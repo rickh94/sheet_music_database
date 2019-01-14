@@ -1,0 +1,62 @@
+version: "3"
+services:
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "3000:3000"
+      - "3443:3443"
+    volumes:
+      - ./config/frontend/nginx:/etc/nginx/conf.d
+      - ./config/frontend/certs:/etc/nginx/ssl
+      - ./frontend/build/:/build
+
+  backend-app:
+    build:
+      context: .
+    volumes:
+      - ./backend/app:/app
+      - web-files:/vol/web
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic -c --noinput &&
+             gunicorn contacts.wsgi --bind 0.0.0.0:8000"
+    environment:
+      - SECRET_KEY
+      - DEBUG
+      - ALLOWED_HOSTS
+      - DB_HOST
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - MAILGUN_API_KEY
+      - CORS_ORIGIN_WHITELIST
+    depends_on:
+      - backend-db
+    expose:
+      - "8000"
+      - "8443"
+  
+  backend-nginx:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+      - "8443:443"
+    volumes:
+      - ./config/backend/nginx:/etc/nginx/conf.d
+      - ./config/backend/certs:/etc/nginx/ssl
+      - web-files:/vol/web
+    expose:
+      - "80"
+      - "443"
+    depends_on:
+      - backend-app
+  
+  backend-db:
+    image: postgres:10-alpine
+    environment:
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+
+volumes:
+  web-files:
