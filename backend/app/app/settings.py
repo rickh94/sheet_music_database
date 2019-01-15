@@ -137,14 +137,23 @@ STATIC_ROOT = "/vol/web/static"
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
+# HOST SETTINGS
 USE_X_FORWARDED_HOST = True
 
 SITE_ID = 1
 
+
+# AUTHENTICATION SETTINGS
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+# EMAIL SETTINGS
 EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
 
 ANYMAIL = {
@@ -155,6 +164,7 @@ ANYMAIL = {
 EMAIL_HOST = "mg.temptestsites.online"
 EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = "webmaster@mg.temptestsites.online"
 
+# REST SETTINGS
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.SessionAuthentication",
@@ -165,10 +175,7 @@ REST_FRAMEWORK = {
 # SECURE_SSL_REDIRECT = True
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-AUTHENTICATION_BACKENDS = (
-    "django.contrib.auth.backends.ModelBackend",
-    "allauth.account.auth_backends.AuthenticationBackend",
-)
+# CORS SETTINGS
 
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = env.list("CORS_ORIGIN_WHITELIST")

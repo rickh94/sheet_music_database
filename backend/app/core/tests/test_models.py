@@ -8,42 +8,46 @@ pytestmark = pytest.mark.django_db
 
 
 @pytest.fixture
-def composer1():
+def composer1(user1):
     return Composer.objects.create(
         name="Johann Sebastian Bach",
         born=datetime.date(1685, 3, 31),
         died=datetime.date(1750, 7, 28),
         era="Baroque",
+        user=user1,
     )
 
 
 @pytest.fixture
-def composer_no_dates():
-    return Composer.objects.create(name="Test Comp", era="Romantic")
+def composer_no_dates(user1):
+    return Composer.objects.create(name="Test Comp", era="Romantic", user=user1)
 
 
 @pytest.fixture
-def sheet1(tmp_path):
+def sheet1(tmp_path, user1):
     tmp_file = tmp_path / "test.ly"
     with tmp_file.open("w") as fp:
         fp.write("testdata")
-    return Sheet.objects.create(filename="testfile.ly", type="Score", format="LilyPond")
+    return Sheet.objects.create(
+        filename="testfile.ly", type="Score", format="LilyPond", user=user1
+    )
 
 
 @pytest.fixture
-def composer_still_alive():
+def composer_still_alive(user1):
     return Composer.objects.create(
         name="Still is Alive",
         is_alive=True,
         born=datetime.date(1982, 8, 4),
         era="Contemporary",
         short_name="S. is Alive",
+        user=user1,
     )
 
 
 @pytest.fixture
-def piece1(composer1):
-    piece = Piece.objects.create(title="Sonata I", catalog="BWV 1001")
+def piece1(composer1, user1):
+    piece = Piece.objects.create(title="Sonata I", catalog="BWV 1001", user=user1)
     piece.composer.add(composer1)
     return piece
 

@@ -60,3 +60,11 @@ services:
 
 volumes:
   web-files:
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.212.0/24
