@@ -1,7 +1,6 @@
 import datetime
 
 import pytest
-from django.contrib.auth import get_user_model
 
 from rest_framework.test import APIClient
 
@@ -44,4 +43,15 @@ def composer2(user1):
         died=datetime.date(1741, 7, 28),
         era="Baroque",
         user=user1,
+    )
+
+
+@pytest.fixture
+def user2_composer(user2):
+    return Composer.objects.create(
+        name="Johannes Brahms",
+        born=datetime.date(1833, 7, 7),
+        died=datetime.date(1897, 4, 3),
+        era="Romantic",
+        user=user2,
     )

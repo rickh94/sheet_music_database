@@ -12,6 +12,14 @@ def sheet_file_path(_instance, filename):
     return str(Path("uploads/sheets") / filename)
 
 
+def _generate_short_name(name):
+    """Get composer short name"""
+    name_parts = name.split(" ")
+    lname = name_parts.pop()
+    initials = "".join([f"{name[0]}." for name in name_parts])
+    return f"{initials} {lname}"
+
+
 class Composer(models.Model):
     """A composer object in the database"""
 
@@ -36,14 +44,11 @@ class Composer(models.Model):
 
         return f"{self.name} ({born} - {died})"
 
-    def get_short_name(self):
-        """Get composer short name"""
-        if self.short_name:
-            return self.short_name
-        name_parts = self.name.split(" ")
-        lname = name_parts.pop()
-        initials = "".join([f"{name[0]}." for name in name_parts])
-        return f"{initials} {lname}"
+    def save(self, *args, **kwargs):
+        """Generate a short name if not provided and save"""
+        if not self.pk and not self.short_name:
+            self.short_name = _generate_short_name(self.name)
+        super(Composer, self).save(*args, **kwargs)
 
 
 class Sheet(models.Model):
@@ -67,8 +72,20 @@ class Piece(models.Model):
     catalog = models.CharField(max_length=255, blank=True)
     composer = models.ManyToManyField(to="Composer", related_name="pieces")
     files = models.ManyToManyField(to="Sheet", related_name="pieces")
+    tags = models.ManyToManyField(to="Tag", related_name="pieces")
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):
         """Get string representation"""
         return self.title
+
+
+class Tag(models.Model):
+    """A Tag in the database"""
+
+    name = models.CharField(max_length=50)
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+
+    def __str__(self):
+        """Get string representation"""
+        return self.name

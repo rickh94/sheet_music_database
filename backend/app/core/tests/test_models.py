@@ -2,7 +2,7 @@ import datetime
 
 import pytest
 
-from core.models import Composer, Sheet, sheet_file_path, Piece
+from core.models import Composer, Sheet, sheet_file_path, Piece, Tag
 
 pytestmark = pytest.mark.django_db
 
@@ -52,6 +52,11 @@ def piece1(composer1, user1):
     return piece
 
 
+@pytest.fixture
+def tag1(user1):
+    return Tag.objects.create(name="Test", user=user1)
+
+
 class TestComposer(object):
     def test_composer_str(self, composer1):
         """Test that a composer is converted to str"""
@@ -71,13 +76,13 @@ class TestComposer(object):
             == str(composer_still_alive)
         )
 
-    def test_composer_get_short_name(self, composer1):
+    def test_composer_generate_short_name(self, composer1):
         """Test that a composers shortened name can be generated"""
-        assert "J.S. Bach" == composer1.get_short_name()
+        assert "J.S. Bach" == composer1.short_name
 
     def test_custom_short_name_has_priority(self, composer_still_alive):
         """Test that a composer's custom short name takes priority"""
-        assert "S. is Alive" == composer_still_alive.get_short_name()
+        assert "S. is Alive" == composer_still_alive.short_name
 
 
 class TestSheet(object):
@@ -100,3 +105,9 @@ class TestPiece(object):
     def test_piece_str(self, piece1):
         """Test str representation of piece"""
         assert piece1.title == str(piece1)
+
+
+class TestTag(object):
+    def test_tag_str(self, tag1):
+        """Test str representation of tag"""
+        assert tag1.name == str(tag1)
