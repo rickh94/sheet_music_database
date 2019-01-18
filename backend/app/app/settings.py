@@ -50,8 +50,8 @@ INSTALLED_APPS = [
     "rest_auth.registration",
     "rest_auth",
     "corsheaders",
-    "core",
     "anymail",
+    "core",
 ]
 
 MIDDLEWARE = [
@@ -83,7 +83,7 @@ TEMPLATES = [
     }
 ]
 
-WSGI_APPLICATION = "contacts.wsgi.application"
+WSGI_APPLICATION = "app.wsgi.application"
 
 
 # Database

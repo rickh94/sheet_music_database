@@ -20,6 +20,7 @@ django-allauth = "*"
 django-anymail = {extras = ["mailgun"],version = "*"}
 django-cors-headers = "*"
 uuid = "*"
+django-rest-knox = "*"
 
 [requires]
 python_version = "3.7"
