@@ -3,12 +3,12 @@ LABEL maintainer="Rick Henry"
 
 ENV PYTHONUNBUFFERED 1
 
-COPY ./requirements.pip /requirements.pip
 
 RUN apk add --update --no-cache postgresql-client
 RUN apk add --update --no-cache --virtual .tmp-build-deps\
     gcc libc-dev linux-headers postgresql-dev musl-dev zlib zlib-dev libffi-dev python3-dev
 
+COPY ./requirements.pip /requirements.pip
 RUN pip install -r /requirements.pip
 
 RUN apk del .tmp-build-deps

@@ -15,12 +15,13 @@ psycopg2 = "<2.8.0,>=2.7.6.1"
 pytest = "*"
 pytest-django = "*"
 flake8 = "*"
-django-rest-auth = {extras = ["with_sociall"],version = "*"}
+django-rest-auth = {extras = ["with_social"],version = "*"}
 django-allauth = "*"
 django-anymail = {extras = ["mailgun"],version = "*"}
 django-cors-headers = "*"
 uuid = "*"
 django-rest-knox = "*"
+django-filter = "*"
 
 [requires]
 python_version = "3.7"

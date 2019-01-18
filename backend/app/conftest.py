@@ -5,14 +5,24 @@ pytestmark = pytest.mark.django_db
 
 
 @pytest.fixture
-def user1():
+def user1_password():
+    return "The 44th President"
+
+
+@pytest.fixture
+def user2_password():
+    return "The 44th First Lady"
+
+
+@pytest.fixture
+def user1(user1_password):
     return get_user_model().objects.create_user(
-        "barack@whitehouse.gov", "The 44th President"
+        username="barack", email="barack@whitehouse.gov", password=user1_password
     )
 
 
 @pytest.fixture
-def user2():
+def user2(user2_password):
     return get_user_model().objects.create_user(
-        "michelle@whitehouse.gov", "The 44th First Lady"
+        username="michelle", email="michelle@whitehouse.gov", password=user2_password
     )

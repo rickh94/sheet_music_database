@@ -1,7 +1,6 @@
 from django.urls import path, include
 
 urlpatterns = [
-    path("auth/", include("rest_auth.urls")),
-    path("auth/registration/", include("rest_auth.registration.urls")),
+    path("auth/", include("accounts.urls")),
     path("music/", include("music.urls")),
 ]

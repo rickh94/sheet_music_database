@@ -51,7 +51,11 @@ INSTALLED_APPS = [
     "rest_auth",
     "corsheaders",
     "anymail",
+    "django_filters",
+    "knox",
     "core",
+    "accounts",
+    "music",
 ]
 
 MIDDLEWARE = [
@@ -153,6 +157,13 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
+REST_AUTH_TOKEN_MODEL = "knox.models.AuthToken"
+REST_AUTH_TOKEN_CREATOR = "accounts.utils.create_knox_token"
+REST_AUTH_SERIALIZERS = {
+    "USER_DETAILS_SERIALIZER": "accounts.serializers.UserDetailsSerializer",
+    "TOKEN_SERIALIZER": "accounts.serializers.KnoxSerializer",
+}
+
 # EMAIL SETTINGS
 EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
 
@@ -166,11 +177,11 @@ EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = "webmaster@mg.temptestsites.online"
 
 # REST SETTINGS
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.SessionAuthentication",
-        "rest_framework.authentication.TokenAuthentication",
-    ]
+    "DEFAULT_AUTHENTICATION_CLASSES": ("knox.auth.TokenAuthentication",),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
 }
+
 
 # SECURE_SSL_REDIRECT = True
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
