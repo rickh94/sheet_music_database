@@ -47,8 +47,13 @@ def sheet1(tmp_path, user1):
         fp.write("testdata")
     return Sheet.objects.create(
         filename="testfile.ly",
+<<<<<<< HEAD
         sheetType="Score",
         fileFormat="LilyPond",
+=======
+        sheet_type="Score",
+        file_format="LilyPond",
+>>>>>>> ugh
         user=user1,
         file=str(tmp_file),
     )
@@ -61,8 +66,8 @@ def sheet2(tmp_path, user1):
         fp.write(b"testdata")
     return Sheet.objects.create(
         filename="testfile.pdf",
-        sheetType="Part",
-        fileFormat="LilyPond",
+        sheet_type="Part",
+        file_format="LilyPond",
         user=user1,
         file=str(tmp_file),
     )
@@ -75,8 +80,8 @@ def user2_sheet(tmp_path, user2):
         fp.write(b"testdata")
     return Sheet.objects.create(
         filename="testfile2.pdf",
-        sheetType="Part",
-        fileFormat="LilyPond",
+        sheet_type="Part",
+        file_format="LilyPond",
         user=user2,
         file=str(tmp_file),
     )

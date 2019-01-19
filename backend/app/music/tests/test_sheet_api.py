@@ -26,7 +26,7 @@ def sheet_upload_url():
 @pytest.fixture
 def sheet_no_file(user1):
     return Sheet.objects.create(
-        filename="testfile.pdf", sheetType="Part", fileFormat="PDF", user=user1
+        filename="testfile.pdf", sheet_type="Part", file_format="PDF", user=user1
     )
 
 
@@ -81,8 +81,13 @@ class TestPrivateSheetAPI(object):
         with test_file.open("rb") as the_file:
             payload = {
                 "filename": "test.pdf",
+<<<<<<< HEAD
                 "fileFormat": "pdf",
                 "fileType": "Part",
+=======
+                "file_format": "pdf",
+                "sheet_type": "Part",
+>>>>>>> ugh
                 "file": the_file,
             }
             authenticated_client.post(sheets_url, payload, format="multipart")
@@ -93,7 +98,7 @@ class TestPrivateSheetAPI(object):
         self, authenticated_client, sheets_url, user1
     ):
         """Test creating a sheet"""
-        payload = {"filename": "test.pdf", "format": "pdf", "type": "Part"}
+        payload = {"filename": "test.pdf", "file_format": "pdf", "sheet_type": "Part"}
         res = authenticated_client.post(sheets_url, payload)
 
         assert res.status_code == status.HTTP_400_BAD_REQUEST
