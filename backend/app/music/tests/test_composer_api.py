@@ -18,25 +18,25 @@ def composer_url():
 class TestPublicComposerAPI(object):
     """Test the publicly available composer api"""
 
-    def test_login_required(self, public_client, composer_url):
+    def test_login_required(self, test_login_required, composer_url):
         """Test that login is required for the composer url"""
-        res = public_client.get(composer_url)
-        assert res.status_code == status.HTTP_401_UNAUTHORIZED
+        assert test_login_required(composer_url)
 
 
 class TestPrivateComposerAPI(object):
     """Test the private composer api"""
 
     def test_retrieve_composer_list(
-        self, authenticated_client, composer_url, composer1, composer2
+        self, get_list_and_serializer, composer_url, composer1, composer2
     ):
         """Test that you can get the composer list"""
-        res = authenticated_client.get(composer_url)
-        composers = Composer.objects.all()
-        serializer = ComposerSerializer(composers, many=True)
+        res, serializer = get_list_and_serializer(
+            composer_url, Composer, ComposerSerializer
+        )
 
         assert res.status_code == status.HTTP_200_OK
-        assert res.data == serializer.data
+        for item in serializer.data:
+            assert item in res.data
 
     def test_composers_limited_to_user(
         self, authenticated_client, composer_url, composer1, user2_composer

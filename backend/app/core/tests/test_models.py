@@ -2,7 +2,7 @@ import datetime
 
 import pytest
 
-from core.models import Composer, Sheet, sheet_file_path, Piece, Tag
+from core.models import Composer, Sheet, sheet_file_path, Piece
 
 pytestmark = pytest.mark.django_db
 
@@ -50,11 +50,6 @@ def piece1(composer1, user1):
     piece = Piece.objects.create(title="Sonata I", catalog="BWV 1001", user=user1)
     piece.composer.add(composer1)
     return piece
-
-
-@pytest.fixture
-def tag1(user1):
-    return Tag.objects.create(name="Test", user=user1)
 
 
 class TestComposer(object):

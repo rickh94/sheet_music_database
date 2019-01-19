@@ -1,6 +1,8 @@
 import pytest
 from django.contrib.auth import get_user_model
 
+from core.models import Tag
+
 pytestmark = pytest.mark.django_db
 
 
@@ -26,3 +28,13 @@ def user2(user2_password):
     return get_user_model().objects.create_user(
         username="michelle", email="michelle@whitehouse.gov", password=user2_password
     )
+
+
+@pytest.fixture
+def tag1(user1):
+    return Tag.objects.create(name="Test", user=user1)
+
+
+@pytest.fixture
+def tag2(user1):
+    return Tag.objects.create(name="Test2", user=user1)

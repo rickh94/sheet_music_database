@@ -1,6 +1,7 @@
 import datetime
 
 import pytest
+from rest_framework import status
 
 from rest_framework.test import APIClient
 
@@ -55,3 +56,28 @@ def user2_composer(user2):
         era="Romantic",
         user=user2,
     )
+
+
+# -------------- HELPER FUNCTIONS --------------
+@pytest.fixture
+def test_login_required(public_client):
+    """Fixture for testing authentication is required"""
+
+    def _test(url):
+        res = public_client.get(url)
+        return res.status_code == status.HTTP_401_UNAUTHORIZED
+
+    return _test
+
+
+@pytest.fixture
+def get_list_and_serializer(authenticated_client):
+    """Fixture for getting a list of objects from a serializer and client"""
+
+    def _get(url, model_class, serializer_class):
+        res = authenticated_client.get(url)
+        items = model_class.objects.all()
+        serializer = serializer_class(items, many=True)
+        return res, serializer
+
+    return _get

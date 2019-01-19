@@ -4,7 +4,8 @@ from rest_framework.routers import DefaultRouter
 from music import views
 
 router = DefaultRouter()
-router.register("composer", views.ComposerViewSet)
+router.register("composers", views.ComposerViewSet)
+router.register("tags", views.TagViewSet)
 
 app_name = "music"
 
