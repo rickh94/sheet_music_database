@@ -1,7 +1,7 @@
 import pytest
 from django.contrib.auth import get_user_model
 
-from core.models import Tag, Sheet
+from core.models import Sheet, Tag
 
 pytestmark = pytest.mark.django_db
 
@@ -19,14 +19,14 @@ def user2_password():
 @pytest.fixture
 def user1(user1_password):
     return get_user_model().objects.create_user(
-        username="barack", email="barack@whitehouse.gov", password=user1_password
+        username="barack", email="barack@whitehouse.gov", password=user1_password,
     )
 
 
 @pytest.fixture
 def user2(user2_password):
     return get_user_model().objects.create_user(
-        username="michelle", email="michelle@whitehouse.gov", password=user2_password
+        username="michelle", email="michelle@whitehouse.gov", password=user2_password,
     )
 
 
@@ -47,8 +47,8 @@ def sheet1(tmp_path, user1):
         fp.write("testdata")
     return Sheet.objects.create(
         filename="testfile.ly",
-        type="Score",
-        format="LilyPond",
+        sheetType="Score",
+        fileFormat="LilyPond",
         user=user1,
         file=str(tmp_file),
     )
@@ -61,8 +61,8 @@ def sheet2(tmp_path, user1):
         fp.write(b"testdata")
     return Sheet.objects.create(
         filename="testfile.pdf",
-        type="Part",
-        format="LilyPond",
+        sheetType="Part",
+        fileFormat="LilyPond",
         user=user1,
         file=str(tmp_file),
     )
@@ -75,8 +75,8 @@ def user2_sheet(tmp_path, user2):
         fp.write(b"testdata")
     return Sheet.objects.create(
         filename="testfile2.pdf",
-        type="Part",
-        format="LilyPond",
+        sheetType="Part",
+        fileFormat="LilyPond",
         user=user2,
         file=str(tmp_file),
     )

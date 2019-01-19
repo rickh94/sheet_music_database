@@ -15,10 +15,14 @@ def build_py_requirements():
     :return: path to newly created requirements file
     """
 
-    result = subprocess.run(
+    result_main = subprocess.run(
         ["pipenv", "lock", "-r"], cwd=PROJECT_ROOT, stdout=subprocess.PIPE
     )
+    result_dev = subprocess.run(
+        ["pipenv", "lock", "--dev", "-r"], cwd=PROJECT_ROOT, stdout=subprocess.PIPE
+    )
+    text = b''.join([result_main.stdout, result_dev.stdout])
     requirements = Path(PROJECT_ROOT) / "requirements.pip"
     with requirements.open("wb") as req:
-        req.write(result.stdout)
+        req.write(text)
     return requirements

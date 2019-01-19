@@ -5,7 +5,6 @@ from django.urls import reverse
 from rest_framework import status
 
 from core.models import Sheet
-
 from music.serializers import SheetSerializer
 
 pytestmark = pytest.mark.django_db
@@ -27,7 +26,7 @@ def sheet_upload_url():
 @pytest.fixture
 def sheet_no_file(user1):
     return Sheet.objects.create(
-        filename="testfile.pdf", type="Part", format="PDF", user=user1
+        filename="testfile.pdf", sheetType="Part", fileFormat="PDF", user=user1
     )
 
 
@@ -82,8 +81,8 @@ class TestPrivateSheetAPI(object):
         with test_file.open("rb") as the_file:
             payload = {
                 "filename": "test.pdf",
-                "format": "pdf",
-                "type": "Part",
+                "fileFormat": "pdf",
+                "fileType": "Part",
                 "file": the_file,
             }
             authenticated_client.post(sheets_url, payload, format="multipart")

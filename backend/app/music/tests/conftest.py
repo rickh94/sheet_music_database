@@ -2,7 +2,6 @@ import datetime
 
 import pytest
 from rest_framework import status
-
 from rest_framework.test import APIClient
 
 from core.models import Composer
@@ -31,7 +30,7 @@ def composer1(user1):
         born=datetime.date(1770, 12, 17),
         died=datetime.date(1827, 3, 26),
         era="Romantic",
-        short_name="L. van Beethoven",
+        shortName="L. van Beethoven",
         user=user1,
     )
 

@@ -27,7 +27,7 @@ class TestPrivateComposerAPI(object):
     """Test the private composer api"""
 
     def test_retrieve_composer_list(
-        self, get_list_and_serializer, composer_url, composer1, composer2
+        self, get_list_and_serializer, composer_url, composer1, composer2,
     ):
         """Test that you can get the composer list"""
         res, serializer = get_list_and_serializer(
@@ -39,7 +39,7 @@ class TestPrivateComposerAPI(object):
             assert item in res.data
 
     def test_composers_limited_to_user(
-        self, authenticated_client, composer_url, composer1, user2_composer
+        self, authenticated_client, composer_url, composer1, user2_composer,
     ):
         """Test that composers returned match current user only"""
         res = authenticated_client.get(composer_url)
@@ -49,7 +49,7 @@ class TestPrivateComposerAPI(object):
         assert res.data[0]["name"] == composer1.name
 
     def test_create_composer_successful(
-        self, authenticated_client, composer_url, user1
+        self, authenticated_client, composer_url, user1,
     ):
         """Test creating a new composer"""
         payload = {
@@ -71,7 +71,7 @@ class TestPrivateComposerAPI(object):
             "born": datetime.date(1810, 6, 8),
             "died": datetime.date(1856, 7, 29),
             "era": "Romantic",
-            "short_name": "Rob",
+            "shortName": "Rob",
         }
 
         authenticated_client.post(composer_url, payload)
@@ -79,7 +79,7 @@ class TestPrivateComposerAPI(object):
         composer_query = Composer.objects.filter(user=user1, name=payload["name"])
 
         assert composer_query.exists()
-        assert composer_query[0].short_name == payload["short_name"]
+        assert composer_query[0].shortName == payload["shortName"]
 
     def test_create_composer_invalid(self, authenticated_client, composer_url):
         """Test creating invalid composer fails"""

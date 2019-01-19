@@ -1,6 +1,5 @@
-from rest_framework import serializers
-
 from rest_auth.serializers import UserDetailsSerializer
+from rest_framework import serializers
 
 
 class KnoxSerializer(serializers.Serializer):

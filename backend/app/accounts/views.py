@@ -1,5 +1,5 @@
-from allauth.account.utils import complete_signup
 from allauth.account import app_settings as allauth_settings
+from allauth.account.utils import complete_signup
 from rest_auth.registration.views import RegisterView
 from rest_auth.views import LoginView
 from rest_framework.response import Response

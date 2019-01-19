@@ -5,6 +5,27 @@ verify_ssl = true
 
 [dev-packages]
 python-dotenv = "*"
+flake8-blind-except = "*"
+flake8-builtins = "*"
+flake8-comprehensions = "*"
+flake8-eradicate = "*"
+flake8-broken-line = "*"
+flake8-tidy-imports = "*"
+flake8-django = "*"
+flake8-assertive = "*"
+flake8-mock = "*"
+flake8-pytest = "*"
+flake8-bandit = "*"
+pytest-instafail = "*"
+pytest-picked = "*"
+pytest-cov = "*"
+pytest-sugar = "*"
+pytest-xdist = "*"
+pytest = "*"
+pytest-django = "*"
+flake8 = "*"
+isort = "*"
+flake8-colors = "*"
 
 [packages]
 django = "<2.2.0,>=2.1.5"
@@ -12,9 +33,6 @@ djangorestframework = "<3.10.0,>=3.9.0"
 gunicorn = "<19.10.0,>=19.9.0"
 django-environ = "<0.5.0,>=0.4.5"
 psycopg2 = "<2.8.0,>=2.7.6.1"
-pytest = "*"
-pytest-django = "*"
-flake8 = "*"
 django-rest-auth = {extras = ["with_social"],version = "*"}
 django-allauth = "*"
 django-anymail = {extras = ["mailgun"],version = "*"}

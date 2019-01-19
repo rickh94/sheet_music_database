@@ -1,10 +1,10 @@
-from rest_framework import viewsets, mixins, status
+from rest_framework import mixins, status, viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from core.models import Composer, Tag, Sheet
+from core.models import Composer, Sheet, Tag
 from music import serializers
 
 
@@ -16,7 +16,7 @@ class GenericMusicViewSet(viewsets.GenericViewSet):
 
 
 class BasicMusicAttrViewSet(
-    mixins.ListModelMixin, mixins.CreateModelMixin, GenericMusicViewSet
+    mixins.ListModelMixin, mixins.CreateModelMixin, GenericMusicViewSet,
 ):
     """Base Viewset for user owned music attributes"""
 

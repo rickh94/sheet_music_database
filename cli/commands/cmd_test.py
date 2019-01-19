@@ -5,15 +5,32 @@ import click
 
 @click.command()
 @click.option("-v", "--verbose", is_flag=True)
-def cli(verbose):
+@click.option("--cov", is_flag=True)
+@click.option("--picked", is_flag=True)
+def cli(verbose, cov, picked):
     """
     Run tests
 
     :return: Subprocess call result
     """
     dash_v = "-v" if verbose else ""
-    cmd = (
-        "docker-compose run --rm backend-app sh"
-        f' -c "pytest {dash_v} --disable-pytest-warnings && flake8"'
-    )
-    return subprocess.call(cmd, shell=True)
+    pytest_options = ["--instafail", "-n", "4"]
+    if verbose:
+        pytest_options += "-v"
+    if cov:
+        pytest_options += "--cov=."
+    if picked:
+        pytest_options += "--picked"
+
+    sub_cmd = [
+        "pytest",
+        *pytest_options,
+        "--disable-pytest-warnings",
+        "&&",
+        "flake8",
+        "&&",
+        "isort */**.py",
+    ]
+    sub_cmd_str = " ".join(sub_cmd)
+    cmd = ["docker-compose", "run", "--rm", "backend-app", "sh", f'-c "{sub_cmd_str}"']
+    return subprocess.call(" ".join(cmd), shell=True)

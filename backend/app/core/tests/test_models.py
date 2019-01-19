@@ -2,7 +2,7 @@ import datetime
 
 import pytest
 
-from core.models import Composer, sheet_file_path, Piece
+from core.models import Composer, Piece, sheet_file_path
 
 pytestmark = pytest.mark.django_db
 
@@ -27,10 +27,10 @@ def composer_no_dates(user1):
 def composer_still_alive(user1):
     return Composer.objects.create(
         name="Still is Alive",
-        is_alive=True,
+        isAlive=True,
         born=datetime.date(1982, 8, 4),
         era="Contemporary",
-        short_name="S. is Alive",
+        shortName="S. is Alive",
         user=user1,
     )
 
@@ -63,11 +63,11 @@ class TestComposer(object):
 
     def test_composer_generate_short_name(self, composer1):
         """Test that a composers shortened name can be generated"""
-        assert "J.S. Bach" == composer1.short_name
+        assert "J.S. Bach" == composer1.shortName
 
     def test_custom_short_name_has_priority(self, composer_still_alive):
         """Test that a composer's custom short name takes priority"""
-        assert "S. is Alive" == composer_still_alive.short_name
+        assert "S. is Alive" == composer_still_alive.shortName
 
 
 class TestSheet(object):

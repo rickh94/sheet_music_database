@@ -1,5 +1,5 @@
 import knox.views
-from django.urls import path, include
+from django.urls import include, path
 
 from accounts import views
 
