@@ -1,7 +1,7 @@
 import pytest
 from django.contrib.auth import get_user_model
 
-from core.models import Tag
+from core.models import Tag, Sheet
 
 pytestmark = pytest.mark.django_db
 
@@ -38,3 +38,45 @@ def tag1(user1):
 @pytest.fixture
 def tag2(user1):
     return Tag.objects.create(name="Test2", user=user1)
+
+
+@pytest.fixture
+def sheet1(tmp_path, user1):
+    tmp_file = tmp_path / "test.ly"
+    with tmp_file.open("w") as fp:
+        fp.write("testdata")
+    return Sheet.objects.create(
+        filename="testfile.ly",
+        type="Score",
+        format="LilyPond",
+        user=user1,
+        file=str(tmp_file),
+    )
+
+
+@pytest.fixture
+def sheet2(tmp_path, user1):
+    tmp_file = tmp_path / "test.pdf"
+    with tmp_file.open("wb") as fp:
+        fp.write(b"testdata")
+    return Sheet.objects.create(
+        filename="testfile.pdf",
+        type="Part",
+        format="LilyPond",
+        user=user1,
+        file=str(tmp_file),
+    )
+
+
+@pytest.fixture
+def user2_sheet(tmp_path, user2):
+    tmp_file = tmp_path / "test2.pdf"
+    with tmp_file.open("wb") as fp:
+        fp.write(b"testdata")
+    return Sheet.objects.create(
+        filename="testfile2.pdf",
+        type="Part",
+        format="LilyPond",
+        user=user2,
+        file=str(tmp_file),
+    )

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from core.models import Composer, Tag
+from core.models import Composer, Tag, Sheet
 
 
 class ComposerSerializer(serializers.ModelSerializer):
@@ -18,4 +18,22 @@ class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tag
         fields = ("id", "name")
+        read_only_fields = ("id",)
+
+
+class SheetSerializer(serializers.ModelSerializer):
+    """Serializer for Sheet objects"""
+
+    class Meta:
+        model = Sheet
+        fields = ("id", "filename", "format", "type", "file")
+        read_only_fields = ("id",)
+
+
+class SheetFileSerializer(serializers.ModelSerializer):
+    """Serializer for sheet details"""
+
+    class Meta:
+        model = Sheet
+        fields = ("id", "file")
         read_only_fields = ("id",)

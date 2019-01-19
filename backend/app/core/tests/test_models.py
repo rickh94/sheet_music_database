@@ -2,7 +2,7 @@ import datetime
 
 import pytest
 
-from core.models import Composer, Sheet, sheet_file_path, Piece
+from core.models import Composer, sheet_file_path, Piece
 
 pytestmark = pytest.mark.django_db
 
@@ -21,16 +21,6 @@ def composer1(user1):
 @pytest.fixture
 def composer_no_dates(user1):
     return Composer.objects.create(name="Test Comp", era="Romantic", user=user1)
-
-
-@pytest.fixture
-def sheet1(tmp_path, user1):
-    tmp_file = tmp_path / "test.ly"
-    with tmp_file.open("w") as fp:
-        fp.write("testdata")
-    return Sheet.objects.create(
-        filename="testfile.ly", type="Score", format="LilyPond", user=user1
-    )
 
 
 @pytest.fixture
@@ -84,6 +74,11 @@ class TestSheet(object):
     def test_sheet_str(self, sheet1):
         """Test str representation of sheet"""
         assert sheet1.filename == str(sheet1)
+
+    def test_file_added_correctly(self, sheet1):
+        """Test that the file is added correctly"""
+        with open(str(sheet1.file), "r") as sheet_file:
+            assert "testdata" in sheet_file.read()
 
     def test_sheet_path(self, monkeypatch):
         """Test creating correct file paths"""
