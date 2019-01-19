@@ -55,8 +55,8 @@ class Sheet(models.Model):
     """A sheet music file"""
 
     filename = models.CharField(max_length=255)
-    format = models.CharField(max_length=255)
-    type = models.CharField(max_length=255, blank=True)
+    file_format = models.CharField(max_length=255)
+    sheet_type = models.CharField(max_length=255, blank=True)
     file = models.FileField(upload_to=sheet_file_path)
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 

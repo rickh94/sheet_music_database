@@ -26,7 +26,7 @@ class SheetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sheet
-        fields = ("id", "filename", "format", "type", "file")
+        fields = ("id", "filename", "file_format", "sheet_type", "file")
         read_only_fields = ("id",)
 
 
