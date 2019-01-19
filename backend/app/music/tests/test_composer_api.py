@@ -71,7 +71,7 @@ class TestPrivateComposerAPI(object):
             "born": datetime.date(1810, 6, 8),
             "died": datetime.date(1856, 7, 29),
             "era": "Romantic",
-            "shortName": "Rob",
+            "short_name": "Rob",
         }
 
         authenticated_client.post(composer_url, payload)
@@ -79,7 +79,7 @@ class TestPrivateComposerAPI(object):
         composer_query = Composer.objects.filter(user=user1, name=payload["name"])
 
         assert composer_query.exists()
-        assert composer_query[0].shortName == payload["shortName"]
+        assert composer_query[0].short_name == payload["short_name"]
 
     def test_create_composer_invalid(self, authenticated_client, composer_url):
         """Test creating invalid composer fails"""

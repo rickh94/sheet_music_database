@@ -81,13 +81,8 @@ class TestPrivateSheetAPI(object):
         with test_file.open("rb") as the_file:
             payload = {
                 "filename": "test.pdf",
-<<<<<<< HEAD
-                "fileFormat": "pdf",
-                "fileType": "Part",
-=======
                 "file_format": "pdf",
                 "sheet_type": "Part",
->>>>>>> ugh
                 "file": the_file,
             }
             authenticated_client.post(sheets_url, payload, format="multipart")

@@ -26,9 +26,9 @@ class Composer(models.Model):
     name = models.CharField(max_length=255)
     born = models.DateField(null=True)
     died = models.DateField(null=True)
-    isAlive = models.BooleanField(default=False)
+    is_alive = models.BooleanField(default=False)
     era = models.CharField(max_length=255)
-    shortName = models.CharField(max_length=30, blank=True)
+    short_name = models.CharField(max_length=30, blank=True)
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):
@@ -37,7 +37,7 @@ class Composer(models.Model):
         died = ""
         if self.died:
             died = self.died.year
-        elif self.isAlive:
+        elif self.is_alive:
             died = "present"
         else:
             died = "?"
@@ -46,8 +46,8 @@ class Composer(models.Model):
 
     def save(self, *args, **kwargs):
         """Generate a short name if not provided and save"""
-        if not self.pk and not self.shortName:
-            self.shortName = _generate_short_name(self.name)
+        if not self.pk and not self.short_name:
+            self.short_name = _generate_short_name(self.name)
         super(Composer, self).save(*args, **kwargs)
 
 

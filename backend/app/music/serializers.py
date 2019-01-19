@@ -8,7 +8,7 @@ class ComposerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Composer
-        fields = ("id", "name", "born", "died", "era", "shortName")
+        fields = ("id", "name", "born", "died", "era", "short_name")
         read_only_fields = ("id",)
 
 

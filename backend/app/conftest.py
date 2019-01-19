@@ -47,13 +47,8 @@ def sheet1(tmp_path, user1):
         fp.write("testdata")
     return Sheet.objects.create(
         filename="testfile.ly",
-<<<<<<< HEAD
-        sheetType="Score",
-        fileFormat="LilyPond",
-=======
         sheet_type="Score",
         file_format="LilyPond",
->>>>>>> ugh
         user=user1,
         file=str(tmp_file),
     )

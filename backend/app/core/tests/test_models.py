@@ -27,10 +27,10 @@ def composer_no_dates(user1):
 def composer_still_alive(user1):
     return Composer.objects.create(
         name="Still is Alive",
-        isAlive=True,
+        is_alive=True,
         born=datetime.date(1982, 8, 4),
         era="Contemporary",
-        shortName="S. is Alive",
+        short_name="S. is Alive",
         user=user1,
     )
 
@@ -63,11 +63,11 @@ class TestComposer(object):
 
     def test_composer_generate_short_name(self, composer1):
         """Test that a composers shortened name can be generated"""
-        assert "J.S. Bach" == composer1.shortName
+        assert "J.S. Bach" == composer1.short_name
 
     def test_custom_short_name_has_priority(self, composer_still_alive):
         """Test that a composer's custom short name takes priority"""
-        assert "S. is Alive" == composer_still_alive.shortName
+        assert "S. is Alive" == composer_still_alive.short_name
 
 
 class TestSheet(object):

@@ -30,7 +30,7 @@ def composer1(user1):
         born=datetime.date(1770, 12, 17),
         died=datetime.date(1827, 3, 26),
         era="Romantic",
-        shortName="L. van Beethoven",
+        short_name="L. van Beethoven",
         user=user1,
     )
 
