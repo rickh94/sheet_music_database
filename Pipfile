@@ -26,6 +26,7 @@ pytest-django = "*"
 flake8 = "*"
 isort = "*"
 flake8-colors = "*"
+detect-secrets = "*"
 
 [packages]
 django = "<2.2.0,>=2.1.5"
@@ -40,6 +41,7 @@ django-cors-headers = "*"
 uuid = "*"
 django-rest-knox = "*"
 django-filter = "*"
+pyupgrade = "*"
 
 [requires]
 python_version = "3.7"

@@ -21,7 +21,7 @@ def build_py_requirements():
     result_dev = subprocess.run(
         ["pipenv", "lock", "--dev", "-r"], cwd=PROJECT_ROOT, stdout=subprocess.PIPE
     )
-    text = b''.join([result_main.stdout, result_dev.stdout])
+    text = b"".join([result_main.stdout, result_dev.stdout])
     requirements = Path(PROJECT_ROOT) / "requirements.pip"
     with requirements.open("wb") as req:
         req.write(text)

@@ -5,19 +5,13 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('core', '0002_auto_20190116_1822'),
-    ]
+    dependencies = [("core", "0002_auto_20190116_1822")]
 
     operations = [
         migrations.RenameField(
-            model_name='sheet',
-            old_name='format',
-            new_name='file_format',
+            model_name="sheet", old_name="format", new_name="file_format"
         ),
         migrations.RenameField(
-            model_name='sheet',
-            old_name='type',
-            new_name='sheet_type',
+            model_name="sheet", old_name="type", new_name="sheet_type"
         ),
     ]
