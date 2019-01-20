@@ -1,9 +1,8 @@
 import pytest
-from django.urls import reverse
-from rest_framework import status
-
 from core.models import Tag
+from django.urls import reverse
 from music.serializers import TagSerializer
+from rest_framework import status
 
 pytestmark = pytest.mark.django_db
 
@@ -18,7 +17,7 @@ def user2_tag(user2):
     return Tag.objects.create(name="user2 tag", user=user2)
 
 
-class TestPublicTagAPI(object):
+class TestPublicTagAPI:
     """Test the publicly available tag api"""
 
     def test_login_required(self, tag_url, test_login_required):
@@ -26,7 +25,7 @@ class TestPublicTagAPI(object):
         assert test_login_required(tag_url)
 
 
-class TestPrivateTagAPI(object):
+class TestPrivateTagAPI:
     """Test the private tag api"""
 
     def test_retrieve_tag_list(self, get_list_and_serializer, tag_url, tag1, tag2):

@@ -1,11 +1,10 @@
 import os
 
 import pytest
-from django.urls import reverse
-from rest_framework import status
-
 from core.models import Sheet
+from django.urls import reverse
 from music.serializers import SheetSerializer
+from rest_framework import status
 
 pytestmark = pytest.mark.django_db
 
@@ -38,7 +37,7 @@ def test_file(tmp_path):
     return tmp_file
 
 
-class TestPublicSheetAPI(object):
+class TestPublicSheetAPI:
     """Test public part of api"""
 
     def test_login_required(self, test_login_required, sheets_url):
@@ -46,7 +45,7 @@ class TestPublicSheetAPI(object):
         assert test_login_required(sheets_url)
 
 
-class TestPrivateSheetAPI(object):
+class TestPrivateSheetAPI:
     """Test private part of api"""
 
     def test_retrieve_sheet_list(

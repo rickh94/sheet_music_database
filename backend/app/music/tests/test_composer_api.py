@@ -14,7 +14,7 @@ def composer_url():
     return reverse("music:composer-list")
 
 
-class TestPublicComposerAPI(object):
+class TestPublicComposerAPI:
     """Test the publicly available composer api"""
 
     def test_login_required(self, test_login_required, composer_url):
@@ -22,7 +22,7 @@ class TestPublicComposerAPI(object):
         assert test_login_required(composer_url)
 
 
-class TestPrivateComposerAPI(object):
+class TestPrivateComposerAPI:
     """Test the private composer api"""
 
     def test_retrieve_composer_list(

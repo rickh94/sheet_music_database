@@ -48,7 +48,7 @@ class Composer(models.Model):
         """Generate a short name if not provided and save"""
         if not self.pk and not self.short_name:
             self.short_name = _generate_short_name(self.name)
-        super(Composer, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
 
 class Sheet(models.Model):

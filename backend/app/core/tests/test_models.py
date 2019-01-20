@@ -1,7 +1,6 @@
 import datetime
 
 import pytest
-
 from core.models import Composer, Piece, sheet_file_path
 
 pytestmark = pytest.mark.django_db
@@ -42,7 +41,7 @@ def piece1(composer1, user1):
     return piece
 
 
-class TestComposer(object):
+class TestComposer:
     def test_composer_str(self, composer1):
         """Test that a composer is converted to str"""
         assert (
@@ -70,7 +69,7 @@ class TestComposer(object):
         assert "S. is Alive" == composer_still_alive.short_name
 
 
-class TestSheet(object):
+class TestSheet:
     def test_sheet_str(self, sheet1):
         """Test str representation of sheet"""
         assert sheet1.filename == str(sheet1)
@@ -91,13 +90,13 @@ class TestSheet(object):
         assert file_path == f"uploads/sheets/testname.ly"
 
 
-class TestPiece(object):
+class TestPiece:
     def test_piece_str(self, piece1):
         """Test str representation of piece"""
         assert piece1.title == str(piece1)
 
 
-class TestTag(object):
+class TestTag:
     def test_tag_str(self, tag1):
         """Test str representation of tag"""
         assert tag1.name == str(tag1)
