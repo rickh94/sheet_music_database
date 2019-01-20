@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from core.models import Composer, Sheet, Tag
+from core.models import Composer, Piece, Sheet, Tag
 
 
 class ComposerSerializer(serializers.ModelSerializer):
@@ -36,4 +36,19 @@ class SheetFileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sheet
         fields = ("id", "file")
+        read_only_fields = ("id",)
+
+
+class PieceSerializer(serializers.ModelSerializer):
+    """Serializer for pieces"""
+
+    composer = serializers.PrimaryKeyRelatedField(
+        many=True, queryset=Composer.objects.all()
+    )
+    tags = serializers.PrimaryKeyRelatedField(many=True, queryset=Tag.objects.all())
+    sheets = serializers.PrimaryKeyRelatedField(many=True, queryset=Sheet.objects.all())
+
+    class Meta:
+        model = Piece
+        fields = ("id", "title", "catalog", "composer", "tags", "sheets")
         read_only_fields = ("id",)

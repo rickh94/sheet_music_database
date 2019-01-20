@@ -71,7 +71,7 @@ class Piece(models.Model):
     title = models.CharField(max_length=255)
     catalog = models.CharField(max_length=255, blank=True)
     composer = models.ManyToManyField(to="Composer", related_name="pieces")
-    files = models.ManyToManyField(to="Sheet", related_name="pieces")
+    sheets = models.ManyToManyField(to="Sheet", related_name="pieces")
     tags = models.ManyToManyField(to="Tag", related_name="pieces")
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 

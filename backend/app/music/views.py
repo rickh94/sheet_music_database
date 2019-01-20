@@ -4,7 +4,7 @@ from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from core.models import Composer, Sheet, Tag
+from core.models import Composer, Piece, Sheet, Tag
 from music import serializers
 
 
@@ -69,3 +69,18 @@ class SheetViewSet(BasicMusicAttrViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class PieceViewSet(viewsets.ModelViewSet, GenericMusicViewSet):
+    """Manage pieces in the database"""
+
+    serializer_class = serializers.PieceSerializer
+    queryset = Piece.objects.all()
+
+    def get_queryset(self):
+        """Get pieces for authenticated user"""
+        return self.queryset.filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        """Add user to piece"""
+        serializer.save(user=self.request.user)
