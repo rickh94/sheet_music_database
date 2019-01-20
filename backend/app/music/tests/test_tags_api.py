@@ -1,8 +1,9 @@
 import pytest
-from core.models import Tag
 from django.urls import reverse
-from music.serializers import TagSerializer
 from rest_framework import status
+
+from core.models import Tag
+from music.serializers import TagSerializer
 
 pytestmark = pytest.mark.django_db
 

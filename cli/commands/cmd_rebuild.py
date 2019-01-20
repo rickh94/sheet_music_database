@@ -1,6 +1,7 @@
 import subprocess
 
 import click
+
 from cli.commands.build_frontend import build_js_frontend
 from cli.commands.build_requirements import build_py_requirements
 

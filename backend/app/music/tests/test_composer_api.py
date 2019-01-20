@@ -1,10 +1,11 @@
 import datetime
 
 import pytest
-from core.models import Composer
 from django.urls import reverse
-from music.serializers import ComposerSerializer
 from rest_framework import status
+
+from core.models import Composer
+from music.serializers import ComposerSerializer
 
 pytestmark = pytest.mark.django_db
 

@@ -1,6 +1,7 @@
 import pytest
-from core.models import Sheet, Tag
 from django.contrib.auth import get_user_model
+
+from core.models import Sheet, Tag
 
 pytestmark = pytest.mark.django_db
 

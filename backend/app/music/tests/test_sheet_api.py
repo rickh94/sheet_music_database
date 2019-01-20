@@ -1,10 +1,11 @@
 import os
 
 import pytest
-from core.models import Sheet
 from django.urls import reverse
-from music.serializers import SheetSerializer
 from rest_framework import status
+
+from core.models import Sheet
+from music.serializers import SheetSerializer
 
 pytestmark = pytest.mark.django_db
 
