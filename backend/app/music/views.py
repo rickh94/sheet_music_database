@@ -71,6 +71,19 @@ class SheetViewSet(BasicMusicAttrViewSet):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+def _params_to_ints(querystring):
+    """Convert a list of string iD to a list of integers"""
+    return [int(str_id) for str_id in querystring.split(",")]
+
+
+def _filter_on_attr(queryset, attr_params, attr_name):
+    if attr_params:
+        # generate name of filter programmatically
+        filters = {f"{attr_name}__id__in": _params_to_ints(attr_params)}
+        return queryset.filter(**filters)
+    return queryset
+
+
 class PieceViewSet(viewsets.ModelViewSet, GenericMusicViewSet):
     """Manage pieces in the database"""
 
@@ -79,7 +92,17 @@ class PieceViewSet(viewsets.ModelViewSet, GenericMusicViewSet):
 
     def get_queryset(self):
         """Get pieces for authenticated user"""
-        return self.queryset.filter(user=self.request.user)
+        queryset = self.queryset
+        for attr_name in ["tags", "composer"]:
+            attr_params = self.request.query_params.get(attr_name)
+            queryset = _filter_on_attr(queryset, attr_params, attr_name)
+        era = self.request.query_params.get("era")
+        catalog = self.request.query_params.get("catalog")
+        if era:
+            queryset = queryset.filter(composer__era__icontains=era)
+        if catalog:
+            queryset = queryset.filter(catalog__icontains=catalog)
+        return queryset.filter(user=self.request.user)
 
     def perform_create(self, serializer):
         """Add user to piece"""

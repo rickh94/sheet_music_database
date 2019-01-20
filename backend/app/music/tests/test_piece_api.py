@@ -30,12 +30,58 @@ def piece3(composer2, user1):
 
 
 @pytest.fixture
+def piece4(user1):
+    return Piece.objects.create(title="test", catalog="test", user=user1)
+
+
+@pytest.fixture
 def user2_piece(composer2, user2):
     piece = Piece.objects.create(
         title="Concerto in E major (Spring)", catalog="RV 269", user=user2
     )
     piece.composer.add(composer2)
     return piece
+
+
+@pytest.fixture
+def piece_tag1_composer1(tag1, composer1, user1):
+    piece = Piece.objects.create(title="Test Piece", catalog="test1", user=user1)
+    piece.tags.add(tag1)
+    piece.composer.add(composer1)
+    return piece
+
+
+@pytest.fixture
+def piece_tag2_composer2(tag2, composer2, user1):
+    piece = Piece.objects.create(title="Test Piece", catalog="test2", user=user1)
+    piece.tags.add(tag2)
+    piece.composer.add(composer2)
+    return piece
+
+
+@pytest.fixture
+def piece2_serializer(piece2):
+    return PieceSerializer(piece2)
+
+
+@pytest.fixture
+def piece3_serializer(piece3):
+    return PieceSerializer(piece3)
+
+
+@pytest.fixture
+def piece4_serializer(piece4):
+    return PieceSerializer(piece4)
+
+
+@pytest.fixture
+def piece_tag1_composer1_serializer(piece_tag1_composer1):
+    return PieceSerializer(piece_tag1_composer1)
+
+
+@pytest.fixture
+def piece_tag2_composer2_serializer(piece_tag2_composer2):
+    return PieceSerializer(piece_tag2_composer2)
 
 
 @pytest.fixture
@@ -87,6 +133,13 @@ class TestPrivatePieceAPI:
 
         assert res.status_code == status.HTTP_201_CREATED
         assert Piece.objects.filter(user=user1, title=payload["title"]).exists()
+
+    def test_create_piece_invalid(self, authenticated_client, piece_url):
+        """Test creating an invalid piece"""
+        payload = {"title": ""}
+        res = authenticated_client.post(piece_url, payload)
+
+        assert res.status_code == status.HTTP_400_BAD_REQUEST
 
     def test_create_piece_with_composer(
         self, authenticated_client, piece_url, composer1, test_piece_payload
@@ -151,3 +204,73 @@ class TestPrivatePieceAPI:
         res = authenticated_client.post(piece_url, payload)
 
         assert res.status_code == status.HTTP_201_CREATED
+
+    def test_filter_pieces_by_tag(
+        self,
+        authenticated_client,
+        piece_url,
+        piece2_serializer,
+        piece_tag1_composer1_serializer,
+        piece_tag2_composer2_serializer,
+        tag1,
+        tag2,
+    ):
+        """Filter Pieces by specific tags"""
+        res = authenticated_client.get(piece_url, {"tags": f"{tag1.id},{tag2.id}"})
+
+        assert piece_tag1_composer1_serializer.data in res.data
+        assert piece_tag2_composer2_serializer.data in res.data
+        assert piece2_serializer.data not in res.data
+
+    def test_filter_pieces_by_composer(
+        self,
+        authenticated_client,
+        piece_url,
+        piece4_serializer,
+        piece_tag1_composer1_serializer,
+        piece_tag2_composer2_serializer,
+        composer1,
+        composer2,
+    ):
+        """Filter Pieces by a composer"""
+        res = authenticated_client.get(
+            piece_url, {"composer": f"{composer1.id},{composer2.id}"}
+        )
+
+        assert piece_tag1_composer1_serializer.data in res.data
+        assert piece_tag2_composer2_serializer.data in res.data
+        assert piece4_serializer.data not in res.data
+
+    def test_search_pieces_by_era(
+        self,
+        authenticated_client,
+        piece_url,
+        piece3_serializer,
+        piece_tag1_composer1_serializer,
+        piece_tag2_composer2_serializer,
+        composer1,
+        composer2,
+    ):
+        """Filter Pieces by era"""
+        res = authenticated_client.get(piece_url, {"era": f"{composer1.era.lower()}"})
+
+        assert piece_tag1_composer1_serializer.data in res.data
+        assert piece3_serializer.data not in res.data
+
+    def test_search_pieces_by_catalog(
+        self,
+        authenticated_client,
+        piece_url,
+        piece2,
+        piece2_serializer,
+        piece3,
+        piece3_serializer,
+        piece_tag1_composer1_serializer,
+    ):
+        """Filter Pieces by catalog number"""
+        res = authenticated_client.get(
+            piece_url, {"catalog": f"{piece2.catalog.lower()}"}
+        )
+
+        assert piece2_serializer.data in res.data
+        assert piece_tag1_composer1_serializer.data not in res.data

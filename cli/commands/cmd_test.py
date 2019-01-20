@@ -13,8 +13,7 @@ def cli(verbose, cov, picked):
 
     :return: Subprocess call result
     """
-    dash_v = "-v" if verbose else ""
-    pytest_options = ["--instafail", "-n", "4"]
+    pytest_options = ["--instafail"]
     if verbose:
         pytest_options += "-v"
     if cov:
