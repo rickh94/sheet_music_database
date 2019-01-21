@@ -33,6 +33,7 @@ def test_wait_for_db_ready(gi):
 @mock.patch("time.sleep", return_value=True)
 def test_wait_for_db(_time_sleep, gi):
     """Test waiting for the database"""
+    # noinspection PyTypeChecker
     gi.side_effect: List[Union[Exception, bool]] = [OperationalError] * 5 + [True]
     call_command("wait_for_db")
     assert gi.call_count == 6
