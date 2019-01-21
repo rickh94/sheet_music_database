@@ -2,7 +2,7 @@ language: python
 env:
   - SECRET_KEY=testsecretkey ALLOWED_HOSTS=localhost,app,backend-app DB_HOST=DB
     POSTGRES_DB=app POSTGRES_USER=app_user POSTGRES_PASSWORD=testpassword
-    MAILGUN_API_KEY=TEST TOKEN_TTL_HOURS=168
+    MAILGUN_API_KEY=TEST TOKEN_TTL_HOURS=168 CORS_ORIGIN_WHITELIST=localhost,app
 
 python:
   - "3.6"
