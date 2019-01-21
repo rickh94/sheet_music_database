@@ -17,7 +17,8 @@ services:
       - ./backend/app:/app
       - web-files:/vol/web
     command: >
-      sh -c "python manage.py migrate &&
+      sh -c "python manage.py wait_for_db &&
+             python manage.py migrate &&
              python manage.py collectstatic -c --noinput &&
              gunicorn app.wsgi --bind 0.0.0.0:8000"
     environment:

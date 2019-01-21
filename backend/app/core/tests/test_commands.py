@@ -1,4 +1,8 @@
+from typing import List, Union
+from unittest import mock
+
 from django.core.management import call_command
+from django.db import OperationalError
 
 
 def test_make_js_api_interface(tmp_path):
@@ -15,3 +19,20 @@ def test_make_js_api_interface(tmp_path):
         assert "put(payload, initialConfig = {})" in data
         assert "URL()" in data
         assert "admin()" not in data
+
+
+@mock.patch("django.db.utils.ConnectionHandler.__getitem__")
+def test_wait_for_db_ready(gi):
+    """Test waiting for the db"""
+    gi.return_value = True
+    call_command("wait_for_db")
+    assert gi.call_count == 1
+
+
+@mock.patch("django.db.ConnectionHandler.__getitem__")
+@mock.patch("time.sleep", return_value=True)
+def test_wait_for_db(_time_sleep, gi):
+    """Test waiting for the database"""
+    gi.side_effect: List[Union[Exception, bool]] = [OperationalError] * 5 + [True]
+    call_command("wait_for_db")
+    assert gi.call_count == 6
