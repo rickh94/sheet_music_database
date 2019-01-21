@@ -19,6 +19,7 @@ def get_relevant_urls():
         if "admin" not in item["url"]
         and ".<format>" not in item["url"]
         and "schema" not in item["url"]
+        and "password/reset" not in item["url"]
     ]
     return urls
 
