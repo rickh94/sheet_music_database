@@ -16,6 +16,8 @@ services:
 before_script:
   - cd frontend && yarn && cd ..
   - pip install docker-compose
+  - pipenv lock -r > requirements.pip
+  - pipenv lock --dev -r >> requirements.pip
 
 script:
   - cd frontend && yarn test && cd ..
