@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-
+import datetime
 import os
 
 import environ
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "rest_auth.registration",
     "rest_auth",
+    "django_extensions",
     "corsheaders",
     "anymail",
     "django_filters",
@@ -165,6 +166,8 @@ REST_AUTH_SERIALIZERS = {
     "TOKEN_SERIALIZER": "accounts.serializers.KnoxSerializer",
 }
 
+TOKEN_TTL = datetime.timedelta(hours=env.int("TOKEN_TTL_HOURS"))
+
 # EMAIL SETTINGS
 EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
 
@@ -189,7 +192,7 @@ REST_FRAMEWORK = {
 
 # CORS SETTINGS
 
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = env.list("CORS_ORIGIN_WHITELIST")
 
 CORS_URL_REGEX = r"^/api/.*$"

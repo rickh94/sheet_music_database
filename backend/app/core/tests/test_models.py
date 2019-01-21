@@ -69,6 +69,12 @@ class TestComposer:
         """Test that a composer's custom short name takes priority"""
         assert "S. is Alive" == composer_still_alive.short_name
 
+    def test_short_name_has_stripped_whitespace(self, user1):
+        """Test that all whitespace is stripped from a composer's short name"""
+        test_comp = Composer.objects.create(name="Test", era="test", user=user1)
+
+        assert test_comp.short_name == "Test"
+
 
 class TestSheet:
     def test_sheet_str(self, sheet1):

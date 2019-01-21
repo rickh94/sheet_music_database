@@ -1,5 +1,4 @@
-from rest_framework import mixins, status, viewsets
-from rest_framework.authentication import TokenAuthentication
+from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -11,13 +10,10 @@ from music import serializers
 class GenericMusicViewSet(viewsets.GenericViewSet):
     """Mixin for custom authentication options"""
 
-    authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
 
 
-class BasicMusicAttrViewSet(
-    mixins.ListModelMixin, mixins.CreateModelMixin, GenericMusicViewSet
-):
+class BasicMusicAttrViewSet(viewsets.ModelViewSet, GenericMusicViewSet):
     """Base Viewset for user owned music attributes"""
 
     def get_queryset(self):

@@ -17,7 +17,7 @@ def _generate_short_name(name):
     name_parts = name.split(" ")
     lname = name_parts.pop()
     initials = "".join([f"{name[0]}." for name in name_parts])
-    return f"{initials} {lname}"
+    return f"{initials} {lname}".strip()
 
 
 class Composer(models.Model):
