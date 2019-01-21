@@ -1,0 +1,21 @@
+language: python
+env:
+  - SECRET_KEY=testsecretkey ALLOWED_HOSTS=localhost,app,backend-app DB_HOST=DB \
+    POSTGRES_DB=app POSTGRES_USER=app_user POSTGRES_PASSWORD=testpassword \
+    MAILGUN_API_KEY=TEST TOKEN_TTL_HOURS=168
+
+python:
+  - "3.6"
+
+node_js:
+  - "11.7.0"
+
+services:
+  - docker
+
+before_script:
+  - pip install docker-compose
+
+script:
+  - cd frontend && yarn test
+  - docker-compose run app sh -c "pytest --disable-pytest-warnings && flake8"
