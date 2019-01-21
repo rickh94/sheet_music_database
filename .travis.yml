@@ -19,4 +19,4 @@ before_script:
 
 script:
   - cd frontend && yarn test
-  - docker-compose run app sh -c "pytest --disable-pytest-warnings && flake8"
+  - docker-compose run backend-app sh -c "pytest --disable-pytest-warnings && flake8"
