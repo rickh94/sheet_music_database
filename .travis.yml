@@ -14,9 +14,9 @@ services:
   - docker
 
 before_script:
-  - cd frontend && yarn
+  - cd frontend && yarn && cd ..
   - pip install docker-compose
 
 script:
-  - cd frontend && yarn test
+  - cd frontend && yarn test && cd ..
   - docker-compose run backend-app sh -c "pytest --disable-pytest-warnings && flake8"
