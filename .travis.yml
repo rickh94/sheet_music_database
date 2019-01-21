@@ -1,7 +1,7 @@
 language: python
 env:
-  - SECRET_KEY=testsecretkey ALLOWED_HOSTS=localhost,app,backend-app DB_HOST=DB \
-    POSTGRES_DB=app POSTGRES_USER=app_user POSTGRES_PASSWORD=testpassword \
+  - SECRET_KEY=testsecretkey ALLOWED_HOSTS=localhost,app,backend-app DB_HOST=DB
+    POSTGRES_DB=app POSTGRES_USER=app_user POSTGRES_PASSWORD=testpassword
     MAILGUN_API_KEY=TEST TOKEN_TTL_HOURS=168
 
 python:
@@ -14,6 +14,7 @@ services:
   - docker
 
 before_script:
+  - cd frontend && yarn
   - pip install docker-compose
 
 script:
