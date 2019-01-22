@@ -2,3 +2,4 @@ requirements.pip
 urls.json
 */scratch/*
 **/scratch/
+.mypy_cache

@@ -1,6 +1,6 @@
 import collections
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
 def write_javascript_head(js_path: Path, hostname: str):
@@ -114,24 +114,26 @@ class MethodList:
         """Iterate through methods"""
         yield from self.__methods
 
-    def __getitem__(self, item: str) -> Method:
+    def __getitem__(self, item: str) -> Optional[Method]:
         for method in self.__methods:
             if method.name == item:
                 return method
+        return None
 
-    def index(self, name: str) -> int:
+    def index(self, name: str) -> Optional[int]:
         for i, item in enumerate(self.__methods):
             if item.name == name:
                 return i
+        return None
 
     def replace(self, item: Method):
         idx = self.index(item.name)
         self.__methods[idx] = item
 
-    def append(self, item):
+    def append(self, item: Method):
         self.__methods.append(item)
 
-    def __str__(self):
+    def __str__(self) -> str:
         method_names = []
         for method in self.__methods:
             method_names.append(method.name)
@@ -139,7 +141,7 @@ class MethodList:
 
 
 def get_unique_endpoints(urls: List[str]) -> Dict:
-    endpoints = {}
+    endpoints: dict = {}
     for url in urls:
         url_parts = url.strip("/").split("/")
         end = url_parts.pop()
@@ -172,13 +174,13 @@ class MethodFactory:
         for url in self.urls:
             self._create_parents(url)
 
-    def _create_parents(self, url):
+    def _create_parents(self, url: str):
         """Create parents of a url if they don't exist"""
         for part in url.split("/"):
             if part not in self.methods and "<" not in part:
                 self.create_method(part)
 
-    def create_method(self, item: str, arg: str = "", replace: bool = False):
+    def create_method(self, item: str, arg: str = ""):
         """Wrapper for creating a method with or without args"""
         if not item:
             return

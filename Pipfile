@@ -27,6 +27,7 @@ flake8 = "*"
 isort = "*"
 flake8-colors = "*"
 detect-secrets = "*"
+mypy = "*"
 
 [packages]
 django = "<2.2.0,>=2.1.5"
