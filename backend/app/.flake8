@@ -6,3 +6,4 @@ exclude =
     settings.py
 
 max-line-length = 88
+ignore = S101,W503
