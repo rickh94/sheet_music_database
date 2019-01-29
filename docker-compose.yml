@@ -16,11 +16,12 @@ services:
     volumes:
       - ./backend/app:/app
       - web-files:/vol/web
+      - socks:/socks
     command: >
       sh -c "python manage.py wait_for_db &&
              python manage.py migrate &&
              python manage.py collectstatic -c --noinput &&
-             gunicorn app.wsgi --bind 0.0.0.0:8000"
+             uwsgi /app/uwsgi.ini"
     environment:
       - SECRET_KEY
       - DEBUG
@@ -35,21 +36,18 @@ services:
     depends_on:
       - backend-db
     expose:
-      - "8000"
-      - "8443"
+      - "9090"
   
   backend-nginx:
     image: nginx:alpine
     ports:
-      - "8000:80"
-      - "8443:443"
+      - "8000:8000"
+      - "8443:8443"
     volumes:
       - ./config/backend/nginx:/etc/nginx/conf.d
       - ./config/backend/certs:/etc/nginx/ssl
       - web-files:/vol/web
-    expose:
-      - "80"
-      - "443"
+      - socks:/socks
     depends_on:
       - backend-app
   
@@ -62,6 +60,7 @@ services:
 
 volumes:
   web-files:
+  socks:
 
 networks:
   default:
