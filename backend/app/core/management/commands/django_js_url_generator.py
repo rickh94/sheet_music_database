@@ -67,6 +67,21 @@ def write_html_methods(js_path: Path):
                 "  }",
             ]
         ),
+        "\n".join(
+            [
+                "\n  queryParams(params) {",
+                "    // Must be last in chaing or query will be in the middle of the "
+                "url",
+                "    this.path += '?'",
+                "    let paramStr",
+                "    params.forEach((item, key) => {",
+                "      paramStr += `${key}=${item}&`",
+                "    })",
+                "    this.path += paramStr.substring(0, paramStr.length - 1)",
+                "    return this",
+                "  }",
+            ]
+        ),
         make_html_method("get"),
         make_html_method("delete"),
         make_html_method("head"),
