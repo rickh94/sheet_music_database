@@ -16,7 +16,6 @@ services:
     volumes:
       - ./backend/app:/app
       - web-files:/vol/web
-      - socks:/socks
     command: >
       sh -c "python manage.py wait_for_db &&
              python manage.py migrate &&
@@ -47,7 +46,6 @@ services:
       - ./config/backend/nginx:/etc/nginx/conf.d
       - ./config/backend/certs:/etc/nginx/ssl
       - web-files:/vol/web
-      - socks:/socks
     depends_on:
       - backend-app
   
@@ -60,7 +58,6 @@ services:
 
 volumes:
   web-files:
-  socks:
 
 networks:
   default:
