@@ -5,7 +5,7 @@ module.exports = {
     // '.+\\.(css|styl|less|sass|scss)$': 'jest-transform-css'
   },
   moduleNameMapper: {
-    '\\.(css|sass)$': 'jest-transform-stub'
+    '\\.(css|sass|scss)$': 'jest-transform-stub'
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/']
 }

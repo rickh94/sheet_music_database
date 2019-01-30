@@ -3,6 +3,8 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import 'normalize.css'
+
 import stuff from '../../reducers'
 import Home from '../Home/Home'
 

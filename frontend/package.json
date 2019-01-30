@@ -6,6 +6,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "components": "^0.1.0",
+    "normalize.css": "^8.0.1",
+    "rea": "^0.0.1",
     "react": "^16.7.0",
     "react-bulma-components": "^2.3.0",
     "react-dom": "^16.7.0",
@@ -39,6 +41,7 @@
     "jest-transform-css": "^2.0.0",
     "jest-transform-stub": "^1.0.0",
     "parcel-bundler": "^1.11.0",
-    "react-test-renderer": "^16.7.0"
+    "react-test-renderer": "^16.7.0",
+    "sass": "^1.16.1"
   }
 }

@@ -1,11 +1,17 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import  Container from 'react-bulma-components/lib/components/container'
 import Home from './Home'
 import '../../setupTests'
 
 describe('Home', () => {
   const wrapper = shallow(<Home />)
-  it('renders a div', () => {
-    expect(wrapper.find('div').length).toEqual(1)
+  it('renders an enclosing container', () => {
+    expect(wrapper.exists('Container')).toBeTruthy()
   })
+
+  it('renders the header', () => {
+    expect(wrapper.exists('Header')).toBeTruthy()
+  })
+
 })
