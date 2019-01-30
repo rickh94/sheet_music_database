@@ -17,8 +17,8 @@ before_script:
   - cd frontend && yarn && cd ..
   - pip install docker-compose
   - pip install pipenv
-  - pipenv lock -r > requirements.pip
-  - pipenv lock --dev -r >> requirements.pip
+  - pipenv lock -r --pre > requirements.pip
+  - pipenv lock --dev -r --pre >> requirements.pip
 
 script:
   - cd frontend && yarn test && cd ..
