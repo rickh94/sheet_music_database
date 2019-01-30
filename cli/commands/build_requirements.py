@@ -16,10 +16,12 @@ def build_py_requirements():
     """
 
     result_main = subprocess.run(
-        ["pipenv", "lock", "-r"], cwd=PROJECT_ROOT, stdout=subprocess.PIPE
+        ["pipenv", "lock", "-r", "--pre"], cwd=PROJECT_ROOT, stdout=subprocess.PIPE
     )
     result_dev = subprocess.run(
-        ["pipenv", "lock", "--dev", "-r"], cwd=PROJECT_ROOT, stdout=subprocess.PIPE
+        ["pipenv", "lock", "--dev", "-r", "--pre"],
+        cwd=PROJECT_ROOT,
+        stdout=subprocess.PIPE,
     )
     text = b"".join([result_main.stdout, result_dev.stdout])
     requirements = Path(PROJECT_ROOT) / "requirements.pip"
