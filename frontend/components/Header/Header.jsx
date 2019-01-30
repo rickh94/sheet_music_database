@@ -10,7 +10,8 @@ export default class Header extends Component {
   }
 
   render() {
-    const { open } = this.state
+    const {open} = this.state
+    const menuActive = open ? 'is-active' : ''
     return (
       <Navbar color="primary" textColor="light">
         <Navbar.Brand textColor="white" renderAs="div" paddingless={true} marginless={true}>
@@ -28,17 +29,27 @@ export default class Header extends Component {
             </Navbar.Item>
           </Link>
           <Navbar.Burger
-            className={open && 'is-active'}
+            className={menuActive}
             paddingless={true}
             marginless={true}
             onClick={() => this.setState({ open: !open })}
           />
         </Navbar.Brand>
-        <Navbar.Menu className={open && 'is-active'} color="primary">
+        <Navbar.Menu className={menuActive} color="primary">
           <Navbar.Container color="primary" position="end">
             <Link to="/" className="header--link">
-              <Navbar.Item renderAs="div">
+              <Navbar.Item renderAs="div" className="nav-item-resp">
                 Home
+              </Navbar.Item>
+            </Link>
+            <Link to="/login" className="header--link">
+              <Navbar.Item renderAs="div" className="nav-item-resp">
+                Login
+              </Navbar.Item>
+            </Link>
+            <Link to="/register" className="header--link">
+              <Navbar.Item renderAs="div" className="nav-item-resp">
+                Register
               </Navbar.Item>
             </Link>
           </Navbar.Container>

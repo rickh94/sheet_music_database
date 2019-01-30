@@ -36,6 +36,7 @@
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "eslint-plugin-react": "^7.12.4",
     "jest": "^23.6.0",
     "jest-css-modules": "^1.1.0",
     "jest-transform-css": "^2.0.0",
