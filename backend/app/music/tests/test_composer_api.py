@@ -27,7 +27,14 @@ class TestPrivateComposerAPI:
     """Test the private composer api"""
 
     def test_retrieve_composer_list(
-        self, get_list_and_serializer, composer_url, composer1, composer2
+        self,
+        get_list_and_serializer,
+        composer_url,
+        composer1,
+        composer2,
+        status_ok,
+        no_extra_data_in_res,
+        all_data_in_res,
     ):
         """Test that you can get the composer list"""
         res, serializer = get_list_and_serializer(
@@ -35,8 +42,8 @@ class TestPrivateComposerAPI:
         )
 
         assert res.status_code == status.HTTP_200_OK
-        for item in serializer.data:
-            assert item in res.data
+        assert no_extra_data_in_res(res, serializer)
+        assert all_data_in_res(res, serializer)
 
     def test_composers_limited_to_user(
         self, authenticated_client, composer_url, composer1, user2_composer

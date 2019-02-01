@@ -105,14 +105,21 @@ class TestPrivatePieceAPI:
     """Test the private piece api"""
 
     def test_retrieve_piece_list(
-        self, piece2, piece3, piece_url, get_list_and_serializer
+        self,
+        piece2,
+        piece3,
+        piece_url,
+        get_list_and_serializer,
+        status_ok,
+        all_data_in_res,
+        no_extra_data_in_res,
     ):
         """Test that you can get the list of pieces"""
         res, serializer = get_list_and_serializer(piece_url, Piece, PieceSerializer)
 
-        assert res.status_code == status.HTTP_200_OK
-        for item in serializer.data:
-            assert item in res.data
+        assert status_ok(res)
+        assert all_data_in_res(res, serializer)
+        assert no_extra_data_in_res(res, serializer)
 
     def test_pieces_limited_to_user(
         self, piece2, user2_piece, piece_url, authenticated_client

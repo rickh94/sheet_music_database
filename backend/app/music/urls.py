@@ -8,6 +8,7 @@ router.register("composers", views.ComposerViewSet)
 router.register("tags", views.TagViewSet)
 router.register("sheets", views.SheetViewSet)
 router.register("pieces", views.PieceViewSet)
+router.register("instruments", views.InstrumentViewSet)
 
 app_name = "music"
 

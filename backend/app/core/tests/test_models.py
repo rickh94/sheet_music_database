@@ -107,3 +107,9 @@ class TestTag:
     def test_tag_str(self, tag1):
         """Test str representation of tag"""
         assert tag1.name == str(tag1)
+
+
+class TestInstrument:
+    def test_instrument_str(self, instrument1, instrument2):
+        """Test str representation of instrument"""
+        assert instrument1.name == str(instrument1)

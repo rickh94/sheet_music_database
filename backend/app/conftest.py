@@ -1,7 +1,8 @@
 import pytest
 from django.contrib.auth import get_user_model
+from rest_framework import status
 
-from core.models import Sheet, Tag
+from core.models import Sheet, Tag, Instrument
 
 pytestmark = pytest.mark.django_db
 
@@ -80,3 +81,26 @@ def user2_sheet(tmp_path, user2):
         user=user2,
         file=str(tmp_file),
     )
+
+
+@pytest.fixture
+def instrument1(user1):
+    return Instrument.objects.create(name="Violin", user=user1)
+
+
+@pytest.fixture
+def instrument2(user1):
+    return Instrument.objects.create(name="viola", user=user1)
+
+
+@pytest.fixture
+def user2_instrument(user2):
+    return Instrument.objects.create(name="flute", user=user2)
+
+
+@pytest.fixture
+def status_ok():
+    def _ok(response):
+        return response.status_code == status.HTTP_200_OK
+
+    return _ok

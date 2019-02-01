@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from core.models import Composer, Piece, Sheet, Tag
+from core.models import Composer, Instrument, Piece, Sheet, Tag
 
 
 class ComposerSerializer(serializers.ModelSerializer):
@@ -37,6 +37,20 @@ class SheetFileSerializer(serializers.ModelSerializer):
         model = Sheet
         fields = ("id", "file")
         read_only_fields = ("id",)
+
+
+class InstrumentSerializer(serializers.ModelSerializer):
+    """Serializer for Instrument objects"""
+
+    class Meta:
+        model = Instrument
+        fields = ("id", "name")
+        read_only_fields = ("id",)
+
+    @staticmethod
+    def validate_name(name):
+        """Validate the instrument name"""
+        return name.lower()
 
 
 class PieceSerializer(serializers.ModelSerializer):

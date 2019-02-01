@@ -29,19 +29,30 @@ class TestPublicTagAPI:
 class TestPrivateTagAPI:
     """Test the private tag api"""
 
-    def test_retrieve_tag_list(self, get_list_and_serializer, tag_url, tag1, tag2):
+    def test_retrieve_tag_list(
+        self,
+        get_list_and_serializer,
+        tag_url,
+        tag1,
+        tag2,
+        all_data_in_res,
+        status_ok,
+        no_extra_data_in_res,
+    ):
         """Test getting the Tag list"""
         res, serializer = get_list_and_serializer(tag_url, Tag, TagSerializer)
 
         assert res.status_code == status.HTTP_200_OK
-        for item in serializer.data:
-            assert item in res.data
+        assert all_data_in_res(res, serializer)
+        assert no_extra_data_in_res(res, serializer)
 
-    def test_tags_limited_to_user(self, authenticated_client, tag_url, tag1, user2_tag):
+    def test_tags_limited_to_user(
+        self, authenticated_client, tag_url, tag1, user2_tag, status_ok
+    ):
         """Test tags are limited only to user"""
         res = authenticated_client.get(tag_url)
 
-        assert res.status_code == status.HTTP_200_OK
+        assert status_ok(res)
         assert len(res.data) == 1
         assert res.data[0]["name"] == tag1.name
 

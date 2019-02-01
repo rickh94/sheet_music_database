@@ -30,6 +30,7 @@ def cli(verbose, cov, picked):
         "&&",
         "isort */**.py",
     ]
+    subprocess.Popen(["black", "."])
     sub_cmd_str = " ".join(sub_cmd)
     cmd = ["docker-compose", "run", "--rm", "backend-app", "sh", f'-c "{sub_cmd_str}"']
     return subprocess.call(" ".join(cmd), shell=True)

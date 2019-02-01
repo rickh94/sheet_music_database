@@ -80,3 +80,25 @@ def get_list_and_serializer(authenticated_client):
         return res, serializer
 
     return _get
+
+
+@pytest.fixture
+def all_data_in_res():
+    def _has_data(response, serializer):
+        for item in serializer.data:
+            if item not in response.data:
+                return False
+        return True
+
+    return _has_data
+
+
+@pytest.fixture
+def no_extra_data_in_res():
+    def _no_extra(response, serializer):
+        for item in response.data:
+            if item not in serializer.data:
+                return False
+        return True
+
+    return _no_extra

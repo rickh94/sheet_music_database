@@ -3,7 +3,7 @@ from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from core.models import Composer, Piece, Sheet, Tag
+from core.models import Composer, Instrument, Piece, Sheet, Tag
 from music import serializers
 
 
@@ -14,7 +14,7 @@ class GenericMusicViewSet(viewsets.GenericViewSet):
 
 
 class BasicMusicAttrViewSet(viewsets.ModelViewSet, GenericMusicViewSet):
-    """Base Viewset for user owned music attributes"""
+    """Base ViewSet for user owned music attributes"""
 
     def get_queryset(self):
         """Get items associated with user"""
@@ -37,6 +37,13 @@ class TagViewSet(BasicMusicAttrViewSet):
 
     serializer_class = serializers.TagSerializer
     queryset = Tag.objects.all()
+
+
+class InstrumentViewSet(BasicMusicAttrViewSet):
+    """ViewSet for Instruments"""
+
+    serializer_class = serializers.InstrumentSerializer
+    queryset = Instrument.objects.all()
 
 
 class SheetViewSet(BasicMusicAttrViewSet):

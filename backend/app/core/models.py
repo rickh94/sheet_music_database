@@ -73,6 +73,7 @@ class Piece(models.Model):
     composer = models.ManyToManyField(to="Composer", related_name="pieces")
     sheets = models.ManyToManyField(to="Sheet", related_name="pieces")
     tags = models.ManyToManyField(to="Tag", related_name="pieces")
+    instruments = models.ManyToManyField(to="Instrument", related_name="instruments")
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):
@@ -84,6 +85,17 @@ class Tag(models.Model):
     """A Tag in the database"""
 
     name = models.CharField(max_length=50)
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+
+    def __str__(self):
+        """Get string representation"""
+        return self.name
+
+
+class Instrument(models.Model):
+    """An Instrument in the database"""
+
+    name = models.CharField(max_length=100)
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):
