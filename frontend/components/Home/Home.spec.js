@@ -34,7 +34,7 @@ describe('Home', () => {
   })
 
   it('renders 4 Description Cards', () => {
-    expect(wrapper.find('.description-card').length).toEqual(4)
+    expect(wrapper.find('DescriptionCard').length).toEqual(4)
   })
 
 })
