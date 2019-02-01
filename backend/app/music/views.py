@@ -96,7 +96,7 @@ class PieceViewSet(viewsets.ModelViewSet, GenericMusicViewSet):
     def get_queryset(self):
         """Get pieces for authenticated user"""
         queryset = self.queryset
-        for attr_name in ["tags", "composer"]:
+        for attr_name in ["tags", "composer", "instruments"]:
             attr_params = self.request.query_params.get(attr_name)
             queryset = _filter_on_attr(queryset, attr_params, attr_name)
         era = self.request.query_params.get("era")

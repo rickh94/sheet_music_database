@@ -43,18 +43,20 @@ def user2_piece(composer2, user2):
 
 
 @pytest.fixture
-def piece_tag1_composer1(tag1, composer1, user1):
+def piece_tag1_composer1(tag1, composer1, instrument1, user1):
     piece = Piece.objects.create(title="Test Piece", catalog="test1", user=user1)
     piece.tags.add(tag1)
     piece.composer.add(composer1)
+    piece.instruments.add(instrument1)
     return piece
 
 
 @pytest.fixture
-def piece_tag2_composer2(tag2, composer2, user1):
+def piece_tag2_composer2(tag2, composer2, instrument2, user1):
     piece = Piece.objects.create(title="Test Piece", catalog="test2", user=user1)
     piece.tags.add(tag2)
     piece.composer.add(composer2)
+    piece.instruments.add(instrument2)
     return piece
 
 
@@ -269,6 +271,25 @@ class TestPrivatePieceAPI:
     ):
         """Filter Pieces by specific tags"""
         res = authenticated_client.get(piece_url, {"tags": f"{tag1.id},{tag2.id}"})
+
+        assert piece_tag1_composer1_serializer.data in res.data
+        assert piece_tag2_composer2_serializer.data in res.data
+        assert piece2_serializer.data not in res.data
+
+    def test_filter_pieces_by_instrument(
+        self,
+        authenticated_client,
+        piece_url,
+        piece2_serializer,
+        piece_tag1_composer1_serializer,
+        piece_tag2_composer2_serializer,
+        instrument1,
+        instrument2,
+    ):
+        """Filter Pieces by specific tags"""
+        res = authenticated_client.get(
+            piece_url, {"instruments": f"{instrument1.id},{instrument2.id}"}
+        )
 
         assert piece_tag1_composer1_serializer.data in res.data
         assert piece_tag2_composer2_serializer.data in res.data
