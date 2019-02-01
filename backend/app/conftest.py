@@ -104,3 +104,19 @@ def status_ok():
         return response.status_code == status.HTTP_200_OK
 
     return _ok
+
+
+@pytest.fixture
+def status_created():
+    def _created(response):
+        return response.status_code == status.HTTP_201_CREATED
+
+    return _created
+
+
+@pytest.fixture
+def status_bad_request():
+    def _bad(response):
+        return response.status_code == status.HTTP_400_BAD_REQUEST
+
+    return _bad

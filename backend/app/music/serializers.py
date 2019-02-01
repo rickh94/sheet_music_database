@@ -61,8 +61,11 @@ class PieceSerializer(serializers.ModelSerializer):
     )
     tags = serializers.PrimaryKeyRelatedField(many=True, queryset=Tag.objects.all())
     sheets = serializers.PrimaryKeyRelatedField(many=True, queryset=Sheet.objects.all())
+    instruments = serializers.PrimaryKeyRelatedField(
+        many=True, queryset=Instrument.objects.all()
+    )
 
     class Meta:
         model = Piece
-        fields = ("id", "title", "catalog", "composer", "tags", "sheets")
+        fields = ("id", "title", "catalog", "composer", "tags", "sheets", "instruments")
         read_only_fields = ("id",)

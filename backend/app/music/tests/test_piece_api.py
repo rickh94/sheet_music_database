@@ -1,6 +1,5 @@
 import pytest
 from django.urls import reverse
-from rest_framework import status
 
 from core.models import Piece
 from music.serializers import PieceSerializer
@@ -122,40 +121,47 @@ class TestPrivatePieceAPI:
         assert no_extra_data_in_res(res, serializer)
 
     def test_pieces_limited_to_user(
-        self, piece2, user2_piece, piece_url, authenticated_client
+        self, piece2, user2_piece, piece_url, authenticated_client, status_ok
     ):
         """Test that pieces match current user only"""
         res = authenticated_client.get(piece_url)
 
-        assert res.status_code == status.HTTP_200_OK
+        assert status_ok(res)
         assert len(res.data) == 1
         assert res.data[0]["title"] == piece2.title
 
     def test_create_piece_successful(
-        self, authenticated_client, piece_url, user1, test_piece_payload
+        self, authenticated_client, piece_url, user1, test_piece_payload, status_created
     ):
         """Test that a piece can be created."""
         payload = test_piece_payload()
         res = authenticated_client.post(piece_url, payload)
 
-        assert res.status_code == status.HTTP_201_CREATED
+        assert status_created(res)
         assert Piece.objects.filter(user=user1, title=payload["title"]).exists()
 
-    def test_create_piece_invalid(self, authenticated_client, piece_url):
+    def test_create_piece_invalid(
+        self, authenticated_client, piece_url, status_bad_request
+    ):
         """Test creating an invalid piece"""
         payload = {"title": ""}
         res = authenticated_client.post(piece_url, payload)
 
-        assert res.status_code == status.HTTP_400_BAD_REQUEST
+        assert status_bad_request(res)
 
     def test_create_piece_with_composer(
-        self, authenticated_client, piece_url, composer1, test_piece_payload
+        self,
+        authenticated_client,
+        piece_url,
+        composer1,
+        test_piece_payload,
+        status_created,
     ):
         """Test that a piece can be created with a composer"""
         payload = test_piece_payload(composer=[composer1.id])
         res = authenticated_client.post(piece_url, payload)
 
-        assert res.status_code == status.HTTP_201_CREATED
+        assert status_created(res)
 
         new_piece = Piece.objects.get(id=res.data["id"])
         composers = new_piece.composer.all()
@@ -164,13 +170,19 @@ class TestPrivatePieceAPI:
         assert composer1 in composers
 
     def test_create_piece_with_tags(
-        self, authenticated_client, piece_url, tag1, tag2, test_piece_payload
+        self,
+        authenticated_client,
+        piece_url,
+        tag1,
+        tag2,
+        test_piece_payload,
+        status_created,
     ):
         """Test that a piece can be created with tags"""
         payload = test_piece_payload(tags=[tag1.id, tag2.id])
         res = authenticated_client.post(piece_url, payload)
 
-        assert res.status_code == status.HTTP_201_CREATED
+        assert status_created(res)
 
         new_piece = Piece.objects.get(id=res.data["id"])
         tags = new_piece.tags.all()
@@ -180,13 +192,19 @@ class TestPrivatePieceAPI:
         assert tag2 in tags
 
     def test_create_piece_with_sheets(
-        self, authenticated_client, piece_url, sheet1, sheet2, test_piece_payload
+        self,
+        authenticated_client,
+        piece_url,
+        sheet1,
+        sheet2,
+        test_piece_payload,
+        status_created,
     ):
         """Test that a piece can be created with sheets"""
         payload = test_piece_payload(sheets=[sheet1.id, sheet2.id])
         res = authenticated_client.post(piece_url, payload)
 
-        assert res.status_code == status.HTTP_201_CREATED
+        assert status_created(res)
 
         new_piece = Piece.objects.get(id=res.data["id"])
         sheets = new_piece.sheets.all()
@@ -195,6 +213,28 @@ class TestPrivatePieceAPI:
         assert sheet1 in sheets
         assert sheet2 in sheets
 
+    def test_create_piece_with_instruments(
+        self,
+        authenticated_client,
+        piece_url,
+        instrument1,
+        instrument2,
+        test_piece_payload,
+        status_created,
+    ):
+        """Test that a piece can be created with instruments"""
+        payload = test_piece_payload(instruments=[instrument1.id, instrument2.id])
+        res = authenticated_client.post(piece_url, payload)
+
+        assert status_created(res)
+
+        new_piece = Piece.objects.get(id=res.data["id"])
+        instruments = new_piece.instruments.all()
+
+        assert instruments.count() == 2
+        assert instrument1 in instruments
+        assert instrument2 in instruments
+
     def test_create_piece_everything(
         self,
         authenticated_client,
@@ -202,15 +242,20 @@ class TestPrivatePieceAPI:
         composer1,
         tag1,
         sheet1,
+        instrument1,
         test_piece_payload,
+        status_created,
     ):
         """Test a full piece creation"""
         payload = test_piece_payload(
-            composer=[composer1.id], tags=[tag1.id], sheets=[sheet1.id]
+            composer=[composer1.id],
+            tags=[tag1.id],
+            sheets=[sheet1.id],
+            instruments=[instrument1.id],
         )
         res = authenticated_client.post(piece_url, payload)
 
-        assert res.status_code == status.HTTP_201_CREATED
+        assert status_created(res)
 
     def test_filter_pieces_by_tag(
         self,
