@@ -40,8 +40,12 @@ describe('Home', () => {
 
 describe('DescriptionCard', () => {
   const wrapper = shallow(<DescriptionCard title="Test">test body</DescriptionCard>)
+  beforeEach(() => {
+    wrapper.update()
+  })
   it('renders a Card', () => {
     expect(wrapper.exists('Card')).toBeTruthy()
+    expect(wrapper.hasClass('description-card')).toBeTruthy()
   })
 
   it('renders the card title from props', () => {
@@ -55,5 +59,14 @@ describe('DescriptionCard', () => {
     expect(wrapper.exists('CardContent')).toBeTruthy()
     const content = wrapper.find('CardContent')
     expect(content.contains('test body')).toBeTruthy()
+  })
+
+  it('adds margin without column prop', () => {
+    expect(wrapper.hasClass('margin-default')).toBeTruthy()
+  })
+
+  it('adds no margin with column prop', () => {
+    wrapper.setProps({ title: 'Test', children: 'test body', column: true })
+    expect(wrapper.hasClass('margin-default')).toBeFalsy()
   })
 })
