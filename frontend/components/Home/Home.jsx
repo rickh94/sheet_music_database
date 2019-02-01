@@ -38,12 +38,15 @@ export default class Home extends Component {
             <Card.Footer>
               <Card.Footer.Item>
                 <Link to="/login" className="card--link">
-                  <FontAwesomeIcon icon="user" /> Login
+                  <FontAwesomeIcon icon="user" />{' '}
+                  Login
                 </Link>
               </Card.Footer.Item>
               <Card.Footer.Item>
                 <Link to="/register" className="card--link">
-                  <FontAwesomeIcon icon="user-plus" /> Register
+                <FontAwesomeIcon icon="user-plus"></FontAwesomeIcon>
+                {' '}
+                  Register
                 </Link>
               </Card.Footer.Item>
             </Card.Footer>
@@ -92,7 +95,7 @@ export default class Home extends Component {
   }
 }
 
-function DescriptionCard(props) {
+export function DescriptionCard(props) {
   const marginClass = props.column ? '' : 'margin-default'
   return (
     <Card className={`${marginClass} description-card`}>

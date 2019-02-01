@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 import '../../setupTests'
-import Home from './Home'
+import Home, { DescriptionCard } from './Home'
 
 describe('Home', () => {
   const wrapper = shallow(<Home />)
@@ -36,5 +36,24 @@ describe('Home', () => {
   it('renders 4 Description Cards', () => {
     expect(wrapper.find('DescriptionCard').length).toEqual(4)
   })
+})
 
+describe('DescriptionCard', () => {
+  const wrapper = shallow(<DescriptionCard title="Test">test body</DescriptionCard>)
+  it('renders a Card', () => {
+    expect(wrapper.exists('Card')).toBeTruthy()
+  })
+
+  it('renders the card title from props', () => {
+    expect(wrapper.exists('CardHeader')).toBeTruthy()
+    expect(wrapper.exists('CardHeaderTitle')).toBeTruthy()
+    const title = wrapper.find('CardHeaderTitle')
+    expect(title.contains('Test')).toBeTruthy()
+  })
+
+  it('renders the body from props', () => {
+    expect(wrapper.exists('CardContent')).toBeTruthy()
+    const content = wrapper.find('CardContent')
+    expect(content.contains('test body')).toBeTruthy()
+  })
 })
