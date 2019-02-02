@@ -1,0 +1,2843 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Register /> renders 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Register />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Header />,
+        <Container
+          breakpoint={null}
+          fluid={false}
+          renderAs="div"
+          style={Object {}}
+        >
+          <Card
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <CardHeader
+              renderAs="div"
+            >
+              <CardHeaderTitle
+                renderAs="div"
+              >
+                Register
+              </CardHeaderTitle>
+            </CardHeader>
+            <CardContent
+              renderAs="div"
+            >
+              <RegistrationForm />
+            </CardContent>
+          </Card>
+        </Container>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "backgroundColor": undefined,
+          "breakpoint": null,
+          "children": <Card
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <CardHeader
+              renderAs="div"
+            >
+              <CardHeaderTitle
+                renderAs="div"
+              >
+                Register
+              </CardHeaderTitle>
+            </CardHeader>
+            <CardContent
+              renderAs="div"
+            >
+              <RegistrationForm />
+            </CardContent>
+          </Card>,
+          "className": undefined,
+          "clearfix": undefined,
+          "clipped": undefined,
+          "fluid": false,
+          "hidden": undefined,
+          "invisible": undefined,
+          "italic": undefined,
+          "marginless": undefined,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": Array [
+              <CardHeader
+                renderAs="div"
+              >
+                <CardHeaderTitle
+                  renderAs="div"
+                >
+                  Register
+                </CardHeaderTitle>
+              </CardHeader>,
+              <CardContent
+                renderAs="div"
+              >
+                <RegistrationForm />
+              </CardContent>,
+            ],
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <CardHeaderTitle
+                  renderAs="div"
+                >
+                  Register
+                </CardHeaderTitle>,
+                "className": undefined,
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Register",
+                  "className": undefined,
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": "Register",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <RegistrationForm />,
+                "className": undefined,
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Header />,
+          <Container
+            breakpoint={null}
+            fluid={false}
+            renderAs="div"
+            style={Object {}}
+          >
+            <Card
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <CardHeader
+                renderAs="div"
+              >
+                <CardHeaderTitle
+                  renderAs="div"
+                >
+                  Register
+                </CardHeaderTitle>
+              </CardHeader>
+              <CardContent
+                renderAs="div"
+              >
+                <RegistrationForm />
+              </CardContent>
+            </Card>
+          </Container>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "breakpoint": null,
+            "children": <Card
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <CardHeader
+                renderAs="div"
+              >
+                <CardHeaderTitle
+                  renderAs="div"
+                >
+                  Register
+                </CardHeaderTitle>
+              </CardHeader>
+              <CardContent
+                renderAs="div"
+              >
+                <RegistrationForm />
+              </CardContent>
+            </Card>,
+            "className": undefined,
+            "clearfix": undefined,
+            "clipped": undefined,
+            "fluid": false,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": Array [
+                <CardHeader
+                  renderAs="div"
+                >
+                  <CardHeaderTitle
+                    renderAs="div"
+                  >
+                    Register
+                  </CardHeaderTitle>
+                </CardHeader>,
+                <CardContent
+                  renderAs="div"
+                >
+                  <RegistrationForm />
+                </CardContent>,
+              ],
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <CardHeaderTitle
+                    renderAs="div"
+                  >
+                    Register
+                  </CardHeaderTitle>,
+                  "className": undefined,
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Register",
+                    "className": undefined,
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "div",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Register",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <RegistrationForm />,
+                  "className": undefined,
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`<RegistrationForm /> renders 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RegistrationForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Field
+          align={null}
+          className=""
+          horizontal={false}
+          kind={null}
+          multiline={false}
+          renderAs="div"
+          style={Object {}}
+        >
+          <Label
+            className=""
+            htmlFor={null}
+            size={null}
+            style={Object {}}
+          >
+            Email
+          </Label>
+          <Control
+            className=""
+            fullwidth={false}
+            iconLeft={false}
+            iconRight={false}
+            loading={false}
+            renderAs="div"
+            size={null}
+            style={Object {}}
+          >
+            <Input
+              className=""
+              color={null}
+              disabled={false}
+              isStatic={false}
+              name={null}
+              placeholder="Enter email..."
+              readOnly={false}
+              size={null}
+              style={Object {}}
+              type="email"
+              value=""
+            />
+          </Control>
+        </Field>,
+        <Field
+          align={null}
+          className=""
+          horizontal={false}
+          kind={null}
+          multiline={false}
+          renderAs="div"
+          style={Object {}}
+        >
+          <Label
+            className=""
+            htmlFor={null}
+            size={null}
+            style={Object {}}
+          >
+            Password
+          </Label>
+          <Control
+            className=""
+            fullwidth={false}
+            iconLeft={false}
+            iconRight={false}
+            loading={false}
+            renderAs="div"
+            size={null}
+            style={Object {}}
+          >
+            <Input
+              className=""
+              color={null}
+              disabled={false}
+              isStatic={false}
+              name={null}
+              placeholder="Enter password.."
+              readOnly={false}
+              size={null}
+              style={Object {}}
+              type="password"
+              value=""
+            />
+          </Control>
+        </Field>,
+        <Field
+          align={null}
+          className=""
+          horizontal={false}
+          kind={null}
+          multiline={false}
+          renderAs="div"
+          style={Object {}}
+        >
+          <Label
+            className=""
+            htmlFor={null}
+            size={null}
+            style={Object {}}
+          >
+            Confirm Password
+          </Label>
+          <Control
+            className=""
+            fullwidth={false}
+            iconLeft={false}
+            iconRight={false}
+            loading={false}
+            renderAs="div"
+            size={null}
+            style={Object {}}
+          >
+            <Input
+              className=""
+              color={null}
+              disabled={false}
+              isStatic={false}
+              name={null}
+              placeholder="Confirm password..."
+              readOnly={false}
+              size={null}
+              style={Object {}}
+              type="password"
+              value=""
+            />
+          </Control>
+        </Field>,
+        <Field
+          align={null}
+          className=""
+          horizontal={false}
+          kind={null}
+          multiline={false}
+          renderAs="div"
+          style={Object {}}
+          type="group"
+        >
+          <Control
+            className=""
+            fullwidth={false}
+            iconLeft={false}
+            iconRight={false}
+            loading={false}
+            renderAs="div"
+            size={null}
+            style={Object {}}
+          >
+            <Button
+              className=""
+              color={null}
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={Object {}}
+              submit={false}
+              text={false}
+              type="primary"
+            >
+              Register
+            </Button>
+          </Control>
+          <Control
+            className=""
+            fullwidth={false}
+            iconLeft={false}
+            iconRight={false}
+            loading={false}
+            renderAs="div"
+            size={null}
+            style={Object {}}
+          >
+            <Button
+              className=""
+              color={null}
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={Object {}}
+              submit={false}
+              text={false}
+            >
+              Cancel
+            </Button>
+          </Control>
+        </Field>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "align": null,
+          "backgroundColor": undefined,
+          "children": Array [
+            <Label
+              className=""
+              htmlFor={null}
+              size={null}
+              style={Object {}}
+            >
+              Email
+            </Label>,
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Enter email..."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="email"
+                value=""
+              />
+            </Control>,
+          ],
+          "className": "",
+          "clearfix": undefined,
+          "clipped": undefined,
+          "hidden": undefined,
+          "horizontal": false,
+          "invisible": undefined,
+          "italic": undefined,
+          "kind": null,
+          "marginless": undefined,
+          "multiline": false,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": "Email",
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "htmlFor": null,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": "Email",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Enter email..."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="email"
+                value=""
+              />,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "fullwidth": false,
+              "hidden": undefined,
+              "iconLeft": false,
+              "iconRight": false,
+              "invisible": undefined,
+              "italic": undefined,
+              "loading": false,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backgroundColor": undefined,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "color": null,
+                "disabled": false,
+                "hidden": undefined,
+                "invisible": undefined,
+                "isStatic": false,
+                "italic": undefined,
+                "marginless": undefined,
+                "name": null,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "placeholder": "Enter email...",
+                "pull": undefined,
+                "radiusless": undefined,
+                "readOnly": false,
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "type": "email",
+                "unselectable": undefined,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "align": null,
+          "backgroundColor": undefined,
+          "children": Array [
+            <Label
+              className=""
+              htmlFor={null}
+              size={null}
+              style={Object {}}
+            >
+              Password
+            </Label>,
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Enter password.."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="password"
+                value=""
+              />
+            </Control>,
+          ],
+          "className": "",
+          "clearfix": undefined,
+          "clipped": undefined,
+          "hidden": undefined,
+          "horizontal": false,
+          "invisible": undefined,
+          "italic": undefined,
+          "kind": null,
+          "marginless": undefined,
+          "multiline": false,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": "Password",
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "htmlFor": null,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": "Password",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Enter password.."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="password"
+                value=""
+              />,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "fullwidth": false,
+              "hidden": undefined,
+              "iconLeft": false,
+              "iconRight": false,
+              "invisible": undefined,
+              "italic": undefined,
+              "loading": false,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backgroundColor": undefined,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "color": null,
+                "disabled": false,
+                "hidden": undefined,
+                "invisible": undefined,
+                "isStatic": false,
+                "italic": undefined,
+                "marginless": undefined,
+                "name": null,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "placeholder": "Enter password..",
+                "pull": undefined,
+                "radiusless": undefined,
+                "readOnly": false,
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "type": "password",
+                "unselectable": undefined,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "align": null,
+          "backgroundColor": undefined,
+          "children": Array [
+            <Label
+              className=""
+              htmlFor={null}
+              size={null}
+              style={Object {}}
+            >
+              Confirm Password
+            </Label>,
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Confirm password..."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="password"
+                value=""
+              />
+            </Control>,
+          ],
+          "className": "",
+          "clearfix": undefined,
+          "clipped": undefined,
+          "hidden": undefined,
+          "horizontal": false,
+          "invisible": undefined,
+          "italic": undefined,
+          "kind": null,
+          "marginless": undefined,
+          "multiline": false,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": "Confirm Password",
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "htmlFor": null,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": "Confirm Password",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Confirm password..."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="password"
+                value=""
+              />,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "fullwidth": false,
+              "hidden": undefined,
+              "iconLeft": false,
+              "iconRight": false,
+              "invisible": undefined,
+              "italic": undefined,
+              "loading": false,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backgroundColor": undefined,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "color": null,
+                "disabled": false,
+                "hidden": undefined,
+                "invisible": undefined,
+                "isStatic": false,
+                "italic": undefined,
+                "marginless": undefined,
+                "name": null,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "placeholder": "Confirm password...",
+                "pull": undefined,
+                "radiusless": undefined,
+                "readOnly": false,
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "type": "password",
+                "unselectable": undefined,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "align": null,
+          "backgroundColor": undefined,
+          "children": Array [
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+                type="primary"
+              >
+                Register
+              </Button>
+            </Control>,
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+            </Control>,
+          ],
+          "className": "",
+          "clearfix": undefined,
+          "clipped": undefined,
+          "hidden": undefined,
+          "horizontal": false,
+          "invisible": undefined,
+          "italic": undefined,
+          "kind": null,
+          "marginless": undefined,
+          "multiline": false,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "type": "group",
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+                type="primary"
+              >
+                Register
+              </Button>,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "fullwidth": false,
+              "hidden": undefined,
+              "iconLeft": false,
+              "iconRight": false,
+              "invisible": undefined,
+              "italic": undefined,
+              "loading": false,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Register",
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "color": null,
+                "disabled": false,
+                "fullwidth": false,
+                "hidden": undefined,
+                "inverted": false,
+                "invisible": undefined,
+                "isSelected": false,
+                "isStatic": false,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "onClick": [Function],
+                "outlined": false,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "remove": false,
+                "renderAs": "button",
+                "reset": false,
+                "responsive": undefined,
+                "rounded": false,
+                "shadowless": undefined,
+                "size": null,
+                "state": null,
+                "style": Object {},
+                "submit": false,
+                "text": false,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "type": "primary",
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": "Register",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "fullwidth": false,
+              "hidden": undefined,
+              "iconLeft": false,
+              "iconRight": false,
+              "invisible": undefined,
+              "italic": undefined,
+              "loading": false,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Cancel",
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "color": null,
+                "disabled": false,
+                "fullwidth": false,
+                "hidden": undefined,
+                "inverted": false,
+                "invisible": undefined,
+                "isSelected": false,
+                "isStatic": false,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "onClick": [Function],
+                "outlined": false,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "remove": false,
+                "renderAs": "button",
+                "reset": false,
+                "responsive": undefined,
+                "rounded": false,
+                "shadowless": undefined,
+                "size": null,
+                "state": null,
+                "style": Object {},
+                "submit": false,
+                "text": false,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": "Cancel",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Field
+            align={null}
+            className=""
+            horizontal={false}
+            kind={null}
+            multiline={false}
+            renderAs="div"
+            style={Object {}}
+          >
+            <Label
+              className=""
+              htmlFor={null}
+              size={null}
+              style={Object {}}
+            >
+              Email
+            </Label>
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Enter email..."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="email"
+                value=""
+              />
+            </Control>
+          </Field>,
+          <Field
+            align={null}
+            className=""
+            horizontal={false}
+            kind={null}
+            multiline={false}
+            renderAs="div"
+            style={Object {}}
+          >
+            <Label
+              className=""
+              htmlFor={null}
+              size={null}
+              style={Object {}}
+            >
+              Password
+            </Label>
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Enter password.."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="password"
+                value=""
+              />
+            </Control>
+          </Field>,
+          <Field
+            align={null}
+            className=""
+            horizontal={false}
+            kind={null}
+            multiline={false}
+            renderAs="div"
+            style={Object {}}
+          >
+            <Label
+              className=""
+              htmlFor={null}
+              size={null}
+              style={Object {}}
+            >
+              Confirm Password
+            </Label>
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Input
+                className=""
+                color={null}
+                disabled={false}
+                isStatic={false}
+                name={null}
+                placeholder="Confirm password..."
+                readOnly={false}
+                size={null}
+                style={Object {}}
+                type="password"
+                value=""
+              />
+            </Control>
+          </Field>,
+          <Field
+            align={null}
+            className=""
+            horizontal={false}
+            kind={null}
+            multiline={false}
+            renderAs="div"
+            style={Object {}}
+            type="group"
+          >
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+                type="primary"
+              >
+                Register
+              </Button>
+            </Control>
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+            </Control>
+          </Field>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "align": null,
+            "backgroundColor": undefined,
+            "children": Array [
+              <Label
+                className=""
+                htmlFor={null}
+                size={null}
+                style={Object {}}
+              >
+                Email
+              </Label>,
+              <Control
+                className=""
+                fullwidth={false}
+                iconLeft={false}
+                iconRight={false}
+                loading={false}
+                renderAs="div"
+                size={null}
+                style={Object {}}
+              >
+                <Input
+                  className=""
+                  color={null}
+                  disabled={false}
+                  isStatic={false}
+                  name={null}
+                  placeholder="Enter email..."
+                  readOnly={false}
+                  size={null}
+                  style={Object {}}
+                  type="email"
+                  value=""
+                />
+              </Control>,
+            ],
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "horizontal": false,
+            "invisible": undefined,
+            "italic": undefined,
+            "kind": null,
+            "marginless": undefined,
+            "multiline": false,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Email",
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "htmlFor": null,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": "Email",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <Input
+                  className=""
+                  color={null}
+                  disabled={false}
+                  isStatic={false}
+                  name={null}
+                  placeholder="Enter email..."
+                  readOnly={false}
+                  size={null}
+                  style={Object {}}
+                  type="email"
+                  value=""
+                />,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "fullwidth": false,
+                "hidden": undefined,
+                "iconLeft": false,
+                "iconRight": false,
+                "invisible": undefined,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": null,
+                  "disabled": false,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "name": null,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "placeholder": "Enter email...",
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "readOnly": false,
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": null,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "type": "email",
+                  "unselectable": undefined,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "align": null,
+            "backgroundColor": undefined,
+            "children": Array [
+              <Label
+                className=""
+                htmlFor={null}
+                size={null}
+                style={Object {}}
+              >
+                Password
+              </Label>,
+              <Control
+                className=""
+                fullwidth={false}
+                iconLeft={false}
+                iconRight={false}
+                loading={false}
+                renderAs="div"
+                size={null}
+                style={Object {}}
+              >
+                <Input
+                  className=""
+                  color={null}
+                  disabled={false}
+                  isStatic={false}
+                  name={null}
+                  placeholder="Enter password.."
+                  readOnly={false}
+                  size={null}
+                  style={Object {}}
+                  type="password"
+                  value=""
+                />
+              </Control>,
+            ],
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "horizontal": false,
+            "invisible": undefined,
+            "italic": undefined,
+            "kind": null,
+            "marginless": undefined,
+            "multiline": false,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Password",
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "htmlFor": null,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": "Password",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <Input
+                  className=""
+                  color={null}
+                  disabled={false}
+                  isStatic={false}
+                  name={null}
+                  placeholder="Enter password.."
+                  readOnly={false}
+                  size={null}
+                  style={Object {}}
+                  type="password"
+                  value=""
+                />,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "fullwidth": false,
+                "hidden": undefined,
+                "iconLeft": false,
+                "iconRight": false,
+                "invisible": undefined,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": null,
+                  "disabled": false,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "name": null,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "placeholder": "Enter password..",
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "readOnly": false,
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": null,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "type": "password",
+                  "unselectable": undefined,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "align": null,
+            "backgroundColor": undefined,
+            "children": Array [
+              <Label
+                className=""
+                htmlFor={null}
+                size={null}
+                style={Object {}}
+              >
+                Confirm Password
+              </Label>,
+              <Control
+                className=""
+                fullwidth={false}
+                iconLeft={false}
+                iconRight={false}
+                loading={false}
+                renderAs="div"
+                size={null}
+                style={Object {}}
+              >
+                <Input
+                  className=""
+                  color={null}
+                  disabled={false}
+                  isStatic={false}
+                  name={null}
+                  placeholder="Confirm password..."
+                  readOnly={false}
+                  size={null}
+                  style={Object {}}
+                  type="password"
+                  value=""
+                />
+              </Control>,
+            ],
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "horizontal": false,
+            "invisible": undefined,
+            "italic": undefined,
+            "kind": null,
+            "marginless": undefined,
+            "multiline": false,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Confirm Password",
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "htmlFor": null,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": "Confirm Password",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <Input
+                  className=""
+                  color={null}
+                  disabled={false}
+                  isStatic={false}
+                  name={null}
+                  placeholder="Confirm password..."
+                  readOnly={false}
+                  size={null}
+                  style={Object {}}
+                  type="password"
+                  value=""
+                />,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "fullwidth": false,
+                "hidden": undefined,
+                "iconLeft": false,
+                "iconRight": false,
+                "invisible": undefined,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": null,
+                  "disabled": false,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "name": null,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "placeholder": "Confirm password...",
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "readOnly": false,
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": null,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "type": "password",
+                  "unselectable": undefined,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "align": null,
+            "backgroundColor": undefined,
+            "children": Array [
+              <Control
+                className=""
+                fullwidth={false}
+                iconLeft={false}
+                iconRight={false}
+                loading={false}
+                renderAs="div"
+                size={null}
+                style={Object {}}
+              >
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                  type="primary"
+                >
+                  Register
+                </Button>
+              </Control>,
+              <Control
+                className=""
+                fullwidth={false}
+                iconLeft={false}
+                iconRight={false}
+                loading={false}
+                renderAs="div"
+                size={null}
+                style={Object {}}
+              >
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </Control>,
+            ],
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "horizontal": false,
+            "invisible": undefined,
+            "italic": undefined,
+            "kind": null,
+            "marginless": undefined,
+            "multiline": false,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "type": "group",
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                  type="primary"
+                >
+                  Register
+                </Button>,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "fullwidth": false,
+                "hidden": undefined,
+                "iconLeft": false,
+                "iconRight": false,
+                "invisible": undefined,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Register",
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": null,
+                  "disabled": false,
+                  "fullwidth": false,
+                  "hidden": undefined,
+                  "inverted": false,
+                  "invisible": undefined,
+                  "isSelected": false,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "loading": false,
+                  "marginless": undefined,
+                  "onClick": [Function],
+                  "outlined": false,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "remove": false,
+                  "renderAs": "button",
+                  "reset": false,
+                  "responsive": undefined,
+                  "rounded": false,
+                  "shadowless": undefined,
+                  "size": null,
+                  "state": null,
+                  "style": Object {},
+                  "submit": false,
+                  "text": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "type": "primary",
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": "Register",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "fullwidth": false,
+                "hidden": undefined,
+                "iconLeft": false,
+                "iconRight": false,
+                "invisible": undefined,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Cancel",
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": null,
+                  "disabled": false,
+                  "fullwidth": false,
+                  "hidden": undefined,
+                  "inverted": false,
+                  "invisible": undefined,
+                  "isSelected": false,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "loading": false,
+                  "marginless": undefined,
+                  "onClick": [Function],
+                  "outlined": false,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "remove": false,
+                  "renderAs": "button",
+                  "reset": false,
+                  "responsive": undefined,
+                  "rounded": false,
+                  "shadowless": undefined,
+                  "size": null,
+                  "state": null,
+                  "style": Object {},
+                  "submit": false,
+                  "text": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": "Cancel",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

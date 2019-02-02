@@ -52,7 +52,7 @@ describe('LoginForm', () => {
   })
 
   it('renders email input for email field', () => {
-    const field = wrapper.findWhere(n => n.contains('Email') && n.name() == 'Field')
+    const field = wrapper.findWhere(el => el.contains('Email') && el.name() == 'Field')
     expect(field.exists('Input')).toBeTruthy()
     const input = field.find('Input')
     expect(input.props().type).toEqual('email')

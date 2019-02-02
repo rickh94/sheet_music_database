@@ -10,6 +10,7 @@ export default class Login extends Component {
   render() {
     return (
       // Perhaps refactor to be centered fixed width
+      // TODO: add link to register new users
       <React.Fragment>
         <Header />
         <Container>
