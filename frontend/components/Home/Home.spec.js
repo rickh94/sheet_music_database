@@ -5,6 +5,11 @@ import Home, { DescriptionCard } from './Home'
 
 describe('Home', () => {
   const wrapper = shallow(<Home />)
+
+  it('renders correctly', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('renders an enclosing container', () => {
     expect(wrapper.exists('Container')).toBeTruthy()
   })

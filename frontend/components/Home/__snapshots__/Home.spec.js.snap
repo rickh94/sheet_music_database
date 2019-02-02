@@ -1,0 +1,3797 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Header />,
+        <Container
+          breakpoint={null}
+          className="foreground"
+          fluid={false}
+          renderAs="div"
+          style={Object {}}
+        >
+          <Card
+            className="margin-default mostly-opaque"
+            renderAs="div"
+            style={Object {}}
+          >
+            <CardContent
+              renderAs="div"
+              style={
+                Object {
+                  "paddingTop": "1vh",
+                }
+              }
+            >
+              <Heading
+                className=""
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                Sheet Music Database
+              </Heading>
+              <Heading
+                className=""
+                heading={false}
+                renderAs="h1"
+                size={null}
+                spaced={false}
+                subtitle={true}
+                weight={null}
+              >
+                Organize your sheet music
+              </Heading>
+              <Content
+                renderAs="div"
+                size={null}
+                style={Object {}}
+              >
+                Organize your sheet music by Piece, with Composers, Tags, and Instruments.
+              </Content>
+            </CardContent>
+            <CardFooter
+              className=""
+              renderAs="div"
+            >
+              <CardFooterItem
+                className=""
+                renderAs="div"
+              >
+                <Link
+                  className="card--link"
+                  replace={false}
+                  to="/login"
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="user"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   Login
+                </Link>
+              </CardFooterItem>
+              <CardFooterItem
+                className=""
+                renderAs="div"
+              >
+                <Link
+                  className="card--link"
+                  replace={false}
+                  to="/register"
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="user-plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   Register
+                </Link>
+              </CardFooterItem>
+            </CardFooter>
+          </Card>
+          <br />
+          <Heading
+            className="margin-default"
+            heading={false}
+            renderAs="h1"
+            size={4}
+            spaced={false}
+            subtitle={false}
+            weight={null}
+          >
+            Organization
+          </Heading>
+          <DescriptionCard
+            title="Piece"
+          >
+            Everything is organized into pieces which have:
+            <ul>
+              <li>
+                Composer(s): The composer of the piece
+              </li>
+              <li>
+                Sheets: The individual sheet music files that correspond to the piece
+              </li>
+              <li>
+                Tags: Arbitrary tags for categorizing pieces
+              </li>
+              <li>
+                Instruments: All the instruments connected with a piece
+                '
+                s sheets
+              </li>
+            </ul>
+            This provides one place for all the data about a piece can be found, while still having separate data that can be filtered in other ways
+          </DescriptionCard>
+          <Columns
+            breakpoint={null}
+            centered={false}
+            className="margin-default"
+            gapless={false}
+            multiline={true}
+            style={Object {}}
+          >
+            <Column
+              className=""
+              desktop={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              fullhd={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              mobile={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              narrow={false}
+              offset={null}
+              size={null}
+              style={Object {}}
+              tablet={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              widescreen={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+            >
+              <DescriptionCard
+                column={true}
+                title="Composer"
+              >
+                Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.
+              </DescriptionCard>
+            </Column>
+            <Column
+              className=""
+              desktop={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              fullhd={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              mobile={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              narrow={false}
+              offset={null}
+              size={null}
+              style={Object {}}
+              tablet={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              widescreen={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+            >
+              <DescriptionCard
+                column={true}
+                title="Sheet"
+              >
+                A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.
+              </DescriptionCard>
+            </Column>
+            <Column
+              className=""
+              desktop={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              fullhd={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              mobile={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              narrow={false}
+              offset={null}
+              size={null}
+              style={Object {}}
+              tablet={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+              widescreen={
+                Object {
+                  "narrow": false,
+                  "offset": null,
+                  "size": null,
+                }
+              }
+            >
+              <DescriptionCard
+                column={true}
+                title="Tag"
+              >
+                A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.
+              </DescriptionCard>
+            </Column>
+          </Columns>
+        </Container>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "backgroundColor": undefined,
+          "breakpoint": null,
+          "children": Array [
+            <Card
+              className="margin-default mostly-opaque"
+              renderAs="div"
+              style={Object {}}
+            >
+              <CardContent
+                renderAs="div"
+                style={
+                  Object {
+                    "paddingTop": "1vh",
+                  }
+                }
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Sheet Music Database
+                </Heading>
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={null}
+                  spaced={false}
+                  subtitle={true}
+                  weight={null}
+                >
+                  Organize your sheet music
+                </Heading>
+                <Content
+                  renderAs="div"
+                  size={null}
+                  style={Object {}}
+                >
+                  Organize your sheet music by Piece, with Composers, Tags, and Instruments.
+                </Content>
+              </CardContent>
+              <CardFooter
+                className=""
+                renderAs="div"
+              >
+                <CardFooterItem
+                  className=""
+                  renderAs="div"
+                >
+                  <Link
+                    className="card--link"
+                    replace={false}
+                    to="/login"
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="user"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     Login
+                  </Link>
+                </CardFooterItem>
+                <CardFooterItem
+                  className=""
+                  renderAs="div"
+                >
+                  <Link
+                    className="card--link"
+                    replace={false}
+                    to="/register"
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="user-plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     Register
+                  </Link>
+                </CardFooterItem>
+              </CardFooter>
+            </Card>,
+            <br />,
+            <Heading
+              className="margin-default"
+              heading={false}
+              renderAs="h1"
+              size={4}
+              spaced={false}
+              subtitle={false}
+              weight={null}
+            >
+              Organization
+            </Heading>,
+            <DescriptionCard
+              title="Piece"
+            >
+              Everything is organized into pieces which have:
+              <ul>
+                <li>
+                  Composer(s): The composer of the piece
+                </li>
+                <li>
+                  Sheets: The individual sheet music files that correspond to the piece
+                </li>
+                <li>
+                  Tags: Arbitrary tags for categorizing pieces
+                </li>
+                <li>
+                  Instruments: All the instruments connected with a piece
+                  '
+                  s sheets
+                </li>
+              </ul>
+              This provides one place for all the data about a piece can be found, while still having separate data that can be filtered in other ways
+            </DescriptionCard>,
+            <Columns
+              breakpoint={null}
+              centered={false}
+              className="margin-default"
+              gapless={false}
+              multiline={true}
+              style={Object {}}
+            >
+              <Column
+                className=""
+                desktop={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                fullhd={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                mobile={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                narrow={false}
+                offset={null}
+                size={null}
+                style={Object {}}
+                tablet={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                widescreen={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+              >
+                <DescriptionCard
+                  column={true}
+                  title="Composer"
+                >
+                  Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.
+                </DescriptionCard>
+              </Column>
+              <Column
+                className=""
+                desktop={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                fullhd={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                mobile={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                narrow={false}
+                offset={null}
+                size={null}
+                style={Object {}}
+                tablet={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                widescreen={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+              >
+                <DescriptionCard
+                  column={true}
+                  title="Sheet"
+                >
+                  A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.
+                </DescriptionCard>
+              </Column>
+              <Column
+                className=""
+                desktop={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                fullhd={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                mobile={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                narrow={false}
+                offset={null}
+                size={null}
+                style={Object {}}
+                tablet={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                widescreen={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+              >
+                <DescriptionCard
+                  column={true}
+                  title="Tag"
+                >
+                  A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.
+                </DescriptionCard>
+              </Column>
+            </Columns>,
+          ],
+          "className": "foreground",
+          "clearfix": undefined,
+          "clipped": undefined,
+          "fluid": false,
+          "hidden": undefined,
+          "invisible": undefined,
+          "italic": undefined,
+          "marginless": undefined,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": Array [
+                <CardContent
+                  renderAs="div"
+                  style={
+                    Object {
+                      "paddingTop": "1vh",
+                    }
+                  }
+                >
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Sheet Music Database
+                  </Heading>
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={null}
+                    spaced={false}
+                    subtitle={true}
+                    weight={null}
+                  >
+                    Organize your sheet music
+                  </Heading>
+                  <Content
+                    renderAs="div"
+                    size={null}
+                    style={Object {}}
+                  >
+                    Organize your sheet music by Piece, with Composers, Tags, and Instruments.
+                  </Content>
+                </CardContent>,
+                <CardFooter
+                  className=""
+                  renderAs="div"
+                >
+                  <CardFooterItem
+                    className=""
+                    renderAs="div"
+                  >
+                    <Link
+                      className="card--link"
+                      replace={false}
+                      to="/login"
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="user"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       Login
+                    </Link>
+                  </CardFooterItem>
+                  <CardFooterItem
+                    className=""
+                    renderAs="div"
+                  >
+                    <Link
+                      className="card--link"
+                      replace={false}
+                      to="/register"
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="user-plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       Register
+                    </Link>
+                  </CardFooterItem>
+                </CardFooter>,
+              ],
+              "className": "margin-default mostly-opaque",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": Array [
+                    <Heading
+                      className=""
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Sheet Music Database
+                    </Heading>,
+                    <Heading
+                      className=""
+                      heading={false}
+                      renderAs="h1"
+                      size={null}
+                      spaced={false}
+                      subtitle={true}
+                      weight={null}
+                    >
+                      Organize your sheet music
+                    </Heading>,
+                    <Content
+                      renderAs="div"
+                      size={null}
+                      style={Object {}}
+                    >
+                      Organize your sheet music by Piece, with Composers, Tags, and Instruments.
+                    </Content>,
+                  ],
+                  "className": undefined,
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "style": Object {
+                    "paddingTop": "1vh",
+                  },
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Sheet Music Database",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "heading": false,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "h1",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "size": 3,
+                      "spaced": false,
+                      "subtitle": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                      "weight": null,
+                    },
+                    "ref": null,
+                    "rendered": "Sheet Music Database",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Organize your sheet music",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "heading": false,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "h1",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "size": null,
+                      "spaced": false,
+                      "subtitle": true,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                      "weight": null,
+                    },
+                    "ref": null,
+                    "rendered": "Organize your sheet music",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Organize your sheet music by Piece, with Composers, Tags, and Instruments.",
+                      "className": undefined,
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "div",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "size": null,
+                      "style": Object {},
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "Organize your sheet music by Piece, with Composers, Tags, and Instruments.",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": Array [
+                    <CardFooterItem
+                      className=""
+                      renderAs="div"
+                    >
+                      <Link
+                        className="card--link"
+                        replace={false}
+                        to="/login"
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="user"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         Login
+                      </Link>
+                    </CardFooterItem>,
+                    <CardFooterItem
+                      className=""
+                      renderAs="div"
+                    >
+                      <Link
+                        className="card--link"
+                        replace={false}
+                        to="/register"
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="user-plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         Register
+                      </Link>
+                    </CardFooterItem>,
+                  ],
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": <Link
+                        className="card--link"
+                        replace={false}
+                        to="/login"
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="user"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         Login
+                      </Link>,
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "div",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="user"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />,
+                          " Login",
+                        ],
+                        "className": "card--link",
+                        "replace": false,
+                        "to": "/login",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "border": false,
+                            "className": "",
+                            "fixedWidth": false,
+                            "flip": null,
+                            "icon": "user",
+                            "inverse": false,
+                            "listItem": false,
+                            "mask": null,
+                            "pull": null,
+                            "pulse": false,
+                            "rotation": null,
+                            "size": null,
+                            "spin": false,
+                            "symbol": false,
+                            "title": "",
+                            "transform": null,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        " Login",
+                      ],
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": <Link
+                        className="card--link"
+                        replace={false}
+                        to="/register"
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="user-plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         Register
+                      </Link>,
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "div",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="user-plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />,
+                          " Register",
+                        ],
+                        "className": "card--link",
+                        "replace": false,
+                        "to": "/register",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "border": false,
+                            "className": "",
+                            "fixedWidth": false,
+                            "flip": null,
+                            "icon": "user-plus",
+                            "inverse": false,
+                            "listItem": false,
+                            "mask": null,
+                            "pull": null,
+                            "pulse": false,
+                            "rotation": null,
+                            "size": null,
+                            "spin": false,
+                            "symbol": false,
+                            "title": "",
+                            "transform": null,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        " Register",
+                      ],
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": "Organization",
+              "className": "margin-default",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "heading": false,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "h1",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": 4,
+              "spaced": false,
+              "subtitle": false,
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+              "weight": null,
+            },
+            "ref": null,
+            "rendered": "Organization",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                "Everything is organized into pieces which have:",
+                <ul>
+                  <li>
+                    Composer(s): The composer of the piece
+                  </li>
+                  <li>
+                    Sheets: The individual sheet music files that correspond to the piece
+                  </li>
+                  <li>
+                    Tags: Arbitrary tags for categorizing pieces
+                  </li>
+                  <li>
+                    Instruments: All the instruments connected with a piece
+                    '
+                    s sheets
+                  </li>
+                </ul>,
+                "This provides one place for all the data about a piece can be found, while still having separate data that can be filtered in other ways",
+              ],
+              "title": "Piece",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Everything is organized into pieces which have:",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      Composer(s): The composer of the piece
+                    </li>,
+                    <li>
+                      Sheets: The individual sheet music files that correspond to the piece
+                    </li>,
+                    <li>
+                      Tags: Arbitrary tags for categorizing pieces
+                    </li>,
+                    <li>
+                      Instruments: All the instruments connected with a piece
+                      '
+                      s sheets
+                    </li>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Composer(s): The composer of the piece",
+                    },
+                    "ref": null,
+                    "rendered": "Composer(s): The composer of the piece",
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Sheets: The individual sheet music files that correspond to the piece",
+                    },
+                    "ref": null,
+                    "rendered": "Sheets: The individual sheet music files that correspond to the piece",
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Tags: Arbitrary tags for categorizing pieces",
+                    },
+                    "ref": null,
+                    "rendered": "Tags: Arbitrary tags for categorizing pieces",
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Instruments: All the instruments connected with a piece",
+                        "'",
+                        "s sheets",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Instruments: All the instruments connected with a piece",
+                      "'",
+                      "s sheets",
+                    ],
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+              "This provides one place for all the data about a piece can be found, while still having separate data that can be filtered in other ways",
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "breakpoint": null,
+              "centered": false,
+              "children": Array [
+                <Column
+                  className=""
+                  desktop={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  fullhd={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  mobile={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  narrow={false}
+                  offset={null}
+                  size={null}
+                  style={Object {}}
+                  tablet={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  widescreen={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                >
+                  <DescriptionCard
+                    column={true}
+                    title="Composer"
+                  >
+                    Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.
+                  </DescriptionCard>
+                </Column>,
+                <Column
+                  className=""
+                  desktop={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  fullhd={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  mobile={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  narrow={false}
+                  offset={null}
+                  size={null}
+                  style={Object {}}
+                  tablet={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  widescreen={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                >
+                  <DescriptionCard
+                    column={true}
+                    title="Sheet"
+                  >
+                    A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.
+                  </DescriptionCard>
+                </Column>,
+                <Column
+                  className=""
+                  desktop={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  fullhd={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  mobile={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  narrow={false}
+                  offset={null}
+                  size={null}
+                  style={Object {}}
+                  tablet={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  widescreen={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                >
+                  <DescriptionCard
+                    column={true}
+                    title="Tag"
+                  >
+                    A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.
+                  </DescriptionCard>
+                </Column>,
+              ],
+              "className": "margin-default",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "gapless": false,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "multiline": true,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <DescriptionCard
+                    column={true}
+                    title="Composer"
+                  >
+                    Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.
+                  </DescriptionCard>,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "desktop": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "fullhd": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "mobile": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "narrow": false,
+                  "offset": null,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": null,
+                  "style": Object {},
+                  "tablet": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                  "widescreen": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.",
+                    "column": true,
+                    "title": "Composer",
+                  },
+                  "ref": null,
+                  "rendered": "Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <DescriptionCard
+                    column={true}
+                    title="Sheet"
+                  >
+                    A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.
+                  </DescriptionCard>,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "desktop": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "fullhd": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "mobile": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "narrow": false,
+                  "offset": null,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": null,
+                  "style": Object {},
+                  "tablet": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                  "widescreen": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.",
+                    "column": true,
+                    "title": "Sheet",
+                  },
+                  "ref": null,
+                  "rendered": "A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <DescriptionCard
+                    column={true}
+                    title="Tag"
+                  >
+                    A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.
+                  </DescriptionCard>,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "desktop": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "fullhd": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "mobile": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "narrow": false,
+                  "offset": null,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": null,
+                  "style": Object {},
+                  "tablet": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                  "widescreen": Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.",
+                    "column": true,
+                    "title": "Tag",
+                  },
+                  "ref": null,
+                  "rendered": "A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Header />,
+          <Container
+            breakpoint={null}
+            className="foreground"
+            fluid={false}
+            renderAs="div"
+            style={Object {}}
+          >
+            <Card
+              className="margin-default mostly-opaque"
+              renderAs="div"
+              style={Object {}}
+            >
+              <CardContent
+                renderAs="div"
+                style={
+                  Object {
+                    "paddingTop": "1vh",
+                  }
+                }
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Sheet Music Database
+                </Heading>
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={null}
+                  spaced={false}
+                  subtitle={true}
+                  weight={null}
+                >
+                  Organize your sheet music
+                </Heading>
+                <Content
+                  renderAs="div"
+                  size={null}
+                  style={Object {}}
+                >
+                  Organize your sheet music by Piece, with Composers, Tags, and Instruments.
+                </Content>
+              </CardContent>
+              <CardFooter
+                className=""
+                renderAs="div"
+              >
+                <CardFooterItem
+                  className=""
+                  renderAs="div"
+                >
+                  <Link
+                    className="card--link"
+                    replace={false}
+                    to="/login"
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="user"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     Login
+                  </Link>
+                </CardFooterItem>
+                <CardFooterItem
+                  className=""
+                  renderAs="div"
+                >
+                  <Link
+                    className="card--link"
+                    replace={false}
+                    to="/register"
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="user-plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     Register
+                  </Link>
+                </CardFooterItem>
+              </CardFooter>
+            </Card>
+            <br />
+            <Heading
+              className="margin-default"
+              heading={false}
+              renderAs="h1"
+              size={4}
+              spaced={false}
+              subtitle={false}
+              weight={null}
+            >
+              Organization
+            </Heading>
+            <DescriptionCard
+              title="Piece"
+            >
+              Everything is organized into pieces which have:
+              <ul>
+                <li>
+                  Composer(s): The composer of the piece
+                </li>
+                <li>
+                  Sheets: The individual sheet music files that correspond to the piece
+                </li>
+                <li>
+                  Tags: Arbitrary tags for categorizing pieces
+                </li>
+                <li>
+                  Instruments: All the instruments connected with a piece
+                  '
+                  s sheets
+                </li>
+              </ul>
+              This provides one place for all the data about a piece can be found, while still having separate data that can be filtered in other ways
+            </DescriptionCard>
+            <Columns
+              breakpoint={null}
+              centered={false}
+              className="margin-default"
+              gapless={false}
+              multiline={true}
+              style={Object {}}
+            >
+              <Column
+                className=""
+                desktop={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                fullhd={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                mobile={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                narrow={false}
+                offset={null}
+                size={null}
+                style={Object {}}
+                tablet={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                widescreen={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+              >
+                <DescriptionCard
+                  column={true}
+                  title="Composer"
+                >
+                  Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.
+                </DescriptionCard>
+              </Column>
+              <Column
+                className=""
+                desktop={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                fullhd={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                mobile={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                narrow={false}
+                offset={null}
+                size={null}
+                style={Object {}}
+                tablet={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                widescreen={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+              >
+                <DescriptionCard
+                  column={true}
+                  title="Sheet"
+                >
+                  A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.
+                </DescriptionCard>
+              </Column>
+              <Column
+                className=""
+                desktop={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                fullhd={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                mobile={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                narrow={false}
+                offset={null}
+                size={null}
+                style={Object {}}
+                tablet={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+                widescreen={
+                  Object {
+                    "narrow": false,
+                    "offset": null,
+                    "size": null,
+                  }
+                }
+              >
+                <DescriptionCard
+                  column={true}
+                  title="Tag"
+                >
+                  A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.
+                </DescriptionCard>
+              </Column>
+            </Columns>
+          </Container>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "breakpoint": null,
+            "children": Array [
+              <Card
+                className="margin-default mostly-opaque"
+                renderAs="div"
+                style={Object {}}
+              >
+                <CardContent
+                  renderAs="div"
+                  style={
+                    Object {
+                      "paddingTop": "1vh",
+                    }
+                  }
+                >
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Sheet Music Database
+                  </Heading>
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={null}
+                    spaced={false}
+                    subtitle={true}
+                    weight={null}
+                  >
+                    Organize your sheet music
+                  </Heading>
+                  <Content
+                    renderAs="div"
+                    size={null}
+                    style={Object {}}
+                  >
+                    Organize your sheet music by Piece, with Composers, Tags, and Instruments.
+                  </Content>
+                </CardContent>
+                <CardFooter
+                  className=""
+                  renderAs="div"
+                >
+                  <CardFooterItem
+                    className=""
+                    renderAs="div"
+                  >
+                    <Link
+                      className="card--link"
+                      replace={false}
+                      to="/login"
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="user"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       Login
+                    </Link>
+                  </CardFooterItem>
+                  <CardFooterItem
+                    className=""
+                    renderAs="div"
+                  >
+                    <Link
+                      className="card--link"
+                      replace={false}
+                      to="/register"
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="user-plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       Register
+                    </Link>
+                  </CardFooterItem>
+                </CardFooter>
+              </Card>,
+              <br />,
+              <Heading
+                className="margin-default"
+                heading={false}
+                renderAs="h1"
+                size={4}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                Organization
+              </Heading>,
+              <DescriptionCard
+                title="Piece"
+              >
+                Everything is organized into pieces which have:
+                <ul>
+                  <li>
+                    Composer(s): The composer of the piece
+                  </li>
+                  <li>
+                    Sheets: The individual sheet music files that correspond to the piece
+                  </li>
+                  <li>
+                    Tags: Arbitrary tags for categorizing pieces
+                  </li>
+                  <li>
+                    Instruments: All the instruments connected with a piece
+                    '
+                    s sheets
+                  </li>
+                </ul>
+                This provides one place for all the data about a piece can be found, while still having separate data that can be filtered in other ways
+              </DescriptionCard>,
+              <Columns
+                breakpoint={null}
+                centered={false}
+                className="margin-default"
+                gapless={false}
+                multiline={true}
+                style={Object {}}
+              >
+                <Column
+                  className=""
+                  desktop={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  fullhd={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  mobile={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  narrow={false}
+                  offset={null}
+                  size={null}
+                  style={Object {}}
+                  tablet={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  widescreen={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                >
+                  <DescriptionCard
+                    column={true}
+                    title="Composer"
+                  >
+                    Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.
+                  </DescriptionCard>
+                </Column>
+                <Column
+                  className=""
+                  desktop={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  fullhd={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  mobile={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  narrow={false}
+                  offset={null}
+                  size={null}
+                  style={Object {}}
+                  tablet={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  widescreen={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                >
+                  <DescriptionCard
+                    column={true}
+                    title="Sheet"
+                  >
+                    A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.
+                  </DescriptionCard>
+                </Column>
+                <Column
+                  className=""
+                  desktop={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  fullhd={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  mobile={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  narrow={false}
+                  offset={null}
+                  size={null}
+                  style={Object {}}
+                  tablet={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                  widescreen={
+                    Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    }
+                  }
+                >
+                  <DescriptionCard
+                    column={true}
+                    title="Tag"
+                  >
+                    A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.
+                  </DescriptionCard>
+                </Column>
+              </Columns>,
+            ],
+            "className": "foreground",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "fluid": false,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": Array [
+                  <CardContent
+                    renderAs="div"
+                    style={
+                      Object {
+                        "paddingTop": "1vh",
+                      }
+                    }
+                  >
+                    <Heading
+                      className=""
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Sheet Music Database
+                    </Heading>
+                    <Heading
+                      className=""
+                      heading={false}
+                      renderAs="h1"
+                      size={null}
+                      spaced={false}
+                      subtitle={true}
+                      weight={null}
+                    >
+                      Organize your sheet music
+                    </Heading>
+                    <Content
+                      renderAs="div"
+                      size={null}
+                      style={Object {}}
+                    >
+                      Organize your sheet music by Piece, with Composers, Tags, and Instruments.
+                    </Content>
+                  </CardContent>,
+                  <CardFooter
+                    className=""
+                    renderAs="div"
+                  >
+                    <CardFooterItem
+                      className=""
+                      renderAs="div"
+                    >
+                      <Link
+                        className="card--link"
+                        replace={false}
+                        to="/login"
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="user"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         Login
+                      </Link>
+                    </CardFooterItem>
+                    <CardFooterItem
+                      className=""
+                      renderAs="div"
+                    >
+                      <Link
+                        className="card--link"
+                        replace={false}
+                        to="/register"
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="user-plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         Register
+                      </Link>
+                    </CardFooterItem>
+                  </CardFooter>,
+                ],
+                "className": "margin-default mostly-opaque",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": Array [
+                      <Heading
+                        className=""
+                        heading={false}
+                        renderAs="h1"
+                        size={3}
+                        spaced={false}
+                        subtitle={false}
+                        weight={null}
+                      >
+                        Sheet Music Database
+                      </Heading>,
+                      <Heading
+                        className=""
+                        heading={false}
+                        renderAs="h1"
+                        size={null}
+                        spaced={false}
+                        subtitle={true}
+                        weight={null}
+                      >
+                        Organize your sheet music
+                      </Heading>,
+                      <Content
+                        renderAs="div"
+                        size={null}
+                        style={Object {}}
+                      >
+                        Organize your sheet music by Piece, with Composers, Tags, and Instruments.
+                      </Content>,
+                    ],
+                    "className": undefined,
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "div",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "style": Object {
+                      "paddingTop": "1vh",
+                    },
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": "Sheet Music Database",
+                        "className": "",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "heading": false,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "h1",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "size": 3,
+                        "spaced": false,
+                        "subtitle": false,
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                        "weight": null,
+                      },
+                      "ref": null,
+                      "rendered": "Sheet Music Database",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": "Organize your sheet music",
+                        "className": "",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "heading": false,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "h1",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "size": null,
+                        "spaced": false,
+                        "subtitle": true,
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                        "weight": null,
+                      },
+                      "ref": null,
+                      "rendered": "Organize your sheet music",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": "Organize your sheet music by Piece, with Composers, Tags, and Instruments.",
+                        "className": undefined,
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "div",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "size": null,
+                        "style": Object {},
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "Organize your sheet music by Piece, with Composers, Tags, and Instruments.",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": Array [
+                      <CardFooterItem
+                        className=""
+                        renderAs="div"
+                      >
+                        <Link
+                          className="card--link"
+                          replace={false}
+                          to="/login"
+                        >
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="user"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />
+                           Login
+                        </Link>
+                      </CardFooterItem>,
+                      <CardFooterItem
+                        className=""
+                        renderAs="div"
+                      >
+                        <Link
+                          className="card--link"
+                          replace={false}
+                          to="/register"
+                        >
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="user-plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />
+                           Register
+                        </Link>
+                      </CardFooterItem>,
+                    ],
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "div",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": <Link
+                          className="card--link"
+                          replace={false}
+                          to="/login"
+                        >
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="user"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />
+                           Login
+                        </Link>,
+                        "className": "",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "div",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": Array [
+                            <FontAwesomeIcon
+                              border={false}
+                              className=""
+                              fixedWidth={false}
+                              flip={null}
+                              icon="user"
+                              inverse={false}
+                              listItem={false}
+                              mask={null}
+                              pull={null}
+                              pulse={false}
+                              rotation={null}
+                              size={null}
+                              spin={false}
+                              symbol={false}
+                              title=""
+                              transform={null}
+                            />,
+                            " Login",
+                          ],
+                          "className": "card--link",
+                          "replace": false,
+                          "to": "/login",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {
+                              "border": false,
+                              "className": "",
+                              "fixedWidth": false,
+                              "flip": null,
+                              "icon": "user",
+                              "inverse": false,
+                              "listItem": false,
+                              "mask": null,
+                              "pull": null,
+                              "pulse": false,
+                              "rotation": null,
+                              "size": null,
+                              "spin": false,
+                              "symbol": false,
+                              "title": "",
+                              "transform": null,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          " Login",
+                        ],
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": <Link
+                          className="card--link"
+                          replace={false}
+                          to="/register"
+                        >
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="user-plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />
+                           Register
+                        </Link>,
+                        "className": "",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "div",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": Array [
+                            <FontAwesomeIcon
+                              border={false}
+                              className=""
+                              fixedWidth={false}
+                              flip={null}
+                              icon="user-plus"
+                              inverse={false}
+                              listItem={false}
+                              mask={null}
+                              pull={null}
+                              pulse={false}
+                              rotation={null}
+                              size={null}
+                              spin={false}
+                              symbol={false}
+                              title=""
+                              transform={null}
+                            />,
+                            " Register",
+                          ],
+                          "className": "card--link",
+                          "replace": false,
+                          "to": "/register",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {
+                              "border": false,
+                              "className": "",
+                              "fixedWidth": false,
+                              "flip": null,
+                              "icon": "user-plus",
+                              "inverse": false,
+                              "listItem": false,
+                              "mask": null,
+                              "pull": null,
+                              "pulse": false,
+                              "rotation": null,
+                              "size": null,
+                              "spin": false,
+                              "symbol": false,
+                              "title": "",
+                              "transform": null,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          " Register",
+                        ],
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Organization",
+                "className": "margin-default",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "heading": false,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "h1",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": 4,
+                "spaced": false,
+                "subtitle": false,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+                "weight": null,
+              },
+              "ref": null,
+              "rendered": "Organization",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  "Everything is organized into pieces which have:",
+                  <ul>
+                    <li>
+                      Composer(s): The composer of the piece
+                    </li>
+                    <li>
+                      Sheets: The individual sheet music files that correspond to the piece
+                    </li>
+                    <li>
+                      Tags: Arbitrary tags for categorizing pieces
+                    </li>
+                    <li>
+                      Instruments: All the instruments connected with a piece
+                      '
+                      s sheets
+                    </li>
+                  </ul>,
+                  "This provides one place for all the data about a piece can be found, while still having separate data that can be filtered in other ways",
+                ],
+                "title": "Piece",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Everything is organized into pieces which have:",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        Composer(s): The composer of the piece
+                      </li>,
+                      <li>
+                        Sheets: The individual sheet music files that correspond to the piece
+                      </li>,
+                      <li>
+                        Tags: Arbitrary tags for categorizing pieces
+                      </li>,
+                      <li>
+                        Instruments: All the instruments connected with a piece
+                        '
+                        s sheets
+                      </li>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Composer(s): The composer of the piece",
+                      },
+                      "ref": null,
+                      "rendered": "Composer(s): The composer of the piece",
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Sheets: The individual sheet music files that correspond to the piece",
+                      },
+                      "ref": null,
+                      "rendered": "Sheets: The individual sheet music files that correspond to the piece",
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Tags: Arbitrary tags for categorizing pieces",
+                      },
+                      "ref": null,
+                      "rendered": "Tags: Arbitrary tags for categorizing pieces",
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "Instruments: All the instruments connected with a piece",
+                          "'",
+                          "s sheets",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Instruments: All the instruments connected with a piece",
+                        "'",
+                        "s sheets",
+                      ],
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+                "This provides one place for all the data about a piece can be found, while still having separate data that can be filtered in other ways",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "breakpoint": null,
+                "centered": false,
+                "children": Array [
+                  <Column
+                    className=""
+                    desktop={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    fullhd={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    mobile={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    narrow={false}
+                    offset={null}
+                    size={null}
+                    style={Object {}}
+                    tablet={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    widescreen={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                  >
+                    <DescriptionCard
+                      column={true}
+                      title="Composer"
+                    >
+                      Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.
+                    </DescriptionCard>
+                  </Column>,
+                  <Column
+                    className=""
+                    desktop={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    fullhd={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    mobile={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    narrow={false}
+                    offset={null}
+                    size={null}
+                    style={Object {}}
+                    tablet={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    widescreen={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                  >
+                    <DescriptionCard
+                      column={true}
+                      title="Sheet"
+                    >
+                      A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.
+                    </DescriptionCard>
+                  </Column>,
+                  <Column
+                    className=""
+                    desktop={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    fullhd={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    mobile={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    narrow={false}
+                    offset={null}
+                    size={null}
+                    style={Object {}}
+                    tablet={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                    widescreen={
+                      Object {
+                        "narrow": false,
+                        "offset": null,
+                        "size": null,
+                      }
+                    }
+                  >
+                    <DescriptionCard
+                      column={true}
+                      title="Tag"
+                    >
+                      A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.
+                    </DescriptionCard>
+                  </Column>,
+                ],
+                "className": "margin-default",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "gapless": false,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "multiline": true,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": <DescriptionCard
+                      column={true}
+                      title="Composer"
+                    >
+                      Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.
+                    </DescriptionCard>,
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "desktop": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "fullhd": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "mobile": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "narrow": false,
+                    "offset": null,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": null,
+                    "style": Object {},
+                    "tablet": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "widescreen": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.",
+                      "column": true,
+                      "title": "Composer",
+                    },
+                    "ref": null,
+                    "rendered": "Composers are separate objects from Pieces so that multiple pieces can share the same composer and you can easily see all pieces associated with a composer. It holds all the data about a composer, such as their name, birth/death dates, and the era/style of their compositions.",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": <DescriptionCard
+                      column={true}
+                      title="Sheet"
+                    >
+                      A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.
+                    </DescriptionCard>,
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "desktop": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "fullhd": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "mobile": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "narrow": false,
+                    "offset": null,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": null,
+                    "style": Object {},
+                    "tablet": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "widescreen": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.",
+                      "column": true,
+                      "title": "Sheet",
+                    },
+                    "ref": null,
+                    "rendered": "A Sheet is actual sheet music with an associated file. It holds all the data about the file, such as the instrument(s) in the sheet, the file format, and what type of sheet it is (e.g. score, part, manuscript), as well as being able to get the file itself.",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": <DescriptionCard
+                      column={true}
+                      title="Tag"
+                    >
+                      A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.
+                    </DescriptionCard>,
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "desktop": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "fullhd": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "mobile": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "narrow": false,
+                    "offset": null,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": null,
+                    "style": Object {},
+                    "tablet": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "widescreen": Object {
+                      "narrow": false,
+                      "offset": null,
+                      "size": null,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.",
+                      "column": true,
+                      "title": "Tag",
+                    },
+                    "ref": null,
+                    "rendered": "A Tag (like in many apps) is any arbitrary text to be associated with a piece to descibe its attributes and associate it with other pieces with those attributes.",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

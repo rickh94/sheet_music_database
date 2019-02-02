@@ -6,6 +6,11 @@ import '../../setupTests'
 
 describe('Header', () => {
   const wrapper = shallow(<Header />)
+
+  it('renders correctly', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('renders a Navbar', () => {
     expect(wrapper.exists('Navbar')).toBeTruthy()
   })

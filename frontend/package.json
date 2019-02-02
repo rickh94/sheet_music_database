@@ -26,7 +26,8 @@
     "test": "jest",
     "serve": "parcel index.html",
     "build": "parcel build index.html",
-    "watch": "parcel watch index.html"
+    "watch": "parcel watch index.html",
+    "crcf": "crcf"
   },
   "browserslist": [
     "> 3%"
@@ -37,8 +38,10 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "create-react-component-folder": "https://github.com/snaerth/create-react-component-folder#9407d36865372fa7697f803a408a43ee64748d32",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint-plugin-react": "^7.12.4",
     "jest": "^23.6.0",
     "jest-css-modules": "^1.1.0",
@@ -47,5 +50,20 @@
     "parcel-bundler": "^1.11.0",
     "react-test-renderer": "^16.7.0",
     "sass": "^1.16.1"
+  },
+  "crcf": [
+    "scss",
+    "proptypes",
+    "jsx",
+    "uppercase",
+    "spec"
+  ],
+  "jest": {
+    "setupFiles": [
+      "./setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

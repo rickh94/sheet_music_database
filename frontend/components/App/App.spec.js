@@ -5,6 +5,11 @@ import '../../setupTests'
 
 describe('App', () => {
   const wrapper = shallow(<App />)
+
+  it('renders correctly', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('renders a Provider', () => {
     expect(wrapper.find('Provider').length).toEqual(1)
   })

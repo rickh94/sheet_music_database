@@ -38,15 +38,12 @@ export default class Home extends Component {
             <Card.Footer>
               <Card.Footer.Item>
                 <Link to="/login" className="card--link">
-                  <FontAwesomeIcon icon="user" />{' '}
-                  Login
+                  <FontAwesomeIcon icon="user" /> Login
                 </Link>
               </Card.Footer.Item>
               <Card.Footer.Item>
                 <Link to="/register" className="card--link">
-                <FontAwesomeIcon icon="user-plus"></FontAwesomeIcon>
-                {' '}
-                  Register
+                  <FontAwesomeIcon icon="user-plus" /> Register
                 </Link>
               </Card.Footer.Item>
             </Card.Footer>
