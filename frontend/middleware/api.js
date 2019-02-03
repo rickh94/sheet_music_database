@@ -232,6 +232,16 @@ export default class DjangoURL {
     const { config, url } = this.setupRequest(initialConfig)
     return Axios.patch(url, payload, config)
   }
+
+  get url() {
+    // utility function
+    return `${this.baseurl}${this.path}`
+  }
+
+  clear() {
+    // utility function
+    this.path = '/'
+  }
 }
 /*
  * This was generated from the list of urls: 

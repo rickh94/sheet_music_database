@@ -89,6 +89,17 @@ def write_html_methods(js_path: Path):
         make_html_method("post", payload=True),
         make_html_method("put", payload=True),
         make_html_method("patch", payload=True),
+        "\n".join(
+            [
+                "\n  get url() {",
+                "    // utility function",
+                "    return `${this.baseurl}${this.path}`",
+                "  }",
+            ]
+        ),
+        "\n".join(
+            ["\n  clear() {", "    // utility function", "    this.path = '/'", "  }"]
+        ),
     ]
     javascript_lines = "\n".join(functions)
     with js_path.open("a") as js_file:
