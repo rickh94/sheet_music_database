@@ -36,16 +36,6 @@ export default class DjangoURL {
     return this
   }
 
-  get reset() {
-    this.path += 'reset/'
-    return this
-  }
-
-  get confirm() {
-    this.path += 'confirm/'
-    return this
-  }
-
   get user() {
     this.path += 'user/'
     return this
@@ -53,6 +43,49 @@ export default class DjangoURL {
 
   get change() {
     this.path += 'change/'
+    return this
+  }
+
+  get signup() {
+    this.path += 'signup/'
+    return this
+  }
+
+  get set() {
+    this.path += 'set/'
+    return this
+  }
+
+  get inactive() {
+    this.path += 'inactive/'
+    return this
+  }
+
+  get email() {
+    this.path += 'email/'
+    return this
+  }
+
+  confirm_email(key = '') {
+    this.path += 'confirm-email/'
+    if (key) {
+      this.path += key + '/'
+    }
+    return this
+  }
+
+  get cancelled() {
+    this.path += 'cancelled/'
+    return this
+  }
+
+  get error() {
+    this.path += 'error/'
+    return this
+  }
+
+  get connections() {
+    this.path += 'connections/'
     return this
   }
 
@@ -93,8 +126,24 @@ export default class DjangoURL {
     return this
   }
 
+  instruments(pk = '') {
+    this.path += 'instruments/'
+    if (pk) {
+      this.path += pk + '/'
+    }
+    return this
+  }
+
   get music() {
     this.path += 'music/'
+    return this
+  }
+
+  account_confirm_email(key = '') {
+    this.path += 'account-confirm-email/'
+    if (key) {
+      this.path += key + '/'
+    }
     return this
   }
 
@@ -118,6 +167,11 @@ export default class DjangoURL {
     return this
   }
 
+  get social() {
+    this.path += 'social/'
+    return this
+  }
+
   setAuthorization(config) {
     if (this.token) {
       config.headers = config.headers || {}
@@ -127,10 +181,21 @@ export default class DjangoURL {
   }
 
   setupRequest(config) {
-    const url = this.url
+    const url = `${this.baseurl}${this.path}`
     this.path = '/'
-    config = setAuthorization(config)
+    config = this.setAuthorization(config)
     return { config, url }
+  }
+
+  queryParams(params) {
+    // Must be last in chain before request or query will be in the middle of the url
+    this.path += '?'
+    let paramStr
+    params.forEach((item, key) => {
+      paramStr += `${key}=${item}&`
+    })
+    this.path += paramStr.substring(0, paramStr.length - 1)
+    return this
   }
 
   async get(initialConfig = {}) {
@@ -174,12 +239,23 @@ export default class DjangoURL {
  *   /v1/auth/registration/
  *   /v1/auth/logout/
  *   /v1/auth/logoutall/
- *   /v1/auth/password/reset/
- *   /v1/auth/password/reset/confirm/
  *   /v1/auth/login/
  *   /v1/auth/logout/
  *   /v1/auth/user/
  *   /v1/auth/password/change/
+ *   /v1/auth/signup/
+ *   /v1/auth/login/
+ *   /v1/auth/logout/
+ *   /v1/auth/password/change/
+ *   /v1/auth/password/set/
+ *   /v1/auth/inactive/
+ *   /v1/auth/email/
+ *   /v1/auth/confirm-email/
+ *   /v1/auth/confirm-email/<key>/
+ *   /v1/auth/social/login/cancelled/
+ *   /v1/auth/social/login/error/
+ *   /v1/auth/social/signup/
+ *   /v1/auth/social/connections/
  *   /v1/music/composers/
  *   /v1/music/composers/<pk>/
  *   /v1/music/tags/
@@ -189,6 +265,9 @@ export default class DjangoURL {
  *   /v1/music/sheets/<pk>/upload-file/
  *   /v1/music/pieces/
  *   /v1/music/pieces/<pk>/
+ *   /v1/music/instruments/
+ *   /v1/music/instruments/<pk>/
  *   /v1/music/
+ *   /registration/account-confirm-email/<key>
  *   /docs/
  */

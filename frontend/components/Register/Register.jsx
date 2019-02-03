@@ -12,7 +12,7 @@ class Register extends Component {
       <React.Fragment>
         <Header />
         <Container>
-          <Card>
+          <Card className="margin-default">
             <Card.Header>
               <Card.Header.Title>Register</Card.Header.Title>
             </Card.Header>
@@ -31,6 +31,9 @@ Register.propTypes = {}
 export default Register
 
 export class RegistrationForm extends Component {
+  onRegisterClicked() {}
+  onCancelClicked() {}
+
   render() {
     return (
       <form>
@@ -54,10 +57,8 @@ export class RegistrationForm extends Component {
         </Field>
         <Field type="group">
           <Control>
-            <Button type="primary">Register</Button>
-          </Control>
-          <Control>
-            <Button>Cancel</Button>
+            <Button type="primary" onClick={() => this.onRegisterClicked()}>Register</Button>
+            <Button onClick={() => this.onCancelClicked()}>Cancel</Button>
           </Control>
         </Field>
       </form>

@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login renders correctly 1`] = `
+exports[`LoginWrapper renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
+  Symbol(enzyme.__unrendered__): <LoginWrapper
+    login={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -30,10 +32,33 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
+            <CardHeader
+              renderAs="div"
+            >
+              <CardHeaderTitle
+                renderAs="div"
+              >
+                Login
+              </CardHeaderTitle>
+            </CardHeader>
             <CardContent
               renderAs="div"
             >
-              <LoginForm />
+              <LoginForm
+                attemptLogin={[Function]}
+              />
+              <CardContent
+                renderAs="div"
+              >
+                <Link
+                  replace={false}
+                  to="/register"
+                >
+                  Don
+                  '
+                  t have an account? Register Here
+                </Link>
+              </CardContent>
             </CardContent>
           </Card>
         </Container>,
@@ -62,10 +87,33 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
+            <CardHeader
+              renderAs="div"
+            >
+              <CardHeaderTitle
+                renderAs="div"
+              >
+                Login
+              </CardHeaderTitle>
+            </CardHeader>
             <CardContent
               renderAs="div"
             >
-              <LoginForm />
+              <LoginForm
+                attemptLogin={[Function]}
+              />
+              <CardContent
+                renderAs="div"
+              >
+                <Link
+                  replace={false}
+                  to="/register"
+                >
+                  Don
+                  '
+                  t have an account? Register Here
+                </Link>
+              </CardContent>
             </CardContent>
           </Card>,
           "className": undefined,
@@ -98,11 +146,36 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "backgroundColor": undefined,
-            "children": <CardContent
-              renderAs="div"
-            >
-              <LoginForm />
-            </CardContent>,
+            "children": Array [
+              <CardHeader
+                renderAs="div"
+              >
+                <CardHeaderTitle
+                  renderAs="div"
+                >
+                  Login
+                </CardHeaderTitle>
+              </CardHeader>,
+              <CardContent
+                renderAs="div"
+              >
+                <LoginForm
+                  attemptLogin={[Function]}
+                />
+                <CardContent
+                  renderAs="div"
+                >
+                  <Link
+                    replace={false}
+                    to="/register"
+                  >
+                    Don
+                    '
+                    t have an account? Register Here
+                  </Link>
+                </CardContent>
+              </CardContent>,
+            ],
             "className": "margin-default",
             "clearfix": undefined,
             "clipped": undefined,
@@ -126,46 +199,194 @@ ShallowWrapper {
             "unselectable": undefined,
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "backgroundColor": undefined,
-              "children": <LoginForm />,
-              "className": undefined,
-              "clearfix": undefined,
-              "clipped": undefined,
-              "hidden": undefined,
-              "invisible": undefined,
-              "italic": undefined,
-              "marginless": undefined,
-              "overlay": undefined,
-              "paddingless": undefined,
-              "pull": undefined,
-              "radiusless": undefined,
-              "renderAs": "div",
-              "responsive": undefined,
-              "shadowless": undefined,
-              "textAlignment": undefined,
-              "textColor": undefined,
-              "textSize": undefined,
-              "textTransform": undefined,
-              "textWeight": undefined,
-              "unselectable": undefined,
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
-              "props": Object {},
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <CardHeaderTitle
+                  renderAs="div"
+                >
+                  Login
+                </CardHeaderTitle>,
+                "className": undefined,
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
               "ref": null,
-              "rendered": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Login",
+                  "className": undefined,
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": "Login",
+                "type": [Function],
+              },
               "type": [Function],
             },
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": Array [
+                  <LoginForm
+                    attemptLogin={[Function]}
+                  />,
+                  <CardContent
+                    renderAs="div"
+                  >
+                    <Link
+                      replace={false}
+                      to="/register"
+                    >
+                      Don
+                      '
+                      t have an account? Register Here
+                    </Link>
+                  </CardContent>,
+                ],
+                "className": undefined,
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "attemptLogin": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": <Link
+                      replace={false}
+                      to="/register"
+                    >
+                      Don
+                      '
+                      t have an account? Register Here
+                    </Link>,
+                    "className": undefined,
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "div",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        "Don",
+                        "'",
+                        "t have an account? Register Here",
+                      ],
+                      "replace": false,
+                      "to": "/register",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Don",
+                      "'",
+                      "t have an account? Register Here",
+                    ],
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         "type": [Function],
@@ -192,10 +413,33 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
+              <CardHeader
+                renderAs="div"
+              >
+                <CardHeaderTitle
+                  renderAs="div"
+                >
+                  Login
+                </CardHeaderTitle>
+              </CardHeader>
               <CardContent
                 renderAs="div"
               >
-                <LoginForm />
+                <LoginForm
+                  attemptLogin={[Function]}
+                />
+                <CardContent
+                  renderAs="div"
+                >
+                  <Link
+                    replace={false}
+                    to="/register"
+                  >
+                    Don
+                    '
+                    t have an account? Register Here
+                  </Link>
+                </CardContent>
               </CardContent>
             </Card>
           </Container>,
@@ -224,10 +468,33 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
+              <CardHeader
+                renderAs="div"
+              >
+                <CardHeaderTitle
+                  renderAs="div"
+                >
+                  Login
+                </CardHeaderTitle>
+              </CardHeader>
               <CardContent
                 renderAs="div"
               >
-                <LoginForm />
+                <LoginForm
+                  attemptLogin={[Function]}
+                />
+                <CardContent
+                  renderAs="div"
+                >
+                  <Link
+                    replace={false}
+                    to="/register"
+                  >
+                    Don
+                    '
+                    t have an account? Register Here
+                  </Link>
+                </CardContent>
               </CardContent>
             </Card>,
             "className": undefined,
@@ -260,11 +527,36 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "backgroundColor": undefined,
-              "children": <CardContent
-                renderAs="div"
-              >
-                <LoginForm />
-              </CardContent>,
+              "children": Array [
+                <CardHeader
+                  renderAs="div"
+                >
+                  <CardHeaderTitle
+                    renderAs="div"
+                  >
+                    Login
+                  </CardHeaderTitle>
+                </CardHeader>,
+                <CardContent
+                  renderAs="div"
+                >
+                  <LoginForm
+                    attemptLogin={[Function]}
+                  />
+                  <CardContent
+                    renderAs="div"
+                  >
+                    <Link
+                      replace={false}
+                      to="/register"
+                    >
+                      Don
+                      '
+                      t have an account? Register Here
+                    </Link>
+                  </CardContent>
+                </CardContent>,
+              ],
               "className": "margin-default",
               "clearfix": undefined,
               "clipped": undefined,
@@ -288,46 +580,194 @@ ShallowWrapper {
               "unselectable": undefined,
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "backgroundColor": undefined,
-                "children": <LoginForm />,
-                "className": undefined,
-                "clearfix": undefined,
-                "clipped": undefined,
-                "hidden": undefined,
-                "invisible": undefined,
-                "italic": undefined,
-                "marginless": undefined,
-                "overlay": undefined,
-                "paddingless": undefined,
-                "pull": undefined,
-                "radiusless": undefined,
-                "renderAs": "div",
-                "responsive": undefined,
-                "shadowless": undefined,
-                "textAlignment": undefined,
-                "textColor": undefined,
-                "textSize": undefined,
-                "textTransform": undefined,
-                "textWeight": undefined,
-                "unselectable": undefined,
-              },
-              "ref": null,
-              "rendered": Object {
+            "rendered": Array [
+              Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
-                "props": Object {},
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <CardHeaderTitle
+                    renderAs="div"
+                  >
+                    Login
+                  </CardHeaderTitle>,
+                  "className": undefined,
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
                 "ref": null,
-                "rendered": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Login",
+                    "className": undefined,
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "div",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Login",
+                  "type": [Function],
+                },
                 "type": [Function],
               },
-              "type": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": Array [
+                    <LoginForm
+                      attemptLogin={[Function]}
+                    />,
+                    <CardContent
+                      renderAs="div"
+                    >
+                      <Link
+                        replace={false}
+                        to="/register"
+                      >
+                        Don
+                        '
+                        t have an account? Register Here
+                      </Link>
+                    </CardContent>,
+                  ],
+                  "className": undefined,
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "attemptLogin": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": <Link
+                        replace={false}
+                        to="/register"
+                      >
+                        Don
+                        '
+                        t have an account? Register Here
+                      </Link>,
+                      "className": undefined,
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "div",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          "Don",
+                          "'",
+                          "t have an account? Register Here",
+                        ],
+                        "replace": false,
+                        "to": "/register",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Don",
+                        "'",
+                        "t have an account? Register Here",
+                      ],
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
           "type": [Function],

@@ -26,7 +26,7 @@ ShallowWrapper {
           style={Object {}}
         >
           <Card
-            className=""
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
@@ -67,7 +67,7 @@ ShallowWrapper {
           "backgroundColor": undefined,
           "breakpoint": null,
           "children": <Card
-            className=""
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
@@ -132,7 +132,7 @@ ShallowWrapper {
                 <RegistrationForm />
               </CardContent>,
             ],
-            "className": "",
+            "className": "margin-default",
             "clearfix": undefined,
             "clipped": undefined,
             "hidden": undefined,
@@ -286,7 +286,7 @@ ShallowWrapper {
             style={Object {}}
           >
             <Card
-              className=""
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
@@ -327,7 +327,7 @@ ShallowWrapper {
             "backgroundColor": undefined,
             "breakpoint": null,
             "children": <Card
-              className=""
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
@@ -392,7 +392,7 @@ ShallowWrapper {
                   <RegistrationForm />
                 </CardContent>,
               ],
-              "className": "",
+              "className": "margin-default",
               "clearfix": undefined,
               "clipped": undefined,
               "hidden": undefined,
@@ -740,17 +740,6 @@ ShallowWrapper {
             >
               Register
             </Button>
-          </Control>
-          <Control
-            className=""
-            fullwidth={false}
-            iconLeft={false}
-            iconRight={false}
-            loading={false}
-            renderAs="div"
-            size={null}
-            style={Object {}}
-          >
             <Button
               className=""
               color={null}
@@ -1369,77 +1358,64 @@ ShallowWrapper {
         "props": Object {
           "align": null,
           "backgroundColor": undefined,
-          "children": Array [
-            <Control
+          "children": <Control
+            className=""
+            fullwidth={false}
+            iconLeft={false}
+            iconRight={false}
+            loading={false}
+            renderAs="div"
+            size={null}
+            style={Object {}}
+          >
+            <Button
               className=""
+              color={null}
+              disabled={false}
               fullwidth={false}
-              iconLeft={false}
-              iconRight={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
               loading={false}
-              renderAs="div"
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
               size={null}
+              state={null}
               style={Object {}}
+              submit={false}
+              text={false}
+              type="primary"
             >
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-                type="primary"
-              >
-                Register
-              </Button>
-            </Control>,
-            <Control
+              Register
+            </Button>
+            <Button
               className=""
+              color={null}
+              disabled={false}
               fullwidth={false}
-              iconLeft={false}
-              iconRight={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
               loading={false}
-              renderAs="div"
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
               size={null}
+              state={null}
               style={Object {}}
+              submit={false}
+              text={false}
             >
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Cancel
-              </Button>
-            </Control>,
-          ],
+              Cancel
+            </Button>
+          </Control>,
           "className": "",
           "clearfix": undefined,
           "clipped": undefined,
@@ -1467,14 +1443,14 @@ ShallowWrapper {
           "unselectable": undefined,
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "backgroundColor": undefined,
-              "children": <Button
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": Array [
+              <Button
                 className=""
                 color={null}
                 disabled={false}
@@ -1498,35 +1474,60 @@ ShallowWrapper {
               >
                 Register
               </Button>,
-              "className": "",
-              "clearfix": undefined,
-              "clipped": undefined,
-              "fullwidth": false,
-              "hidden": undefined,
-              "iconLeft": false,
-              "iconRight": false,
-              "invisible": undefined,
-              "italic": undefined,
-              "loading": false,
-              "marginless": undefined,
-              "overlay": undefined,
-              "paddingless": undefined,
-              "pull": undefined,
-              "radiusless": undefined,
-              "renderAs": "div",
-              "responsive": undefined,
-              "shadowless": undefined,
-              "size": null,
-              "style": Object {},
-              "textAlignment": undefined,
-              "textColor": undefined,
-              "textSize": undefined,
-              "textTransform": undefined,
-              "textWeight": undefined,
-              "unselectable": undefined,
-            },
-            "ref": null,
-            "rendered": Object {
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>,
+            ],
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "fullwidth": false,
+            "hidden": undefined,
+            "iconLeft": false,
+            "iconRight": false,
+            "invisible": undefined,
+            "italic": undefined,
+            "loading": false,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "size": null,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
@@ -1576,66 +1577,7 @@ ShallowWrapper {
               "rendered": "Register",
               "type": [Function],
             },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "backgroundColor": undefined,
-              "children": <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Cancel
-              </Button>,
-              "className": "",
-              "clearfix": undefined,
-              "clipped": undefined,
-              "fullwidth": false,
-              "hidden": undefined,
-              "iconLeft": false,
-              "iconRight": false,
-              "invisible": undefined,
-              "italic": undefined,
-              "loading": false,
-              "marginless": undefined,
-              "overlay": undefined,
-              "paddingless": undefined,
-              "pull": undefined,
-              "radiusless": undefined,
-              "renderAs": "div",
-              "responsive": undefined,
-              "shadowless": undefined,
-              "size": null,
-              "style": Object {},
-              "textAlignment": undefined,
-              "textColor": undefined,
-              "textSize": undefined,
-              "textTransform": undefined,
-              "textWeight": undefined,
-              "unselectable": undefined,
-            },
-            "ref": null,
-            "rendered": Object {
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
@@ -1684,9 +1626,9 @@ ShallowWrapper {
               "rendered": "Cancel",
               "type": [Function],
             },
-            "type": [Function],
-          },
-        ],
+          ],
+          "type": [Function],
+        },
         "type": [Function],
       },
     ],
@@ -1869,17 +1811,6 @@ ShallowWrapper {
               >
                 Register
               </Button>
-            </Control>
-            <Control
-              className=""
-              fullwidth={false}
-              iconLeft={false}
-              iconRight={false}
-              loading={false}
-              renderAs="div"
-              size={null}
-              style={Object {}}
-            >
               <Button
                 className=""
                 color={null}
@@ -2498,77 +2429,64 @@ ShallowWrapper {
           "props": Object {
             "align": null,
             "backgroundColor": undefined,
-            "children": Array [
-              <Control
+            "children": <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Button
                 className=""
+                color={null}
+                disabled={false}
                 fullwidth={false}
-                iconLeft={false}
-                iconRight={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
                 loading={false}
-                renderAs="div"
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
                 size={null}
+                state={null}
                 style={Object {}}
+                submit={false}
+                text={false}
+                type="primary"
               >
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                  type="primary"
-                >
-                  Register
-                </Button>
-              </Control>,
-              <Control
+                Register
+              </Button>
+              <Button
                 className=""
+                color={null}
+                disabled={false}
                 fullwidth={false}
-                iconLeft={false}
-                iconRight={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
                 loading={false}
-                renderAs="div"
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
                 size={null}
+                state={null}
                 style={Object {}}
+                submit={false}
+                text={false}
               >
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Cancel
-                </Button>
-              </Control>,
-            ],
+                Cancel
+              </Button>
+            </Control>,
             "className": "",
             "clearfix": undefined,
             "clipped": undefined,
@@ -2596,14 +2514,14 @@ ShallowWrapper {
             "unselectable": undefined,
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "backgroundColor": undefined,
-                "children": <Button
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": Array [
+                <Button
                   className=""
                   color={null}
                   disabled={false}
@@ -2627,35 +2545,60 @@ ShallowWrapper {
                 >
                   Register
                 </Button>,
-                "className": "",
-                "clearfix": undefined,
-                "clipped": undefined,
-                "fullwidth": false,
-                "hidden": undefined,
-                "iconLeft": false,
-                "iconRight": false,
-                "invisible": undefined,
-                "italic": undefined,
-                "loading": false,
-                "marginless": undefined,
-                "overlay": undefined,
-                "paddingless": undefined,
-                "pull": undefined,
-                "radiusless": undefined,
-                "renderAs": "div",
-                "responsive": undefined,
-                "shadowless": undefined,
-                "size": null,
-                "style": Object {},
-                "textAlignment": undefined,
-                "textColor": undefined,
-                "textSize": undefined,
-                "textTransform": undefined,
-                "textWeight": undefined,
-                "unselectable": undefined,
-              },
-              "ref": null,
-              "rendered": Object {
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>,
+              ],
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "fullwidth": false,
+              "hidden": undefined,
+              "iconLeft": false,
+              "iconRight": false,
+              "invisible": undefined,
+              "italic": undefined,
+              "loading": false,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": null,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
@@ -2705,66 +2648,7 @@ ShallowWrapper {
                 "rendered": "Register",
                 "type": [Function],
               },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "backgroundColor": undefined,
-                "children": <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Cancel
-                </Button>,
-                "className": "",
-                "clearfix": undefined,
-                "clipped": undefined,
-                "fullwidth": false,
-                "hidden": undefined,
-                "iconLeft": false,
-                "iconRight": false,
-                "invisible": undefined,
-                "italic": undefined,
-                "loading": false,
-                "marginless": undefined,
-                "overlay": undefined,
-                "paddingless": undefined,
-                "pull": undefined,
-                "radiusless": undefined,
-                "renderAs": "div",
-                "responsive": undefined,
-                "shadowless": undefined,
-                "size": null,
-                "style": Object {},
-                "textAlignment": undefined,
-                "textColor": undefined,
-                "textSize": undefined,
-                "textTransform": undefined,
-                "textWeight": undefined,
-                "unselectable": undefined,
-              },
-              "ref": null,
-              "rendered": Object {
+              Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
@@ -2813,9 +2697,9 @@ ShallowWrapper {
                 "rendered": "Cancel",
                 "type": [Function],
               },
-              "type": [Function],
-            },
-          ],
+            ],
+            "type": [Function],
+          },
           "type": [Function],
         },
       ],

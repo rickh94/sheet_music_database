@@ -1,7 +1,8 @@
 from django.contrib import admin
 
-from core.models import Composer, Piece, Sheet
+from core import models
 
-admin.register(Sheet)
-admin.register(Piece)
-admin.register(Composer)
+admin.register(models.Sheet)
+admin.register(models.Piece)
+admin.register(models.Composer)
+admin.register(models.Instrument)

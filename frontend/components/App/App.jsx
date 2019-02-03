@@ -13,6 +13,7 @@ import Login from '../Login'
 import NotFound from '../NotFound'
 
 import './App.scss'
+import Register from '../Register';
 
 let store = createStore(stuff, applyMiddleware(thunk))
 
@@ -28,6 +29,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
             <Route default component={NotFound} />
           </Switch>
         </BrowserRouter>

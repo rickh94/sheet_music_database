@@ -8,7 +8,7 @@ services:
     volumes:
       - ./config/frontend/nginx:/etc/nginx/conf.d
       - ./config/frontend/certs:/etc/nginx/ssl
-      - ./frontend/build/:/build
+      - ./frontend/dist/:/var/www/html
 
   backend-app:
     build:

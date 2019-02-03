@@ -20,7 +20,7 @@ def write_javascript_head(js_path: Path, hostname: str):
         "export default class DjangoURL {",
         "",
         "  constructor(token = '') {",
-        f"    this.baseurl = 'https://{hostname}'",
+        f"    this.baseurl = '{hostname}'",
         "    this.path = '/'",
         "    this.token = token",
         "  }",
@@ -60,9 +60,9 @@ def write_html_methods(js_path: Path):
         "\n".join(
             [
                 "\n  setupRequest(config) {",
-                "    const url = this.url",
+                "    const url = `${this.baseurl}${this.path}`",
                 "    this.path = '/'",
-                "    config = setAuthorization(config)",
+                "    config = this.setAuthorization(config)",
                 "    return { config, url }",
                 "  }",
             ]
@@ -70,8 +70,8 @@ def write_html_methods(js_path: Path):
         "\n".join(
             [
                 "\n  queryParams(params) {",
-                "    // Must be last in chaing or query will be in the middle of the "
-                "url",
+                "    // Must be last in chain before request or query will"
+                " be in the middle of the url",
                 "    this.path += '?'",
                 "    let paramStr",
                 "    params.forEach((item, key) => {",

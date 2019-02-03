@@ -86,4 +86,17 @@ describe('<RegistrationForm />', () => {
     const cancelButton = wrapper.findWhere(el => el.contains('Cancel') && el.name() == 'Button')
     expect(cancelButton.length).toEqual(1)
   })
+
+  it('calls onRegsiterClicked when register button is clicked', () => {
+    const spy = jest.spyOn(wrapper.instance(), 'onRegisterClicked')
+    wrapper.findWhere(el => el.contains('Register') && el.name() == 'Button').simulate('click')
+    expect(spy).toHaveBeenCalled()
+  })
+
+  it('calls onCancelClicked when cancel is clicked', () => {
+    const spy = jest.spyOn(wrapper.instance(), 'onCancelClicked')
+    wrapper.findWhere(el => el.contains('Cancel') && el.name() == 'Button').simulate('click')
+    expect(spy).toHaveBeenCalled()
+
+  })
 })
