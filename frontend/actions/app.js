@@ -51,3 +51,30 @@ export function register(email, password1, password2, remember) {
     }
   }
 }
+
+export function logout(token, all = false) {
+  return async dispatch => {
+    dispatch({
+      type: 'LOGOUT'
+    })
+    try {
+      const api = new DjangoURL(token)
+      if (all) {
+        await api.v1.auth.logoutall.post()
+      } else {
+        await api.v1.auth.logout.post()
+      }
+      localStorage.removeItem('token')
+      dispatch({
+        type: 'LOGOUT_SUCCESSFUL'
+      })
+      return true
+    } catch (err) {
+      dispatch({
+        type: 'LOGOUT_FAILED',
+        payload: err.response.data
+      })
+      return false
+    }
+  }
+}

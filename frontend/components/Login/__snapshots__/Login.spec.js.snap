@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports['LoginWrapper renders correctly 1'] = `
+exports[`LoginWrapper renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LoginWrapper
@@ -61,6 +61,7 @@ ShallowWrapper {
             >
               <LoginForm
                 attemptLogin={[Function]}
+                cancel={[Function]}
               />
               <CardContent
                 renderAs="div"
@@ -116,6 +117,7 @@ ShallowWrapper {
             >
               <LoginForm
                 attemptLogin={[Function]}
+                cancel={[Function]}
               />
               <CardContent
                 renderAs="div"
@@ -176,6 +178,7 @@ ShallowWrapper {
               >
                 <LoginForm
                   attemptLogin={[Function]}
+                  cancel={[Function]}
                 />
                 <CardContent
                   renderAs="div"
@@ -291,6 +294,7 @@ ShallowWrapper {
                 "children": Array [
                   <LoginForm
                     attemptLogin={[Function]}
+                    cancel={[Function]}
                   />,
                   <CardContent
                     renderAs="div"
@@ -334,6 +338,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "attemptLogin": [Function],
+                    "cancel": [Function],
                   },
                   "ref": null,
                   "rendered": null,
@@ -442,6 +447,7 @@ ShallowWrapper {
               >
                 <LoginForm
                   attemptLogin={[Function]}
+                  cancel={[Function]}
                 />
                 <CardContent
                   renderAs="div"
@@ -497,6 +503,7 @@ ShallowWrapper {
               >
                 <LoginForm
                   attemptLogin={[Function]}
+                  cancel={[Function]}
                 />
                 <CardContent
                   renderAs="div"
@@ -557,6 +564,7 @@ ShallowWrapper {
                 >
                   <LoginForm
                     attemptLogin={[Function]}
+                    cancel={[Function]}
                   />
                   <CardContent
                     renderAs="div"
@@ -672,6 +680,7 @@ ShallowWrapper {
                   "children": Array [
                     <LoginForm
                       attemptLogin={[Function]}
+                      cancel={[Function]}
                     />,
                     <CardContent
                       renderAs="div"
@@ -715,6 +724,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "attemptLogin": [Function],
+                      "cancel": [Function],
                     },
                     "ref": null,
                     "rendered": null,
@@ -809,4 +819,4 @@ ShallowWrapper {
     },
   },
 }
-`
+`;

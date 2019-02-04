@@ -15,9 +15,9 @@ describe('LoginWrapper', () => {
     />
   )
 
-  beforeEach = () => {
+  beforeEach(() => {
     wrapper.update()
-  }
+  })
 
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot()
@@ -115,7 +115,7 @@ describe('LoginWrapper', () => {
 })
 
 describe('LoginForm', () => {
-  const wrapper = shallow(<LoginForm attemptLogin={jest.fn()} />)
+  const wrapper = shallow(<LoginForm attemptLogin={jest.fn()} cancel={jest.fn()}/>)
   const mockEvent = { preventDefault: jest.fn() }
 
   beforeEach(() => {
@@ -146,6 +146,7 @@ describe('LoginForm', () => {
   it('renders a remember checkbox', () => {
     expect(wrapper.exists('Checkbox')).toBeTruthy()
   })
+
 
   it('calls login function when button is clicked', () => {
     const attemptLogin = jest.fn()
@@ -256,5 +257,12 @@ describe('LoginForm', () => {
         el => el.contains(nonFieldErrors) && el.name() == 'Notification'
       ).length
     ).toEqual(1)
+  })
+
+  it('calls prop callback in onCancelClicked', () => {
+    const cancel = jest.fn()
+    wrapper.setProps({ cancel})
+    wrapper.instance().onCancelClicked()
+    expect(cancel).toHaveBeenCalled()
   })
 })

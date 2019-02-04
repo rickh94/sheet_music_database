@@ -41,6 +41,23 @@ export default function app(state = initialState, action) {
         isLoading: false,
         errors: action.payload
       }
+    case 'LOGOUT':
+      return {
+        ...state,
+        isLoading: true
+      }
+    case 'LOGOUT_SUCCESSFUL':
+      return {
+        ...state,
+        isLoading: false,
+        token: null
+      }
+    case 'LOGOUT_FAILED':
+      return {
+        ...state,
+        isLoading: false,
+        errors: action.payload
+      }
     default:
       return state
   }

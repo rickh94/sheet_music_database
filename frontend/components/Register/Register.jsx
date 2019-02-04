@@ -17,7 +17,7 @@ import { connect } from 'react-redux'
 import Header from '../Header'
 import alertText from '../../middleware/alertText'
 import TextFieldWithErrors from '../TextFieldWithErrors'
-import {app} from '../../actions'
+import { app } from '../../actions'
 
 export class Register extends Component {
   componentDidMount() {
@@ -29,7 +29,7 @@ export class Register extends Component {
 
   static propTypes = {
     app: PropTypes.object.isRequired,
-    register: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired
   }
 
   attemptRegister = async (email, password1, password2, remember) => {
@@ -46,7 +46,6 @@ export class Register extends Component {
       this.props.alert.show(alertText('Registration Failed'), { type: 'error' })
       return this.props.app.errors
     }
-
   }
 
   render() {
@@ -59,7 +58,10 @@ export class Register extends Component {
               <Card.Header.Title>Register</Card.Header.Title>
             </Card.Header>
             <Card.Content>
-              <RegistrationForm attemptRegister={this.attemptRegister} />
+              <RegistrationForm
+                attemptRegister={this.attemptRegister}
+                cancel={() => this.props.history.goBack()}
+              />
             </Card.Content>
           </Card>
         </Container>
@@ -100,27 +102,33 @@ export class RegistrationForm extends Component {
       nonFieldErrors: null
     }
   }
-  
+
   static propTypes = {
     attemptRegister: PropTypes.func.isRequired,
+    cancel: PropTypes.func.isRequired
   }
 
   onRegisterClicked = async e => {
     e.preventDefault()
     const { email, password1, password2, remember } = this.state
     if (!email) {
-      this.setState({errors: {email: 'Email is required'}})
+      this.setState({ errors: { email: 'Email is required' } })
       return
     }
     if (!password1) {
-      this.setState({errors: {password1: 'Password is required'}})
+      this.setState({ errors: { password1: 'Password is required' } })
       return
     }
     if (password2 !== password1) {
-      this.setState({errors: {password2: 'Passwords need to match'}})
+      this.setState({ errors: { password2: 'Passwords need to match' } })
       return
     }
-    const registrationErrors = await this.props.attemptRegister(email, password1, password2, remember)
+    const registrationErrors = await this.props.attemptRegister(
+      email,
+      password1,
+      password2,
+      remember
+    )
     if (registrationErrors) {
       this.setState({
         errors: {
@@ -132,7 +140,9 @@ export class RegistrationForm extends Component {
       })
     }
   }
-  onCancelClicked() {}
+  onCancelClicked() {
+    this.props.cancel()
+  }
 
   onFieldChange = (e, name) => {
     this.setState({ [name]: e.target.value })

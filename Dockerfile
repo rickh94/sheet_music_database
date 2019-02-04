@@ -7,6 +7,7 @@ ENV PYTHONUNBUFFERED 1
 # RUN apk add --update --no-cache postgresql-client
 # RUN apk add --update --no-cache --virtual .tmp-build-deps\
 #     gcc libc-dev linux-headers postgresql-dev musl-dev zlib zlib-dev libffi-dev python3-dev
+RUN pip install --upgrade pip
 RUN apt-get update -y
 RUN apt-get install -y postgresql-client
 

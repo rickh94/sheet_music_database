@@ -2,25 +2,21 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import { withAlert } from 'react-alert'
 
 import Container from 'react-bulma-components/lib/components/container'
 import {
   Field,
-  Label,
   Control,
-  Input,
   Checkbox,
-  Help
 } from 'react-bulma-components/lib/components/form'
 import Button from 'react-bulma-components/lib/components/button'
 import Card from 'react-bulma-components/lib/components/card'
 import Content from 'react-bulma-components/lib/components/card/components/content'
-import { withAlert } from 'react-alert'
 import Notification from 'react-bulma-components/lib/components/notification'
 
 import Header from '../Header'
 import TextFieldWithErrors from '../TextFieldWithErrors'
-
 import { app } from '../../actions'
 import alertText from '../../middleware/alertText'
 
@@ -65,7 +61,7 @@ export class LoginWrapper extends Component {
               <Card.Header.Title>Login</Card.Header.Title>
             </Card.Header>
             <Card.Content>
-              <LoginForm attemptLogin={this.attemptLogin} />
+              <LoginForm attemptLogin={this.attemptLogin} cancel={() => this.props.history.goBack()} />
               <Content>
                 <Link to="/register">Don{"'"}t have an account? Register Here</Link>
               </Content>
@@ -109,10 +105,13 @@ export class LoginForm extends Component {
   }
 
   static propTypes = {
-    attemptLogin: PropTypes.func.isRequired
+    attemptLogin: PropTypes.func.isRequired,
+    cancel: PropTypes.func.isRequired
   }
 
-  onCancelClicked() {}
+  onCancelClicked = () => {
+    this.props.cancel()
+  }
 
   onFieldChange = (e, name) => {
     this.setState({ [name]: e.target.value })

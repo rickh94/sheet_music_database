@@ -119,7 +119,9 @@ describe('Register', () => {
 })
 
 describe('RegistrationForm', () => {
-  const wrapper = shallow(<RegistrationForm attemptRegister={jest.fn()} />)
+  const wrapper = shallow(
+    <RegistrationForm attemptRegister={jest.fn()} cancel={jest.fn()} />
+  )
   const mockEvent = { preventDefault: jest.fn() }
   beforeEach(() => {
     wrapper.update()
@@ -317,6 +319,13 @@ describe('RegistrationForm', () => {
         el => el.contains(nonFieldErrors) && el.name() == 'Notification'
       ).length
     ).toEqual(1)
+  })
+
+  it('calls cancel callback in onCancelClicked', () => {
+    const cancel = jest.fn()
+    wrapper.setProps({ cancel })
+    wrapper.instance().onCancelClicked()
+    expect(cancel).toHaveBeenCalled()
   })
 })
 

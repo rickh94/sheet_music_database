@@ -12,6 +12,7 @@ import 'normalize.css'
 import stuff from '../../reducers'
 import Home from '../Home'
 import Login from '../Login'
+import Logout from '../Logout'
 import NotFound from '../NotFound'
 
 import './App.scss'
@@ -39,6 +40,7 @@ export default class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/logout" component={Logout} />
               <Route exact path="/register" component={Register} />
               <Route default component={NotFound} />
             </Switch>

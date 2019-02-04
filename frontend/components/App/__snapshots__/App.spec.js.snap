@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports['App renders correctly 1'] = `
+exports[`App renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App />,
@@ -37,6 +37,11 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/login"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/logout"
             />
             <Route
               component={[Function]}
@@ -79,6 +84,11 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
+              path="/logout"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
               path="/register"
             />
             <Route
@@ -115,6 +125,11 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
+              path="/logout"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
               path="/register"
             />
             <Route
@@ -139,6 +154,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/login"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/logout"
               />,
               <Route
                 component={[Function]}
@@ -174,6 +194,19 @@ ShallowWrapper {
                 "component": [Function],
                 "exact": true,
                 "path": "/login",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/logout",
               },
               "ref": null,
               "rendered": null,
@@ -243,6 +276,11 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
+                path="/logout"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
                 path="/register"
               />
               <Route
@@ -277,6 +315,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/login"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/logout"
               />
               <Route
                 component={[Function]}
@@ -317,6 +360,11 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
+                path="/logout"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
                 path="/register"
               />
               <Route
@@ -341,6 +389,11 @@ ShallowWrapper {
                   component={[Function]}
                   exact={true}
                   path="/login"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/logout"
                 />,
                 <Route
                   component={[Function]}
@@ -376,6 +429,19 @@ ShallowWrapper {
                   "component": [Function],
                   "exact": true,
                   "path": "/login",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/logout",
                 },
                 "ref": null,
                 "rendered": null,
@@ -434,4 +500,4 @@ ShallowWrapper {
     },
   },
 }
-`
+`;

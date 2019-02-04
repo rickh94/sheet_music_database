@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "typeface-asap": "^0.0.69",
+    "typeface-noto-sans": "^0.0.54"
+  }
+}

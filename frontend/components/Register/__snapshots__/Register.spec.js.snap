@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports['Register renders 1'] = `
+exports[`Register renders 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Register
@@ -61,6 +61,7 @@ ShallowWrapper {
             >
               <RegistrationForm
                 attemptRegister={[Function]}
+                cancel={[Function]}
               />
             </CardContent>
           </Card>
@@ -104,6 +105,7 @@ ShallowWrapper {
             >
               <RegistrationForm
                 attemptRegister={[Function]}
+                cancel={[Function]}
               />
             </CardContent>
           </Card>,
@@ -152,6 +154,7 @@ ShallowWrapper {
               >
                 <RegistrationForm
                   attemptRegister={[Function]}
+                  cancel={[Function]}
                 />
               </CardContent>,
             ],
@@ -254,6 +257,7 @@ ShallowWrapper {
                 "backgroundColor": undefined,
                 "children": <RegistrationForm
                   attemptRegister={[Function]}
+                  cancel={[Function]}
                 />,
                 "className": undefined,
                 "clearfix": undefined,
@@ -283,6 +287,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "attemptRegister": [Function],
+                  "cancel": [Function],
                 },
                 "ref": null,
                 "rendered": null,
@@ -331,6 +336,7 @@ ShallowWrapper {
               >
                 <RegistrationForm
                   attemptRegister={[Function]}
+                  cancel={[Function]}
                 />
               </CardContent>
             </Card>
@@ -374,6 +380,7 @@ ShallowWrapper {
               >
                 <RegistrationForm
                   attemptRegister={[Function]}
+                  cancel={[Function]}
                 />
               </CardContent>
             </Card>,
@@ -422,6 +429,7 @@ ShallowWrapper {
                 >
                   <RegistrationForm
                     attemptRegister={[Function]}
+                    cancel={[Function]}
                   />
                 </CardContent>,
               ],
@@ -524,6 +532,7 @@ ShallowWrapper {
                   "backgroundColor": undefined,
                   "children": <RegistrationForm
                     attemptRegister={[Function]}
+                    cancel={[Function]}
                   />,
                   "className": undefined,
                   "clearfix": undefined,
@@ -553,6 +562,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "attemptRegister": [Function],
+                    "cancel": [Function],
                   },
                   "ref": null,
                   "rendered": null,
@@ -587,13 +597,14 @@ ShallowWrapper {
     },
   },
 }
-`
+`;
 
-exports['RegistrationForm renders 1'] = `
+exports[`RegistrationForm renders 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <RegistrationForm
     attemptRegister={[MockFunction]}
+    cancel={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -1871,4 +1882,4 @@ ShallowWrapper {
     },
   },
 }
-`
+`;
