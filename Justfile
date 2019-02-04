@@ -32,3 +32,6 @@ test:
 format:
     black .
     cd $HOME/repositories/sheet_music_database/frontend && npx eslint --fix {components,reducers,actions,middleware}/**
+
+crcf name +ARGS='':
+    cd $HOME/repositories/sheet_music_database/frontend && yarn crcf {{ARGS}} components/{{name}}
