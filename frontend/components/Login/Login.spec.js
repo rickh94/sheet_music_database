@@ -51,7 +51,7 @@ describe('LoginWrapper', () => {
   })
 
   it('calls showAlert with success message on successful login', async () => {
-    const login = async (_email, _pass, _remember) => {
+    const login = async () => {
       return Promise.resolve(true)
     }
     const alert = { show: jest.fn() }
@@ -89,7 +89,7 @@ describe('LoginWrapper', () => {
   })
 
   it('goes back to previous page on successful login', async () => {
-    const login = async (_email, _pass, _remember) => {
+    const login = async () => {
       return Promise.resolve(true)
     }
     const history = { goBack: jest.fn() }
@@ -211,7 +211,7 @@ describe('LoginForm', () => {
 
   it('sets error state if login fails with email error', async () => {
     const email = 'Please enter a valid email'
-    const attemptLogin = async (_e, _p, _r) => {
+    const attemptLogin = async () => {
       return {
         email
       }
@@ -224,7 +224,7 @@ describe('LoginForm', () => {
 
   it('sets error state if login fails with password error', async () => {
     const password = 'Please enter a valid password'
-    const attemptLogin = (_e, _p, _r) => {
+    const attemptLogin = () => {
       return {
         password
       }
@@ -237,7 +237,7 @@ describe('LoginForm', () => {
 
   it('sets error state if login fails with non field error', async () => {
     const non_field_errors = 'Could not login with provided credentials'
-    const attemptLogin = (_e, _p, _r) => {
+    const attemptLogin = () => {
       return {
         non_field_errors
       }

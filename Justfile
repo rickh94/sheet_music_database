@@ -24,3 +24,11 @@ create-account email:
     docker-compose up -d
     coreapi get http://localhost:8000/docs
     coreapi action auth registration create -p email={{email}} -p password1=this\ is\ a\ test -p password2=this\ is\ a\ test
+
+test:
+    cd $HOME/repositories/sheet_music_database/frontend && yarn test 
+    pipenv run smdb test -m 
+
+format:
+    black .
+    cd $HOME/repositories/sheet_music_database/frontend && npx eslint --fix {components,reducers,actions,middleware}/**

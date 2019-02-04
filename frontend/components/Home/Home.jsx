@@ -58,7 +58,7 @@ export default class Home extends Component {
               <li>Composer(s): The composer of the piece</li>
               <li>Sheets: The individual sheet music files that correspond to the piece</li>
               <li>Tags: Arbitrary tags for categorizing pieces</li>
-              <li>Instruments: All the instruments connected with a piece{"'"}s sheets</li>
+              <li>Instruments: All the instruments connected with a piece{'\''}s sheets</li>
             </ul>
             This provides one place for all the data about a piece can be found, while still having separate data that
             can be filtered in other ways

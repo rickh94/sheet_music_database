@@ -7,7 +7,8 @@ import click
 @click.option("-v", "--verbose", is_flag=True)
 @click.option("--cov", is_flag=True)
 @click.option("--picked", is_flag=True)
-def cli(verbose, cov, picked):
+@click.option("-m", "--multi-thread", is_flag=True)
+def cli(verbose, cov, picked, multi_thread):
     """
     Run tests
 
@@ -15,11 +16,13 @@ def cli(verbose, cov, picked):
     """
     pytest_options = ["--instafail"]
     if verbose:
-        pytest_options += "-v"
+        pytest_options.append("-v")
     if cov:
-        pytest_options += "--cov=."
+        pytest_options.append("--cov=.")
     if picked:
-        pytest_options += "--picked"
+        pytest_options.append("--picked")
+    if multi_thread:
+        pytest_options.append("-n 8")
 
     sub_cmd = [
         "pytest",

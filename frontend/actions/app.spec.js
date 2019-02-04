@@ -7,10 +7,10 @@ describe('app login actions', () => {
   const api = new DjangoURL()
   const mockGetState = jest.fn()
 
-  beforeEach = () => {
+  beforeEach(() => {
     api.clear()
-    mockGetState.mockReset()
-  }
+  })
+
   it('returns the data', async () => {
     const mockDispatch = jest.fn()
     const mock = new MockAdapter(axios)
@@ -23,7 +23,9 @@ describe('app login actions', () => {
       .reply(200, {
         token
       })
-    expect(await login('test@test.test', 'testpass', true)(mockDispatch, mockGetState)).toBeTruthy()
+    expect(
+      await login('test@test.test', 'testpass', true)(mockDispatch, mockGetState)
+    ).toBeTruthy()
     expect(mockDispatch).toHaveBeenCalledWith({ type: 'LOGIN' })
     expect(mockDispatch).toHaveBeenCalledWith({
       type: 'LOGIN_SUCCESSFUL',
@@ -42,11 +44,13 @@ describe('app login actions', () => {
         password: 'failpassword'
       })
       .reply(400, errors)
-    expect(await login('fail@test.com', 'failpassword', false)(mockDispatch, mockGetState)).toBeFalsy()
+    expect(
+      await login('fail@test.com', 'failpassword', false)(mockDispatch, mockGetState)
+    ).toBeFalsy()
     expect(mockDispatch).toBeCalledWith({ type: 'LOGIN' })
     expect(mockDispatch).toBeCalledWith({
       type: 'LOGIN_FAILED',
-      // payload: errors
+      payload: errors
     })
     // does NOT like having an error payload. cannot figure out why
   })
@@ -56,10 +60,10 @@ describe('app register actions', () => {
   const api = new DjangoURL()
   const mockGetState = jest.fn()
 
-  beforeEach = () => {
+  beforeEach(() => {
     api.clear()
-    mockGetState.mockReset()
-  }
+  })
+
   it('returns the data', async () => {
     const mockDispatch = jest.fn()
     const mock = new MockAdapter(axios)
@@ -73,7 +77,12 @@ describe('app register actions', () => {
       .reply(200, {
         token
       })
-    expect(await register('test@test.test', 'testpass', 'testpass', true)(mockDispatch, mockGetState)).toBeTruthy()
+    expect(
+      await register('test@test.test', 'testpass', 'testpass', true)(
+        mockDispatch,
+        mockGetState
+      )
+    ).toBeTruthy()
     expect(mockDispatch).toHaveBeenCalledWith({ type: 'REGISTER' })
     expect(mockDispatch).toHaveBeenCalledWith({
       type: 'REGISTER_SUCCESSFUL',
@@ -92,7 +101,12 @@ describe('app register actions', () => {
         password: 'failpassword'
       })
       .reply(400, errors)
-    expect(await register('fail@test.com', 'failpassword', 'failpassword', false)(mockDispatch, mockGetState)).toBeFalsy()
+    expect(
+      await register('fail@test.com', 'failpassword', 'failpassword', false)(
+        mockDispatch,
+        mockGetState
+      )
+    ).toBeFalsy()
     expect(mockDispatch).toBeCalledWith({ type: 'REGISTER' })
     expect(mockDispatch).toBeCalledWith({
       type: 'REGISTER_FAILED',

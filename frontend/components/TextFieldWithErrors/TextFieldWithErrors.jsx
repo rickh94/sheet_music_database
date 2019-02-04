@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Field,
   Label,
@@ -35,4 +35,4 @@ TextFieldWithErrors.propTypes = {
   name: PropTypes.string.isRequired,
 }
 
-export default TextFieldWithErrors;
+export default TextFieldWithErrors

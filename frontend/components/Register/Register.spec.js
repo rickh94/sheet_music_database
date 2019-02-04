@@ -64,7 +64,7 @@ describe('Register', () => {
   })
 
   it('calls showAlert with success message on successful register', async () => {
-    const register = async (_email, _pass, _pass2, _remember) => Promise.resolve(true)
+    const register = async () => Promise.resolve(true)
 
     const alert = { show: jest.fn() }
     wrapper.setProps({ register, alert })
@@ -107,7 +107,7 @@ describe('Register', () => {
   })
 
   it('goes back to previous page on successful register', async () => {
-    const register = async (_email, _pass, _pass2, _remember) => Promise.resolve(true)
+    const register = async () => Promise.resolve(true)
 
     const history = { goBack: jest.fn() }
     wrapper.setProps({ register, history })

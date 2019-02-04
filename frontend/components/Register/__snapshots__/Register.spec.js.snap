@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Register renders 1`] = `
+exports['Register renders 1'] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Register
@@ -587,9 +587,9 @@ ShallowWrapper {
     },
   },
 }
-`;
+`
 
-exports[`RegistrationForm renders 1`] = `
+exports['RegistrationForm renders 1'] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <RegistrationForm
@@ -1871,4 +1871,4 @@ ShallowWrapper {
     },
   },
 }
-`;
+`
