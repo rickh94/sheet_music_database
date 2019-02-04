@@ -10,8 +10,8 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('renders a Provider', () => {
-    expect(wrapper.find('Provider').length).toEqual(1)
+  it('renders two Providers (Redux and Alert)', () => {
+    expect(wrapper.find('Provider').length).toEqual(2)
   })
 
   it('renders a router', () => {

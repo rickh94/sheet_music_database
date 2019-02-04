@@ -15,7 +15,7 @@ describe('Home', () => {
   })
 
   it('renders the header', () => {
-    expect(wrapper.exists('Header')).toBeTruthy()
+    expect(wrapper.exists('Connect(Header)')).toBeTruthy()
   })
 
   it('renders a card', () => {

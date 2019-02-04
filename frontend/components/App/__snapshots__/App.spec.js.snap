@@ -17,29 +17,39 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <BrowserRouter>
-        <Switch>
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/login"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/register"
-          />
-          <Route
-            component={[Function]}
-            default={true}
-          />
-        </Switch>
-      </BrowserRouter>,
+      "children": <Provider
+        offset="30px"
+        position="bottom left"
+        template={[Function]}
+        timeout={3000}
+        transition="fade"
+        type="info"
+        zIndex={100}
+      >
+        <BrowserRouter>
+          <Switch>
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/login"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/register"
+            />
+            <Route
+              component={[Function]}
+              default={true}
+            />
+          </Switch>
+        </BrowserRouter>
+      </Provider>,
       "store": Object {
         "dispatch": [Function],
         "getState": [Function],
@@ -50,122 +60,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Switch>
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/login"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/register"
-          />
-          <Route
-            component={[Function]}
-            default={true}
-          />
-        </Switch>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/"
-            />,
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/login"
-            />,
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/register"
-            />,
-            <Route
-              component={[Function]}
-              default={true}
-            />,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/login",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/register",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "default": true,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "class",
@@ -193,13 +87,13 @@ ShallowWrapper {
             />
           </Switch>
         </BrowserRouter>,
-        "store": Object {
-          "dispatch": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-          Symbol(observable): [Function],
-        },
+        "offset": "30px",
+        "position": "bottom left",
+        "template": [Function],
+        "timeout": 3000,
+        "transition": "fade",
+        "type": "info",
+        "zIndex": 100,
       },
       "ref": null,
       "rendered": Object {
@@ -311,6 +205,210 @@ ShallowWrapper {
               "type": [Function],
             },
           ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Provider
+          offset="30px"
+          position="bottom left"
+          template={[Function]}
+          timeout={3000}
+          transition="fade"
+          type="info"
+          zIndex={100}
+        >
+          <BrowserRouter>
+            <Switch>
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/register"
+              />
+              <Route
+                component={[Function]}
+                default={true}
+              />
+            </Switch>
+          </BrowserRouter>
+        </Provider>,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <BrowserRouter>
+            <Switch>
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/register"
+              />
+              <Route
+                component={[Function]}
+                default={true}
+              />
+            </Switch>
+          </BrowserRouter>,
+          "offset": "30px",
+          "position": "bottom left",
+          "template": [Function],
+          "timeout": 3000,
+          "transition": "fade",
+          "type": "info",
+          "zIndex": 100,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Switch>
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/register"
+              />
+              <Route
+                component={[Function]}
+                default={true}
+              />
+            </Switch>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/login"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/register"
+                />,
+                <Route
+                  component={[Function]}
+                  default={true}
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/login",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/register",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "default": true,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
           "type": [Function],
         },
         "type": [Function],

@@ -15,7 +15,7 @@ describe('<NotFound />', () => {
   })
 
   it('renders the Header', () => {
-    expect(wrapper.exists('Header')).toBeTruthy()
+    expect(wrapper.exists('Connect(Header)')).toBeTruthy()
   })
 
   it('renders a container', () => {

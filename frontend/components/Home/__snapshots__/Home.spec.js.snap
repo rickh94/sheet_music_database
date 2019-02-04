@@ -18,7 +18,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Connect(Header) />,
         <Container
           breakpoint={null}
           className="foreground"
@@ -1900,7 +1900,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Connect(Header) />,
           <Container
             breakpoint={null}
             className="foreground"

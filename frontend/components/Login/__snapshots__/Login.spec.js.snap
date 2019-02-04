@@ -4,6 +4,21 @@ exports[`LoginWrapper renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LoginWrapper
+    alert={
+      Object {
+        "show": [MockFunction],
+      }
+    }
+    app={
+      Object {
+        "errors": Object {},
+      }
+    }
+    history={
+      Object {
+        "goBack": [MockFunction],
+      }
+    }
     login={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -20,7 +35,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Connect(Header) />,
         <Container
           breakpoint={null}
           fluid={false}
@@ -401,7 +416,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Connect(Header) />,
           <Container
             breakpoint={null}
             fluid={false}

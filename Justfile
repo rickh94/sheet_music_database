@@ -16,3 +16,11 @@ logs container:
 generate-client host:
     pipenv run smdb manage make_js_interface {{host}} api.js
     mv backend/app/api.js frontend/middleware/api.js
+
+yarn +ARGS:
+    cd $HOME/repositories/sheet_music_database/frontend && yarn {{ARGS}}
+
+create-account email:
+    docker-compose up -d
+    coreapi get http://localhost:8000/docs
+    coreapi action auth registration create -p email={{email}} -p password1=this\ is\ a\ test -p password2=this\ is\ a\ test

@@ -1,6 +1,6 @@
 import DjangoURL from '../middleware/api'
 
-export const login = (email, password, remember) => {
+export function login(email, password, remember) {
   return async dispatch => {
     dispatch({
       type: 'LOGIN'
@@ -15,11 +15,39 @@ export const login = (email, password, remember) => {
         type: 'LOGIN_SUCCESSFUL',
         payload: res.data
       })
+      return true
     } catch (err) {
       dispatch({
         type: 'LOGIN_FAILED',
         payload: err.response.data
       })
+      return false
+    }
+  }
+}
+
+export function register(email, password1, password2, remember) {
+  return async dispatch => {
+    dispatch({
+      type: 'REGISTER'
+    })
+    try {
+      const api = new DjangoURL()
+      const res = await api.v1.auth.registration.post({ email, password1, password2 })
+      if (remember) {
+        localStorage.setItem('token', res.data.token)
+      }
+      dispatch({
+        type: 'REGISTER_SUCCESSFUL',
+        payload: res.data
+      })
+      return true
+    } catch (err) {
+      dispatch({
+        type: 'REGISTER_FAILED',
+        payload: err.response.data
+      })
+      return false
     }
   }
 }

@@ -3,33 +3,55 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import Header from '../Header/Header'
-
-import { app } from '../../actions'
-
 import Container from 'react-bulma-components/lib/components/container'
 import {
   Field,
   Label,
   Control,
   Input,
-  Checkbox
+  Checkbox,
+  Help
 } from 'react-bulma-components/lib/components/form'
 import Button from 'react-bulma-components/lib/components/button'
 import Card from 'react-bulma-components/lib/components/card'
 import Content from 'react-bulma-components/lib/components/card/components/content'
+import { withAlert } from 'react-alert'
+import Notification from 'react-bulma-components/lib/components/notification'
+
+import Header from '../Header'
+import TextFieldWithErrors from '../TextFieldWithErrors'
+
+import { app } from '../../actions'
+import alertText from '../../middleware/alertText'
 
 export class LoginWrapper extends Component {
-  constructor(props) {
-    super(props)
+  static propTypes = {
+    login: PropTypes.func.isRequired,
+    alert: PropTypes.object.isRequired,
+    app: PropTypes.object.isRequired
   }
 
-  static propTypes = {
-    login: PropTypes.func.isRequired
+  componentDidMount() {
+    if (this.props.app.token) {
+      this.props.alert.show(alertText('Already Logged In'))
+      this.props.history.goBack()
+    }
   }
 
   attemptLogin = async (email, password, remember) => {
-    await this.props.login(email, password, remember)
+    let success
+    try {
+      success = await this.props.login(email, password, remember)
+    } catch (err) {
+      success = false
+    }
+    if (success) {
+      this.props.alert.show(alertText('Login Successful'), { type: 'success' })
+      this.props.history.goBack()
+    } else {
+      this.props.alert.show(alertText('Login Failed'), { type: 'error' })
+      return this.props.app.errors
+    }
   }
 
   render() {
@@ -55,93 +77,10 @@ export class LoginWrapper extends Component {
   }
 }
 
-export class LoginForm extends Component {
-  state = {
-    email: '',
-    password: '',
-    remember: false,
-    errors: {}
+const mapStateToProps = state => {
+  return {
+    app: state.app
   }
-
-  static propTypes = {
-    attemptLogin: PropTypes.func.isRequired
-  }
-  // onLoginClicked() {}
-
-  onCancelClicked() {}
-
-  onFieldChange(e, name) {
-    this.setState({ [name]: e.target.value })
-  }
-
-  onLoginClick = e => {
-    e.preventDefault()
-    const { email, password, remember } = this.state
-    if (!email) {
-      this.setState({ errors: { email: 'Email is required' } })
-      return
-    }
-    if (!password) {
-      this.setState({ errors: { password: 'Password is required' } })
-      return
-    }
-    this.props.attemptLogin(email, password, remember)
-  }
-
-  render() {
-    const { email, password, remember } = this.state
-    return (
-      <form>
-        <Field>
-          <Label>Email</Label>
-          <Control>
-            <Input
-              type="email"
-              placeholder="Enter Email..."
-              value={email}
-              onChange={e => this.onFieldChange(e, 'email')}
-            />
-          </Control>
-        </Field>
-        <Field>
-          <Label>Password</Label>
-          <Control>
-            <Input
-              type="password"
-              placeholder="Enter Password..."
-              value={password}
-              onChange={e => this.onFieldChange(e, 'password')}
-            />
-          </Control>
-        </Field>
-        <Field>
-          <Control>
-            <Checkbox
-              onChange={e => this.setState({ remember: !remember })}
-              checked={remember}
-            >
-              {' '}
-              Remember Me
-            </Checkbox>
-          </Control>
-        </Field>
-        <Field kind="group">
-          <Control>
-            <Button type="primary" onClick={e => this.onLoginClick(e)}>
-              Login
-            </Button>
-          </Control>
-          <Control>
-            <Button onClick={() => this.onCancelClicked()}>Cancel</Button>
-          </Control>
-        </Field>
-      </form>
-    )
-  }
-}
-
-const mapStateToProps = () => {
-  return {}
 }
 
 const mapDispatchToProps = dispatch => {
@@ -155,4 +94,106 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LoginWrapper)
+)(withAlert(LoginWrapper))
+
+export class LoginForm extends Component {
+  state = {
+    email: '',
+    password: '',
+    remember: false,
+    errors: {
+      email: null,
+      password: null,
+      nonFieldErrors: null
+    }
+  }
+
+  static propTypes = {
+    attemptLogin: PropTypes.func.isRequired
+  }
+
+  onCancelClicked() {}
+
+  onFieldChange = (e, name) => {
+    this.setState({ [name]: e.target.value })
+  }
+
+  onLoginClicked = async e => {
+    e.preventDefault()
+    const { email, password, remember } = this.state
+    if (!email) {
+      this.setState({ errors: { email: 'Email is required' } })
+      return
+    }
+    if (!password) {
+      this.setState({ errors: { password: 'Password is required' } })
+      return
+    }
+    const loginErrors = await this.props.attemptLogin(email, password, remember)
+    if (loginErrors) {
+      this.setState({
+        errors: {
+          email: loginErrors.email,
+          password: loginErrors.password,
+          nonFieldErrors: loginErrors.non_field_errors
+        }
+      })
+    }
+  }
+
+  render() {
+    const { email, password, remember, errors } = this.state
+    return (
+      <form>
+        {errors.nonFieldErrors && (
+          <Notification color="danger">
+            {errors.nonFieldErrors}
+            <Button
+              remove
+              onClick={() => this.setState({ errors: { nonFieldErrors: null } })}
+            />
+          </Notification>
+        )}
+        <TextFieldWithErrors
+          label="Email"
+          placeholder="Enter Email..."
+          value={email}
+          type="email"
+          onChange={this.onFieldChange}
+          error={errors.email}
+          name="email"
+        />
+        <TextFieldWithErrors
+          label="Password"
+          placeholder="Enter Password..."
+          value={password}
+          type="password"
+          error={errors.password}
+          name="password"
+          onChange={this.onFieldChange}
+        />
+        <Field>
+          <Control>
+            <Checkbox
+              onChange={() => this.setState({ remember: !remember })}
+              checked={remember}
+            >
+              {' '}
+              Keep Me Logged In
+            </Checkbox>
+          </Control>
+        </Field>
+        <Field kind="group">
+          <Control>
+            <Button type="primary" onClick={e => this.onLoginClicked(e)}>
+              Login
+            </Button>
+          </Control>
+          <Control>
+            <Button onClick={() => this.onCancelClicked()}>Cancel</Button>
+          </Control>
+        </Field>
+      </form>
+    )
+  }
+}

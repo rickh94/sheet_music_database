@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import React from 'react'
 import '../../setupTests'
 import { LoginWrapper, LoginForm } from './Login'
@@ -6,7 +6,18 @@ import { LoginWrapper, LoginForm } from './Login'
 import { Label } from 'react-bulma-components/lib/components/form'
 
 describe('LoginWrapper', () => {
-  const wrapper = shallow(<LoginWrapper login={jest.fn()} />)
+  const wrapper = shallow(
+    <LoginWrapper
+      login={jest.fn()}
+      alert={{ show: jest.fn() }}
+      app={{ errors: {} }}
+      history={{ goBack: jest.fn() }}
+    />
+  )
+
+  beforeEach = () => {
+    wrapper.update()
+  }
 
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot()
@@ -17,7 +28,7 @@ describe('LoginWrapper', () => {
   })
 
   it('renders the Header', () => {
-    expect(wrapper.exists('Header')).toBeTruthy()
+    expect(wrapper.exists('Connect(Header)')).toBeTruthy()
   })
 
   it('renders a LoginForm', () => {
@@ -38,6 +49,69 @@ describe('LoginWrapper', () => {
     wrapper.instance().attemptLogin('testemail', 'testpass', false)
     expect(login).toHaveBeenCalledWith('testemail', 'testpass', false)
   })
+
+  it('calls showAlert with success message on successful login', async () => {
+    const login = async (_email, _pass, _remember) => {
+      return Promise.resolve(true)
+    }
+    const alert = { show: jest.fn() }
+    wrapper.setProps({ login, alert })
+    await wrapper.instance().attemptLogin('testemail', 'testpassword', false)
+    expect(alert.show).toHaveBeenCalledWith(
+      <span className={'alert-text'}>Login Successful</span>,
+      {
+        type: 'success'
+      }
+    )
+  })
+
+  it('calls showAlert with failure message on failed login', async () => {
+    const login = () => Promise.resolve(false)
+    const alert = { show: jest.fn() }
+    wrapper.setProps({ login, alert })
+    await wrapper.instance().attemptLogin('testemail', 'testpassword', false)
+    expect(alert.show).toHaveBeenCalledWith(
+      <span className={'alert-text'}>Login Failed</span>,
+      {
+        type: 'error'
+      }
+    )
+  })
+
+  it('returns errors on failed login', async () => {
+    const login = () => Promise.resolve(false)
+    const errors = { someError: 'fail' }
+    const app = { errors }
+    wrapper.setProps({ login, app })
+    expect(
+      await wrapper.instance().attemptLogin('testemail', 'testpassword', false)
+    ).toEqual(errors)
+  })
+
+  it('goes back to previous page on successful login', async () => {
+    const login = async (_email, _pass, _remember) => {
+      return Promise.resolve(true)
+    }
+    const history = { goBack: jest.fn() }
+    wrapper.setProps({ login, history })
+    await wrapper.instance().attemptLogin('testemail', 'testpassword', false)
+    expect(history.goBack).toHaveBeenCalled()
+  })
+
+  it('should redirect if already logged in', () => {
+    const show = jest.fn()
+    const goBack = jest.fn()
+    wrapper.setProps({
+      history: { goBack },
+      app: { token: 'sometoken' },
+      alert: { show }
+    })
+    wrapper.instance().componentDidMount()
+    expect(show).toHaveBeenCalledWith(
+      <span className={'alert-text'}>Already Logged In</span>
+    )
+    expect(goBack).toHaveBeenCalled()
+  })
 })
 
 describe('LoginForm', () => {
@@ -53,34 +127,13 @@ describe('LoginForm', () => {
   })
 
   it('renders needed fields', () => {
-    expect(wrapper.find('Field').length).toEqual(4)
+    expect(wrapper.find('Field').length).toEqual(2)
+    expect(wrapper.find('TextFieldWithErrors').length).toEqual(2)
   })
 
-  it('renders labels for email, password', () => {
-    expect(wrapper.containsMatchingElement(<Label>Email</Label>)).toBeTruthy()
-    expect(wrapper.containsMatchingElement(<Label>Password</Label>)).toBeTruthy()
-  })
-
-  it('renders fields with controls', () => {
-    wrapper.find('Field').forEach(field => {
-      expect(field.exists('Control')).toBeTruthy()
-    })
-  })
-
-  it('renders email input for email field', () => {
-    const field = wrapper.findWhere(el => el.contains('Email') && el.name() == 'Field')
-    expect(field.exists('Input')).toBeTruthy()
-    const input = field.find('Input')
-    expect(input.props().type).toEqual('email')
-  })
-
-  it('renders password input for password field', () => {
-    const field = wrapper.findWhere(
-      el => el.contains('Password') && el.name() == 'Field'
-    )
-    expect(field.exists('Input')).toBeTruthy()
-    const input = field.find('Input')
-    expect(input.props().type).toEqual('password')
+  it('updates state based on field', () => {
+    wrapper.instance().onFieldChange({target: {value: 'test'}}, 'email')
+    expect(wrapper.state().email).toEqual('test')
   })
 
   it('renders a login button', () => {
@@ -97,13 +150,21 @@ describe('LoginForm', () => {
   it('calls login function when button is clicked', () => {
     const attemptLogin = jest.fn()
     wrapper.setProps({ attemptLogin })
-    wrapper.setState({ email: 'test@example.com', password: 'testpassword', remember: false})
+    wrapper.setState({
+      email: 'test@example.com',
+      password: 'testpassword',
+      remember: false
+    })
     wrapper
       .findWhere(el => el.contains('Login') && el.name() == 'Button')
       .simulate('click', mockEvent)
     expect(attemptLogin).toHaveBeenCalledWith('test@example.com', 'testpassword', false)
 
-    wrapper.setState({ email: 'test@example.com', password: 'testpassword', remember: true})
+    wrapper.setState({
+      email: 'test@example.com',
+      password: 'testpassword',
+      remember: true
+    })
     wrapper
       .findWhere(el => el.contains('Login') && el.name() == 'Button')
       .simulate('click', mockEvent)
@@ -143,25 +204,57 @@ describe('LoginForm', () => {
     expect(spy).toHaveBeenCalled()
   })
 
-  it('calls update field on email change', () => {
-    const field = wrapper.findWhere(el => el.contains('Email') && el.name() == 'Field')
-    const input = field.find('Input')
-    input.simulate('change', { target: { value: 'test@example.com' } })
-    expect(wrapper.state().email).toEqual('test@example.com')
-  })
-
-  it('updates state on password change', () => {
-    const field = wrapper.findWhere(
-      el => el.contains('Password') && el.name() == 'Field'
-    )
-    const input = field.find('Input')
-    input.simulate('change', { target: { value: 'password123' } })
-    expect(wrapper.state().password).toEqual('password123')
-  })
-
   it('updates state on remember change', () => {
-    const checkbox = wrapper.find('Checkbox')
-    checkbox.simulate('click')
+    wrapper.find('Checkbox').first().simulate('click')
     expect(wrapper.state().remember).toBeTruthy()
+  })
+
+  it('sets error state if login fails with email error', async () => {
+    const email = 'Please enter a valid email'
+    const attemptLogin = async (_e, _p, _r) => {
+      return {
+        email
+      }
+    }
+    wrapper.setProps({ attemptLogin })
+    wrapper.setState({ email: 'test', password: 'test' })
+    await wrapper.instance().onLoginClicked(mockEvent)
+    expect(wrapper.state().errors.email).toEqual(email)
+  })
+
+  it('sets error state if login fails with password error', async () => {
+    const password = 'Please enter a valid password'
+    const attemptLogin = (_e, _p, _r) => {
+      return {
+        password
+      }
+    }
+    wrapper.setProps({ attemptLogin })
+    wrapper.setState({ email: 'test', password: 'test' })
+    await wrapper.instance().onLoginClicked(mockEvent)
+    expect(wrapper.state().errors.password).toEqual(password)
+  })
+
+  it('sets error state if login fails with non field error', async () => {
+    const non_field_errors = 'Could not login with provided credentials'
+    const attemptLogin = (_e, _p, _r) => {
+      return {
+        non_field_errors
+      }
+    }
+    wrapper.setProps({ attemptLogin })
+    wrapper.setState({ email: 'test', password: 'test' })
+    await wrapper.instance().onLoginClicked(mockEvent)
+    expect(wrapper.state().errors.nonFieldErrors).toEqual(non_field_errors)
+  })
+
+  it('shows a message for non-field errors', () => {
+    const nonFieldErrors = 'could not login'
+    wrapper.setState({ errors: { nonFieldErrors } })
+    expect(
+      wrapper.findWhere(
+        el => el.contains(nonFieldErrors) && el.name() == 'Notification'
+      ).length
+    ).toEqual(1)
   })
 })
