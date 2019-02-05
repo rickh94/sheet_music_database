@@ -1,4 +1,4 @@
-import appReducer from './app'
+import accountReducer from './account'
 
 const initialState = {
   token: null,
@@ -6,19 +6,19 @@ const initialState = {
   errors: {}
 }
 
-describe('app reducer', () => {
+describe('account reducer', () => {
   it('should return the initial state', () => {
-    expect(appReducer(undefined, {})).toEqual(initialState)
+    expect(accountReducer(undefined, {})).toEqual(initialState)
   })
 
   it('should return existing state', () => {
     const someState = { token: '12345', isLoading: false, test: 'test' }
-    expect(appReducer(someState, {})).toEqual(someState)
+    expect(accountReducer(someState, {})).toEqual(someState)
   })
 
   describe('Login actions', () => {
     it('should set isLoading', () => {
-      expect(appReducer(undefined, { type: 'LOGIN' })).toEqual({
+      expect(accountReducer(undefined, { type: 'LOGIN' })).toEqual({
         ...initialState,
         isLoading: true
       })
@@ -32,7 +32,7 @@ describe('app reducer', () => {
           token
         }
       }
-      expect(appReducer({ isLoading: true, ...initialState }, action)).toEqual({
+      expect(accountReducer({ isLoading: true, ...initialState }, action)).toEqual({
         ...initialState,
         isLoading: false,
         token
@@ -45,7 +45,7 @@ describe('app reducer', () => {
         type: 'LOGIN_FAILED',
         payload: errors
       }
-      expect(appReducer({ ...initialState, isLoading: true }, action)).toEqual({
+      expect(accountReducer({ ...initialState, isLoading: true }, action)).toEqual({
         ...initialState,
         isLoading: false,
         errors
@@ -55,7 +55,7 @@ describe('app reducer', () => {
 
   describe('Register Actions', () => {
     it('should set isLoading', () => {
-      expect(appReducer(undefined, { type: 'REGISTER' })).toEqual({
+      expect(accountReducer(undefined, { type: 'REGISTER' })).toEqual({
         ...initialState,
         isLoading: true
       })
@@ -69,7 +69,7 @@ describe('app reducer', () => {
           token
         }
       }
-      expect(appReducer({ ...initialState, isLoading: true }, action)).toEqual({
+      expect(accountReducer({ ...initialState, isLoading: true }, action)).toEqual({
         ...initialState,
         isLoading: false,
         token
@@ -82,7 +82,7 @@ describe('app reducer', () => {
         type: 'REGISTER_FAILED',
         payload: errors
       }
-      expect(appReducer({ ...initialState, isLoading: true }, action)).toEqual({
+      expect(accountReducer({ ...initialState, isLoading: true }, action)).toEqual({
         ...initialState,
         isLoading: false,
         errors
@@ -91,7 +91,7 @@ describe('app reducer', () => {
   })
   describe('Logout actions', () => {
     it('should set isLoading', () => {
-      expect(appReducer(undefined, { type: 'LOGOUT' })).toEqual({
+      expect(accountReducer(undefined, { type: 'LOGOUT' })).toEqual({
         ...initialState,
         isLoading: true
       })
@@ -99,7 +99,7 @@ describe('app reducer', () => {
 
     it('should delete token and unset isLoading if successful', () => {
       expect(
-        appReducer(
+        accountReducer(
           { token: 'sometokentext', isLoading: true },
           { type: 'LOGOUT_SUCCESSFUL' }
         )
@@ -113,7 +113,7 @@ describe('app reducer', () => {
       const state = { token: 'sometokentext', isLoading: true }
       const someError = 'some error text'
       expect(
-        appReducer(state, { type: 'LOGOUT_FAILED', payload: { someError } })
+        accountReducer(state, { type: 'LOGOUT_FAILED', payload: { someError } })
       ).toEqual({
         ...state,
         isLoading: false,

@@ -3,6 +3,7 @@ import Navbar from 'react-bulma-components/lib/components/navbar'
 import Heading from 'react-bulma-components/lib/components/heading'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import './Header.scss'
 
@@ -11,9 +12,13 @@ export class Header extends Component {
     open: false
   }
 
+  static propTypes = {
+    account: PropTypes.object.isRequired,
+  }
+
   render() {
     const { open } = this.state
-    const { token } = this.props.app
+    const { token } = this.props.account
     const menuActive = open ? 'is-active' : ''
     return (
       <Navbar color="primary" textColor="light">
@@ -57,9 +62,9 @@ export class Header extends Component {
             </Link>
             {token ? (
               <React.Fragment>
-                <Link to="/account" className="header--link">
+                <Link to="/profile" className="header--link">
                   <Navbar.Item renderAs="div" className="nav-item-resp">
-                    Account
+                    Profile
                   </Navbar.Item>
                 </Link>
                 <Link to="/logout" className="header--link">
@@ -91,7 +96,7 @@ export class Header extends Component {
 
 const mapStateToProps = state => {
   return {
-    app: state.app
+    account: state.account
   }
 }
 

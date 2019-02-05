@@ -46,4 +46,9 @@ describe('<TextFieldWithErrors />', () => {
     wrapper.find('Input').simulate('change', { target: 'testvalue' })
     expect(onChange).toHaveBeenCalled()
   })
+
+  it('does not render label if not provided', () => {
+    wrapper.setProps({label: null})
+    expect(wrapper.exists('Label')).toBeFalsy()
+  })
 })

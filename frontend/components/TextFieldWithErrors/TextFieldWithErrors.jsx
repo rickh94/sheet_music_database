@@ -11,7 +11,7 @@ import {
 function TextFieldWithErrors(props) {
   return (
     <Field>
-      <Label>{props.label}</Label>
+      {props.label && <Label>{props.label}</Label>}
       <Control>
         <Input
           type={props.type}
@@ -27,12 +27,13 @@ function TextFieldWithErrors(props) {
 }
 
 TextFieldWithErrors.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   type: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   error: PropTypes.any,
   name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string
 }
 
 export default TextFieldWithErrors

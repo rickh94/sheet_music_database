@@ -8,7 +8,7 @@ describe('Logout', () => {
     <Logout
       history={{ goBack: jest.fn() }}
       logout={jest.fn()}
-      app={{ token: 'testtokentext' }}
+      account={{ token: 'testtokentext' }}
       alert={{ show: jest.fn() }}
     />
   )
@@ -73,7 +73,7 @@ describe('Logout', () => {
     const logout = jest.fn()
     const token = 'sometokentext'
     const spy = jest.spyOn(wrapper.instance(), 'handleLogout')
-    wrapper.setProps({ logout, app: { token } })
+    wrapper.setProps({ logout, account: { token } })
     await wrapper.instance().onLogoutClicked()
     expect(logout).toHaveBeenCalledWith(token)
     expect(spy).toHaveBeenCalledWith(undefined)
@@ -83,7 +83,7 @@ describe('Logout', () => {
     const logout = jest.fn()
     const token = 'sometokentext'
     const spy = jest.spyOn(wrapper.instance(), 'handleLogout')
-    wrapper.setProps({ logout, app: { token } })
+    wrapper.setProps({ logout, account: { token } })
     await wrapper.instance().onLogoutAllClicked()
     expect(logout).toHaveBeenCalledWith(token, true)
     expect(spy).toHaveBeenCalledWith(undefined, true)
@@ -110,7 +110,7 @@ describe('Logout', () => {
   it('redirects and shows alert if there is no token', () => {
     const history = { goBack: jest.fn() }
     const alert = { show: jest.fn() }
-    wrapper.setProps({ app: { token: null }, history, alert })
+    wrapper.setProps({ account: { token: null }, history, alert })
     wrapper.instance().componentDidMount()
     expect(history.goBack).toHaveBeenCalled()
     expect(alert.show).toHaveBeenCalledWith(

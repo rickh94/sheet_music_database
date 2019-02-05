@@ -17,18 +17,18 @@ import Notification from 'react-bulma-components/lib/components/notification'
 
 import Header from '../Header'
 import TextFieldWithErrors from '../TextFieldWithErrors'
-import { app } from '../../actions'
+import { account } from '../../actions'
 import alertText from '../../middleware/alertText'
 
 export class LoginWrapper extends Component {
   static propTypes = {
     login: PropTypes.func.isRequired,
     alert: PropTypes.object.isRequired,
-    app: PropTypes.object.isRequired
+    account: PropTypes.object.isRequired
   }
 
   componentDidMount() {
-    if (this.props.app.token) {
+    if (this.props.account.token) {
       this.props.alert.show(alertText('Already Logged In'))
       this.props.history.goBack()
     }
@@ -46,7 +46,7 @@ export class LoginWrapper extends Component {
       this.props.history.goBack()
     } else {
       this.props.alert.show(alertText('Login Failed'), { type: 'error' })
-      return this.props.app.errors
+      return this.props.account.errors
     }
   }
 
@@ -75,14 +75,14 @@ export class LoginWrapper extends Component {
 
 const mapStateToProps = state => {
   return {
-    app: state.app
+    account: state.account
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     login: (email, password, remember) => {
-      return dispatch(app.login(email, password, remember))
+      return dispatch(account.login(email, password, remember))
     }
   }
 }

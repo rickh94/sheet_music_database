@@ -1,0 +1,8 @@
+.edit-link {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  &:hover {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}

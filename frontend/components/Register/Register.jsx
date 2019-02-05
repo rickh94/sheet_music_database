@@ -17,18 +17,18 @@ import { connect } from 'react-redux'
 import Header from '../Header'
 import alertText from '../../middleware/alertText'
 import TextFieldWithErrors from '../TextFieldWithErrors'
-import { app } from '../../actions'
+import { account } from '../../actions'
 
 export class Register extends Component {
   componentDidMount() {
-    if (this.props.app.token) {
+    if (this.props.account.token) {
       this.props.alert.show(alertText('Already Logged In'))
       this.props.history.goBack()
     }
   }
 
   static propTypes = {
-    app: PropTypes.object.isRequired,
+    account: PropTypes.object.isRequired,
     register: PropTypes.func.isRequired
   }
 
@@ -44,7 +44,7 @@ export class Register extends Component {
       this.props.history.goBack()
     } else {
       this.props.alert.show(alertText('Registration Failed'), { type: 'error' })
-      return this.props.app.errors
+      return this.props.account.errors
     }
   }
 
@@ -73,14 +73,14 @@ export class Register extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     register: (email, password1, password2, remember) => {
-      return dispatch(app.register(email, password1, password2, remember))
+      return dispatch(account.register(email, password1, password2, remember))
     }
   }
 }
 
 const mapStateToProps = state => {
   return {
-    app: state.app
+    account: state.account
   }
 }
 
@@ -140,6 +140,7 @@ export class RegistrationForm extends Component {
       })
     }
   }
+
   onCancelClicked() {
     this.props.cancel()
   }

@@ -6,7 +6,7 @@ import { Register, RegistrationForm } from './Register'
 describe('Register', () => {
   const wrapper = shallow(
     <Register
-      app={{ token: null }}
+      account={{ token: null }}
       history={{ goBack: jest.fn() }}
       alert={{ show: jest.fn() }}
       register={jest.fn()}
@@ -42,7 +42,7 @@ describe('Register', () => {
     const show = jest.fn()
     const goBack = jest.fn()
     wrapper.setProps({
-      app: { token: 'sometoken' },
+      account: { token: 'sometoken' },
       history: { goBack },
       alert: { show }
     })
@@ -97,8 +97,8 @@ describe('Register', () => {
   it('returns errors on failed register', async () => {
     const register = () => Promise.resolve(false)
     const errors = { someError: 'fail' }
-    const app = { errors }
-    wrapper.setProps({ register, app })
+    const account = { errors }
+    wrapper.setProps({ register, account })
     expect(
       await wrapper
         .instance()

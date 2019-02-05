@@ -4,14 +4,14 @@ exports[`LoginWrapper renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LoginWrapper
+    account={
+      Object {
+        "errors": Object {},
+      }
+    }
     alert={
       Object {
         "show": [MockFunction],
-      }
-    }
-    app={
-      Object {
-        "errors": Object {},
       }
     }
     history={

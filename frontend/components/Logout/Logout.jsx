@@ -9,33 +9,33 @@ import Notification from 'react-bulma-components/lib/components/notification/not
 import { withAlert } from 'react-alert'
 
 import Header from '../Header'
-import { app } from '../../actions'
+import { account } from '../../actions'
 import alertText from '../../middleware/alertText'
 
 export class Logout extends Component {
   static propTypes = {
     history: PropTypes.object.isRequired,
     logout: PropTypes.func.isRequired,
-    app: PropTypes.object.isRequired,
+    account: PropTypes.object.isRequired,
     alert: PropTypes.object.isRequired
   }
 
   state = { errors: null }
 
   componentDidMount() {
-    if (!this.props.app.token) {
+    if (!this.props.account.token) {
       this.props.alert.show(alertText('Not Logged In'), { type: 'error' })
       this.props.history.goBack()
     }
   }
 
   async onLogoutClicked() {
-    const success = await this.props.logout(this.props.app.token)
+    const success = await this.props.logout(this.props.account.token)
     this.handleLogout(success)
   }
 
   async onLogoutAllClicked() {
-    const success = await this.props.logout(this.props.app.token, true)
+    const success = await this.props.logout(this.props.account.token, true)
     this.handleLogout(success, true)
   }
 
@@ -83,14 +83,14 @@ export class Logout extends Component {
 
 const mapStateToProps = state => {
   return {
-    app: state.app
+    account: state.account
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     logout: (token, all) => {
-      return dispatch(app.logout(token, all))
+      return dispatch(account.logout(token, all))
     }
   }
 }

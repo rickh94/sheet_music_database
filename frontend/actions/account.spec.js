@@ -1,4 +1,4 @@
-import { login, register, logout } from './app'
+import { login, register, logout } from './account'
 import MockAdapter from 'axios-mock-adapter'
 import axios from 'axios'
 import DjangoURL from '../middleware/api'

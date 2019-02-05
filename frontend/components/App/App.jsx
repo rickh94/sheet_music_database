@@ -14,6 +14,7 @@ import Home from '../Home'
 import Login from '../Login'
 import Logout from '../Logout'
 import NotFound from '../NotFound'
+import Profile from '../Profile'
 
 import './App.scss'
 import Register from '../Register'
@@ -42,6 +43,7 @@ export default class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/logout" component={Logout} />
               <Route exact path="/register" component={Register} />
+              <Route exact path="/profile" component={Profile} />
               <Route default component={NotFound} />
             </Switch>
           </BrowserRouter>

@@ -1,25 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Logout renders correctly 1`] = `
+exports[`Profile renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Logout
+  Symbol(enzyme.__unrendered__): <Profile
     account={
       Object {
-        "token": "testtokentext",
+        "token": "sometoken",
       }
     }
-    alert={
-      Object {
-        "show": [MockFunction],
-      }
-    }
-    history={
-      Object {
-        "goBack": [MockFunction],
-      }
-    }
-    logout={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -43,7 +32,7 @@ ShallowWrapper {
           style={Object {}}
         >
           <Card
-            className=""
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
@@ -53,64 +42,44 @@ ShallowWrapper {
               <CardHeaderTitle
                 renderAs="div"
               >
-                Logout
+                Profile
               </CardHeaderTitle>
             </CardHeader>
             <CardContent
               renderAs="div"
             >
-              Are you sure you want to logout?
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Logout
-              </Button>
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Cancel
-              </Button>
+              <FieldDisplay
+                backendFieldName="first_name"
+                errors={null}
+                label="First Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="last_name"
+                errors={null}
+                label="Last Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="email"
+                errors={null}
+                label="Email"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="username"
+                errors={null}
+                label="Username"
+                saveCallback={[Function]}
+                value=""
+              />
               <br />
-              You can also log out of all devices (this operation cannot be reversed)
               <Button
                 className=""
-                color="danger"
+                color={null}
                 disabled={false}
                 fullwidth={false}
                 inverted={false}
@@ -129,7 +98,7 @@ ShallowWrapper {
                 submit={false}
                 text={false}
               >
-                Logout All
+                Change Password
               </Button>
             </CardContent>
           </Card>
@@ -155,7 +124,7 @@ ShallowWrapper {
           "backgroundColor": undefined,
           "breakpoint": null,
           "children": <Card
-            className=""
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
@@ -165,64 +134,44 @@ ShallowWrapper {
               <CardHeaderTitle
                 renderAs="div"
               >
-                Logout
+                Profile
               </CardHeaderTitle>
             </CardHeader>
             <CardContent
               renderAs="div"
             >
-              Are you sure you want to logout?
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Logout
-              </Button>
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Cancel
-              </Button>
+              <FieldDisplay
+                backendFieldName="first_name"
+                errors={null}
+                label="First Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="last_name"
+                errors={null}
+                label="Last Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="email"
+                errors={null}
+                label="Email"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="username"
+                errors={null}
+                label="Username"
+                saveCallback={[Function]}
+                value=""
+              />
               <br />
-              You can also log out of all devices (this operation cannot be reversed)
               <Button
                 className=""
-                color="danger"
+                color={null}
                 disabled={false}
                 fullwidth={false}
                 inverted={false}
@@ -241,7 +190,7 @@ ShallowWrapper {
                 submit={false}
                 text={false}
               >
-                Logout All
+                Change Password
               </Button>
             </CardContent>
           </Card>,
@@ -276,71 +225,50 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "children": Array [
-              null,
               <CardHeader
                 renderAs="div"
               >
                 <CardHeaderTitle
                   renderAs="div"
                 >
-                  Logout
+                  Profile
                 </CardHeaderTitle>
               </CardHeader>,
               <CardContent
                 renderAs="div"
               >
-                Are you sure you want to logout?
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout
-                </Button>
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Cancel
-                </Button>
+                <FieldDisplay
+                  backendFieldName="first_name"
+                  errors={null}
+                  label="First Name"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="last_name"
+                  errors={null}
+                  label="Last Name"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="email"
+                  errors={null}
+                  label="Email"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="username"
+                  errors={null}
+                  label="Username"
+                  saveCallback={[Function]}
+                  value=""
+                />
                 <br />
-                You can also log out of all devices (this operation cannot be reversed)
                 <Button
                   className=""
-                  color="danger"
+                  color={null}
                   disabled={false}
                   fullwidth={false}
                   inverted={false}
@@ -359,11 +287,11 @@ ShallowWrapper {
                   submit={false}
                   text={false}
                 >
-                  Logout All
+                  Change Password
                 </Button>
               </CardContent>,
             ],
-            "className": "",
+            "className": "margin-default",
             "clearfix": undefined,
             "clipped": undefined,
             "hidden": undefined,
@@ -387,7 +315,6 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            null,
             Object {
               "instance": null,
               "key": undefined,
@@ -397,7 +324,7 @@ ShallowWrapper {
                 "children": <CardHeaderTitle
                   renderAs="div"
                 >
-                  Logout
+                  Profile
                 </CardHeaderTitle>,
                 "className": undefined,
                 "clearfix": undefined,
@@ -427,7 +354,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "backgroundColor": undefined,
-                  "children": "Logout",
+                  "children": "Profile",
                   "className": undefined,
                   "clearfix": undefined,
                   "clipped": undefined,
@@ -450,7 +377,7 @@ ShallowWrapper {
                   "unselectable": undefined,
                 },
                 "ref": null,
-                "rendered": "Logout",
+                "rendered": "Profile",
                 "type": [Function],
               },
               "type": [Function],
@@ -462,58 +389,38 @@ ShallowWrapper {
               "props": Object {
                 "backgroundColor": undefined,
                 "children": Array [
-                  "Are you sure you want to logout?",
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Logout
-                  </Button>,
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Cancel
-                  </Button>,
+                  <FieldDisplay
+                    backendFieldName="first_name"
+                    errors={null}
+                    label="First Name"
+                    saveCallback={[Function]}
+                    value=""
+                  />,
+                  <FieldDisplay
+                    backendFieldName="last_name"
+                    errors={null}
+                    label="Last Name"
+                    saveCallback={[Function]}
+                    value=""
+                  />,
+                  <FieldDisplay
+                    backendFieldName="email"
+                    errors={null}
+                    label="Email"
+                    saveCallback={[Function]}
+                    value=""
+                  />,
+                  <FieldDisplay
+                    backendFieldName="username"
+                    errors={null}
+                    label="Username"
+                    saveCallback={[Function]}
+                    value=""
+                  />,
                   <br />,
-                  "You can also log out of all devices (this operation cannot be reversed)",
                   <Button
                     className=""
-                    color="danger"
+                    color={null}
                     disabled={false}
                     fullwidth={false}
                     inverted={false}
@@ -532,7 +439,7 @@ ShallowWrapper {
                     submit={false}
                     text={false}
                   >
-                    Logout All
+                    Change Password
                   </Button>,
                 ],
                 "className": undefined,
@@ -558,103 +465,64 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                "Are you sure you want to logout?",
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Logout",
-                    "className": "",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "color": null,
-                    "disabled": false,
-                    "fullwidth": false,
-                    "hidden": undefined,
-                    "inverted": false,
-                    "invisible": undefined,
-                    "isSelected": false,
-                    "isStatic": false,
-                    "italic": undefined,
-                    "loading": false,
-                    "marginless": undefined,
-                    "onClick": [Function],
-                    "outlined": false,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "remove": false,
-                    "renderAs": "button",
-                    "reset": false,
-                    "responsive": undefined,
-                    "rounded": false,
-                    "shadowless": undefined,
-                    "size": null,
-                    "state": null,
-                    "style": Object {},
-                    "submit": false,
-                    "text": false,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
+                    "backendFieldName": "first_name",
+                    "errors": null,
+                    "label": "First Name",
+                    "saveCallback": [Function],
+                    "value": "",
                   },
                   "ref": null,
-                  "rendered": "Logout",
+                  "rendered": null,
                   "type": [Function],
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Cancel",
-                    "className": "",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "color": null,
-                    "disabled": false,
-                    "fullwidth": false,
-                    "hidden": undefined,
-                    "inverted": false,
-                    "invisible": undefined,
-                    "isSelected": false,
-                    "isStatic": false,
-                    "italic": undefined,
-                    "loading": false,
-                    "marginless": undefined,
-                    "onClick": [Function],
-                    "outlined": false,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "remove": false,
-                    "renderAs": "button",
-                    "reset": false,
-                    "responsive": undefined,
-                    "rounded": false,
-                    "shadowless": undefined,
-                    "size": null,
-                    "state": null,
-                    "style": Object {},
-                    "submit": false,
-                    "text": false,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
+                    "backendFieldName": "last_name",
+                    "errors": null,
+                    "label": "Last Name",
+                    "saveCallback": [Function],
+                    "value": "",
                   },
                   "ref": null,
-                  "rendered": "Cancel",
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "backendFieldName": "email",
+                    "errors": null,
+                    "label": "Email",
+                    "saveCallback": [Function],
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "backendFieldName": "username",
+                    "errors": null,
+                    "label": "Username",
+                    "saveCallback": [Function],
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
                   "type": [Function],
                 },
                 Object {
@@ -666,18 +534,17 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "br",
                 },
-                "You can also log out of all devices (this operation cannot be reversed)",
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
                     "backgroundColor": undefined,
-                    "children": "Logout All",
+                    "children": "Change Password",
                     "className": "",
                     "clearfix": undefined,
                     "clipped": undefined,
-                    "color": "danger",
+                    "color": null,
                     "disabled": false,
                     "fullwidth": false,
                     "hidden": undefined,
@@ -713,7 +580,7 @@ ShallowWrapper {
                     "unselectable": undefined,
                   },
                   "ref": null,
-                  "rendered": "Logout All",
+                  "rendered": "Change Password",
                   "type": [Function],
                 },
               ],
@@ -742,7 +609,7 @@ ShallowWrapper {
             style={Object {}}
           >
             <Card
-              className=""
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
@@ -752,64 +619,44 @@ ShallowWrapper {
                 <CardHeaderTitle
                   renderAs="div"
                 >
-                  Logout
+                  Profile
                 </CardHeaderTitle>
               </CardHeader>
               <CardContent
                 renderAs="div"
               >
-                Are you sure you want to logout?
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout
-                </Button>
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Cancel
-                </Button>
+                <FieldDisplay
+                  backendFieldName="first_name"
+                  errors={null}
+                  label="First Name"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="last_name"
+                  errors={null}
+                  label="Last Name"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="email"
+                  errors={null}
+                  label="Email"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="username"
+                  errors={null}
+                  label="Username"
+                  saveCallback={[Function]}
+                  value=""
+                />
                 <br />
-                You can also log out of all devices (this operation cannot be reversed)
                 <Button
                   className=""
-                  color="danger"
+                  color={null}
                   disabled={false}
                   fullwidth={false}
                   inverted={false}
@@ -828,7 +675,7 @@ ShallowWrapper {
                   submit={false}
                   text={false}
                 >
-                  Logout All
+                  Change Password
                 </Button>
               </CardContent>
             </Card>
@@ -854,7 +701,7 @@ ShallowWrapper {
             "backgroundColor": undefined,
             "breakpoint": null,
             "children": <Card
-              className=""
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
@@ -864,64 +711,44 @@ ShallowWrapper {
                 <CardHeaderTitle
                   renderAs="div"
                 >
-                  Logout
+                  Profile
                 </CardHeaderTitle>
               </CardHeader>
               <CardContent
                 renderAs="div"
               >
-                Are you sure you want to logout?
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout
-                </Button>
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Cancel
-                </Button>
+                <FieldDisplay
+                  backendFieldName="first_name"
+                  errors={null}
+                  label="First Name"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="last_name"
+                  errors={null}
+                  label="Last Name"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="email"
+                  errors={null}
+                  label="Email"
+                  saveCallback={[Function]}
+                  value=""
+                />
+                <FieldDisplay
+                  backendFieldName="username"
+                  errors={null}
+                  label="Username"
+                  saveCallback={[Function]}
+                  value=""
+                />
                 <br />
-                You can also log out of all devices (this operation cannot be reversed)
                 <Button
                   className=""
-                  color="danger"
+                  color={null}
                   disabled={false}
                   fullwidth={false}
                   inverted={false}
@@ -940,7 +767,7 @@ ShallowWrapper {
                   submit={false}
                   text={false}
                 >
-                  Logout All
+                  Change Password
                 </Button>
               </CardContent>
             </Card>,
@@ -975,71 +802,50 @@ ShallowWrapper {
             "props": Object {
               "backgroundColor": undefined,
               "children": Array [
-                null,
                 <CardHeader
                   renderAs="div"
                 >
                   <CardHeaderTitle
                     renderAs="div"
                   >
-                    Logout
+                    Profile
                   </CardHeaderTitle>
                 </CardHeader>,
                 <CardContent
                   renderAs="div"
                 >
-                  Are you sure you want to logout?
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Logout
-                  </Button>
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Cancel
-                  </Button>
+                  <FieldDisplay
+                    backendFieldName="first_name"
+                    errors={null}
+                    label="First Name"
+                    saveCallback={[Function]}
+                    value=""
+                  />
+                  <FieldDisplay
+                    backendFieldName="last_name"
+                    errors={null}
+                    label="Last Name"
+                    saveCallback={[Function]}
+                    value=""
+                  />
+                  <FieldDisplay
+                    backendFieldName="email"
+                    errors={null}
+                    label="Email"
+                    saveCallback={[Function]}
+                    value=""
+                  />
+                  <FieldDisplay
+                    backendFieldName="username"
+                    errors={null}
+                    label="Username"
+                    saveCallback={[Function]}
+                    value=""
+                  />
                   <br />
-                  You can also log out of all devices (this operation cannot be reversed)
                   <Button
                     className=""
-                    color="danger"
+                    color={null}
                     disabled={false}
                     fullwidth={false}
                     inverted={false}
@@ -1058,11 +864,11 @@ ShallowWrapper {
                     submit={false}
                     text={false}
                   >
-                    Logout All
+                    Change Password
                   </Button>
                 </CardContent>,
               ],
-              "className": "",
+              "className": "margin-default",
               "clearfix": undefined,
               "clipped": undefined,
               "hidden": undefined,
@@ -1086,7 +892,6 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
-              null,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -1096,7 +901,7 @@ ShallowWrapper {
                   "children": <CardHeaderTitle
                     renderAs="div"
                   >
-                    Logout
+                    Profile
                   </CardHeaderTitle>,
                   "className": undefined,
                   "clearfix": undefined,
@@ -1126,7 +931,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "backgroundColor": undefined,
-                    "children": "Logout",
+                    "children": "Profile",
                     "className": undefined,
                     "clearfix": undefined,
                     "clipped": undefined,
@@ -1149,7 +954,7 @@ ShallowWrapper {
                     "unselectable": undefined,
                   },
                   "ref": null,
-                  "rendered": "Logout",
+                  "rendered": "Profile",
                   "type": [Function],
                 },
                 "type": [Function],
@@ -1161,58 +966,38 @@ ShallowWrapper {
                 "props": Object {
                   "backgroundColor": undefined,
                   "children": Array [
-                    "Are you sure you want to logout?",
-                    <Button
-                      className=""
-                      color={null}
-                      disabled={false}
-                      fullwidth={false}
-                      inverted={false}
-                      isSelected={false}
-                      isStatic={false}
-                      loading={false}
-                      onClick={[Function]}
-                      outlined={false}
-                      remove={false}
-                      renderAs="button"
-                      reset={false}
-                      rounded={false}
-                      size={null}
-                      state={null}
-                      style={Object {}}
-                      submit={false}
-                      text={false}
-                    >
-                      Logout
-                    </Button>,
-                    <Button
-                      className=""
-                      color={null}
-                      disabled={false}
-                      fullwidth={false}
-                      inverted={false}
-                      isSelected={false}
-                      isStatic={false}
-                      loading={false}
-                      onClick={[Function]}
-                      outlined={false}
-                      remove={false}
-                      renderAs="button"
-                      reset={false}
-                      rounded={false}
-                      size={null}
-                      state={null}
-                      style={Object {}}
-                      submit={false}
-                      text={false}
-                    >
-                      Cancel
-                    </Button>,
+                    <FieldDisplay
+                      backendFieldName="first_name"
+                      errors={null}
+                      label="First Name"
+                      saveCallback={[Function]}
+                      value=""
+                    />,
+                    <FieldDisplay
+                      backendFieldName="last_name"
+                      errors={null}
+                      label="Last Name"
+                      saveCallback={[Function]}
+                      value=""
+                    />,
+                    <FieldDisplay
+                      backendFieldName="email"
+                      errors={null}
+                      label="Email"
+                      saveCallback={[Function]}
+                      value=""
+                    />,
+                    <FieldDisplay
+                      backendFieldName="username"
+                      errors={null}
+                      label="Username"
+                      saveCallback={[Function]}
+                      value=""
+                    />,
                     <br />,
-                    "You can also log out of all devices (this operation cannot be reversed)",
                     <Button
                       className=""
-                      color="danger"
+                      color={null}
                       disabled={false}
                       fullwidth={false}
                       inverted={false}
@@ -1231,7 +1016,7 @@ ShallowWrapper {
                       submit={false}
                       text={false}
                     >
-                      Logout All
+                      Change Password
                     </Button>,
                   ],
                   "className": undefined,
@@ -1257,103 +1042,64 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Are you sure you want to logout?",
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
-                      "backgroundColor": undefined,
-                      "children": "Logout",
-                      "className": "",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "color": null,
-                      "disabled": false,
-                      "fullwidth": false,
-                      "hidden": undefined,
-                      "inverted": false,
-                      "invisible": undefined,
-                      "isSelected": false,
-                      "isStatic": false,
-                      "italic": undefined,
-                      "loading": false,
-                      "marginless": undefined,
-                      "onClick": [Function],
-                      "outlined": false,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "remove": false,
-                      "renderAs": "button",
-                      "reset": false,
-                      "responsive": undefined,
-                      "rounded": false,
-                      "shadowless": undefined,
-                      "size": null,
-                      "state": null,
-                      "style": Object {},
-                      "submit": false,
-                      "text": false,
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
+                      "backendFieldName": "first_name",
+                      "errors": null,
+                      "label": "First Name",
+                      "saveCallback": [Function],
+                      "value": "",
                     },
                     "ref": null,
-                    "rendered": "Logout",
+                    "rendered": null,
                     "type": [Function],
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
-                      "backgroundColor": undefined,
-                      "children": "Cancel",
-                      "className": "",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "color": null,
-                      "disabled": false,
-                      "fullwidth": false,
-                      "hidden": undefined,
-                      "inverted": false,
-                      "invisible": undefined,
-                      "isSelected": false,
-                      "isStatic": false,
-                      "italic": undefined,
-                      "loading": false,
-                      "marginless": undefined,
-                      "onClick": [Function],
-                      "outlined": false,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "remove": false,
-                      "renderAs": "button",
-                      "reset": false,
-                      "responsive": undefined,
-                      "rounded": false,
-                      "shadowless": undefined,
-                      "size": null,
-                      "state": null,
-                      "style": Object {},
-                      "submit": false,
-                      "text": false,
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
+                      "backendFieldName": "last_name",
+                      "errors": null,
+                      "label": "Last Name",
+                      "saveCallback": [Function],
+                      "value": "",
                     },
                     "ref": null,
-                    "rendered": "Cancel",
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "backendFieldName": "email",
+                      "errors": null,
+                      "label": "Email",
+                      "saveCallback": [Function],
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "backendFieldName": "username",
+                      "errors": null,
+                      "label": "Username",
+                      "saveCallback": [Function],
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
                     "type": [Function],
                   },
                   Object {
@@ -1365,18 +1111,17 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "br",
                   },
-                  "You can also log out of all devices (this operation cannot be reversed)",
                   Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
                       "backgroundColor": undefined,
-                      "children": "Logout All",
+                      "children": "Change Password",
                       "className": "",
                       "clearfix": undefined,
                       "clipped": undefined,
-                      "color": "danger",
+                      "color": null,
                       "disabled": false,
                       "fullwidth": false,
                       "hidden": undefined,
@@ -1412,7 +1157,7 @@ ShallowWrapper {
                       "unselectable": undefined,
                     },
                     "ref": null,
-                    "rendered": "Logout All",
+                    "rendered": "Change Password",
                     "type": [Function],
                   },
                 ],

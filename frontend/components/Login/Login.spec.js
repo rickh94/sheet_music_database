@@ -10,7 +10,7 @@ describe('LoginWrapper', () => {
     <LoginWrapper
       login={jest.fn()}
       alert={{ show: jest.fn() }}
-      app={{ errors: {} }}
+      account={{ errors: {} }}
       history={{ goBack: jest.fn() }}
     />
   )
@@ -81,8 +81,8 @@ describe('LoginWrapper', () => {
   it('returns errors on failed login', async () => {
     const login = () => Promise.resolve(false)
     const errors = { someError: 'fail' }
-    const app = { errors }
-    wrapper.setProps({ login, app })
+    const account = { errors }
+    wrapper.setProps({ login, account })
     expect(
       await wrapper.instance().attemptLogin('testemail', 'testpassword', false)
     ).toEqual(errors)
@@ -103,7 +103,7 @@ describe('LoginWrapper', () => {
     const goBack = jest.fn()
     wrapper.setProps({
       history: { goBack },
-      app: { token: 'sometoken' },
+      account: { token: 'sometoken' },
       alert: { show }
     })
     wrapper.instance().componentDidMount()

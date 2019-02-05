@@ -50,6 +50,11 @@ ShallowWrapper {
             />
             <Route
               component={[Function]}
+              exact={true}
+              path="/profile"
+            />
+            <Route
+              component={[Function]}
               default={true}
             />
           </Switch>
@@ -90,6 +95,11 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/register"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/profile"
             />
             <Route
               component={[Function]}
@@ -134,6 +144,11 @@ ShallowWrapper {
             />
             <Route
               component={[Function]}
+              exact={true}
+              path="/profile"
+            />
+            <Route
+              component={[Function]}
               default={true}
             />
           </Switch>,
@@ -164,6 +179,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/register"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/profile"
               />,
               <Route
                 component={[Function]}
@@ -231,6 +251,19 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "component": [Function],
+                "exact": true,
+                "path": "/profile",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
                 "default": true,
               },
               "ref": null,
@@ -285,6 +318,11 @@ ShallowWrapper {
               />
               <Route
                 component={[Function]}
+                exact={true}
+                path="/profile"
+              />
+              <Route
+                component={[Function]}
                 default={true}
               />
             </Switch>
@@ -325,6 +363,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/register"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/profile"
               />
               <Route
                 component={[Function]}
@@ -369,6 +412,11 @@ ShallowWrapper {
               />
               <Route
                 component={[Function]}
+                exact={true}
+                path="/profile"
+              />
+              <Route
+                component={[Function]}
                 default={true}
               />
             </Switch>,
@@ -399,6 +447,11 @@ ShallowWrapper {
                   component={[Function]}
                   exact={true}
                   path="/register"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/profile"
                 />,
                 <Route
                   component={[Function]}
@@ -455,6 +508,19 @@ ShallowWrapper {
                   "component": [Function],
                   "exact": true,
                   "path": "/register",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/profile",
                 },
                 "ref": null,
                 "rendered": null,

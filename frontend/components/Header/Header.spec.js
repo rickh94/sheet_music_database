@@ -5,7 +5,7 @@ import { Header } from './Header'
 import '../../setupTests'
 
 describe('Header', () => {
-  const wrapper = shallow(<Header app={{ token: null }} />)
+  const wrapper = shallow(<Header account={{ token: null }} />)
 
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot()
@@ -68,7 +68,7 @@ describe('Header', () => {
   })
 
   it('shows logout and Account if logged in, does not show login or register', () => {
-    wrapper.setProps({ app: { token: 'sometoken' } })
+    wrapper.setProps({ account: { token: 'sometoken' } })
     expect(
       wrapper.findWhere(el => el.contains('Login') && el.name() == 'NavbarItem').length
     ).toEqual(0)
@@ -80,7 +80,7 @@ describe('Header', () => {
       wrapper.findWhere(el => el.contains('Logout') && el.name() == 'NavbarItem').length
     ).toEqual(1)
     expect(
-      wrapper.findWhere(el => el.contains('Account') && el.name() == 'NavbarItem')
+      wrapper.findWhere(el => el.contains('Profile') && el.name() == 'NavbarItem')
         .length
     ).toEqual(1)
   })
