@@ -1,9 +1,9 @@
-import { login, register, logout } from './account'
+import { login, register, logout, getProfile } from './account'
 import MockAdapter from 'axios-mock-adapter'
 import axios from 'axios'
 import DjangoURL from '../middleware/api'
 
-describe('app login actions', () => {
+describe('account login actions', () => {
   const api = new DjangoURL()
   const mockGetState = jest.fn()
 
@@ -55,7 +55,7 @@ describe('app login actions', () => {
   })
 })
 
-describe('app register actions', () => {
+describe('account register actions', () => {
   const api = new DjangoURL()
   const mockGetState = jest.fn()
 
@@ -108,14 +108,14 @@ describe('app register actions', () => {
     ).toBeFalsy()
     expect(mockDispatch).toBeCalledWith({ type: 'REGISTER' })
     expect(mockDispatch).toBeCalledWith({
-      type: 'REGISTER_FAILED',
+      type: 'REGISTER_FAILED'
       // payload: errors
     })
     // does NOT like having an error payload. cannot figure out why
   })
 })
 
-describe('app logout actions', () => {
+describe('account logout actions', () => {
   const api = new DjangoURL()
   const mockGetState = jest.fn()
 
@@ -127,19 +127,11 @@ describe('app logout actions', () => {
     const mockDispatch = jest.fn()
     const mock = new MockAdapter(axios)
     const token = 'testtokentext'
-    mock
-      .onPost(api.v1.auth.logout.url)
-      .reply(200, {
-      })
-    expect(
-      await logout(token, false)(
-        mockDispatch,
-        mockGetState
-      )
-    ).toBeTruthy()
+    mock.onPost(api.v1.auth.logout.url).reply(200, {})
+    expect(await logout(token, false)(mockDispatch, mockGetState)).toBeTruthy()
     expect(mockDispatch).toHaveBeenCalledWith({ type: 'LOGOUT' })
     expect(mockDispatch).toHaveBeenCalledWith({
-      type: 'LOGOUT_SUCCESSFUL',
+      type: 'LOGOUT_SUCCESSFUL'
     })
     expect(localStorage.getItem('token')).toBeFalsy()
   })
@@ -149,19 +141,11 @@ describe('app logout actions', () => {
     const mock = new MockAdapter(axios)
     const token = 'testtokentext'
     localStorage.setItem('token', token)
-    mock
-      .onPost(api.v1.auth.logoutall.url)
-      .reply(200, {
-      })
-    expect(
-      await logout(token, true)(
-        mockDispatch,
-        mockGetState
-      )
-    ).toBeTruthy()
+    mock.onPost(api.v1.auth.logoutall.url).reply(200, {})
+    expect(await logout(token, true)(mockDispatch, mockGetState)).toBeTruthy()
     expect(mockDispatch).toHaveBeenCalledWith({ type: 'LOGOUT' })
     expect(mockDispatch).toHaveBeenCalledWith({
-      type: 'LOGOUT_SUCCESSFUL',
+      type: 'LOGOUT_SUCCESSFUL'
     })
     expect(localStorage.getItem('token')).toBeFalsy()
   })
@@ -172,21 +156,54 @@ describe('app logout actions', () => {
     const errors = { someError: 'error' }
     const token = 'testtokentext'
     localStorage.setItem('token', token)
-    mock
-      .onPost(api.v1.auth.logout.url)
-      .reply(400, errors)
-    expect(
-      await logout(token, false)(
-        mockDispatch,
-        mockGetState
-      )
-    ).toBeFalsy()
+    mock.onPost(api.v1.auth.logout.url).reply(400, errors)
+    expect(await logout(token, false)(mockDispatch, mockGetState)).toBeFalsy()
     expect(mockDispatch).toBeCalledWith({ type: 'LOGOUT' })
     expect(mockDispatch).toBeCalledWith({
       type: 'LOGOUT_FAILED',
-      payload: errors
+      payload: errors 
     })
     expect(localStorage.getItem('token')).toEqual(token)
-    // does NOT like having an error payload. cannot figure out why
+  })
+})
+
+describe('account profile get action', () => {
+  const api = new DjangoURL()
+  const mockGetState = jest.fn()
+  const token = 'testtokentext'
+  const profile = {
+    first_name: 'test first name',
+    last_name: 'test last name',
+    email: 'test email',
+    username: 'testusername'
+  }
+
+  beforeEach(() => {
+    api.clear()
+  })
+
+  it('returns the data', async () => {
+    const mockDispatch = jest.fn()
+    const mock = new MockAdapter(axios)
+    mock.onGet(api.v1.auth.user.url, {}).reply(200, profile)
+    expect(await getProfile(token)(mockDispatch, mockGetState)).toBeTruthy()
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'PROFILE' })
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'PROFILE_GET_SUCCESSFUL',
+      payload: profile
+    })
+  })
+
+  it('returns the errors', async () => {
+    const mockDispatch = jest.fn()
+    const mock = new MockAdapter(axios)
+    const errors = { someError: 'error' }
+    mock.onGet(api.v1.auth.user.url).reply(400, errors)
+    expect(await getProfile(token)(mockDispatch, mockGetState)).toBeFalsy()
+    expect(mockDispatch).toBeCalledWith({ type: 'PROFILE' })
+    expect(mockDispatch).toBeCalledWith({
+      type: 'PROFILE_GET_FAILED',
+      payload: errors
+    })
   })
 })

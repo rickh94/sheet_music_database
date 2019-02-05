@@ -78,3 +78,26 @@ export function logout(token, all = false) {
     }
   }
 }
+
+export function getProfile(token, all = false) {
+  return async dispatch => {
+    dispatch({
+      type: 'PROFILE'
+    })
+    try {
+      const api = new DjangoURL(token)
+      const res = await api.v1.auth.user.get()
+      dispatch({
+        type: 'PROFILE_GET_SUCCESSFUL',
+        payload: res.data
+      })
+      return true
+    } catch (err) {
+      dispatch({
+        type: 'PROFILE_GET_FAILED',
+        payload: err.response.data
+      })
+      return false
+    }
+  }
+}
