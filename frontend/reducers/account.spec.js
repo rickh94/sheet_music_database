@@ -121,4 +121,53 @@ describe('account reducer', () => {
       })
     })
   })
+
+  describe('Profile Actions', () => {
+    const profile = {
+      email: 'test@test.test',
+      firstName: 'test',
+      lastName: 'test',
+      username: 'test'
+    }
+
+    it('should set isLoading', () => {
+      expect(accountReducer(undefined, { type: 'PROFILE' })).toEqual({
+        ...initialState,
+        isLoading: true
+      })
+    })
+
+    it('should unset isLoading and return the data on success', () => {
+      expect(
+        accountReducer(
+          { ...initialState, isLoading: true },
+          { type: 'PROFILE_GET_SUCCESSFUL', payload: profile }
+        )
+      ).toEqual({
+        ...initialState,
+        isLoading: false,
+        profile
+      })
+    })
+
+    it('should unset isLoading and return the errors on failure', () => {
+      const errors = { someError: 'the error' }
+      expect(
+        accountReducer(undefined, { type: 'PROFILE_GET_FAILED', payload: errors })
+      ).toEqual({ ...initialState, isLoading: false, errors })
+    })
+
+    it('should unset is loading and return the data', () => {
+      expect(accountReducer({...initialState, isLoading: true}, {type: 'PROFILE_UPDATE_SUCCESSFUL', payload: profile})).toEqual({
+        ...initialState, isLoading: false, profile
+      })
+    })
+    
+    it('should unset isLoading and return the errors on failure', () => {
+      const errors = { someError: 'the error' }
+      expect(
+        accountReducer(undefined, { type: 'PROFILE_UPDATE_FAILED', payload: errors })
+      ).toEqual({ ...initialState, isLoading: false, errors })
+    })
+  })
 })
