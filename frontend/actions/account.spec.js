@@ -1,4 +1,4 @@
-import { login, register, logout, getProfile } from './account'
+import { login, register, logout, getProfile, updateProfile } from './account'
 import MockAdapter from 'axios-mock-adapter'
 import axios from 'axios'
 import DjangoURL from '../middleware/api'
@@ -161,7 +161,7 @@ describe('account logout actions', () => {
     expect(mockDispatch).toBeCalledWith({ type: 'LOGOUT' })
     expect(mockDispatch).toBeCalledWith({
       type: 'LOGOUT_FAILED',
-      payload: errors 
+      payload: errors
     })
     expect(localStorage.getItem('token')).toEqual(token)
   })
@@ -203,6 +203,53 @@ describe('account profile get action', () => {
     expect(mockDispatch).toBeCalledWith({ type: 'PROFILE' })
     expect(mockDispatch).toBeCalledWith({
       type: 'PROFILE_GET_FAILED',
+      payload: errors
+    })
+  })
+})
+
+describe('account profile update action', () => {
+  const api = new DjangoURL()
+  const mockGetState = jest.fn()
+  const token = 'testtokentext'
+  const profile = {
+    first_name: 'test first name',
+    last_name: 'test last name',
+    email: 'test email',
+    username: 'testusername'
+  }
+
+  const profileUpdate = { username: 'testupdatedusername' }
+
+  beforeEach(() => {
+    api.clear()
+  })
+
+  it('returns the data', async () => {
+    const mockDispatch = jest.fn()
+    const mock = new MockAdapter(axios)
+    mock
+      .onPatch(api.v1.auth.user.url, profileUpdate)
+      .reply(200, { ...profile, username: profileUpdate.username })
+    expect(
+      await updateProfile(token, profileUpdate)(mockDispatch, mockGetState)
+    ).toBeTruthy()
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'PROFILE' })
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'PROFILE_UPDATE_SUCCESSFUL',
+      payload: { ...profile, username: profileUpdate.username }
+    })
+  })
+
+  it('returns the errors', async () => {
+    const mockDispatch = jest.fn()
+    const mock = new MockAdapter(axios)
+    const errors = { someError: 'error' }
+    mock.onPatch(api.v1.auth.user.url, profileUpdate).reply(400, errors)
+    expect(await updateProfile(token, profileUpdate)(mockDispatch, mockGetState)).toBeFalsy()
+    expect(mockDispatch).toBeCalledWith({ type: 'PROFILE' })
+    expect(mockDispatch).toBeCalledWith({
+      type: 'PROFILE_UPDATE_FAILED',
       payload: errors
     })
   })

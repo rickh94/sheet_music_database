@@ -101,3 +101,26 @@ export function getProfile(token, all = false) {
     }
   }
 }
+
+export function updateProfile(token, data) {
+  return async dispatch => {
+    dispatch({
+      type: 'PROFILE'
+    })
+    try {
+      const api = new DjangoURL(token)
+      const res = await api.v1.auth.user.patch(data)
+      dispatch({
+        type: 'PROFILE_UPDATE_SUCCESSFUL',
+        payload: res.data
+      })
+      return true
+    } catch (err) {
+      dispatch({
+        type: 'PROFILE_UPDATE_FAILED',
+        payload: err.response.data
+      })
+      return false
+    }
+  }
+}
