@@ -1,7 +1,13 @@
 const initialState = {
   token: null,
   isLoading: false,
-  errors: {}
+  errors: {},
+  profile: {
+    first_name: '',
+    last_name: '',
+    username: '',
+    email: ''
+  }
 }
 
 function isLoading(state) {

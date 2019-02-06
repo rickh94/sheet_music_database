@@ -5,7 +5,20 @@ import '../../setupTests'
 import { Profile, FieldDisplay } from './Profile'
 
 describe('Profile', () => {
-  const wrapper = shallow(<Profile account={{ token: 'sometoken' }} />)
+  const defaultProfile = { first_name: '', last_name: '', username: '', email: '' }
+
+  const wrapper = shallow(
+    <Profile
+      account={{
+        token: 'sometoken',
+        profile: defaultProfile
+      }}
+      history={{ goBack: jest.fn(), push: jest.fn() }}
+      getProfile={jest.fn()}
+      updateProfile={jest.fn()}
+      alert={{ show: jest.fn() }}
+    />
+  )
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot()
   })
@@ -28,14 +41,52 @@ describe('Profile', () => {
     )
   })
 
-  it('renders 4 FieldDisplays', () => {
-    expect(wrapper.find('FieldDisplay').length).toEqual(4)
+  it('renders 3 FieldDisplays', () => {
+    expect(wrapper.find('FieldDisplay').length).toEqual(3)
+  })
 
+  it('renders email without edit option', () => {
+    expect(wrapper.contains('Email:')).toBeTruthy()
+  })
+
+  it('redirects if user is not logged in', async () => {
+    const history = { push: jest.fn() , goBack: jest.fn()}
+    const alert = { show: jest.fn() }
+    wrapper.setProps({
+      account: { token: null, profile: defaultProfile },
+      history,
+      alert
+    })
+    await wrapper.instance().componentDidMount()
+    expect(history.push).toHaveBeenCalledWith('/login')
+    expect(alert.show).toHaveBeenCalledWith(
+      <span className="alert-text">Please log in</span>,
+      { type: 'error' }
+    )
+  })
+
+  it('downloads profile information', async () => {
+    const getProfile = jest.fn()
+    const token = 'sometesttoken'
+    wrapper.setProps({ getProfile, account: { token, profile: defaultProfile } })
+    await wrapper.instance().componentDidMount()
+    expect(getProfile).toHaveBeenCalledWith(token)
+  })
+
+  it('updates profile information', async () => {
+    const updateProfile = jest.fn()
+    const token = 'sometesttoken'
+    const updateData =  'new test username'
+    wrapper.setProps({ updateProfile, account: { token, profile: defaultProfile } })
+    await wrapper.instance().updateField('username', updateData)
+    expect(updateProfile).toHaveBeenCalledWith(token, {username: updateData})
   })
 })
 
 describe('FieldDisplay', () => {
-  const wrapper = shallow(<FieldDisplay label="" value="" saveCallback={jest.fn()} backendFieldName="test" />)
+  const wrapper = shallow(
+    <FieldDisplay label="" value="" saveCallback={jest.fn()} backendFieldName="test" />
+  )
 
   it('renders the value in the text', () => {
     wrapper.setProps({ value: 'test' })
@@ -83,7 +134,9 @@ describe('FieldDisplay', () => {
     const saveCallback = jest.fn()
     wrapper.setProps({ saveCallback, backendFieldName })
     wrapper.setState({ edit: true, newValue })
-    wrapper.findWhere(el => el.name() == 'Button' && el.contains('Save')).simulate('click')
+    wrapper
+      .findWhere(el => el.name() == 'Button' && el.contains('Save'))
+      .simulate('click')
     expect(saveCallback).toHaveBeenCalledWith(backendFieldName, newValue)
     expect(wrapper.state().edit).toBeFalsy()
   })

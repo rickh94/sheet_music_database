@@ -3,7 +3,13 @@ import accountReducer from './account'
 const initialState = {
   token: null,
   isLoading: false,
-  errors: {}
+  errors: {},
+  profile: {
+    first_name: '',
+    last_name: '',
+    username: '',
+    email: ''
+  }
 }
 
 describe('account reducer', () => {
@@ -158,11 +164,18 @@ describe('account reducer', () => {
     })
 
     it('should unset is loading and return the data', () => {
-      expect(accountReducer({...initialState, isLoading: true}, {type: 'PROFILE_UPDATE_SUCCESSFUL', payload: profile})).toEqual({
-        ...initialState, isLoading: false, profile
+      expect(
+        accountReducer(
+          { ...initialState, isLoading: true },
+          { type: 'PROFILE_UPDATE_SUCCESSFUL', payload: profile }
+        )
+      ).toEqual({
+        ...initialState,
+        isLoading: false,
+        profile
       })
     })
-    
+
     it('should unset isLoading and return the errors on failure', () => {
       const errors = { someError: 'the error' }
       expect(

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { withAlert } from 'react-alert'
 
 import Container from 'react-bulma-components/lib/components/container/container'
 import Card from 'react-bulma-components/lib/components/card'
@@ -8,6 +10,8 @@ import { Field, Control } from 'react-bulma-components/lib/components/form'
 
 import Header from '../Header'
 import TextFieldWithErrors from '../TextFieldWithErrors'
+import { account } from '../../actions'
+import alertText, { messages } from '../../middleware/alertText'
 
 import './Profile.scss'
 
@@ -25,12 +29,43 @@ export class Profile extends Component {
     }
   }
 
-  hoverEditButton = e => {
-    e.target.classList.add('edit-hover')
+  static propTypes = {
+    account: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
+    getProfile: PropTypes.func.isRequired,
+    updateProfile: PropTypes.func.isRequired,
+    alert: PropTypes.object.isRequired
+  }
+
+  async componentDidMount() {
+    if (!this.props.account.token) {
+      this.props.alert.show(messages.notLoggedIn, { type: 'error' })
+      this.props.history.push('/login')
+    } else {
+      const success = this.props.getProfile(this.props.account.token)
+      if (!success) {
+        this.props.alert.show(alertText('Could not get profile information'), {
+          type: 'error'
+        })
+        this.props.history.goBack()
+      }
+    }
+  }
+
+  updateField = async (fieldName, data) => {
+    const success = await this.props.updateProfile(this.props.account.token, {
+      [fieldName]: data
+    })
+    if (!success) {
+      this.props.alert.show(
+        alertText('Could not save profile information', { type: 'error' })
+      )
+    }
   }
 
   render() {
-    const { firstName, lastName, email, username, errors } = this.state
+    const { first_name, last_name, email, username } = this.props.account.profile
+    const { errors } = this.state
     return (
       <React.Fragment>
         <Header />
@@ -40,33 +75,29 @@ export class Profile extends Component {
               <Card.Header.Title>Profile</Card.Header.Title>
             </Card.Header>
             <Card.Content>
+              <div style={{ paddingBottom: '0.8rem' }}>
+                <strong>Email:</strong> {email}
+              </div>
               <FieldDisplay
                 label="First Name"
-                value={firstName}
+                value={first_name}
                 backendFieldName="first_name"
                 errors={errors.firstName}
-                saveCallback={() => {}}
+                saveCallback={this.updateField}
               />
               <FieldDisplay
                 label="Last Name"
-                value={lastName}
+                value={last_name}
                 backendFieldName="last_name"
                 errors={errors.lastName}
-                saveCallback={() => {}}
-              />
-              <FieldDisplay
-                label="Email"
-                value={email}
-                backendFieldName="email"
-                errors={errors.email}
-                saveCallback={() => {}}
+                saveCallback={this.updateField}
               />
               <FieldDisplay
                 label="Username"
                 value={username}
                 backendFieldName="username"
                 errors={errors.email}
-                saveCallback={() => {}}
+                saveCallback={this.updateField}
               />
               <br />
               <Button>Change Password</Button>
@@ -78,17 +109,35 @@ export class Profile extends Component {
   }
 }
 
-Profile.propTypes = {
-  account: PropTypes.object.isRequired
+const mapStateToProps = state => {
+  return {
+    account: state.account
+  }
 }
 
-export default Profile
+const mapDispatchToProps = dispatch => {
+  return {
+    getProfile: token => {
+      return dispatch(account.getProfile(token))
+    },
+
+    updateProfile: (token, data) => {
+      return dispatch(account.updateProfile(token, data))
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withAlert(Profile))
 
 export class FieldDisplay extends Component {
   constructor(props) {
     super(props)
-    this.state = { edit: false, newValue: props.value }
   }
+  state = { newValue: '' }
+
   static propTypes = {
     label: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
@@ -97,10 +146,21 @@ export class FieldDisplay extends Component {
     errors: PropTypes.any
   }
 
+  componentDidMount() {
+    this.setState({ newValue: this.props.value })
+  }
+
+  componentDidUpdate(oldProps) {
+    const newProps = this.props
+    if (oldProps.value != newProps.value) {
+      this.setState({ newValue: newProps.value })
+    }
+  }
+
   render() {
     const { edit, newValue, errors } = this.state
     return (
-      <div style={{...this.props.style, paddingBottom: '0.8rem'}}>
+      <div style={{ ...this.props.style, paddingBottom: '0.8rem' }}>
         <strong>{this.props.label}:</strong>{' '}
         {this.state.edit ? (
           <React.Fragment>
