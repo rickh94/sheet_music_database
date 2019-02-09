@@ -8,7 +8,11 @@ import Axios from 'axios'
  * const res = await django.path.to.endpoint.method(args)
  * [do something with response]
  */
-export default class DjangoURL {
+export default function newUrl(token) {
+  return new DjangoURL(token)
+}
+
+class DjangoURL {
 
   constructor(token = '') {
     this.baseurl = 'https://localhost:8443'

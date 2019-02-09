@@ -187,9 +187,6 @@ export default connect(
 )(withAlert(Profile))
 
 export class FieldDisplay extends Component {
-  constructor(props) {
-    super(props)
-  }
   state = { newValue: '' }
 
   static propTypes = {

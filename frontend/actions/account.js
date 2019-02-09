@@ -6,7 +6,7 @@ export function login(email, password, remember) {
       type: 'LOGIN'
     })
     try {
-      const api = new DjangoURL()
+      const api = DjangoURL()
       const res = await api.v1.auth.login.post({ email, password })
       if (remember) {
         localStorage.setItem('token', res.data.token)
@@ -32,7 +32,7 @@ export function register(email, password1, password2, remember) {
       type: 'REGISTER'
     })
     try {
-      const api = new DjangoURL()
+      const api = DjangoURL()
       const res = await api.v1.auth.registration.post({ email, password1, password2 })
       if (remember) {
         localStorage.setItem('token', res.data.token)
@@ -58,7 +58,7 @@ export function logout(token, all = false) {
       type: 'LOGOUT'
     })
     try {
-      const api = new DjangoURL(token)
+      const api = DjangoURL(token)
       if (all) {
         await api.v1.auth.logoutall.post()
       } else {
@@ -85,7 +85,7 @@ export function getProfile(token, all = false) {
       type: 'PROFILE'
     })
     try {
-      const api = new DjangoURL(token)
+      const api = DjangoURL(token)
       const res = await api.v1.auth.user.get()
       dispatch({
         type: 'PROFILE_GET_SUCCESSFUL',
@@ -108,7 +108,7 @@ export function updateProfile(token, data) {
       type: 'PROFILE'
     })
     try {
-      const api = new DjangoURL(token)
+      const api = DjangoURL(token)
       const res = await api.v1.auth.user.patch(data)
       dispatch({
         type: 'PROFILE_UPDATE_SUCCESSFUL',
@@ -129,7 +129,7 @@ export function changePassword(token, new_password1, new_password2) {
   return async dispatch => {
     dispatch({ type: 'CHANGE_PASSWORD' })
     try {
-      const api = new DjangoURL(token)
+      const api = DjangoURL(token)
       await api.v1.auth.password.change.post({ new_password1, new_password2 })
       dispatch({
         type: 'CHANGE_PASSWORD_SUCCESSFUL'

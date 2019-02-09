@@ -11,7 +11,7 @@ import axios from 'axios'
 import DjangoURL from '../middleware/api'
 
 describe('account login actions', () => {
-  const api = new DjangoURL()
+  const api = DjangoURL()
   const mockGetState = jest.fn()
 
   beforeEach(() => {
@@ -63,7 +63,7 @@ describe('account login actions', () => {
 })
 
 describe('account register actions', () => {
-  const api = new DjangoURL()
+  const api = DjangoURL()
   const mockGetState = jest.fn()
 
   beforeEach(() => {
@@ -123,7 +123,7 @@ describe('account register actions', () => {
 })
 
 describe('account logout actions', () => {
-  const api = new DjangoURL()
+  const api = DjangoURL()
   const mockGetState = jest.fn()
 
   beforeEach(() => {
@@ -175,7 +175,7 @@ describe('account logout actions', () => {
 })
 
 describe('account profile get action', () => {
-  const api = new DjangoURL()
+  const api = DjangoURL()
   const mockGetState = jest.fn()
   const token = 'testtokentext'
   const profile = {
@@ -216,7 +216,7 @@ describe('account profile get action', () => {
 })
 
 describe('account profile update action', () => {
-  const api = new DjangoURL()
+  const api = DjangoURL()
   const mockGetState = jest.fn()
   const token = 'testtokentext'
   const profile = {
@@ -265,7 +265,7 @@ describe('account profile update action', () => {
 })
 
 describe('password change action', () => {
-  const api = new DjangoURL()
+  const api = DjangoURL()
   const mockGetState = jest.fn()
   const token = 'testtokentext'
 
