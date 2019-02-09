@@ -1,5 +1,1460 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Password Change Modal matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PasswordChangeForm
+    errors={Object {}}
+    onCancel={[MockFunction]}
+    onSubmit={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Box
+        className=""
+        renderAs="div"
+        style={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+      >
+        <Heading
+          className=""
+          heading={false}
+          renderAs="h1"
+          size={6}
+          spaced={false}
+          subtitle={false}
+          weight={null}
+        >
+          Change Password
+        </Heading>
+        <form
+          className="form-padding"
+        >
+          <TextFieldWithErrors
+            label="New Password"
+            name=""
+            onChange={[Function]}
+            placeholder="New Password"
+            type="password"
+            value=""
+          />
+          <TextFieldWithErrors
+            label="Confirm New Password"
+            name=""
+            onChange={[Function]}
+            placeholder="Confirm New Password"
+            type="password"
+            value=""
+          />
+          <Field
+            align={null}
+            className=""
+            horizontal={false}
+            kind={null}
+            multiline={false}
+            renderAs="div"
+            style={Object {}}
+            type="group"
+          >
+            <Control
+              className=""
+              fullwidth={false}
+              iconLeft={false}
+              iconRight={false}
+              loading={false}
+              renderAs="div"
+              size={null}
+              style={Object {}}
+            >
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+                type="primary"
+              >
+                Submit
+              </Button>
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[MockFunction]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+            </Control>
+          </Field>
+        </form>
+      </Box>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "backgroundColor": undefined,
+        "children": Array [
+          <Heading
+            className=""
+            heading={false}
+            renderAs="h1"
+            size={6}
+            spaced={false}
+            subtitle={false}
+            weight={null}
+          >
+            Change Password
+          </Heading>,
+          <form
+            className="form-padding"
+          >
+            <TextFieldWithErrors
+              label="New Password"
+              name=""
+              onChange={[Function]}
+              placeholder="New Password"
+              type="password"
+              value=""
+            />
+            <TextFieldWithErrors
+              label="Confirm New Password"
+              name=""
+              onChange={[Function]}
+              placeholder="Confirm New Password"
+              type="password"
+              value=""
+            />
+            <Field
+              align={null}
+              className=""
+              horizontal={false}
+              kind={null}
+              multiline={false}
+              renderAs="div"
+              style={Object {}}
+              type="group"
+            >
+              <Control
+                className=""
+                fullwidth={false}
+                iconLeft={false}
+                iconRight={false}
+                loading={false}
+                renderAs="div"
+                size={null}
+                style={Object {}}
+              >
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                  type="primary"
+                >
+                  Submit
+                </Button>
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[MockFunction]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </Control>
+            </Field>
+          </form>,
+        ],
+        "className": "",
+        "clearfix": undefined,
+        "clipped": undefined,
+        "hidden": undefined,
+        "invisible": undefined,
+        "italic": undefined,
+        "marginless": undefined,
+        "overlay": undefined,
+        "paddingless": undefined,
+        "pull": undefined,
+        "radiusless": undefined,
+        "renderAs": "div",
+        "responsive": undefined,
+        "shadowless": undefined,
+        "style": Object {
+          "backgroundColor": "white",
+        },
+        "textAlignment": undefined,
+        "textColor": undefined,
+        "textSize": undefined,
+        "textTransform": undefined,
+        "textWeight": undefined,
+        "unselectable": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": "Change Password",
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "heading": false,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "h1",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "size": 6,
+            "spaced": false,
+            "subtitle": false,
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+            "weight": null,
+          },
+          "ref": null,
+          "rendered": "Change Password",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TextFieldWithErrors
+                label="New Password"
+                name=""
+                onChange={[Function]}
+                placeholder="New Password"
+                type="password"
+                value=""
+              />,
+              <TextFieldWithErrors
+                label="Confirm New Password"
+                name=""
+                onChange={[Function]}
+                placeholder="Confirm New Password"
+                type="password"
+                value=""
+              />,
+              <Field
+                align={null}
+                className=""
+                horizontal={false}
+                kind={null}
+                multiline={false}
+                renderAs="div"
+                style={Object {}}
+                type="group"
+              >
+                <Control
+                  className=""
+                  fullwidth={false}
+                  iconLeft={false}
+                  iconRight={false}
+                  loading={false}
+                  renderAs="div"
+                  size={null}
+                  style={Object {}}
+                >
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                    type="primary"
+                  >
+                    Submit
+                  </Button>
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[MockFunction]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </Control>
+              </Field>,
+            ],
+            "className": "form-padding",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "error": undefined,
+                "label": "New Password",
+                "name": "",
+                "onChange": [Function],
+                "placeholder": "New Password",
+                "type": "password",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "error": undefined,
+                "label": "Confirm New Password",
+                "name": "",
+                "onChange": [Function],
+                "placeholder": "Confirm New Password",
+                "type": "password",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "align": null,
+                "backgroundColor": undefined,
+                "children": <Control
+                  className=""
+                  fullwidth={false}
+                  iconLeft={false}
+                  iconRight={false}
+                  loading={false}
+                  renderAs="div"
+                  size={null}
+                  style={Object {}}
+                >
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                    type="primary"
+                  >
+                    Submit
+                  </Button>
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[MockFunction]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </Control>,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "horizontal": false,
+                "invisible": undefined,
+                "italic": undefined,
+                "kind": null,
+                "marginless": undefined,
+                "multiline": false,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "type": "group",
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": Array [
+                    <Button
+                      className=""
+                      color={null}
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[Function]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                      type="primary"
+                    >
+                      Submit
+                    </Button>,
+                    <Button
+                      className=""
+                      color={null}
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[MockFunction]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                    >
+                      Cancel
+                    </Button>,
+                  ],
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "fullwidth": false,
+                  "hidden": undefined,
+                  "iconLeft": false,
+                  "iconRight": false,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "loading": false,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": null,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Submit",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "color": null,
+                      "disabled": false,
+                      "fullwidth": false,
+                      "hidden": undefined,
+                      "inverted": false,
+                      "invisible": undefined,
+                      "isSelected": false,
+                      "isStatic": false,
+                      "italic": undefined,
+                      "loading": false,
+                      "marginless": undefined,
+                      "onClick": [Function],
+                      "outlined": false,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "remove": false,
+                      "renderAs": "button",
+                      "reset": false,
+                      "responsive": undefined,
+                      "rounded": false,
+                      "shadowless": undefined,
+                      "size": null,
+                      "state": null,
+                      "style": Object {},
+                      "submit": false,
+                      "text": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "type": "primary",
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "Submit",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Cancel",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "color": null,
+                      "disabled": false,
+                      "fullwidth": false,
+                      "hidden": undefined,
+                      "inverted": false,
+                      "invisible": undefined,
+                      "isSelected": false,
+                      "isStatic": false,
+                      "italic": undefined,
+                      "loading": false,
+                      "marginless": undefined,
+                      "onClick": [MockFunction],
+                      "outlined": false,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "remove": false,
+                      "renderAs": "button",
+                      "reset": false,
+                      "responsive": undefined,
+                      "rounded": false,
+                      "shadowless": undefined,
+                      "size": null,
+                      "state": null,
+                      "style": Object {},
+                      "submit": false,
+                      "text": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "Cancel",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": [Function],
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Box
+          className=""
+          renderAs="div"
+          style={
+            Object {
+              "backgroundColor": "white",
+            }
+          }
+        >
+          <Heading
+            className=""
+            heading={false}
+            renderAs="h1"
+            size={6}
+            spaced={false}
+            subtitle={false}
+            weight={null}
+          >
+            Change Password
+          </Heading>
+          <form
+            className="form-padding"
+          >
+            <TextFieldWithErrors
+              label="New Password"
+              name=""
+              onChange={[Function]}
+              placeholder="New Password"
+              type="password"
+              value=""
+            />
+            <TextFieldWithErrors
+              label="Confirm New Password"
+              name=""
+              onChange={[Function]}
+              placeholder="Confirm New Password"
+              type="password"
+              value=""
+            />
+            <Field
+              align={null}
+              className=""
+              horizontal={false}
+              kind={null}
+              multiline={false}
+              renderAs="div"
+              style={Object {}}
+              type="group"
+            >
+              <Control
+                className=""
+                fullwidth={false}
+                iconLeft={false}
+                iconRight={false}
+                loading={false}
+                renderAs="div"
+                size={null}
+                style={Object {}}
+              >
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                  type="primary"
+                >
+                  Submit
+                </Button>
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[MockFunction]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </Control>
+            </Field>
+          </form>
+        </Box>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "backgroundColor": undefined,
+          "children": Array [
+            <Heading
+              className=""
+              heading={false}
+              renderAs="h1"
+              size={6}
+              spaced={false}
+              subtitle={false}
+              weight={null}
+            >
+              Change Password
+            </Heading>,
+            <form
+              className="form-padding"
+            >
+              <TextFieldWithErrors
+                label="New Password"
+                name=""
+                onChange={[Function]}
+                placeholder="New Password"
+                type="password"
+                value=""
+              />
+              <TextFieldWithErrors
+                label="Confirm New Password"
+                name=""
+                onChange={[Function]}
+                placeholder="Confirm New Password"
+                type="password"
+                value=""
+              />
+              <Field
+                align={null}
+                className=""
+                horizontal={false}
+                kind={null}
+                multiline={false}
+                renderAs="div"
+                style={Object {}}
+                type="group"
+              >
+                <Control
+                  className=""
+                  fullwidth={false}
+                  iconLeft={false}
+                  iconRight={false}
+                  loading={false}
+                  renderAs="div"
+                  size={null}
+                  style={Object {}}
+                >
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                    type="primary"
+                  >
+                    Submit
+                  </Button>
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[MockFunction]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </Control>
+              </Field>
+            </form>,
+          ],
+          "className": "",
+          "clearfix": undefined,
+          "clipped": undefined,
+          "hidden": undefined,
+          "invisible": undefined,
+          "italic": undefined,
+          "marginless": undefined,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {
+            "backgroundColor": "white",
+          },
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": "Change Password",
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "heading": false,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "h1",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "size": 6,
+              "spaced": false,
+              "subtitle": false,
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+              "weight": null,
+            },
+            "ref": null,
+            "rendered": "Change Password",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <TextFieldWithErrors
+                  label="New Password"
+                  name=""
+                  onChange={[Function]}
+                  placeholder="New Password"
+                  type="password"
+                  value=""
+                />,
+                <TextFieldWithErrors
+                  label="Confirm New Password"
+                  name=""
+                  onChange={[Function]}
+                  placeholder="Confirm New Password"
+                  type="password"
+                  value=""
+                />,
+                <Field
+                  align={null}
+                  className=""
+                  horizontal={false}
+                  kind={null}
+                  multiline={false}
+                  renderAs="div"
+                  style={Object {}}
+                  type="group"
+                >
+                  <Control
+                    className=""
+                    fullwidth={false}
+                    iconLeft={false}
+                    iconRight={false}
+                    loading={false}
+                    renderAs="div"
+                    size={null}
+                    style={Object {}}
+                  >
+                    <Button
+                      className=""
+                      color={null}
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[Function]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                      type="primary"
+                    >
+                      Submit
+                    </Button>
+                    <Button
+                      className=""
+                      color={null}
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[MockFunction]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                    >
+                      Cancel
+                    </Button>
+                  </Control>
+                </Field>,
+              ],
+              "className": "form-padding",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "error": undefined,
+                  "label": "New Password",
+                  "name": "",
+                  "onChange": [Function],
+                  "placeholder": "New Password",
+                  "type": "password",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "error": undefined,
+                  "label": "Confirm New Password",
+                  "name": "",
+                  "onChange": [Function],
+                  "placeholder": "Confirm New Password",
+                  "type": "password",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "align": null,
+                  "backgroundColor": undefined,
+                  "children": <Control
+                    className=""
+                    fullwidth={false}
+                    iconLeft={false}
+                    iconRight={false}
+                    loading={false}
+                    renderAs="div"
+                    size={null}
+                    style={Object {}}
+                  >
+                    <Button
+                      className=""
+                      color={null}
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[Function]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                      type="primary"
+                    >
+                      Submit
+                    </Button>
+                    <Button
+                      className=""
+                      color={null}
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[MockFunction]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                    >
+                      Cancel
+                    </Button>
+                  </Control>,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "horizontal": false,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "kind": null,
+                  "marginless": undefined,
+                  "multiline": false,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "type": "group",
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": Array [
+                      <Button
+                        className=""
+                        color={null}
+                        disabled={false}
+                        fullwidth={false}
+                        inverted={false}
+                        isSelected={false}
+                        isStatic={false}
+                        loading={false}
+                        onClick={[Function]}
+                        outlined={false}
+                        remove={false}
+                        renderAs="button"
+                        reset={false}
+                        rounded={false}
+                        size={null}
+                        state={null}
+                        style={Object {}}
+                        submit={false}
+                        text={false}
+                        type="primary"
+                      >
+                        Submit
+                      </Button>,
+                      <Button
+                        className=""
+                        color={null}
+                        disabled={false}
+                        fullwidth={false}
+                        inverted={false}
+                        isSelected={false}
+                        isStatic={false}
+                        loading={false}
+                        onClick={[MockFunction]}
+                        outlined={false}
+                        remove={false}
+                        renderAs="button"
+                        reset={false}
+                        rounded={false}
+                        size={null}
+                        state={null}
+                        style={Object {}}
+                        submit={false}
+                        text={false}
+                      >
+                        Cancel
+                      </Button>,
+                    ],
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "fullwidth": false,
+                    "hidden": undefined,
+                    "iconLeft": false,
+                    "iconRight": false,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "loading": false,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "div",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": null,
+                    "style": Object {},
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": "Submit",
+                        "className": "",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "color": null,
+                        "disabled": false,
+                        "fullwidth": false,
+                        "hidden": undefined,
+                        "inverted": false,
+                        "invisible": undefined,
+                        "isSelected": false,
+                        "isStatic": false,
+                        "italic": undefined,
+                        "loading": false,
+                        "marginless": undefined,
+                        "onClick": [Function],
+                        "outlined": false,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "remove": false,
+                        "renderAs": "button",
+                        "reset": false,
+                        "responsive": undefined,
+                        "rounded": false,
+                        "shadowless": undefined,
+                        "size": null,
+                        "state": null,
+                        "style": Object {},
+                        "submit": false,
+                        "text": false,
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "type": "primary",
+                        "unselectable": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "Submit",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": "Cancel",
+                        "className": "",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "color": null,
+                        "disabled": false,
+                        "fullwidth": false,
+                        "hidden": undefined,
+                        "inverted": false,
+                        "invisible": undefined,
+                        "isSelected": false,
+                        "isStatic": false,
+                        "italic": undefined,
+                        "loading": false,
+                        "marginless": undefined,
+                        "onClick": [MockFunction],
+                        "outlined": false,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "remove": false,
+                        "renderAs": "button",
+                        "reset": false,
+                        "responsive": undefined,
+                        "rounded": false,
+                        "shadowless": undefined,
+                        "size": null,
+                        "state": null,
+                        "style": Object {},
+                        "submit": false,
+                        "text": false,
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "Cancel",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": "form",
+          },
+        ],
+        "type": [Function],
+      },
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
 exports[`Profile renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
@@ -39,6 +1494,7 @@ ShallowWrapper {
         },
       }
     }
+    changePassword={[MockFunction]}
     getProfile={
       [MockFunction] {
         "calls": Array [
@@ -74,6 +1530,7 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -171,6 +1628,32 @@ ShallowWrapper {
             </CardContent>
           </Card>
         </Container>,
+        <Modal
+          className=""
+          closeOnBlur={true}
+          closeOnEsc={true}
+          document={null}
+          onClose={[Function]}
+          show={false}
+          showClose={true}
+        >
+          <ModalContent
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <PasswordChangeForm
+              errors={
+                Object {
+                  "password1": null,
+                  "password2": null,
+                }
+              }
+              onCancel={[Function]}
+              onSubmit={[Function]}
+            />
+          </ModalContent>
+        </Modal>,
       ],
     },
     "ref": null,
@@ -696,6 +2179,95 @@ ShallowWrapper {
         },
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <ModalContent
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <PasswordChangeForm
+              errors={
+                Object {
+                  "password1": null,
+                  "password2": null,
+                }
+              }
+              onCancel={[Function]}
+              onSubmit={[Function]}
+            />
+          </ModalContent>,
+          "className": "",
+          "closeOnBlur": true,
+          "closeOnEsc": true,
+          "document": null,
+          "onClose": [Function],
+          "show": false,
+          "showClose": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": <PasswordChangeForm
+              errors={
+                Object {
+                  "password1": null,
+                  "password2": null,
+                }
+              }
+              onCancel={[Function]}
+              onSubmit={[Function]}
+            />,
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "errors": Object {
+                "password1": null,
+                "password2": null,
+              },
+              "onCancel": [Function],
+              "onSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
     ],
     "type": Symbol(react.fragment),
   },
@@ -791,6 +2363,32 @@ ShallowWrapper {
               </CardContent>
             </Card>
           </Container>,
+          <Modal
+            className=""
+            closeOnBlur={true}
+            closeOnEsc={true}
+            document={null}
+            onClose={[Function]}
+            show={false}
+            showClose={true}
+          >
+            <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <PasswordChangeForm
+                errors={
+                  Object {
+                    "password1": null,
+                    "password2": null,
+                  }
+                }
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />
+            </ModalContent>
+          </Modal>,
         ],
       },
       "ref": null,
@@ -1316,6 +2914,95 @@ ShallowWrapper {
           },
           "type": [Function],
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <PasswordChangeForm
+                errors={
+                  Object {
+                    "password1": null,
+                    "password2": null,
+                  }
+                }
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />
+            </ModalContent>,
+            "className": "",
+            "closeOnBlur": true,
+            "closeOnEsc": true,
+            "document": null,
+            "onClose": [Function],
+            "show": false,
+            "showClose": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <PasswordChangeForm
+                errors={
+                  Object {
+                    "password1": null,
+                    "password2": null,
+                  }
+                }
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "errors": Object {
+                  "password1": null,
+                  "password2": null,
+                },
+                "onCancel": [Function],
+                "onSubmit": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
       ],
       "type": Symbol(react.fragment),
     },
@@ -1324,9 +3011,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

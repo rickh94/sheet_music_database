@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withAlert } from 'react-alert'
@@ -7,6 +7,11 @@ import Container from 'react-bulma-components/lib/components/container/container
 import Card from 'react-bulma-components/lib/components/card'
 import Button from 'react-bulma-components/lib/components/button'
 import { Field, Control } from 'react-bulma-components/lib/components/form'
+import Modal from 'react-bulma-components/lib/components/modal'
+import Heading from 'react-bulma-components/lib/components/heading'
+import Section from 'react-bulma-components/lib/components/section'
+import Box from 'react-bulma-components/lib/components/box'
+import Content from 'react-bulma-components/lib/components/content'
 
 import Header from '../Header'
 import TextFieldWithErrors from '../TextFieldWithErrors'
@@ -26,7 +31,12 @@ export class Profile extends Component {
       lastName: null,
       email: null,
       username: null
-    }
+    },
+    passwordChangeErrors: {
+      password1: null,
+      password2: null
+    },
+    changePasswordOpen: false
   }
 
   static propTypes = {
@@ -34,7 +44,8 @@ export class Profile extends Component {
     history: PropTypes.object.isRequired,
     getProfile: PropTypes.func.isRequired,
     updateProfile: PropTypes.func.isRequired,
-    alert: PropTypes.object.isRequired
+    alert: PropTypes.object.isRequired,
+    changePassword: PropTypes.func.isRequired
   }
 
   async componentDidMount() {
@@ -56,10 +67,30 @@ export class Profile extends Component {
     const success = await this.props.updateProfile(this.props.account.token, {
       [fieldName]: data
     })
-    if (!success) {
-      this.props.alert.show(
-        alertText('Could not save profile information', { type: 'error' })
-      )
+    if (success) {
+      this.props.alert.show(alertText('Profile Updated'), { type: 'success' })
+    } else {
+      this.props.alert.show(alertText('Could not save profile information'), {
+        type: 'error'
+      })
+    }
+  }
+
+  changePassword = async (password1, password2) => {
+    if (password1 !== password2) {
+      this.setState({ passwordChangeErrors: { password2: 'Passwords must match' } })
+      return
+    }
+    const success = await this.props.changePassword(
+      this.props.account.token,
+      password1,
+      password2
+    )
+    if (success) {
+      this.props.alert.show(alertText('Password Changed'), { type: 'success' })
+      this.setState({ changePasswordOpen: false })
+    } else {
+      this.props.alert.show(alertText('Password Change Failed'), { type: 'error' })
     }
   }
 
@@ -100,10 +131,29 @@ export class Profile extends Component {
                 saveCallback={this.updateField}
               />
               <br />
-              <Button>Change Password</Button>
+              <Button
+                onClick={() => {
+                  this.setState({ changePasswordOpen: true })
+                }}
+              >
+                Change Password
+              </Button>
             </Card.Content>
           </Card>
         </Container>
+        <Modal
+          show={this.state.changePasswordOpen}
+          onClose={() => this.setState({ changePasswordOpen: false })}
+          closeOnBlur
+        >
+          <Modal.Content>
+            <PasswordChangeForm
+              errors={this.state.passwordChangeErrors}
+              onSubmit={this.changePassword}
+              onCancel={() => this.setState({ changePasswordOpen: false })}
+            />
+          </Modal.Content>
+        </Modal>
       </React.Fragment>
     )
   }
@@ -123,6 +173,10 @@ const mapDispatchToProps = dispatch => {
 
     updateProfile: (token, data) => {
       return dispatch(account.updateProfile(token, data))
+    },
+
+    changePassword: (token, password1, password2) => {
+      return dispatch(account.changePassword(token, password1, password2))
     }
   }
 }
@@ -207,4 +261,62 @@ export class FieldDisplay extends Component {
       </div>
     )
   }
+}
+
+export class PasswordChangeForm extends Component {
+  state = {
+    password1: '',
+    password2: ''
+  }
+
+  render() {
+    const { password1, password2 } = this.state
+    return (
+      <React.Fragment>
+        <Box style={{ backgroundColor: 'white' }}>
+          <Heading size={6}>Change Password</Heading>
+          <form className="form-padding">
+            <TextFieldWithErrors
+              label="New Password"
+              type="password"
+              onChange={e => this.setState({ password1: e.target.value })}
+              error={this.props.errors.password1}
+              name=""
+              placeholder="New Password"
+              value={password1}
+            />
+            <TextFieldWithErrors
+              label="Confirm New Password"
+              type="password"
+              onChange={e => this.setState({ password2: e.target.value })}
+              error={this.props.errors.password2}
+              name=""
+              placeholder="Confirm New Password"
+              value={password2}
+            />
+            <Field type="group">
+              <Control>
+                <Button
+                  type="primary"
+                  onClick={e => {
+                    e.preventDefault()
+                    this.props.onSubmit(password1, password2)
+                  }}
+                >
+                  Submit
+                </Button>
+                <Button onClick={this.props.onCancel}>Cancel</Button>
+              </Control>
+            </Field>
+          </form>
+        </Box>
+      </React.Fragment>
+    )
+  }
+}
+
+PasswordChangeForm.propTypes = {
+  errors: PropTypes.object.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired
 }

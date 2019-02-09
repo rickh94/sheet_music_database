@@ -91,14 +91,14 @@ describe('Logout', () => {
 
   it('shows an alert, and redirect based on success state', () => {
     const alert = { show: jest.fn() }
-    const history = { goBack: jest.fn() }
+    const history = { push: jest.fn() }
     wrapper.setProps({ alert, history })
     wrapper.instance().handleLogout(true)
     expect(alert.show).toHaveBeenCalledWith(
       <span className={'alert-text'}>Logout Successful</span>,
       { type: 'success' }
     )
-    expect(history.goBack).toHaveBeenCalled()
+    expect(history.push).toHaveBeenCalledWith('/')
     wrapper.instance().handleLogout(false, true, 'some error')
     expect(alert.show).toHaveBeenCalledWith(
       <span className={'alert-text'}>Logout All Failed</span>,

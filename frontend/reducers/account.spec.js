@@ -1,18 +1,18 @@
 import accountReducer from './account'
 
-const initialState = {
-  token: null,
-  isLoading: false,
-  errors: {},
-  profile: {
-    first_name: '',
-    last_name: '',
-    username: '',
-    email: ''
-  }
-}
-
 describe('account reducer', () => {
+  const errors = { someError: 'the error' }
+  const initialState = {
+    token: null,
+    isLoading: false,
+    errors: {},
+    profile: {
+      first_name: '',
+      last_name: '',
+      username: '',
+      email: ''
+    }
+  }
   it('should return the initial state', () => {
     expect(accountReducer(undefined, {})).toEqual(initialState)
   })
@@ -177,10 +177,43 @@ describe('account reducer', () => {
     })
 
     it('should unset isLoading and return the errors on failure', () => {
-      const errors = { someError: 'the error' }
       expect(
         accountReducer(undefined, { type: 'PROFILE_UPDATE_FAILED', payload: errors })
       ).toEqual({ ...initialState, isLoading: false, errors })
+    })
+  })
+
+  describe('password actions', () => {
+    it('should set isLoading', () => {
+      expect(accountReducer(undefined, { type: 'CHANGE_PASSWORD' })).toEqual({
+        ...initialState,
+        isLoading: true
+      })
+    })
+
+    it('should unset isLoading', () => {
+      expect(
+        accountReducer(
+          { ...initialState, isLoading: true },
+          { type: 'CHANGE_PASSWORD_SUCCESSFUL' }
+        )
+      ).toEqual({
+        ...initialState,
+        isLoading: false
+      })
+    })
+
+    it('should unset isLoading and return errors', () => {
+      expect(
+        accountReducer(
+          { ...initialState, isLoading: true },
+          { type: 'CHANGE_PASSWORD_FAILED', payload: errors }
+        )
+      ).toEqual({
+        ...initialState,
+        isLoading: false,
+        errors
+      })
     })
   })
 })

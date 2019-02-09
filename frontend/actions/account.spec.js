@@ -1,4 +1,11 @@
-import { login, register, logout, getProfile, updateProfile } from './account'
+import {
+  login,
+  register,
+  logout,
+  getProfile,
+  updateProfile,
+  changePassword
+} from './account'
 import MockAdapter from 'axios-mock-adapter'
 import axios from 'axios'
 import DjangoURL from '../middleware/api'
@@ -246,11 +253,54 @@ describe('account profile update action', () => {
     const mock = new MockAdapter(axios)
     const errors = { someError: 'error' }
     mock.onPatch(api.v1.auth.user.url, profileUpdate).reply(400, errors)
-    expect(await updateProfile(token, profileUpdate)(mockDispatch, mockGetState)).toBeFalsy()
+    expect(
+      await updateProfile(token, profileUpdate)(mockDispatch, mockGetState)
+    ).toBeFalsy()
     expect(mockDispatch).toBeCalledWith({ type: 'PROFILE' })
     expect(mockDispatch).toBeCalledWith({
       type: 'PROFILE_UPDATE_FAILED',
       payload: errors
+    })
+  })
+})
+
+describe('password change action', () => {
+  const api = new DjangoURL()
+  const mockGetState = jest.fn()
+  const token = 'testtokentext'
+
+  beforeEach(() => {
+    api.clear()
+  })
+
+  it('handles success', async () => {
+    const mockDispatch = jest.fn()
+    const mock = new MockAdapter(axios)
+    mock.onPost(api.v1.auth.password.change.url).reply(200)
+    expect(
+      await changePassword(token, 'newpassword', 'newpassword')(
+        mockDispatch,
+        mockGetState
+      )
+    ).toBeTruthy()
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'CHANGE_PASSWORD' })
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'CHANGE_PASSWORD_SUCCESSFUL'
+    })
+  })
+
+  it('returns the errors', async () => {
+    const mockDispatch = jest.fn()
+    const mock = new MockAdapter(axios)
+    const errors = { someError: 'error' }
+    mock.onPost(api.v1.password.change.url).reply(400, errors)
+    expect(
+      await changePassword(token, 'newpassword', 'newpassword')(mockDispatch, mockGetState)
+    ).toBeFalsy()
+    expect(mockDispatch).toBeCalledWith({ type: 'CHANGE_PASSWORD' })
+    expect(mockDispatch).toBeCalledWith({
+      type: 'CHANGE_PASSWORD_FAILED',
+      // payload: errors
     })
   })
 })

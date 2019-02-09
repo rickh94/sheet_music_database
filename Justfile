@@ -35,3 +35,15 @@ format:
 
 crcf name +ARGS='':
     cd $HOME/repositories/sheet_music_database/frontend && yarn crcf {{ARGS}} components/{{name}}
+
+tf:
+    cd $HOME/repositories/sheet_music_database/frontend && yarn test -u --lastCommit
+
+test-frontend:
+    cd $HOME/repositories/sheet_music_database/frontend && yarn test -u --lastCommit
+
+tb:
+    pipenv run smdb test
+
+test-backend:
+    pipenv run smdb test

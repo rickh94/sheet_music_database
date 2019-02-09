@@ -45,7 +45,7 @@ export class Logout extends Component {
       this.props.alert.show(alertText(`Logout${allText} Successful`), {
         type: 'success'
       })
-      this.props.history.goBack()
+      this.props.history.push('/')
     } else {
       this.props.alert.show(alertText(`Logout${allText} Failed`), { type: 'error' })
       this.setState({ errors })

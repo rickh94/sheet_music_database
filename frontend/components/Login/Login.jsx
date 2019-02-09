@@ -143,7 +143,7 @@ export class LoginForm extends Component {
   render() {
     const { email, password, remember, errors } = this.state
     return (
-      <form>
+      <form className="form-padding">
         {errors.nonFieldErrors && (
           <Notification color="danger">
             {errors.nonFieldErrors}

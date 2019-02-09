@@ -124,3 +124,23 @@ export function updateProfile(token, data) {
     }
   }
 }
+
+export function changePassword(token, new_password1, new_password2) {
+  return async dispatch => {
+    dispatch({ type: 'CHANGE_PASSWORD' })
+    try {
+      const api = new DjangoURL(token)
+      await api.v1.auth.password.change.post({ new_password1, new_password2 })
+      dispatch({
+        type: 'CHANGE_PASSWORD_SUCCESSFUL'
+      })
+      return true
+    } catch (err) {
+      dispatch({
+        type: 'CHANGE_PASSWORD_FAILED',
+        payload: err.response.data
+      })
+      return false
+    }
+  }
+}
