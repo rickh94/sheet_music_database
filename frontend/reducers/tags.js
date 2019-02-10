@@ -1,6 +1,6 @@
 import { isLoading, returnPayload, failed } from './helpers'
 const initialState = {
-  tags: [],
+  list: [],
   isLoading: false,
   errors: {}
 }
@@ -37,16 +37,16 @@ export default function tags(state = initialState, action) {
       return isLoading(state)
 
     case 'GET_TAGS_SUCCESSFUL':
-      return returnPayload(state, 'tags', action.payload)
+      return returnPayload(state, 'list', action.payload)
 
     case 'DELETE_TAG_SUCCESSFUL':
-      return returnPayload(state, 'tags', removeTag(state.tags, action.payload))
+      return returnPayload(state, 'list', removeTag(state.list, action.payload))
 
     case 'UPDATE_TAG_SUCCESSFUL':
-      return returnPayload(state, 'tags', updateTag(state.tags, action.payload))
+      return returnPayload(state, 'list', updateTag(state.list, action.payload))
 
     case 'CREATE_TAG_SUCCESSFUL':
-      return returnPayload(state, 'tags', appendTag(state.tags, action.payload))
+      return returnPayload(state, 'list', appendTag(state.list, action.payload))
 
     case 'GET_TAGS_FAILED':
     case 'CREATE_TAG_FAILED':

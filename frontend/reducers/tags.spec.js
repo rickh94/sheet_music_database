@@ -3,7 +3,7 @@ import tagReducer from './tags'
 describe('tag reducer', () => {
   const errors = { someError: 'error' }
   const initialState = {
-    tags: [],
+    list: [],
     isLoading: false,
     errors: {}
   }
@@ -17,7 +17,7 @@ describe('tag reducer', () => {
   })
 
   it('should return existing state', () => {
-    const someState = { tags: ['tag1', 'tag2'], isLoading: false }
+    const someState = { list: ['tag1', 'tag2'], isLoading: false }
     expect(tagReducer(someState, {})).toEqual(someState)
   })
 
@@ -35,7 +35,7 @@ describe('tag reducer', () => {
           { ...initialState, isLoading: true },
           { type: 'GET_TAGS_SUCCESSFUL', payload: tags }
         )
-      ).toEqual({ ...initialState, isLoading: false, tags })
+      ).toEqual({ ...initialState, isLoading: false, list: tags })
     })
 
     it('should return the errors if get unsuccessful', () => {
@@ -64,13 +64,13 @@ describe('tag reducer', () => {
       const newTags = tags.concat([newTag])
       expect(
         tagReducer(
-          { ...initialState, tags, isLoading: true },
+          { ...initialState, list: tags, isLoading: true },
           { type: 'CREATE_TAG_SUCCESSFUL', payload: newTag }
         )
       ).toEqual({
         ...initialState,
         isLoading: false,
-        tags: newTags
+        list: newTags
       })
     })
 
@@ -100,13 +100,13 @@ describe('tag reducer', () => {
     ]
     expect(
       tagReducer(
-        { ...initialState, tags, isLoading: true },
+        { ...initialState, list: tags, isLoading: true },
         { type: 'UPDATE_TAG_SUCCESSFUL', payload: updatedTag }
       )
     ).toEqual({
       ...initialState,
       isLoading: false,
-      tags: updatedTags
+      list: updatedTags
     })
   })
 
@@ -133,13 +133,13 @@ describe('tag reducer', () => {
     ]
     expect(
       tagReducer(
-        { ...initialState, tags, isLoading: true },
+        { ...initialState, list: tags, isLoading: true },
         { type: 'DELETE_TAG_SUCCESSFUL', payload: 2 }
       )
     ).toEqual({
       ...initialState,
       isLoading: false,
-      tags: newTags
+      list: newTags
     })
   })
 

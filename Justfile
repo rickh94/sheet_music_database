@@ -20,6 +20,9 @@ generate-client host:
 yarn +ARGS:
     cd $HOME/repositories/sheet_music_database/frontend && yarn {{ARGS}}
 
+smdb +ARGS:
+    pipenv run smdb {{ARGS}}
+
 create-account email:
     docker-compose up -d
     coreapi get http://localhost:8000/docs
