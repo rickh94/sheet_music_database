@@ -5,7 +5,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TagItem
     deleteCallback={[MockFunction]}
-    editCallback={[MockFunction]}
+    saveCallback={[MockFunction]}
     tag={
       Object {
         "id": 5,
@@ -28,38 +28,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Link
-          replace={false}
-          to="/tag/5"
-        >
-          test
-        </Link>,
+        <FieldDisplay
+          backendFieldName=""
+          linkTo="/tag/5"
+          saveCallback={[MockFunction]}
+          value="test"
+        />,
         <div
           className="links"
         >
-          <a
-            onClick={[Function]}
-          >
-            <FontAwesomeIcon
-              border={false}
-              className=""
-              fixedWidth={false}
-              flip={null}
-              icon="pen"
-              inverse={false}
-              listItem={false}
-              mask={null}
-              pull={null}
-              pulse={false}
-              rotation={null}
-              size={null}
-              spin={false}
-              symbol={false}
-              title=""
-              transform={null}
-            />
-            edit
-          </a>
           <a
             onClick={[Function]}
           >
@@ -93,12 +70,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "test",
-          "replace": false,
-          "to": "/tag/5",
+          "backendFieldName": "",
+          "errors": undefined,
+          "linkTo": "/tag/5",
+          "saveCallback": [MockFunction],
+          "value": "test",
         },
         "ref": null,
-        "rendered": "test",
+        "rendered": null,
         "type": [Function],
       },
       Object {
@@ -106,16 +85,44 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <a
-              onClick={[Function]}
-            >
+          "children": <a
+            onClick={[Function]}
+          >
+            <FontAwesomeIcon
+              border={false}
+              className=""
+              fixedWidth={false}
+              flip={null}
+              icon="trash"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            delete
+          </a>,
+          "className": "links",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
               <FontAwesomeIcon
                 border={false}
                 className=""
                 fixedWidth={false}
                 flip={null}
-                icon="pen"
+                icon="trash"
                 inverse={false}
                 listItem={false}
                 mask={null}
@@ -127,9 +134,64 @@ ShallowWrapper {
                 symbol={false}
                 title=""
                 transform={null}
-              />
-              edit
-            </a>,
+              />,
+              "delete",
+            ],
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": "trash",
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "",
+                "transform": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "delete",
+          ],
+          "type": "a",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "li",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <FieldDisplay
+            backendFieldName=""
+            linkTo="/tag/5"
+            saveCallback={[MockFunction]}
+            value="test"
+          />,
+          <div
+            className="links"
+          >
             <a
               onClick={[Function]}
             >
@@ -152,73 +214,59 @@ ShallowWrapper {
                 transform={null}
               />
               delete
-            </a>,
-          ],
-          "className": "links",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon="pen"
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />,
-                "edit",
-              ],
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "border": false,
-                  "className": "",
-                  "fixedWidth": false,
-                  "flip": null,
-                  "icon": "pen",
-                  "inverse": false,
-                  "listItem": false,
-                  "mask": null,
-                  "pull": null,
-                  "pulse": false,
-                  "rotation": null,
-                  "size": null,
-                  "spin": false,
-                  "symbol": false,
-                  "title": "",
-                  "transform": null,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "edit",
-            ],
-            "type": "a",
+            </a>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "backendFieldName": "",
+            "errors": undefined,
+            "linkTo": "/tag/5",
+            "saveCallback": [MockFunction],
+            "value": "test",
           },
-          Object {
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              onClick={[Function]}
+            >
+              <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="trash"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              delete
+            </a>,
+            "className": "links",
+          },
+          "ref": null,
+          "rendered": Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
@@ -278,270 +326,6 @@ ShallowWrapper {
             ],
             "type": "a",
           },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "li",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <Link
-            replace={false}
-            to="/tag/5"
-          >
-            test
-          </Link>,
-          <div
-            className="links"
-          >
-            <a
-              onClick={[Function]}
-            >
-              <FontAwesomeIcon
-                border={false}
-                className=""
-                fixedWidth={false}
-                flip={null}
-                icon="pen"
-                inverse={false}
-                listItem={false}
-                mask={null}
-                pull={null}
-                pulse={false}
-                rotation={null}
-                size={null}
-                spin={false}
-                symbol={false}
-                title=""
-                transform={null}
-              />
-              edit
-            </a>
-            <a
-              onClick={[Function]}
-            >
-              <FontAwesomeIcon
-                border={false}
-                className=""
-                fixedWidth={false}
-                flip={null}
-                icon="trash"
-                inverse={false}
-                listItem={false}
-                mask={null}
-                pull={null}
-                pulse={false}
-                rotation={null}
-                size={null}
-                spin={false}
-                symbol={false}
-                title=""
-                transform={null}
-              />
-              delete
-            </a>
-          </div>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "test",
-            "replace": false,
-            "to": "/tag/5",
-          },
-          "ref": null,
-          "rendered": "test",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <a
-                onClick={[Function]}
-              >
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon="pen"
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-                edit
-              </a>,
-              <a
-                onClick={[Function]}
-              >
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon="trash"
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-                delete
-              </a>,
-            ],
-            "className": "links",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <FontAwesomeIcon
-                    border={false}
-                    className=""
-                    fixedWidth={false}
-                    flip={null}
-                    icon="pen"
-                    inverse={false}
-                    listItem={false}
-                    mask={null}
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    symbol={false}
-                    title=""
-                    transform={null}
-                  />,
-                  "edit",
-                ],
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "border": false,
-                    "className": "",
-                    "fixedWidth": false,
-                    "flip": null,
-                    "icon": "pen",
-                    "inverse": false,
-                    "listItem": false,
-                    "mask": null,
-                    "pull": null,
-                    "pulse": false,
-                    "rotation": null,
-                    "size": null,
-                    "spin": false,
-                    "symbol": false,
-                    "title": "",
-                    "transform": null,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "edit",
-              ],
-              "type": "a",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <FontAwesomeIcon
-                    border={false}
-                    className=""
-                    fixedWidth={false}
-                    flip={null}
-                    icon="trash"
-                    inverse={false}
-                    listItem={false}
-                    mask={null}
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    symbol={false}
-                    title=""
-                    transform={null}
-                  />,
-                  "delete",
-                ],
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "border": false,
-                    "className": "",
-                    "fixedWidth": false,
-                    "flip": null,
-                    "icon": "trash",
-                    "inverse": false,
-                    "listItem": false,
-                    "mask": null,
-                    "pull": null,
-                    "pulse": false,
-                    "rotation": null,
-                    "size": null,
-                    "spin": false,
-                    "symbol": false,
-                    "title": "",
-                    "transform": null,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "delete",
-              ],
-              "type": "a",
-            },
-          ],
           "type": "div",
         },
       ],
@@ -575,7 +359,54 @@ ShallowWrapper {
 exports[`Tags matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Tags />,
+  Symbol(enzyme.__unrendered__): <Tags
+    alert={
+      Object {
+        "show": [MockFunction] {
+          "calls": Array [
+            Array [
+              <span
+                className="alert-text"
+              >
+                Could not get Tags
+              </span>,
+              Object {
+                "type": "error",
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
+    getTags={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "testtoken",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    history={
+      Object {
+        "push": [MockFunction],
+      }
+    }
+    tags={Object {}}
+    token="testtoken"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -599,7 +430,7 @@ ShallowWrapper {
           style={Object {}}
         >
           <Card
-            className="margin-defaul"
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
@@ -642,7 +473,7 @@ ShallowWrapper {
           "backgroundColor": undefined,
           "breakpoint": null,
           "children": <Card
-            className="margin-defaul"
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
@@ -709,7 +540,7 @@ ShallowWrapper {
               </Heading>
               <ul />
             </CardContent>,
-            "className": "margin-defaul",
+            "className": "margin-default",
             "clearfix": undefined,
             "clipped": undefined,
             "hidden": undefined,
@@ -848,7 +679,7 @@ ShallowWrapper {
             style={Object {}}
           >
             <Card
-              className="margin-defaul"
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
@@ -891,7 +722,7 @@ ShallowWrapper {
             "backgroundColor": undefined,
             "breakpoint": null,
             "children": <Card
-              className="margin-defaul"
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
@@ -958,7 +789,7 @@ ShallowWrapper {
                 </Heading>
                 <ul />
               </CardContent>,
-              "className": "margin-defaul",
+              "className": "margin-default",
               "clearfix": undefined,
               "clipped": undefined,
               "hidden": undefined,

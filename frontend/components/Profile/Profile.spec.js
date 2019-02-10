@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import '../../setupTests'
 
-import { Profile, FieldDisplay, PasswordChangeForm } from './Profile'
+import { Profile, PasswordChangeForm } from './Profile'
 
 describe('Profile', () => {
   const defaultProfile = { first_name: '', last_name: '', username: '', email: '' }
@@ -52,7 +52,7 @@ describe('Profile', () => {
   })
 
   it('renders email without edit option', () => {
-    expect(wrapper.contains('Email:')).toBeTruthy()
+    expect(wrapper.contains('Email')).toBeTruthy()
   })
 
   it('redirects if user is not logged in', async () => {
@@ -159,64 +159,6 @@ describe('Profile', () => {
   })
 })
 
-describe('FieldDisplay', () => {
-  const wrapper = shallow(
-    <FieldDisplay label="" value="" saveCallback={jest.fn()} backendFieldName="test" />
-  )
-
-  it('renders the value in the text', () => {
-    wrapper.setProps({ value: 'test' })
-    expect(wrapper.contains('test')).toBeTruthy()
-  })
-
-  it('renders an edit link', () => {
-    expect(wrapper.exists('.edit-link')).toBeTruthy()
-  })
-
-  it('renders label', () => {
-    wrapper.setProps({ label: 'Test name' })
-    expect(wrapper.contains('Test name')).toBeTruthy()
-  })
-
-  it('renders a div', () => {
-    expect(wrapper.exists('div')).toBeTruthy()
-  })
-
-  it('renders a field and buttons when edit is true', () => {
-    wrapper.setState({ edit: true })
-    expect(wrapper.exists('TextFieldWithErrors')).toBeTruthy()
-    expect(
-      wrapper.findWhere(el => el.name() == 'Button' && el.contains('Save')).length
-    ).toEqual(1)
-    expect(
-      wrapper.findWhere(el => el.name() == 'Button' && el.contains('Cancel')).length
-    ).toEqual(1)
-  })
-
-  it('resets state when cancel is clicked', () => {
-    const value = 'test value'
-    wrapper.setProps({ value })
-    wrapper.setState({ edit: true, newValue: 'test new value' })
-    wrapper
-      .findWhere(el => el.name() == 'Button' && el.contains('Cancel'))
-      .simulate('click')
-    expect(wrapper.state().edit).toBeFalsy()
-    expect(wrapper.state().newValue).toEqual(value)
-  })
-
-  it('calls the save callback with new value when save is clicked and resets state', () => {
-    const newValue = 'test new value'
-    const backendFieldName = 'backend_field'
-    const saveCallback = jest.fn()
-    wrapper.setProps({ saveCallback, backendFieldName })
-    wrapper.setState({ edit: true, newValue })
-    wrapper
-      .findWhere(el => el.name() == 'Button' && el.contains('Save'))
-      .simulate('click')
-    expect(saveCallback).toHaveBeenCalledWith(backendFieldName, newValue)
-    expect(wrapper.state().edit).toBeFalsy()
-  })
-})
 
 describe('Password Change Modal', () => {
   const wrapper = shallow(

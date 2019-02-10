@@ -13,7 +13,7 @@ export class Header extends Component {
   }
 
   static propTypes = {
-    account: PropTypes.object.isRequired,
+    account: PropTypes.object.isRequired
   }
 
   render() {
@@ -55,36 +55,17 @@ export class Header extends Component {
         </Navbar.Brand>
         <Navbar.Menu className={menuActive} color="primary">
           <Navbar.Container color="primary" position="end">
-            <Link to="/" className="header--link">
-              <Navbar.Item renderAs="div" className="nav-item-resp">
-                Home
-              </Navbar.Item>
-            </Link>
+            <HeaderLink to="/">Home</HeaderLink>
+            <HeaderLink to="/tags">Tags</HeaderLink>
             {token ? (
               <React.Fragment>
-                <Link to="/profile" className="header--link">
-                  <Navbar.Item renderAs="div" className="nav-item-resp">
-                    Profile
-                  </Navbar.Item>
-                </Link>
-                <Link to="/logout" className="header--link">
-                  <Navbar.Item renderAs="div" className="nav-item-resp">
-                    Logout
-                  </Navbar.Item>
-                </Link>
+                <HeaderLink to="/profile">Profile</HeaderLink>
+                <HeaderLink to="/logout">Logout</HeaderLink>
               </React.Fragment>
             ) : (
               <React.Fragment>
-                <Link to="/register" className="header--link">
-                  <Navbar.Item renderAs="div" className="nav-item-resp">
-                    Register
-                  </Navbar.Item>
-                </Link>
-                <Link to="/login" className="header--link">
-                  <Navbar.Item renderAs="div" className="nav-item-resp">
-                    Login
-                  </Navbar.Item>
-                </Link>
+                <HeaderLink to="/register">Register</HeaderLink>
+                <HeaderLink to="/login">Login</HeaderLink>
               </React.Fragment>
             )}
           </Navbar.Container>
@@ -108,3 +89,18 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Header)
+
+export function HeaderLink(props) {
+  return (
+    <Link to={props.to} className="header--link">
+      <Navbar.Item renderAs="div" className="nav-item-resp">
+        {props.children}
+      </Navbar.Item>
+    </Link>
+  )
+}
+
+HeaderLink.propTypes = {
+  children: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired
+}

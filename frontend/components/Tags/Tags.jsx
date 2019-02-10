@@ -1,24 +1,49 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { withAlert } from 'react-alert'
 import { Link } from 'react-router-dom'
 
-import Header from '../Header'
 import Container from 'react-bulma-components/lib/components/container/container'
 import Card from 'react-bulma-components/lib/components/card/card'
 import Heading from 'react-bulma-components/lib/components/heading'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Level from 'react-bulma-components/lib/components/level'
 
-class Tags extends Component {
+import Header from '../Header'
+import FieldDisplay from '../FieldDisplay'
+import { tags } from '../../actions'
+import alertText, { messages } from '../../middleware/alertText'
+
+export class Tags extends Component {
   state = {
-    tags: {
-      list: []
+    errors: {}
+    // errors are saved as [id]: value
+  }
+
+  static propTypes = {
+    token: PropTypes.string,
+    history: PropTypes.object.isRequired,
+    alert: PropTypes.object.isRequired,
+    tags: PropTypes.object.isRequired,
+    getTags: PropTypes.func.isRequired
+  }
+
+  componentDidMount() {
+    if (!this.props.token) {
+      this.props.alert.show(messages.notLoggedIn, { type: 'error' })
+      this.props.history.push('/login')
+    } else {
+      const success = this.props.getTags(this.props.token)
+      console.log(success)
+      if (!success) {
+        this.props.alert.show(...messages.couldNotGet('Tags'))
+      }
     }
   }
 
-  static propTypes = {}
-
   render() {
-    const tagList = this.state.tags.list
+    const tagList = this.props.tags.list
     return (
       <React.Fragment>
         <Header />
@@ -31,8 +56,9 @@ class Tags extends Component {
                   <TagItem
                     tag={tag}
                     key={tag.id}
-                    editCallback={() => {}}
+                    saveCallback={() => {}}
                     deleteCallback={() => {}}
+                    errors={this.state.errors[tag.id]}
                   />
                 ))}
               </ul>
@@ -44,38 +70,54 @@ class Tags extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    token: state.account.token,
+    tags: state.tags
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getTags: token => {
+      return dispatch(tags.getTags(token))
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withAlert(Tags))
+
 export function TagItem(props) {
   return (
-    <li>
-      <Link to={`/tag/${props.tag.id}`}>{props.tag.name}</Link>
+    <Level>
+      <FieldDisplay
+        value={props.tag.name}
+        saveCallback={props.saveCallback}
+        backendFieldName=""
+        errors={props.error}
+        linkTo={`/tag/${props.tag.id}`}
+      />
       <div className="links">
-        <a
-          onClick={e => {
-            e.preventDefault()
-            props.editCallback(props.tag.id)
-          }}
-        >
-          <FontAwesomeIcon icon="pen" />
-          edit
-        </a>
         <a
           onClick={e => {
             e.preventDefault()
             props.deleteCallback(props.tag.id)
           }}
+          className="edit-link"
         >
-          <FontAwesomeIcon icon="trash" />
           delete
         </a>
       </div>
-    </li>
+    </Level>
   )
 }
 
 TagItem.propTypes = {
   tag: PropTypes.object.isRequired,
-  editCallback: PropTypes.func.isRequired,
-  deleteCallback: PropTypes.func.isRequired
+  saveCallback: PropTypes.func.isRequired,
+  deleteCallback: PropTypes.func.isRequired,
+  errors: PropTypes.string
 }
-
-export default Tags

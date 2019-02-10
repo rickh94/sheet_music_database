@@ -14,3 +14,16 @@
 .form-padding {
   padding-right: 2vw;
 }
+
+.field-display-input {
+  max-width: 90%;
+}
+
+.edit-link {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  &:hover {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}

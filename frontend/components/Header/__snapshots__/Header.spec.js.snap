@@ -96,58 +96,27 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Link
-              className="header--link"
-              replace={false}
+            <HeaderLink
               to="/"
             >
-              <NavbarItem
-                active={false}
-                className="nav-item-resp"
-                dropdown={false}
-                dropdownUp={false}
-                hoverable={false}
-                renderAs="div"
-                style={Object {}}
-              >
-                Home
-              </NavbarItem>
-            </Link>
+              Home
+            </HeaderLink>
+            <HeaderLink
+              to="/tags"
+            >
+              Tags
+            </HeaderLink>
             <React.Fragment>
-              <Link
-                className="header--link"
-                replace={false}
+              <HeaderLink
                 to="/register"
               >
-                <NavbarItem
-                  active={false}
-                  className="nav-item-resp"
-                  dropdown={false}
-                  dropdownUp={false}
-                  hoverable={false}
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  Register
-                </NavbarItem>
-              </Link>
-              <Link
-                className="header--link"
-                replace={false}
+                Register
+              </HeaderLink>
+              <HeaderLink
                 to="/login"
               >
-                <NavbarItem
-                  active={false}
-                  className="nav-item-resp"
-                  dropdown={false}
-                  dropdownUp={false}
-                  hoverable={false}
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  Login
-                </NavbarItem>
-              </Link>
+                Login
+              </HeaderLink>
             </React.Fragment>
           </NavbarContainer>
         </NavbarMenu>,
@@ -451,58 +420,27 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Link
-              className="header--link"
-              replace={false}
+            <HeaderLink
               to="/"
             >
-              <NavbarItem
-                active={false}
-                className="nav-item-resp"
-                dropdown={false}
-                dropdownUp={false}
-                hoverable={false}
-                renderAs="div"
-                style={Object {}}
-              >
-                Home
-              </NavbarItem>
-            </Link>
+              Home
+            </HeaderLink>
+            <HeaderLink
+              to="/tags"
+            >
+              Tags
+            </HeaderLink>
             <React.Fragment>
-              <Link
-                className="header--link"
-                replace={false}
+              <HeaderLink
                 to="/register"
               >
-                <NavbarItem
-                  active={false}
-                  className="nav-item-resp"
-                  dropdown={false}
-                  dropdownUp={false}
-                  hoverable={false}
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  Register
-                </NavbarItem>
-              </Link>
-              <Link
-                className="header--link"
-                replace={false}
+                Register
+              </HeaderLink>
+              <HeaderLink
                 to="/login"
               >
-                <NavbarItem
-                  active={false}
-                  className="nav-item-resp"
-                  dropdown={false}
-                  dropdownUp={false}
-                  hoverable={false}
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  Login
-                </NavbarItem>
-              </Link>
+                Login
+              </HeaderLink>
             </React.Fragment>
           </NavbarContainer>,
           "className": "",
@@ -535,58 +473,27 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "children": Array [
-              <Link
-                className="header--link"
-                replace={false}
+              <HeaderLink
                 to="/"
               >
-                <NavbarItem
-                  active={false}
-                  className="nav-item-resp"
-                  dropdown={false}
-                  dropdownUp={false}
-                  hoverable={false}
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  Home
-                </NavbarItem>
-              </Link>,
+                Home
+              </HeaderLink>,
+              <HeaderLink
+                to="/tags"
+              >
+                Tags
+              </HeaderLink>,
               <React.Fragment>
-                <Link
-                  className="header--link"
-                  replace={false}
+                <HeaderLink
                   to="/register"
                 >
-                  <NavbarItem
-                    active={false}
-                    className="nav-item-resp"
-                    dropdown={false}
-                    dropdownUp={false}
-                    hoverable={false}
-                    renderAs="div"
-                    style={Object {}}
-                  >
-                    Register
-                  </NavbarItem>
-                </Link>
-                <Link
-                  className="header--link"
-                  replace={false}
+                  Register
+                </HeaderLink>
+                <HeaderLink
                   to="/login"
                 >
-                  <NavbarItem
-                    active={false}
-                    className="nav-item-resp"
-                    dropdown={false}
-                    dropdownUp={false}
-                    hoverable={false}
-                    renderAs="div"
-                    style={Object {}}
-                  >
-                    Login
-                  </NavbarItem>
-                </Link>
+                  Login
+                </HeaderLink>
               </React.Fragment>,
             ],
             "className": "",
@@ -618,61 +525,25 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {
-                "children": <NavbarItem
-                  active={false}
-                  className="nav-item-resp"
-                  dropdown={false}
-                  dropdownUp={false}
-                  hoverable={false}
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  Home
-                </NavbarItem>,
-                "className": "header--link",
-                "replace": false,
+                "children": "Home",
                 "to": "/",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "active": false,
-                  "backgroundColor": undefined,
-                  "children": "Home",
-                  "className": "nav-item-resp",
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "dropdown": false,
-                  "dropdownUp": false,
-                  "hidden": undefined,
-                  "hoverable": false,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "div",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "style": Object {},
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
-                },
-                "ref": null,
-                "rendered": "Home",
-                "type": [Function],
+              "rendered": "Home",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Tags",
+                "to": "/tags",
               },
+              "ref": null,
+              "rendered": "Tags",
               "type": [Function],
             },
             Object {
@@ -681,40 +552,16 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": Array [
-                  <Link
-                    className="header--link"
-                    replace={false}
+                  <HeaderLink
                     to="/register"
                   >
-                    <NavbarItem
-                      active={false}
-                      className="nav-item-resp"
-                      dropdown={false}
-                      dropdownUp={false}
-                      hoverable={false}
-                      renderAs="div"
-                      style={Object {}}
-                    >
-                      Register
-                    </NavbarItem>
-                  </Link>,
-                  <Link
-                    className="header--link"
-                    replace={false}
+                    Register
+                  </HeaderLink>,
+                  <HeaderLink
                     to="/login"
                   >
-                    <NavbarItem
-                      active={false}
-                      className="nav-item-resp"
-                      dropdown={false}
-                      dropdownUp={false}
-                      hoverable={false}
-                      renderAs="div"
-                      style={Object {}}
-                    >
-                      Login
-                    </NavbarItem>
-                  </Link>,
+                    Login
+                  </HeaderLink>,
                 ],
               },
               "ref": null,
@@ -722,121 +569,25 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": <NavbarItem
-                      active={false}
-                      className="nav-item-resp"
-                      dropdown={false}
-                      dropdownUp={false}
-                      hoverable={false}
-                      renderAs="div"
-                      style={Object {}}
-                    >
-                      Register
-                    </NavbarItem>,
-                    "className": "header--link",
-                    "replace": false,
+                    "children": "Register",
                     "to": "/register",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "active": false,
-                      "backgroundColor": undefined,
-                      "children": "Register",
-                      "className": "nav-item-resp",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "dropdown": false,
-                      "dropdownUp": false,
-                      "hidden": undefined,
-                      "hoverable": false,
-                      "invisible": undefined,
-                      "italic": undefined,
-                      "marginless": undefined,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "renderAs": "div",
-                      "responsive": undefined,
-                      "shadowless": undefined,
-                      "style": Object {},
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
-                    },
-                    "ref": null,
-                    "rendered": "Register",
-                    "type": [Function],
-                  },
+                  "rendered": "Register",
                   "type": [Function],
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": <NavbarItem
-                      active={false}
-                      className="nav-item-resp"
-                      dropdown={false}
-                      dropdownUp={false}
-                      hoverable={false}
-                      renderAs="div"
-                      style={Object {}}
-                    >
-                      Login
-                    </NavbarItem>,
-                    "className": "header--link",
-                    "replace": false,
+                    "children": "Login",
                     "to": "/login",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "active": false,
-                      "backgroundColor": undefined,
-                      "children": "Login",
-                      "className": "nav-item-resp",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "dropdown": false,
-                      "dropdownUp": false,
-                      "hidden": undefined,
-                      "hoverable": false,
-                      "invisible": undefined,
-                      "italic": undefined,
-                      "marginless": undefined,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "renderAs": "div",
-                      "responsive": undefined,
-                      "shadowless": undefined,
-                      "style": Object {},
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
-                    },
-                    "ref": null,
-                    "rendered": "Login",
-                    "type": [Function],
-                  },
+                  "rendered": "Login",
                   "type": [Function],
                 },
               ],
@@ -928,58 +679,27 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <Link
-                className="header--link"
-                replace={false}
+              <HeaderLink
                 to="/"
               >
-                <NavbarItem
-                  active={false}
-                  className="nav-item-resp"
-                  dropdown={false}
-                  dropdownUp={false}
-                  hoverable={false}
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  Home
-                </NavbarItem>
-              </Link>
+                Home
+              </HeaderLink>
+              <HeaderLink
+                to="/tags"
+              >
+                Tags
+              </HeaderLink>
               <React.Fragment>
-                <Link
-                  className="header--link"
-                  replace={false}
+                <HeaderLink
                   to="/register"
                 >
-                  <NavbarItem
-                    active={false}
-                    className="nav-item-resp"
-                    dropdown={false}
-                    dropdownUp={false}
-                    hoverable={false}
-                    renderAs="div"
-                    style={Object {}}
-                  >
-                    Register
-                  </NavbarItem>
-                </Link>
-                <Link
-                  className="header--link"
-                  replace={false}
+                  Register
+                </HeaderLink>
+                <HeaderLink
                   to="/login"
                 >
-                  <NavbarItem
-                    active={false}
-                    className="nav-item-resp"
-                    dropdown={false}
-                    dropdownUp={false}
-                    hoverable={false}
-                    renderAs="div"
-                    style={Object {}}
-                  >
-                    Login
-                  </NavbarItem>
-                </Link>
+                  Login
+                </HeaderLink>
               </React.Fragment>
             </NavbarContainer>
           </NavbarMenu>,
@@ -1283,58 +1003,27 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <Link
-                className="header--link"
-                replace={false}
+              <HeaderLink
                 to="/"
               >
-                <NavbarItem
-                  active={false}
-                  className="nav-item-resp"
-                  dropdown={false}
-                  dropdownUp={false}
-                  hoverable={false}
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  Home
-                </NavbarItem>
-              </Link>
+                Home
+              </HeaderLink>
+              <HeaderLink
+                to="/tags"
+              >
+                Tags
+              </HeaderLink>
               <React.Fragment>
-                <Link
-                  className="header--link"
-                  replace={false}
+                <HeaderLink
                   to="/register"
                 >
-                  <NavbarItem
-                    active={false}
-                    className="nav-item-resp"
-                    dropdown={false}
-                    dropdownUp={false}
-                    hoverable={false}
-                    renderAs="div"
-                    style={Object {}}
-                  >
-                    Register
-                  </NavbarItem>
-                </Link>
-                <Link
-                  className="header--link"
-                  replace={false}
+                  Register
+                </HeaderLink>
+                <HeaderLink
                   to="/login"
                 >
-                  <NavbarItem
-                    active={false}
-                    className="nav-item-resp"
-                    dropdown={false}
-                    dropdownUp={false}
-                    hoverable={false}
-                    renderAs="div"
-                    style={Object {}}
-                  >
-                    Login
-                  </NavbarItem>
-                </Link>
+                  Login
+                </HeaderLink>
               </React.Fragment>
             </NavbarContainer>,
             "className": "",
@@ -1367,58 +1056,27 @@ ShallowWrapper {
             "props": Object {
               "backgroundColor": undefined,
               "children": Array [
-                <Link
-                  className="header--link"
-                  replace={false}
+                <HeaderLink
                   to="/"
                 >
-                  <NavbarItem
-                    active={false}
-                    className="nav-item-resp"
-                    dropdown={false}
-                    dropdownUp={false}
-                    hoverable={false}
-                    renderAs="div"
-                    style={Object {}}
-                  >
-                    Home
-                  </NavbarItem>
-                </Link>,
+                  Home
+                </HeaderLink>,
+                <HeaderLink
+                  to="/tags"
+                >
+                  Tags
+                </HeaderLink>,
                 <React.Fragment>
-                  <Link
-                    className="header--link"
-                    replace={false}
+                  <HeaderLink
                     to="/register"
                   >
-                    <NavbarItem
-                      active={false}
-                      className="nav-item-resp"
-                      dropdown={false}
-                      dropdownUp={false}
-                      hoverable={false}
-                      renderAs="div"
-                      style={Object {}}
-                    >
-                      Register
-                    </NavbarItem>
-                  </Link>
-                  <Link
-                    className="header--link"
-                    replace={false}
+                    Register
+                  </HeaderLink>
+                  <HeaderLink
                     to="/login"
                   >
-                    <NavbarItem
-                      active={false}
-                      className="nav-item-resp"
-                      dropdown={false}
-                      dropdownUp={false}
-                      hoverable={false}
-                      renderAs="div"
-                      style={Object {}}
-                    >
-                      Login
-                    </NavbarItem>
-                  </Link>
+                    Login
+                  </HeaderLink>
                 </React.Fragment>,
               ],
               "className": "",
@@ -1450,61 +1108,25 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "function",
                 "props": Object {
-                  "children": <NavbarItem
-                    active={false}
-                    className="nav-item-resp"
-                    dropdown={false}
-                    dropdownUp={false}
-                    hoverable={false}
-                    renderAs="div"
-                    style={Object {}}
-                  >
-                    Home
-                  </NavbarItem>,
-                  "className": "header--link",
-                  "replace": false,
+                  "children": "Home",
                   "to": "/",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "active": false,
-                    "backgroundColor": undefined,
-                    "children": "Home",
-                    "className": "nav-item-resp",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "dropdown": false,
-                    "dropdownUp": false,
-                    "hidden": undefined,
-                    "hoverable": false,
-                    "invisible": undefined,
-                    "italic": undefined,
-                    "marginless": undefined,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "renderAs": "div",
-                    "responsive": undefined,
-                    "shadowless": undefined,
-                    "style": Object {},
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Home",
-                  "type": [Function],
+                "rendered": "Home",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Tags",
+                  "to": "/tags",
                 },
+                "ref": null,
+                "rendered": "Tags",
                 "type": [Function],
               },
               Object {
@@ -1513,40 +1135,16 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": Array [
-                    <Link
-                      className="header--link"
-                      replace={false}
+                    <HeaderLink
                       to="/register"
                     >
-                      <NavbarItem
-                        active={false}
-                        className="nav-item-resp"
-                        dropdown={false}
-                        dropdownUp={false}
-                        hoverable={false}
-                        renderAs="div"
-                        style={Object {}}
-                      >
-                        Register
-                      </NavbarItem>
-                    </Link>,
-                    <Link
-                      className="header--link"
-                      replace={false}
+                      Register
+                    </HeaderLink>,
+                    <HeaderLink
                       to="/login"
                     >
-                      <NavbarItem
-                        active={false}
-                        className="nav-item-resp"
-                        dropdown={false}
-                        dropdownUp={false}
-                        hoverable={false}
-                        renderAs="div"
-                        style={Object {}}
-                      >
-                        Login
-                      </NavbarItem>
-                    </Link>,
+                      Login
+                    </HeaderLink>,
                   ],
                 },
                 "ref": null,
@@ -1554,121 +1152,25 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": <NavbarItem
-                        active={false}
-                        className="nav-item-resp"
-                        dropdown={false}
-                        dropdownUp={false}
-                        hoverable={false}
-                        renderAs="div"
-                        style={Object {}}
-                      >
-                        Register
-                      </NavbarItem>,
-                      "className": "header--link",
-                      "replace": false,
+                      "children": "Register",
                       "to": "/register",
                     },
                     "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "active": false,
-                        "backgroundColor": undefined,
-                        "children": "Register",
-                        "className": "nav-item-resp",
-                        "clearfix": undefined,
-                        "clipped": undefined,
-                        "dropdown": false,
-                        "dropdownUp": false,
-                        "hidden": undefined,
-                        "hoverable": false,
-                        "invisible": undefined,
-                        "italic": undefined,
-                        "marginless": undefined,
-                        "overlay": undefined,
-                        "paddingless": undefined,
-                        "pull": undefined,
-                        "radiusless": undefined,
-                        "renderAs": "div",
-                        "responsive": undefined,
-                        "shadowless": undefined,
-                        "style": Object {},
-                        "textAlignment": undefined,
-                        "textColor": undefined,
-                        "textSize": undefined,
-                        "textTransform": undefined,
-                        "textWeight": undefined,
-                        "unselectable": undefined,
-                      },
-                      "ref": null,
-                      "rendered": "Register",
-                      "type": [Function],
-                    },
+                    "rendered": "Register",
                     "type": [Function],
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": <NavbarItem
-                        active={false}
-                        className="nav-item-resp"
-                        dropdown={false}
-                        dropdownUp={false}
-                        hoverable={false}
-                        renderAs="div"
-                        style={Object {}}
-                      >
-                        Login
-                      </NavbarItem>,
-                      "className": "header--link",
-                      "replace": false,
+                      "children": "Login",
                       "to": "/login",
                     },
                     "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "active": false,
-                        "backgroundColor": undefined,
-                        "children": "Login",
-                        "className": "nav-item-resp",
-                        "clearfix": undefined,
-                        "clipped": undefined,
-                        "dropdown": false,
-                        "dropdownUp": false,
-                        "hidden": undefined,
-                        "hoverable": false,
-                        "invisible": undefined,
-                        "italic": undefined,
-                        "marginless": undefined,
-                        "overlay": undefined,
-                        "paddingless": undefined,
-                        "pull": undefined,
-                        "radiusless": undefined,
-                        "renderAs": "div",
-                        "responsive": undefined,
-                        "shadowless": undefined,
-                        "style": Object {},
-                        "textAlignment": undefined,
-                        "textColor": undefined,
-                        "textSize": undefined,
-                        "textTransform": undefined,
-                        "textWeight": undefined,
-                        "unselectable": undefined,
-                      },
-                      "ref": null,
-                      "rendered": "Login",
-                      "type": [Function],
-                    },
+                    "rendered": "Login",
                     "type": [Function],
                   },
                 ],

@@ -10,15 +10,16 @@ import {
 
 function TextFieldWithErrors(props) {
   return (
-    <Field>
+    <Field className={props.className}>
       {props.label && <Label>{props.label}</Label>}
-      <Control>
+      <Control className="is-expanded">
         <Input
           type={props.type}
           placeholder={props.placeholder}
           value={props.value}
           onChange={e => props.onChange(e, props.name)}
           color={props.error ? 'danger' : null}
+          className={`is-expanded ${props.inputClass}`}
         />
       </Control>
       {props.error && <Help color="danger">{props.error}</Help>}
@@ -33,7 +34,10 @@ TextFieldWithErrors.propTypes = {
   onChange: PropTypes.func.isRequired,
   error: PropTypes.any,
   name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  group: PropTypes.bool,
+  className: PropTypes.string,
+  inputClass: PropTypes.string
 }
 
 export default TextFieldWithErrors

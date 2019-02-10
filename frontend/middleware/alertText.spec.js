@@ -12,6 +12,17 @@ describe('alertText', () => {
 
 describe('notLoggedIn', () => {
   it('returns a not logged in message', () => {
-    expect(messages.notLoggedIn).toEqual(<span className='alert-text'>Please log in</span>)
+    expect(messages.notLoggedIn).toEqual(
+      <span className="alert-text">Please log in</span>
+    )
+  })
+})
+
+describe('could not get', () => {
+  it('returns alert text and error', () => {
+    expect(messages.couldNotGet('test')).toEqual([
+      <span className="alert-text">Could not get test</span>,
+      { type: 'error' }
+    ])
   })
 })

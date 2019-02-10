@@ -19,6 +19,7 @@ import { account } from '../../actions'
 import alertText, { messages } from '../../middleware/alertText'
 
 import './Profile.scss'
+import FieldDisplay from '../FieldDisplay'
 
 export class Profile extends Component {
   state = {
@@ -48,7 +49,7 @@ export class Profile extends Component {
     changePassword: PropTypes.func.isRequired
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     if (!this.props.account.token) {
       this.props.alert.show(messages.notLoggedIn, { type: 'error' })
       this.props.history.push('/login')
@@ -107,7 +108,9 @@ export class Profile extends Component {
             </Card.Header>
             <Card.Content>
               <div style={{ paddingBottom: '0.8rem' }}>
-                <strong>Email:</strong> {email}
+                <strong>Email</strong>
+                <br />
+                {email}
               </div>
               <FieldDisplay
                 label="First Name"
@@ -185,80 +188,6 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(withAlert(Profile))
-
-export class FieldDisplay extends Component {
-  state = { newValue: '' }
-
-  static propTypes = {
-    label: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    saveCallback: PropTypes.func.isRequired,
-    backendFieldName: PropTypes.string.isRequired,
-    errors: PropTypes.any
-  }
-
-  componentDidMount() {
-    this.setState({ newValue: this.props.value })
-  }
-
-  componentDidUpdate(oldProps) {
-    const newProps = this.props
-    if (oldProps.value != newProps.value) {
-      this.setState({ newValue: newProps.value })
-    }
-  }
-
-  render() {
-    const { edit, newValue, errors } = this.state
-    return (
-      <div style={{ ...this.props.style, paddingBottom: '0.8rem' }}>
-        <strong>{this.props.label}:</strong>{' '}
-        {this.state.edit ? (
-          <React.Fragment>
-            <TextFieldWithErrors
-              type="text"
-              value={newValue}
-              onChange={e => this.setState({ newValue: e.target.value })}
-              error={errors}
-              name=""
-            />
-            <Field type="group">
-              <Control>
-                <Button
-                  onClick={() => {
-                    this.props.saveCallback(this.props.backendFieldName, newValue)
-                    this.setState({ edit: false })
-                  }}
-                >
-                  Save
-                </Button>
-                <Button
-                  onClick={() =>
-                    this.setState({ edit: false, newValue: this.props.value })
-                  }
-                >
-                  Cancel
-                </Button>
-              </Control>
-            </Field>
-          </React.Fragment>
-        ) : (
-          <React.Fragment>
-            {this.props.value}
-            {'  '}
-            <a
-              className="edit-link"
-              id="edit-first-name"
-              onClick={() => this.setState({ edit: true })}
-            >
-              edit
-            </a>
-          </React.Fragment>
-        )}
-      </div>
-    )
-  }
-}
 
 export class PasswordChangeForm extends Component {
   state = {

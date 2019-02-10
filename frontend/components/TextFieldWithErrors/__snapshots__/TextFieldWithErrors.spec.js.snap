@@ -37,7 +37,7 @@ ShallowWrapper {
           Test
         </Label>,
         <Control
-          className=""
+          className="is-expanded"
           fullwidth={false}
           iconLeft={false}
           iconRight={false}
@@ -47,7 +47,7 @@ ShallowWrapper {
           style={Object {}}
         >
           <Input
-            className=""
+            className="is-expanded undefined"
             color={null}
             disabled={false}
             isStatic={false}
@@ -131,7 +131,7 @@ ShallowWrapper {
         "props": Object {
           "backgroundColor": undefined,
           "children": <Input
-            className=""
+            className="is-expanded undefined"
             color={null}
             disabled={false}
             isStatic={false}
@@ -144,7 +144,7 @@ ShallowWrapper {
             type="text"
             value="test"
           />,
-          "className": "",
+          "className": "is-expanded",
           "clearfix": undefined,
           "clipped": undefined,
           "fullwidth": false,
@@ -178,7 +178,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "backgroundColor": undefined,
-            "className": "",
+            "className": "is-expanded undefined",
             "clearfix": undefined,
             "clipped": undefined,
             "color": null,
@@ -237,7 +237,7 @@ ShallowWrapper {
             Test
           </Label>,
           <Control
-            className=""
+            className="is-expanded"
             fullwidth={false}
             iconLeft={false}
             iconRight={false}
@@ -247,7 +247,7 @@ ShallowWrapper {
             style={Object {}}
           >
             <Input
-              className=""
+              className="is-expanded undefined"
               color={null}
               disabled={false}
               isStatic={false}
@@ -331,7 +331,7 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "children": <Input
-              className=""
+              className="is-expanded undefined"
               color={null}
               disabled={false}
               isStatic={false}
@@ -344,7 +344,7 @@ ShallowWrapper {
               type="text"
               value="test"
             />,
-            "className": "",
+            "className": "is-expanded",
             "clearfix": undefined,
             "clipped": undefined,
             "fullwidth": false,
@@ -378,7 +378,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "backgroundColor": undefined,
-              "className": "",
+              "className": "is-expanded undefined",
               "clearfix": undefined,
               "clipped": undefined,
               "color": null,

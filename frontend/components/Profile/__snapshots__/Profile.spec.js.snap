@@ -1575,9 +1575,9 @@ ShallowWrapper {
                 }
               >
                 <strong>
-                  Email:
+                  Email
                 </strong>
-                 
+                <br />
                 
               </div>
               <FieldDisplay
@@ -1699,9 +1699,9 @@ ShallowWrapper {
                 }
               >
                 <strong>
-                  Email:
+                  Email
                 </strong>
-                 
+                <br />
                 
               </div>
               <FieldDisplay
@@ -1802,9 +1802,9 @@ ShallowWrapper {
                   }
                 >
                   <strong>
-                    Email:
+                    Email
                   </strong>
-                   
+                  <br />
                   
                 </div>
                 <FieldDisplay
@@ -1960,9 +1960,9 @@ ShallowWrapper {
                     }
                   >
                     <strong>
-                      Email:
+                      Email
                     </strong>
-                     
+                    <br />
                     
                   </div>,
                   <FieldDisplay
@@ -2041,9 +2041,9 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <strong>
-                        Email:
+                        Email
                       </strong>,
-                      " ",
+                      <br />,
                       "",
                     ],
                     "style": Object {
@@ -2057,13 +2057,21 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Email:",
+                        "children": "Email",
                       },
                       "ref": null,
-                      "rendered": "Email:",
+                      "rendered": "Email",
                       "type": "strong",
                     },
-                    " ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": "br",
+                    },
                     "",
                   ],
                   "type": "div",
@@ -2310,9 +2318,9 @@ ShallowWrapper {
                   }
                 >
                   <strong>
-                    Email:
+                    Email
                   </strong>
-                   
+                  <br />
                   
                 </div>
                 <FieldDisplay
@@ -2434,9 +2442,9 @@ ShallowWrapper {
                   }
                 >
                   <strong>
-                    Email:
+                    Email
                   </strong>
-                   
+                  <br />
                   
                 </div>
                 <FieldDisplay
@@ -2537,9 +2545,9 @@ ShallowWrapper {
                     }
                   >
                     <strong>
-                      Email:
+                      Email
                     </strong>
-                     
+                    <br />
                     
                   </div>
                   <FieldDisplay
@@ -2695,9 +2703,9 @@ ShallowWrapper {
                       }
                     >
                       <strong>
-                        Email:
+                        Email
                       </strong>
-                       
+                      <br />
                       
                     </div>,
                     <FieldDisplay
@@ -2776,9 +2784,9 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         <strong>
-                          Email:
+                          Email
                         </strong>,
-                        " ",
+                        <br />,
                         "",
                       ],
                       "style": Object {
@@ -2792,13 +2800,21 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "Email:",
+                          "children": "Email",
                         },
                         "ref": null,
-                        "rendered": "Email:",
+                        "rendered": "Email",
                         "type": "strong",
                       },
-                      " ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": "br",
+                      },
                       "",
                     ],
                     "type": "div",
