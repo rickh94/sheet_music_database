@@ -25,8 +25,10 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
+      "backgroundColor": undefined,
+      "breakpoint": null,
       "children": Array [
         <FieldDisplay
           backendFieldName=""
@@ -38,30 +40,34 @@ ShallowWrapper {
           className="links"
         >
           <a
+            className="edit-link"
             onClick={[Function]}
           >
-            <FontAwesomeIcon
-              border={false}
-              className=""
-              fixedWidth={false}
-              flip={null}
-              icon="trash"
-              inverse={false}
-              listItem={false}
-              mask={null}
-              pull={null}
-              pulse={false}
-              rotation={null}
-              size={null}
-              spin={false}
-              symbol={false}
-              title=""
-              transform={null}
-            />
             delete
           </a>
         </div>,
       ],
+      "className": "",
+      "clearfix": undefined,
+      "clipped": undefined,
+      "hidden": undefined,
+      "invisible": undefined,
+      "italic": undefined,
+      "marginless": undefined,
+      "overlay": undefined,
+      "paddingless": undefined,
+      "pull": undefined,
+      "radiusless": undefined,
+      "renderAs": "div",
+      "responsive": undefined,
+      "shadowless": undefined,
+      "style": Object {},
+      "textAlignment": undefined,
+      "textColor": undefined,
+      "textSize": undefined,
+      "textTransform": undefined,
+      "textWeight": undefined,
+      "unselectable": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -86,26 +92,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <a
+            className="edit-link"
             onClick={[Function]}
           >
-            <FontAwesomeIcon
-              border={false}
-              className=""
-              fixedWidth={false}
-              flip={null}
-              icon="trash"
-              inverse={false}
-              listItem={false}
-              mask={null}
-              pull={null}
-              pulse={false}
-              rotation={null}
-              size={null}
-              spin={false}
-              symbol={false}
-              title=""
-              transform={null}
-            />
             delete
           </a>,
           "className": "links",
@@ -116,72 +105,27 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <FontAwesomeIcon
-                border={false}
-                className=""
-                fixedWidth={false}
-                flip={null}
-                icon="trash"
-                inverse={false}
-                listItem={false}
-                mask={null}
-                pull={null}
-                pulse={false}
-                rotation={null}
-                size={null}
-                spin={false}
-                symbol={false}
-                title=""
-                transform={null}
-              />,
-              "delete",
-            ],
+            "children": "delete",
+            "className": "edit-link",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "border": false,
-                "className": "",
-                "fixedWidth": false,
-                "flip": null,
-                "icon": "trash",
-                "inverse": false,
-                "listItem": false,
-                "mask": null,
-                "pull": null,
-                "pulse": false,
-                "rotation": null,
-                "size": null,
-                "spin": false,
-                "symbol": false,
-                "title": "",
-                "transform": null,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "delete",
-          ],
+          "rendered": "delete",
           "type": "a",
         },
         "type": "div",
       },
     ],
-    "type": "li",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
+        "backgroundColor": undefined,
+        "breakpoint": null,
         "children": Array [
           <FieldDisplay
             backendFieldName=""
@@ -193,30 +137,34 @@ ShallowWrapper {
             className="links"
           >
             <a
+              className="edit-link"
               onClick={[Function]}
             >
-              <FontAwesomeIcon
-                border={false}
-                className=""
-                fixedWidth={false}
-                flip={null}
-                icon="trash"
-                inverse={false}
-                listItem={false}
-                mask={null}
-                pull={null}
-                pulse={false}
-                rotation={null}
-                size={null}
-                spin={false}
-                symbol={false}
-                title=""
-                transform={null}
-              />
               delete
             </a>
           </div>,
         ],
+        "className": "",
+        "clearfix": undefined,
+        "clipped": undefined,
+        "hidden": undefined,
+        "invisible": undefined,
+        "italic": undefined,
+        "marginless": undefined,
+        "overlay": undefined,
+        "paddingless": undefined,
+        "pull": undefined,
+        "radiusless": undefined,
+        "renderAs": "div",
+        "responsive": undefined,
+        "shadowless": undefined,
+        "style": Object {},
+        "textAlignment": undefined,
+        "textColor": undefined,
+        "textSize": undefined,
+        "textTransform": undefined,
+        "textWeight": undefined,
+        "unselectable": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -241,26 +189,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <a
+              className="edit-link"
               onClick={[Function]}
             >
-              <FontAwesomeIcon
-                border={false}
-                className=""
-                fixedWidth={false}
-                flip={null}
-                icon="trash"
-                inverse={false}
-                listItem={false}
-                mask={null}
-                pull={null}
-                pulse={false}
-                rotation={null}
-                size={null}
-                spin={false}
-                symbol={false}
-                title=""
-                transform={null}
-              />
               delete
             </a>,
             "className": "links",
@@ -271,65 +202,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon="trash"
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />,
-                "delete",
-              ],
+              "children": "delete",
+              "className": "edit-link",
               "onClick": [Function],
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "border": false,
-                  "className": "",
-                  "fixedWidth": false,
-                  "flip": null,
-                  "icon": "trash",
-                  "inverse": false,
-                  "listItem": false,
-                  "mask": null,
-                  "pull": null,
-                  "pulse": false,
-                  "rotation": null,
-                  "size": null,
-                  "spin": false,
-                  "symbol": false,
-                  "title": "",
-                  "transform": null,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "delete",
-            ],
+            "rendered": "delete",
             "type": "a",
           },
           "type": "div",
         },
       ],
-      "type": "li",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -384,6 +268,7 @@ ShallowWrapper {
         },
       }
     }
+    createTag={[MockFunction]}
     getTags={
       [MockFunction] {
         "calls": Array [
@@ -404,7 +289,11 @@ ShallowWrapper {
         "push": [MockFunction],
       }
     }
-    tags={Object {}}
+    tags={
+      Object {
+        "list": Array [],
+      }
+    }
     token="testtoken"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -437,20 +326,124 @@ ShallowWrapper {
             <CardContent
               renderAs="div"
             >
-              <Heading
+              <Level
+                breakpoint={null}
                 className=""
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
+                renderAs="div"
+                style={Object {}}
               >
-                Tags
-              </Heading>
+                <Heading
+                  className="level-item level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Tags
+                </Heading>
+                <a
+                  className="level-item level-right"
+                  id="activate-create"
+                  onClick={[Function]}
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   New
+                </a>
+              </Level>
               <ul />
             </CardContent>
           </Card>
+          <Modal
+            className=""
+            closeOnBlur={true}
+            closeOnEsc={true}
+            document={null}
+            onClose={[Function]}
+            show={false}
+            showClose={true}
+          >
+            <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Connect(Header)
+                size={4}
+              >
+                New Tag
+              </Connect(Header)>
+              <TextFieldWithErrors
+                onChange={[Function]}
+                type="text"
+                value=""
+              />
+              <Button
+                className=""
+                color="primary"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Save
+              </Button>
+              <Button
+                className=""
+                color="danger"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+            </ModalContent>
+          </Modal>
         </Container>,
       ],
     },
@@ -472,28 +465,134 @@ ShallowWrapper {
         "props": Object {
           "backgroundColor": undefined,
           "breakpoint": null,
-          "children": <Card
-            className="margin-default"
-            renderAs="div"
-            style={Object {}}
-          >
-            <CardContent
+          "children": Array [
+            <Card
+              className="margin-default"
               renderAs="div"
+              style={Object {}}
             >
-              <Heading
-                className=""
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
+              <CardContent
+                renderAs="div"
               >
-                Tags
-              </Heading>
-              <ul />
-            </CardContent>
-          </Card>,
+                <Level
+                  breakpoint={null}
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <Heading
+                    className="level-item level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Tags
+                  </Heading>
+                  <a
+                    className="level-item level-right"
+                    id="activate-create"
+                    onClick={[Function]}
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     New
+                  </a>
+                </Level>
+                <ul />
+              </CardContent>
+            </Card>,
+            <Modal
+              className=""
+              closeOnBlur={true}
+              closeOnEsc={true}
+              document={null}
+              onClose={[Function]}
+              show={false}
+              showClose={true}
+            >
+              <ModalContent
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Connect(Header)
+                  size={4}
+                >
+                  New Tag
+                </Connect(Header)>
+                <TextFieldWithErrors
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+                />
+                <Button
+                  className=""
+                  color="primary"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Save
+                </Button>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </ModalContent>
+            </Modal>,
+          ],
           "className": undefined,
           "clearfix": undefined,
           "clipped": undefined,
@@ -518,256 +617,8 @@ ShallowWrapper {
           "unselectable": undefined,
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "backgroundColor": undefined,
-            "children": <CardContent
-              renderAs="div"
-            >
-              <Heading
-                className=""
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
-              >
-                Tags
-              </Heading>
-              <ul />
-            </CardContent>,
-            "className": "margin-default",
-            "clearfix": undefined,
-            "clipped": undefined,
-            "hidden": undefined,
-            "invisible": undefined,
-            "italic": undefined,
-            "marginless": undefined,
-            "overlay": undefined,
-            "paddingless": undefined,
-            "pull": undefined,
-            "radiusless": undefined,
-            "renderAs": "div",
-            "responsive": undefined,
-            "shadowless": undefined,
-            "style": Object {},
-            "textAlignment": undefined,
-            "textColor": undefined,
-            "textSize": undefined,
-            "textTransform": undefined,
-            "textWeight": undefined,
-            "unselectable": undefined,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "backgroundColor": undefined,
-              "children": Array [
-                <Heading
-                  className=""
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                >
-                  Tags
-                </Heading>,
-                <ul />,
-              ],
-              "className": undefined,
-              "clearfix": undefined,
-              "clipped": undefined,
-              "hidden": undefined,
-              "invisible": undefined,
-              "italic": undefined,
-              "marginless": undefined,
-              "overlay": undefined,
-              "paddingless": undefined,
-              "pull": undefined,
-              "radiusless": undefined,
-              "renderAs": "div",
-              "responsive": undefined,
-              "shadowless": undefined,
-              "textAlignment": undefined,
-              "textColor": undefined,
-              "textSize": undefined,
-              "textTransform": undefined,
-              "textWeight": undefined,
-              "unselectable": undefined,
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "backgroundColor": undefined,
-                  "children": "Tags",
-                  "className": "",
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "heading": false,
-                  "hidden": undefined,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "h1",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "size": 3,
-                  "spaced": false,
-                  "subtitle": false,
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
-                  "weight": null,
-                },
-                "ref": null,
-                "rendered": "Tags",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [],
-                },
-                "ref": null,
-                "rendered": Array [],
-                "type": "ul",
-              },
-            ],
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-    ],
-    "type": Symbol(react.fragment),
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Connect(Header) />,
-          <Container
-            breakpoint={null}
-            fluid={false}
-            renderAs="div"
-            style={Object {}}
-          >
-            <Card
-              className="margin-default"
-              renderAs="div"
-              style={Object {}}
-            >
-              <CardContent
-                renderAs="div"
-              >
-                <Heading
-                  className=""
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                >
-                  Tags
-                </Heading>
-                <ul />
-              </CardContent>
-            </Card>
-          </Container>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "backgroundColor": undefined,
-            "breakpoint": null,
-            "children": <Card
-              className="margin-default"
-              renderAs="div"
-              style={Object {}}
-            >
-              <CardContent
-                renderAs="div"
-              >
-                <Heading
-                  className=""
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                >
-                  Tags
-                </Heading>
-                <ul />
-              </CardContent>
-            </Card>,
-            "className": undefined,
-            "clearfix": undefined,
-            "clipped": undefined,
-            "fluid": false,
-            "hidden": undefined,
-            "invisible": undefined,
-            "italic": undefined,
-            "marginless": undefined,
-            "overlay": undefined,
-            "paddingless": undefined,
-            "pull": undefined,
-            "radiusless": undefined,
-            "renderAs": "div",
-            "responsive": undefined,
-            "shadowless": undefined,
-            "style": Object {},
-            "textAlignment": undefined,
-            "textColor": undefined,
-            "textSize": undefined,
-            "textTransform": undefined,
-            "textWeight": undefined,
-            "unselectable": undefined,
-          },
-          "ref": null,
-          "rendered": Object {
+        "rendered": Array [
+          Object {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
@@ -776,17 +627,49 @@ ShallowWrapper {
               "children": <CardContent
                 renderAs="div"
               >
-                <Heading
+                <Level
+                  breakpoint={null}
                   className=""
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
+                  renderAs="div"
+                  style={Object {}}
                 >
-                  Tags
-                </Heading>
+                  <Heading
+                    className="level-item level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Tags
+                  </Heading>
+                  <a
+                    className="level-item level-right"
+                    id="activate-create"
+                    onClick={[Function]}
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     New
+                  </a>
+                </Level>
                 <ul />
               </CardContent>,
               "className": "margin-default",
@@ -819,17 +702,49 @@ ShallowWrapper {
               "props": Object {
                 "backgroundColor": undefined,
                 "children": Array [
-                  <Heading
+                  <Level
+                    breakpoint={null}
                     className=""
-                    heading={false}
-                    renderAs="h1"
-                    size={3}
-                    spaced={false}
-                    subtitle={false}
-                    weight={null}
+                    renderAs="div"
+                    style={Object {}}
                   >
-                    Tags
-                  </Heading>,
+                    <Heading
+                      className="level-item level-left"
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Tags
+                    </Heading>
+                    <a
+                      className="level-item level-right"
+                      id="activate-create"
+                      onClick={[Function]}
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       New
+                    </a>
+                  </Level>,
                   <ul />,
                 ],
                 "className": undefined,
@@ -861,11 +776,48 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "backgroundColor": undefined,
-                    "children": "Tags",
+                    "breakpoint": null,
+                    "children": Array [
+                      <Heading
+                        className="level-item level-left"
+                        heading={false}
+                        renderAs="h1"
+                        size={3}
+                        spaced={false}
+                        subtitle={false}
+                        weight={null}
+                      >
+                        Tags
+                      </Heading>,
+                      <a
+                        className="level-item level-right"
+                        id="activate-create"
+                        onClick={[Function]}
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         New
+                      </a>,
+                    ],
                     "className": "",
                     "clearfix": undefined,
                     "clipped": undefined,
-                    "heading": false,
                     "hidden": undefined,
                     "invisible": undefined,
                     "italic": undefined,
@@ -874,22 +826,119 @@ ShallowWrapper {
                     "paddingless": undefined,
                     "pull": undefined,
                     "radiusless": undefined,
-                    "renderAs": "h1",
+                    "renderAs": "div",
                     "responsive": undefined,
                     "shadowless": undefined,
-                    "size": 3,
-                    "spaced": false,
-                    "subtitle": false,
+                    "style": Object {},
                     "textAlignment": undefined,
                     "textColor": undefined,
                     "textSize": undefined,
                     "textTransform": undefined,
                     "textWeight": undefined,
                     "unselectable": undefined,
-                    "weight": null,
                   },
                   "ref": null,
-                  "rendered": "Tags",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": "Tags",
+                        "className": "level-item level-left",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "heading": false,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "h1",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "size": 3,
+                        "spaced": false,
+                        "subtitle": false,
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                        "weight": null,
+                      },
+                      "ref": null,
+                      "rendered": "Tags",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />,
+                          " New",
+                        ],
+                        "className": "level-item level-right",
+                        "id": "activate-create",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "border": false,
+                            "className": "",
+                            "fixedWidth": false,
+                            "flip": null,
+                            "icon": "plus",
+                            "inverse": false,
+                            "listItem": false,
+                            "mask": null,
+                            "pull": null,
+                            "pulse": false,
+                            "rotation": null,
+                            "size": null,
+                            "spin": false,
+                            "symbol": false,
+                            "title": "",
+                            "transform": null,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        " New",
+                      ],
+                      "type": "a",
+                    },
+                  ],
                   "type": [Function],
                 },
                 Object {
@@ -908,6 +957,1250 @@ ShallowWrapper {
             },
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <ModalContent
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Connect(Header)
+                  size={4}
+                >
+                  New Tag
+                </Connect(Header)>
+                <TextFieldWithErrors
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+                />
+                <Button
+                  className=""
+                  color="primary"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Save
+                </Button>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </ModalContent>,
+              "className": "",
+              "closeOnBlur": true,
+              "closeOnEsc": true,
+              "document": null,
+              "onClose": [Function],
+              "show": false,
+              "showClose": true,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": Array [
+                  <Connect(Header)
+                    size={4}
+                  >
+                    New Tag
+                  </Connect(Header)>,
+                  <TextFieldWithErrors
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+                  />,
+                  <Button
+                    className=""
+                    color="primary"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Save
+                  </Button>,
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>,
+                ],
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "New Tag",
+                    "size": 4,
+                  },
+                  "ref": null,
+                  "rendered": "New Tag",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Save",
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "color": "primary",
+                    "disabled": false,
+                    "fullwidth": false,
+                    "hidden": undefined,
+                    "inverted": false,
+                    "invisible": undefined,
+                    "isSelected": false,
+                    "isStatic": false,
+                    "italic": undefined,
+                    "loading": false,
+                    "marginless": undefined,
+                    "onClick": [Function],
+                    "outlined": false,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "remove": false,
+                    "renderAs": "button",
+                    "reset": false,
+                    "responsive": undefined,
+                    "rounded": false,
+                    "shadowless": undefined,
+                    "size": null,
+                    "state": null,
+                    "style": Object {},
+                    "submit": false,
+                    "text": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Save",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Cancel",
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "color": "danger",
+                    "disabled": false,
+                    "fullwidth": false,
+                    "hidden": undefined,
+                    "inverted": false,
+                    "invisible": undefined,
+                    "isSelected": false,
+                    "isStatic": false,
+                    "italic": undefined,
+                    "loading": false,
+                    "marginless": undefined,
+                    "onClick": [Function],
+                    "outlined": false,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "remove": false,
+                    "renderAs": "button",
+                    "reset": false,
+                    "responsive": undefined,
+                    "rounded": false,
+                    "shadowless": undefined,
+                    "size": null,
+                    "state": null,
+                    "style": Object {},
+                    "submit": false,
+                    "text": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Cancel",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Connect(Header) />,
+          <Container
+            breakpoint={null}
+            fluid={false}
+            renderAs="div"
+            style={Object {}}
+          >
+            <Card
+              className="margin-default"
+              renderAs="div"
+              style={Object {}}
+            >
+              <CardContent
+                renderAs="div"
+              >
+                <Level
+                  breakpoint={null}
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <Heading
+                    className="level-item level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Tags
+                  </Heading>
+                  <a
+                    className="level-item level-right"
+                    id="activate-create"
+                    onClick={[Function]}
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     New
+                  </a>
+                </Level>
+                <ul />
+              </CardContent>
+            </Card>
+            <Modal
+              className=""
+              closeOnBlur={true}
+              closeOnEsc={true}
+              document={null}
+              onClose={[Function]}
+              show={false}
+              showClose={true}
+            >
+              <ModalContent
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Connect(Header)
+                  size={4}
+                >
+                  New Tag
+                </Connect(Header)>
+                <TextFieldWithErrors
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+                />
+                <Button
+                  className=""
+                  color="primary"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Save
+                </Button>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </ModalContent>
+            </Modal>
+          </Container>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "breakpoint": null,
+            "children": Array [
+              <Card
+                className="margin-default"
+                renderAs="div"
+                style={Object {}}
+              >
+                <CardContent
+                  renderAs="div"
+                >
+                  <Level
+                    breakpoint={null}
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <Heading
+                      className="level-item level-left"
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Tags
+                    </Heading>
+                    <a
+                      className="level-item level-right"
+                      id="activate-create"
+                      onClick={[Function]}
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       New
+                    </a>
+                  </Level>
+                  <ul />
+                </CardContent>
+              </Card>,
+              <Modal
+                className=""
+                closeOnBlur={true}
+                closeOnEsc={true}
+                document={null}
+                onClose={[Function]}
+                show={false}
+                showClose={true}
+              >
+                <ModalContent
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <Connect(Header)
+                    size={4}
+                  >
+                    New Tag
+                  </Connect(Header)>
+                  <TextFieldWithErrors
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+                  />
+                  <Button
+                    className=""
+                    color="primary"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Save
+                  </Button>
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </ModalContent>
+              </Modal>,
+            ],
+            "className": undefined,
+            "clearfix": undefined,
+            "clipped": undefined,
+            "fluid": false,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <CardContent
+                  renderAs="div"
+                >
+                  <Level
+                    breakpoint={null}
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <Heading
+                      className="level-item level-left"
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Tags
+                    </Heading>
+                    <a
+                      className="level-item level-right"
+                      id="activate-create"
+                      onClick={[Function]}
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       New
+                    </a>
+                  </Level>
+                  <ul />
+                </CardContent>,
+                "className": "margin-default",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": Array [
+                    <Level
+                      breakpoint={null}
+                      className=""
+                      renderAs="div"
+                      style={Object {}}
+                    >
+                      <Heading
+                        className="level-item level-left"
+                        heading={false}
+                        renderAs="h1"
+                        size={3}
+                        spaced={false}
+                        subtitle={false}
+                        weight={null}
+                      >
+                        Tags
+                      </Heading>
+                      <a
+                        className="level-item level-right"
+                        id="activate-create"
+                        onClick={[Function]}
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         New
+                      </a>
+                    </Level>,
+                    <ul />,
+                  ],
+                  "className": undefined,
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "breakpoint": null,
+                      "children": Array [
+                        <Heading
+                          className="level-item level-left"
+                          heading={false}
+                          renderAs="h1"
+                          size={3}
+                          spaced={false}
+                          subtitle={false}
+                          weight={null}
+                        >
+                          Tags
+                        </Heading>,
+                        <a
+                          className="level-item level-right"
+                          id="activate-create"
+                          onClick={[Function]}
+                        >
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />
+                           New
+                        </a>,
+                      ],
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "div",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "style": Object {},
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "backgroundColor": undefined,
+                          "children": "Tags",
+                          "className": "level-item level-left",
+                          "clearfix": undefined,
+                          "clipped": undefined,
+                          "heading": false,
+                          "hidden": undefined,
+                          "invisible": undefined,
+                          "italic": undefined,
+                          "marginless": undefined,
+                          "overlay": undefined,
+                          "paddingless": undefined,
+                          "pull": undefined,
+                          "radiusless": undefined,
+                          "renderAs": "h1",
+                          "responsive": undefined,
+                          "shadowless": undefined,
+                          "size": 3,
+                          "spaced": false,
+                          "subtitle": false,
+                          "textAlignment": undefined,
+                          "textColor": undefined,
+                          "textSize": undefined,
+                          "textTransform": undefined,
+                          "textWeight": undefined,
+                          "unselectable": undefined,
+                          "weight": null,
+                        },
+                        "ref": null,
+                        "rendered": "Tags",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <FontAwesomeIcon
+                              border={false}
+                              className=""
+                              fixedWidth={false}
+                              flip={null}
+                              icon="plus"
+                              inverse={false}
+                              listItem={false}
+                              mask={null}
+                              pull={null}
+                              pulse={false}
+                              rotation={null}
+                              size={null}
+                              spin={false}
+                              symbol={false}
+                              title=""
+                              transform={null}
+                            />,
+                            " New",
+                          ],
+                          "className": "level-item level-right",
+                          "id": "activate-create",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {
+                              "border": false,
+                              "className": "",
+                              "fixedWidth": false,
+                              "flip": null,
+                              "icon": "plus",
+                              "inverse": false,
+                              "listItem": false,
+                              "mask": null,
+                              "pull": null,
+                              "pulse": false,
+                              "rotation": null,
+                              "size": null,
+                              "spin": false,
+                              "symbol": false,
+                              "title": "",
+                              "transform": null,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          " New",
+                        ],
+                        "type": "a",
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [],
+                    },
+                    "ref": null,
+                    "rendered": Array [],
+                    "type": "ul",
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <ModalContent
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <Connect(Header)
+                    size={4}
+                  >
+                    New Tag
+                  </Connect(Header)>
+                  <TextFieldWithErrors
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+                  />
+                  <Button
+                    className=""
+                    color="primary"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Save
+                  </Button>
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </ModalContent>,
+                "className": "",
+                "closeOnBlur": true,
+                "closeOnEsc": true,
+                "document": null,
+                "onClose": [Function],
+                "show": false,
+                "showClose": true,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": Array [
+                    <Connect(Header)
+                      size={4}
+                    >
+                      New Tag
+                    </Connect(Header)>,
+                    <TextFieldWithErrors
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    />,
+                    <Button
+                      className=""
+                      color="primary"
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[Function]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                    >
+                      Save
+                    </Button>,
+                    <Button
+                      className=""
+                      color="danger"
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[Function]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                    >
+                      Cancel
+                    </Button>,
+                  ],
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "New Tag",
+                      "size": 4,
+                    },
+                    "ref": null,
+                    "rendered": "New Tag",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Save",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "color": "primary",
+                      "disabled": false,
+                      "fullwidth": false,
+                      "hidden": undefined,
+                      "inverted": false,
+                      "invisible": undefined,
+                      "isSelected": false,
+                      "isStatic": false,
+                      "italic": undefined,
+                      "loading": false,
+                      "marginless": undefined,
+                      "onClick": [Function],
+                      "outlined": false,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "remove": false,
+                      "renderAs": "button",
+                      "reset": false,
+                      "responsive": undefined,
+                      "rounded": false,
+                      "shadowless": undefined,
+                      "size": null,
+                      "state": null,
+                      "style": Object {},
+                      "submit": false,
+                      "text": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "Save",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Cancel",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "color": "danger",
+                      "disabled": false,
+                      "fullwidth": false,
+                      "hidden": undefined,
+                      "inverted": false,
+                      "invisible": undefined,
+                      "isSelected": false,
+                      "isStatic": false,
+                      "italic": undefined,
+                      "loading": false,
+                      "marginless": undefined,
+                      "onClick": [Function],
+                      "outlined": false,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "remove": false,
+                      "renderAs": "button",
+                      "reset": false,
+                      "responsive": undefined,
+                      "rounded": false,
+                      "shadowless": undefined,
+                      "size": null,
+                      "state": null,
+                      "style": Object {},
+                      "submit": false,
+                      "text": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "Cancel",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],

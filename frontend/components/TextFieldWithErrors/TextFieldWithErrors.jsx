@@ -33,7 +33,7 @@ TextFieldWithErrors.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   error: PropTypes.any,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   placeholder: PropTypes.string,
   group: PropTypes.bool,
   className: PropTypes.string,

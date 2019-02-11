@@ -3,6 +3,12 @@ import { shallow } from 'enzyme'
 import { Tags, TagItem } from './Tags'
 import '../../setupTests'
 
+function clickButton(wrapper, name) {
+  wrapper
+    .findWhere(el => el.name() == 'Button' && el.contains(name))
+    .simulate('click', { preventDefault: jest.fn() })
+}
+
 describe('Tags', () => {
   const testToken = 'testtoken'
   const wrapper = shallow(
@@ -10,11 +16,12 @@ describe('Tags', () => {
       history={{ push: jest.fn() }}
       token={testToken}
       alert={{ show: jest.fn() }}
+      tags={{ list: [] }}
       getTags={jest.fn()}
-      tags={{}}
+      createTag={jest.fn()}
     />
   )
-  
+
   beforeEach(() => {
     wrapper.update()
   })
@@ -33,7 +40,7 @@ describe('Tags', () => {
 
   it('renders tags from the list', () => {
     const tags = { list: [{ id: 1, name: 'test1' }, { id: 2, name: 'test2' }] }
-    wrapper.setState({ tags })
+    wrapper.setProps({ tags })
     expect(wrapper.find('TagItem').length).toEqual(2)
   })
 
@@ -59,13 +66,39 @@ describe('Tags', () => {
 
   it('shows an error on get failure', () => {
     const getTags = () => false
-    const alert = {show: jest.fn()}
-    wrapper.setProps({getTags, token: testToken, alert})
+    const alert = { show: jest.fn() }
+    wrapper.setProps({ getTags, token: testToken, alert })
     wrapper.instance().componentDidMount()
     expect(alert.show).toHaveBeenCalledWith(
       <span className="alert-text">Could not get Tags</span>,
       { type: 'error' }
     )
+  })
+
+  it('renders a create button', () => {
+    wrapper.find('#activate-create').simulate('click')
+    expect(wrapper.state().createMode).toBeTruthy()
+  })
+
+  it('renders a modal for creating new tags', () => {
+    expect(wrapper.exists('Modal')).toBeTruthy()
+    expect(wrapper.find('Modal').contains('New Tag')).toBeTruthy()
+    expect(wrapper.find('Modal').contains('TextFieldWithError'))
+  })
+
+  it('has a button to save created tag', () => {
+    const createTag = jest.fn()
+    const newTagName = 'new test tag name'
+    wrapper.setProps({ createTag })
+    wrapper.setState({ newTagName })
+    clickButton(wrapper, 'Save')
+    expect(createTag).toHaveBeenCalledWith(testToken, newTagName)
+  })
+
+  it('has a cancel button that closes the modal', () => {
+    wrapper.setState({createMode: true})
+    clickButton(wrapper, 'Cancel')
+    expect(wrapper.state().createMode).toBeFalsy()
   })
 })
 
@@ -79,8 +112,8 @@ describe('TagItem', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('renders a list item', () => {
-    expect(wrapper.exists('li')).toBeTruthy()
+  it('renders a Level', () => {
+    expect(wrapper.exists('Level')).toBeTruthy()
   })
 
   it('has delete link with icon', () => {

@@ -9,16 +9,22 @@ import Card from 'react-bulma-components/lib/components/card/card'
 import Heading from 'react-bulma-components/lib/components/heading'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Level from 'react-bulma-components/lib/components/level'
+import Modal from 'react-bulma-components/lib/components/modal'
+import Button from 'react-bulma-components/lib/components/button'
+import Box from 'react-bulma-components/lib/components/box'
 
 import Header from '../Header'
 import FieldDisplay from '../FieldDisplay'
 import { tags } from '../../actions'
+import TextFieldWithErrors from '../TextFieldWithErrors'
 import alertText, { messages } from '../../middleware/alertText'
 
 export class Tags extends Component {
   state = {
-    errors: {}
     // errors are saved as [id]: value
+    errors: {},
+    newTagName: '',
+    createMode: false
   }
 
   static propTypes = {
@@ -26,7 +32,10 @@ export class Tags extends Component {
     history: PropTypes.object.isRequired,
     alert: PropTypes.object.isRequired,
     tags: PropTypes.object.isRequired,
-    getTags: PropTypes.func.isRequired
+    getTags: PropTypes.func.isRequired,
+    createTag: PropTypes.func.isRequired,
+    updateTag: PropTypes.func.isRequired,
+    deleteTag: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -35,7 +44,6 @@ export class Tags extends Component {
       this.props.history.push('/login')
     } else {
       const success = this.props.getTags(this.props.token)
-      console.log(success)
       if (!success) {
         this.props.alert.show(...messages.couldNotGet('Tags'))
       }
@@ -44,20 +52,35 @@ export class Tags extends Component {
 
   render() {
     const tagList = this.props.tags.list
+    const { token } = this.props
+    const { newTagName } = this.state
     return (
       <React.Fragment>
         <Header />
         <Container>
           <Card className="margin-default">
             <Card.Content>
-              <Heading size={3}>Tags</Heading>
+              <Level>
+                <Heading size={3} className="level-item level-left">
+                  Tags
+                </Heading>
+                <a
+                  id="activate-create"
+                  className="level-item level-right edit-link"
+                  onClick={() => this.setState({ createMode: true })}
+                >
+                  <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} /> New
+                </a>
+              </Level>
               <ul>
                 {tagList.map(tag => (
                   <TagItem
                     tag={tag}
                     key={tag.id}
-                    saveCallback={() => {}}
-                    deleteCallback={() => {}}
+                    saveCallback={(_, name) =>
+                      this.props.updateTag(token, tag.id, name)
+                    }
+                    deleteCallback={id => this.props.deleteTag(token, id)}
                     errors={this.state.errors[tag.id]}
                   />
                 ))}
@@ -65,6 +88,39 @@ export class Tags extends Component {
             </Card.Content>
           </Card>
         </Container>
+        <Modal
+          show={this.state.createMode}
+          onClose={() => this.setState({ createMode: false })}
+          closeOnBlur
+        >
+          <Modal.Content>
+            <Box>
+              <Heading size={4}>New Tag</Heading>
+              <TextFieldWithErrors
+                type="text"
+                value={newTagName}
+                onChange={e => this.setState({ newTagName: e.target.value })}
+                placeholder="Name"
+                className="form-padding"
+              />
+              <Button
+                color="primary"
+                onClick={() => {
+                  this.props.createTag(this.props.token, newTagName)
+                  this.setState({ createMode: false })
+                }}
+              >
+                Save
+              </Button>
+              <Button
+                color="danger"
+                onClick={() => this.setState({ createMode: false })}
+              >
+                Cancel
+              </Button>
+            </Box>
+          </Modal.Content>
+        </Modal>
       </React.Fragment>
     )
   }
@@ -81,6 +137,15 @@ const mapDispatchToProps = dispatch => {
   return {
     getTags: token => {
       return dispatch(tags.getTags(token))
+    },
+    createTag: (token, name) => {
+      return dispatch(tags.createTag(token, name))
+    },
+    updateTag: (token, id, name) => {
+      return dispatch(tags.updateTag(token, id, name))
+    },
+    deleteTag: (token, id) => {
+      return dispatch(tags.deleteTag(token, id))
     }
   }
 }
