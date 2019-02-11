@@ -14,3 +14,25 @@ export function returnPayload(state, name, payload) {
     [name]: payload
   }
 }
+
+export function appendNew(list, newItem) {
+  const newList = list.slice()
+  newList.push(newItem)
+  return newList
+}
+
+export function removeID(list, id) {
+  let removeIdx
+  list.forEach((item, idx) => {
+    if (item.id === id) {
+      removeIdx = idx
+    }
+  })
+  const newList = list.slice(0)
+  newList.splice(removeIdx, 1)
+  return newList
+}
+
+export function updateItem(list, updatedItem) {
+  return list.map(item => (item.id === updatedItem.id ? updatedItem : item))
+}

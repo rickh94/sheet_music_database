@@ -19,6 +19,8 @@ describe('Tags', () => {
       tags={{ list: [] }}
       getTags={jest.fn()}
       createTag={jest.fn()}
+      deleteTag={jest.fn()}
+      updateTag={jest.fn()}
     />
   )
 
@@ -34,8 +36,8 @@ describe('Tags', () => {
     expect(wrapper.exists('Connect(Header)')).toBeTruthy()
   })
 
-  it('renders a list', () => {
-    expect(wrapper.exists('ul')).toBeTruthy()
+  it('renders a div', () => {
+    expect(wrapper.exists('div')).toBeTruthy()
   })
 
   it('renders tags from the list', () => {
@@ -86,19 +88,22 @@ describe('Tags', () => {
     expect(wrapper.find('Modal').contains('TextFieldWithError'))
   })
 
-  it('has a button to save created tag', () => {
+  it('has a button to save created tag, and resets state', () => {
     const createTag = jest.fn()
     const newTagName = 'new test tag name'
     wrapper.setProps({ createTag })
-    wrapper.setState({ newTagName })
+    wrapper.setState({ newTagName, createMode: true })
     clickButton(wrapper, 'Save')
     expect(createTag).toHaveBeenCalledWith(testToken, newTagName)
+    expect(wrapper.state().createMode).toBeFalsy()
+    expect(wrapper.state().newTagName).toEqual('')
   })
 
-  it('has a cancel button that closes the modal', () => {
-    wrapper.setState({createMode: true})
+  it('has a cancel button that closes the modal and reset newtagname', () => {
+    wrapper.setState({createMode: true, newTagName: 'test tag name'})
     clickButton(wrapper, 'Cancel')
     expect(wrapper.state().createMode).toBeFalsy()
+    expect(wrapper.state().newTagName).toEqual('')
   })
 })
 

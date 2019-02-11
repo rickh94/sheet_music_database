@@ -12,7 +12,6 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -105,6 +104,11 @@ ShallowWrapper {
               to="/tags"
             >
               Tags
+            </HeaderLink>
+            <HeaderLink
+              to="/composers"
+            >
+              Composers
             </HeaderLink>
             <React.Fragment>
               <HeaderLink
@@ -430,6 +434,11 @@ ShallowWrapper {
             >
               Tags
             </HeaderLink>
+            <HeaderLink
+              to="/composers"
+            >
+              Composers
+            </HeaderLink>
             <React.Fragment>
               <HeaderLink
                 to="/register"
@@ -482,6 +491,11 @@ ShallowWrapper {
                 to="/tags"
               >
                 Tags
+              </HeaderLink>,
+              <HeaderLink
+                to="/composers"
+              >
+                Composers
               </HeaderLink>,
               <React.Fragment>
                 <HeaderLink
@@ -544,6 +558,18 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "Tags",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Composers",
+                "to": "/composers",
+              },
+              "ref": null,
+              "rendered": "Composers",
               "type": [Function],
             },
             Object {
@@ -688,6 +714,11 @@ ShallowWrapper {
                 to="/tags"
               >
                 Tags
+              </HeaderLink>
+              <HeaderLink
+                to="/composers"
+              >
+                Composers
               </HeaderLink>
               <React.Fragment>
                 <HeaderLink
@@ -1013,6 +1044,11 @@ ShallowWrapper {
               >
                 Tags
               </HeaderLink>
+              <HeaderLink
+                to="/composers"
+              >
+                Composers
+              </HeaderLink>
               <React.Fragment>
                 <HeaderLink
                   to="/register"
@@ -1065,6 +1101,11 @@ ShallowWrapper {
                   to="/tags"
                 >
                   Tags
+                </HeaderLink>,
+                <HeaderLink
+                  to="/composers"
+                >
+                  Composers
                 </HeaderLink>,
                 <React.Fragment>
                   <HeaderLink
@@ -1134,6 +1175,18 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+                  "children": "Composers",
+                  "to": "/composers",
+                },
+                "ref": null,
+                "rendered": "Composers",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
                   "children": Array [
                     <HeaderLink
                       to="/register"
@@ -1189,13 +1242,9 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

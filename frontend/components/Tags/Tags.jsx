@@ -19,6 +19,8 @@ import { tags } from '../../actions'
 import TextFieldWithErrors from '../TextFieldWithErrors'
 import alertText, { messages } from '../../middleware/alertText'
 
+import './Tags.scss'
+
 export class Tags extends Component {
   state = {
     // errors are saved as [id]: value
@@ -61,10 +63,14 @@ export class Tags extends Component {
           <Card className="margin-default">
             <Card.Content>
               <Level>
-                <Heading size={3} className="level-item level-left">
+                <Heading
+                  size={3}
+                  className="tag-header level-item level-left"
+                >
                   Tags
                 </Heading>
                 <a
+                  style={{ verticalAlign: 'top' }}
                   id="activate-create"
                   className="level-item level-right edit-link"
                   onClick={() => this.setState({ createMode: true })}
@@ -72,7 +78,7 @@ export class Tags extends Component {
                   <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} /> New
                 </a>
               </Level>
-              <ul>
+              <div>
                 {tagList.map(tag => (
                   <TagItem
                     tag={tag}
@@ -84,7 +90,7 @@ export class Tags extends Component {
                     errors={this.state.errors[tag.id]}
                   />
                 ))}
-              </ul>
+              </div>
             </Card.Content>
           </Card>
         </Container>
@@ -107,14 +113,14 @@ export class Tags extends Component {
                 color="primary"
                 onClick={() => {
                   this.props.createTag(this.props.token, newTagName)
-                  this.setState({ createMode: false })
+                  this.setState({ createMode: false, newTagName: '' })
                 }}
               >
                 Save
               </Button>
               <Button
                 color="danger"
-                onClick={() => this.setState({ createMode: false })}
+                onClick={() => this.setState({ createMode: false, newTagName: '' })}
               >
                 Cancel
               </Button>

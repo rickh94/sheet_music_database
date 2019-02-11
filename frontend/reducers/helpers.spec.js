@@ -33,3 +33,31 @@ describe('helper functions', () => {
     })
   })
 })
+
+describe('appendNew', () => {
+  it('returns a new list of items', () => {
+    const initList = [1, 2, 3]
+    expect(helpers.appendNew(initList, 4)).toEqual([1, 2, 3, 4])
+    expect(initList).toEqual([1, 2, 3])
+  })
+})
+
+describe('removeID', () => {
+  it('removes the item matching the id and returns a new list', () => {
+    const initList = [{ id: 1 }, { id: 2 }, { id: 3 }]
+    expect(helpers.removeID(initList, 2)).toEqual([{ id: 1 }, { id: 3 }])
+    expect(initList).toEqual([{ id: 1 }, { id: 2 }, { id: 3 }])
+  })
+})
+
+describe('updateItem', () => {
+  it('replaces item with new item based on id and returns a new list', () => {
+    const initList = [{ id: 1 }, { id: 2 }, { id: 3 }]
+    expect(helpers.updateItem(initList, { id: 1, name: 'test' })).toEqual([
+      { id: 1, name: 'test' },
+      { id: 2 },
+      { id: 3 }
+    ])
+    expect(initList).toEqual([{ id: 1 }, { id: 2 }, { id: 3 }])
+  })
+})

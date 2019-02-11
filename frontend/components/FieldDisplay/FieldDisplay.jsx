@@ -36,7 +36,7 @@ export default class FieldDisplay extends Component {
   render() {
     const { edit, newValue, errors } = this.state
     const valueEl = this.props.linkTo ? (
-      <Link to={this.props.linkTo}>{this.props.value}</Link>
+      <Link to={this.props.linkTo} className="field-link">{this.props.value}</Link>
     ) : (
       this.props.value
     )
@@ -79,7 +79,7 @@ export default class FieldDisplay extends Component {
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <div className="level-item level-left is-2">
+              <div className={"level-item level-left is-2"}>
                 {valueEl}
                 <a
                   className="edit-link"

@@ -1,31 +1,8 @@
-import { isLoading, returnPayload, failed } from './helpers'
+import { isLoading, returnPayload, failed, appendNew, removeID, updateItem } from './helpers'
 const initialState = {
   list: [],
   isLoading: false,
   errors: {}
-}
-
-function appendTag(tagList, newTag) {
-  const newTagList = tagList.slice(0)
-  newTagList.push(newTag)
-  return newTagList
-}
-
-function removeTag(tagList, id) {
-  const newTagList = tagList.slice(0)
-  let tagIdx
-  tagList.forEach((tag, idx) => {
-    if (tag.id == id) {
-      tagIdx = idx
-    }
-  })
-  newTagList.splice(tagIdx, 1)
-  return newTagList
-}
-
-function updateTag(tagList, updatedTag) {
-  const newTagList = tagList.map(tag => (tag.id == updatedTag.id ? updatedTag : tag))
-  return newTagList
 }
 
 export default function tags(state = initialState, action) {
@@ -40,13 +17,13 @@ export default function tags(state = initialState, action) {
       return returnPayload(state, 'list', action.payload)
 
     case 'DELETE_TAG_SUCCESSFUL':
-      return returnPayload(state, 'list', removeTag(state.list, action.payload))
+      return returnPayload(state, 'list', removeID(state.list, action.payload))
 
     case 'UPDATE_TAG_SUCCESSFUL':
-      return returnPayload(state, 'list', updateTag(state.list, action.payload))
+      return returnPayload(state, 'list', updateItem(state.list, action.payload))
 
     case 'CREATE_TAG_SUCCESSFUL':
-      return returnPayload(state, 'list', appendTag(state.list, action.payload))
+      return returnPayload(state, 'list', appendNew(state.list, action.payload))
 
     case 'GET_TAGS_FAILED':
     case 'CREATE_TAG_FAILED':

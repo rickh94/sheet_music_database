@@ -6,7 +6,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <App />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -58,6 +57,11 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/tags"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              paht="/composers"
             />
             <Route
               component={[Function]}
@@ -114,6 +118,11 @@ ShallowWrapper {
             />
             <Route
               component={[Function]}
+              exact={true}
+              paht="/composers"
+            />
+            <Route
+              component={[Function]}
               default={true}
             />
           </Switch>
@@ -165,6 +174,11 @@ ShallowWrapper {
             />
             <Route
               component={[Function]}
+              exact={true}
+              paht="/composers"
+            />
+            <Route
+              component={[Function]}
               default={true}
             />
           </Switch>,
@@ -205,6 +219,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/tags"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                paht="/composers"
               />,
               <Route
                 component={[Function]}
@@ -298,6 +317,19 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "component": [Function],
+                "exact": true,
+                "paht": "/composers",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
                 "default": true,
               },
               "ref": null,
@@ -362,6 +394,11 @@ ShallowWrapper {
               />
               <Route
                 component={[Function]}
+                exact={true}
+                paht="/composers"
+              />
+              <Route
+                component={[Function]}
                 default={true}
               />
             </Switch>
@@ -412,6 +449,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/tags"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                paht="/composers"
               />
               <Route
                 component={[Function]}
@@ -466,6 +508,11 @@ ShallowWrapper {
               />
               <Route
                 component={[Function]}
+                exact={true}
+                paht="/composers"
+              />
+              <Route
+                component={[Function]}
                 default={true}
               />
             </Switch>,
@@ -506,6 +553,11 @@ ShallowWrapper {
                   component={[Function]}
                   exact={true}
                   path="/tags"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  paht="/composers"
                 />,
                 <Route
                   component={[Function]}
@@ -599,6 +651,19 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "component": [Function],
+                  "exact": true,
+                  "paht": "/composers",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
                   "default": true,
                 },
                 "ref": null,
@@ -619,13 +684,9 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

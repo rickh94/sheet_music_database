@@ -57,6 +57,7 @@ export class Header extends Component {
           <Navbar.Container color="primary" position="end">
             <HeaderLink to="/">Home</HeaderLink>
             <HeaderLink to="/tags">Tags</HeaderLink>
+            <HeaderLink to="/composers">Composers</HeaderLink>
             {token ? (
               <React.Fragment>
                 <HeaderLink to="/profile">Profile</HeaderLink>
