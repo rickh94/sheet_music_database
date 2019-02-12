@@ -15,6 +15,7 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -219,9 +220,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
@@ -295,6 +300,7 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -329,7 +335,7 @@ ShallowWrapper {
                 style={Object {}}
               >
                 <Heading
-                  className="tag-header level-item level-left"
+                  className="absolutely-no-margin level-item level-left"
                   heading={false}
                   renderAs="h1"
                   size={3}
@@ -500,7 +506,7 @@ ShallowWrapper {
                 style={Object {}}
               >
                 <Heading
-                  className="tag-header level-item level-left"
+                  className="absolutely-no-margin level-item level-left"
                   heading={false}
                   renderAs="h1"
                   size={3}
@@ -589,7 +595,7 @@ ShallowWrapper {
                 style={Object {}}
               >
                 <Heading
-                  className="tag-header level-item level-left"
+                  className="absolutely-no-margin level-item level-left"
                   heading={false}
                   renderAs="h1"
                   size={3}
@@ -674,7 +680,7 @@ ShallowWrapper {
                   style={Object {}}
                 >
                   <Heading
-                    className="tag-header level-item level-left"
+                    className="absolutely-no-margin level-item level-left"
                     heading={false}
                     renderAs="h1"
                     size={3}
@@ -754,7 +760,7 @@ ShallowWrapper {
                   "breakpoint": null,
                   "children": Array [
                     <Heading
-                      className="tag-header level-item level-left"
+                      className="absolutely-no-margin level-item level-left"
                       heading={false}
                       renderAs="h1"
                       size={3}
@@ -831,7 +837,7 @@ ShallowWrapper {
                     "props": Object {
                       "backgroundColor": undefined,
                       "children": "Tags",
-                      "className": "tag-header level-item level-left",
+                      "className": "absolutely-no-margin level-item level-left",
                       "clearfix": undefined,
                       "clipped": undefined,
                       "heading": false,
@@ -1429,7 +1435,7 @@ ShallowWrapper {
                   style={Object {}}
                 >
                   <Heading
-                    className="tag-header level-item level-left"
+                    className="absolutely-no-margin level-item level-left"
                     heading={false}
                     renderAs="h1"
                     size={3}
@@ -1600,7 +1606,7 @@ ShallowWrapper {
                   style={Object {}}
                 >
                   <Heading
-                    className="tag-header level-item level-left"
+                    className="absolutely-no-margin level-item level-left"
                     heading={false}
                     renderAs="h1"
                     size={3}
@@ -1689,7 +1695,7 @@ ShallowWrapper {
                   style={Object {}}
                 >
                   <Heading
-                    className="tag-header level-item level-left"
+                    className="absolutely-no-margin level-item level-left"
                     heading={false}
                     renderAs="h1"
                     size={3}
@@ -1774,7 +1780,7 @@ ShallowWrapper {
                     style={Object {}}
                   >
                     <Heading
-                      className="tag-header level-item level-left"
+                      className="absolutely-no-margin level-item level-left"
                       heading={false}
                       renderAs="h1"
                       size={3}
@@ -1854,7 +1860,7 @@ ShallowWrapper {
                     "breakpoint": null,
                     "children": Array [
                       <Heading
-                        className="tag-header level-item level-left"
+                        className="absolutely-no-margin level-item level-left"
                         heading={false}
                         renderAs="h1"
                         size={3}
@@ -1931,7 +1937,7 @@ ShallowWrapper {
                       "props": Object {
                         "backgroundColor": undefined,
                         "children": "Tags",
-                        "className": "tag-header level-item level-left",
+                        "className": "absolutely-no-margin level-item level-left",
                         "clearfix": undefined,
                         "clipped": undefined,
                         "heading": false,
@@ -2505,9 +2511,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,

@@ -18,8 +18,10 @@ import FieldDisplay from '../FieldDisplay'
 import { tags } from '../../actions'
 import TextFieldWithErrors from '../TextFieldWithErrors'
 import alertText, { messages } from '../../middleware/alertText'
+import {getDataOrLogIn} from '../../helpers'
 
 import './Tags.scss'
+
 
 export class Tags extends Component {
   state = {
@@ -41,15 +43,13 @@ export class Tags extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.token) {
-      this.props.alert.show(messages.notLoggedIn, { type: 'error' })
-      this.props.history.push('/login')
-    } else {
-      const success = this.props.getTags(this.props.token)
-      if (!success) {
-        this.props.alert.show(...messages.couldNotGet('Tags'))
-      }
-    }
+    getDataOrLogIn(
+      this.props.token,
+      this.props.alert,
+      this.props.history,
+      this.props.getTags,
+      'Tags'
+    )
   }
 
   render() {
@@ -63,10 +63,7 @@ export class Tags extends Component {
           <Card className="margin-default">
             <Card.Content>
               <Level>
-                <Heading
-                  size={3}
-                  className="tag-header level-item level-left"
-                >
+                <Heading size={3} className="absolutely-no-margin level-item level-left">
                   Tags
                 </Heading>
                 <a

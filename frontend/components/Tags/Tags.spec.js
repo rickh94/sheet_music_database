@@ -2,6 +2,12 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { Tags, TagItem } from './Tags'
 import '../../setupTests'
+import {
+  testLoggedIn,
+  testToken,
+  testGetData,
+  testGetDataFailed
+} from '../../testHelpers'
 
 function clickButton(wrapper, name) {
   wrapper
@@ -10,7 +16,6 @@ function clickButton(wrapper, name) {
 }
 
 describe('Tags', () => {
-  const testToken = 'testtoken'
   const wrapper = shallow(
     <Tags
       history={{ push: jest.fn() }}
@@ -47,34 +52,15 @@ describe('Tags', () => {
   })
 
   it('redirects if not logged in', () => {
-    const history = { push: jest.fn() }
-    const token = null
-    const alert = { show: jest.fn() }
-    wrapper.setProps({ token, history, alert })
-    wrapper.instance().componentDidMount()
-    expect(history.push).toHaveBeenCalledWith('/login')
-    expect(alert.show).toHaveBeenCalledWith(
-      <span className="alert-text">Please log in</span>,
-      { type: 'error' }
-    )
+    testLoggedIn(wrapper)
   })
 
   it('gets tags if logged in', () => {
-    const getTags = jest.fn()
-    wrapper.setProps({ getTags, token: testToken })
-    wrapper.instance().componentDidMount()
-    expect(getTags).toHaveBeenCalledWith(testToken)
+    testGetData(wrapper, 'getTags')
   })
 
   it('shows an error on get failure', () => {
-    const getTags = () => false
-    const alert = { show: jest.fn() }
-    wrapper.setProps({ getTags, token: testToken, alert })
-    wrapper.instance().componentDidMount()
-    expect(alert.show).toHaveBeenCalledWith(
-      <span className="alert-text">Could not get Tags</span>,
-      { type: 'error' }
-    )
+    testGetDataFailed(wrapper, 'getTags', 'Tags')
   })
 
   it('renders a create button', () => {
@@ -100,7 +86,7 @@ describe('Tags', () => {
   })
 
   it('has a cancel button that closes the modal and reset newtagname', () => {
-    wrapper.setState({createMode: true, newTagName: 'test tag name'})
+    wrapper.setState({ createMode: true, newTagName: 'test tag name' })
     clickButton(wrapper, 'Cancel')
     expect(wrapper.state().createMode).toBeFalsy()
     expect(wrapper.state().newTagName).toEqual('')

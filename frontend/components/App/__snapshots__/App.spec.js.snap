@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <App />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -61,7 +62,7 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
-              paht="/composers"
+              path="/composers"
             />
             <Route
               component={[Function]}
@@ -119,7 +120,7 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
-              paht="/composers"
+              path="/composers"
             />
             <Route
               component={[Function]}
@@ -175,7 +176,7 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
-              paht="/composers"
+              path="/composers"
             />
             <Route
               component={[Function]}
@@ -223,7 +224,7 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
-                paht="/composers"
+                path="/composers"
               />,
               <Route
                 component={[Function]}
@@ -318,7 +319,7 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "exact": true,
-                "paht": "/composers",
+                "path": "/composers",
               },
               "ref": null,
               "rendered": null,
@@ -395,7 +396,7 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
-                paht="/composers"
+                path="/composers"
               />
               <Route
                 component={[Function]}
@@ -453,7 +454,7 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
-                paht="/composers"
+                path="/composers"
               />
               <Route
                 component={[Function]}
@@ -509,7 +510,7 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
-                paht="/composers"
+                path="/composers"
               />
               <Route
                 component={[Function]}
@@ -557,7 +558,7 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   exact={true}
-                  paht="/composers"
+                  path="/composers"
                 />,
                 <Route
                   component={[Function]}
@@ -652,7 +653,7 @@ ShallowWrapper {
                 "props": Object {
                   "component": [Function],
                   "exact": true,
-                  "paht": "/composers",
+                  "path": "/composers",
                 },
                 "ref": null,
                 "rendered": null,
@@ -684,9 +685,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
