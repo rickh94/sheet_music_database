@@ -1512,17 +1512,7 @@ ShallowWrapper {
     }
     history={
       Object {
-        "goBack": [MockFunction] {
-          "calls": Array [
-            Array [],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "goBack": [MockFunction],
         "push": [MockFunction],
       }
     }

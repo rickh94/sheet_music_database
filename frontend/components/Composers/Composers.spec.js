@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Composers, ComposerItem } from './Composers'
+import { Composers, ComposerItem, ComposerForm } from './Composers'
 import '../../setupTests'
-import { testLoggedIn, testGetData, testGetDataFailed } from '../../testHelpers';
+import { testLoggedIn, testGetData, testGetDataFailed } from '../../testHelpers'
 
 describe('Composers', () => {
   const wrapper = shallow(
@@ -11,7 +11,7 @@ describe('Composers', () => {
       alert={{ show: jest.fn() }}
       getComposers={jest.fn()}
       token="sometesttoken"
-      history={{push: jest.fn()}}
+      history={{ push: jest.fn() }}
     />
   )
 
@@ -75,5 +75,25 @@ describe('ComposerItem', () => {
   it('renders the dates if present', () => {
     wrapper.setProps({ composer: { ...composer, born: '1685', died: '1750' } })
     expect(wrapper.contains('(1685-1750)')).toBeTruthy()
+  })
+})
+
+describe('ComposerForm', () => {
+  const wrapper = shallow(<ComposerForm errors={{}} />)
+
+  beforeEach(() => {
+    wrapper.update()
+  })
+
+  it('renders a form', () => {
+    expect(wrapper.exists('form')).toBeTruthy()
+  })
+
+  it('renders 3 text fields (name, era, short name)', () => {
+    expect(wrapper.find('TextFieldWithErrors').length).toEqual(3)
+  })
+
+  it('renders 2 date pickers', () => {
+    expect(wrapper.find('DatePicker').length).toEqual(2)
   })
 })

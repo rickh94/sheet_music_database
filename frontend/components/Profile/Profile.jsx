@@ -20,6 +20,7 @@ import alertText, { messages } from '../../middleware/alertText'
 
 import './Profile.scss'
 import FieldDisplay from '../FieldDisplay'
+import { getDataOrLogIn } from '../../helpers'
 
 export class Profile extends Component {
   state = {
@@ -50,18 +51,13 @@ export class Profile extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.account.token) {
-      this.props.alert.show(messages.notLoggedIn, { type: 'error' })
-      this.props.history.push('/login')
-    } else {
-      const success = this.props.getProfile(this.props.account.token)
-      if (!success) {
-        this.props.alert.show(alertText('Could not get profile information'), {
-          type: 'error'
-        })
-        this.props.history.goBack()
-      }
-    }
+    getDataOrLogIn(
+      this.props.account.token,
+      this.props.alert,
+      this.props.history,
+      this.props.getProfile,
+      'profile information'
+    )
   }
 
   updateField = async (fieldName, data) => {
