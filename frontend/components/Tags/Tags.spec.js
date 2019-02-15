@@ -6,14 +6,10 @@ import {
   testLoggedIn,
   testToken,
   testGetData,
-  testGetDataFailed
+  testGetDataFailed,
+  clickButton
 } from '../../testHelpers'
 
-function clickButton(wrapper, name) {
-  wrapper
-    .findWhere(el => el.name() == 'Button' && el.contains(name))
-    .simulate('click', { preventDefault: jest.fn() })
-}
 
 describe('Tags', () => {
   const wrapper = shallow(

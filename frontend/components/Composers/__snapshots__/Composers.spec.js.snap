@@ -241,11 +241,12 @@ ShallowWrapper {
         "list": Array [],
       }
     }
+    createComposer={[MockFunction]}
     getComposers={
       [MockFunction] {
         "calls": Array [
           Array [
-            "sometesttoken",
+            "testtoken",
           ],
         ],
         "results": Array [
@@ -261,7 +262,8 @@ ShallowWrapper {
         "push": [MockFunction],
       }
     }
-    token="sometesttoken"
+    token="testtoken"
+    updateComposer={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -290,20 +292,54 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Heading
-              className="absolutely-no-margin"
-              heading={false}
-              renderAs="h1"
-              size={3}
-              spaced={false}
-              subtitle={false}
-              weight={null}
+            <Level
+              breakpoint={null}
+              className=""
+              renderAs="div"
+              style={Object {}}
             >
-              Composers
-            </Heading>
+              <Heading
+                className="absolutely-no-margin level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                Composers
+              </Heading>
+              <a
+                className="level-right"
+                onClick={[Function]}
+              >
+                Create
+              </a>
+            </Level>
             <br />
           </Box>
         </Container>,
+        <Modal
+          className=""
+          closeOnBlur={true}
+          closeOnEsc={true}
+          document={null}
+          onClose={[Function]}
+          show={false}
+          showClose={true}
+        >
+          <ModalContent
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <ComposerForm
+              errors={Object {}}
+              onCancel={[Function]}
+              onSubmit={[Function]}
+            />
+          </ModalContent>
+        </Modal>,
       ],
     },
     "ref": null,
@@ -329,17 +365,30 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Heading
-              className="absolutely-no-margin"
-              heading={false}
-              renderAs="h1"
-              size={3}
-              spaced={false}
-              subtitle={false}
-              weight={null}
+            <Level
+              breakpoint={null}
+              className=""
+              renderAs="div"
+              style={Object {}}
             >
-              Composers
-            </Heading>
+              <Heading
+                className="absolutely-no-margin level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                Composers
+              </Heading>
+              <a
+                className="level-right"
+                onClick={[Function]}
+              >
+                Create
+              </a>
+            </Level>
             <br />
           </Box>,
           "className": undefined,
@@ -373,17 +422,30 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "children": Array [
-              <Heading
-                className="absolutely-no-margin"
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
               >
-                Composers
-              </Heading>,
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Composers
+                </Heading>
+                <a
+                  className="level-right"
+                  onClick={[Function]}
+                >
+                  Create
+                </a>
+              </Level>,
               <br />,
               Array [],
             ],
@@ -417,11 +479,29 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "backgroundColor": undefined,
-                "children": "Composers",
-                "className": "absolutely-no-margin",
+                "breakpoint": null,
+                "children": Array [
+                  <Heading
+                    className="absolutely-no-margin level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Composers
+                  </Heading>,
+                  <a
+                    className="level-right"
+                    onClick={[Function]}
+                  >
+                    Create
+                  </a>,
+                ],
+                "className": "",
                 "clearfix": undefined,
                 "clipped": undefined,
-                "heading": false,
                 "hidden": undefined,
                 "invisible": undefined,
                 "italic": undefined,
@@ -430,22 +510,70 @@ ShallowWrapper {
                 "paddingless": undefined,
                 "pull": undefined,
                 "radiusless": undefined,
-                "renderAs": "h1",
+                "renderAs": "div",
                 "responsive": undefined,
                 "shadowless": undefined,
-                "size": 3,
-                "spaced": false,
-                "subtitle": false,
+                "style": Object {},
                 "textAlignment": undefined,
                 "textColor": undefined,
                 "textSize": undefined,
                 "textTransform": undefined,
                 "textWeight": undefined,
                 "unselectable": undefined,
-                "weight": null,
               },
               "ref": null,
-              "rendered": "Composers",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Composers",
+                    "className": "absolutely-no-margin level-left",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "heading": false,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "h1",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": 3,
+                    "spaced": false,
+                    "subtitle": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "weight": null,
+                  },
+                  "ref": null,
+                  "rendered": "Composers",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Create",
+                    "className": "level-right",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Create",
+                  "type": "a",
+                },
+              ],
               "type": [Function],
             },
             Object {
@@ -458,6 +586,82 @@ ShallowWrapper {
               "type": "br",
             },
           ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <ModalContent
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <ComposerForm
+              errors={Object {}}
+              onCancel={[Function]}
+              onSubmit={[Function]}
+            />
+          </ModalContent>,
+          "className": "",
+          "closeOnBlur": true,
+          "closeOnEsc": true,
+          "document": null,
+          "onClose": [Function],
+          "show": false,
+          "showClose": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": <ComposerForm
+              errors={Object {}}
+              onCancel={[Function]}
+              onSubmit={[Function]}
+            />,
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "errors": Object {},
+              "onCancel": [Function],
+              "onSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": [Function],
         },
         "type": [Function],
@@ -484,20 +688,54 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <Heading
-                className="absolutely-no-margin"
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
               >
-                Composers
-              </Heading>
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Composers
+                </Heading>
+                <a
+                  className="level-right"
+                  onClick={[Function]}
+                >
+                  Create
+                </a>
+              </Level>
               <br />
             </Box>
           </Container>,
+          <Modal
+            className=""
+            closeOnBlur={true}
+            closeOnEsc={true}
+            document={null}
+            onClose={[Function]}
+            show={false}
+            showClose={true}
+          >
+            <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <ComposerForm
+                errors={Object {}}
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />
+            </ModalContent>
+          </Modal>,
         ],
       },
       "ref": null,
@@ -523,17 +761,30 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <Heading
-                className="absolutely-no-margin"
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
               >
-                Composers
-              </Heading>
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Composers
+                </Heading>
+                <a
+                  className="level-right"
+                  onClick={[Function]}
+                >
+                  Create
+                </a>
+              </Level>
               <br />
             </Box>,
             "className": undefined,
@@ -567,17 +818,30 @@ ShallowWrapper {
             "props": Object {
               "backgroundColor": undefined,
               "children": Array [
-                <Heading
-                  className="absolutely-no-margin"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
+                <Level
+                  breakpoint={null}
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
                 >
-                  Composers
-                </Heading>,
+                  <Heading
+                    className="absolutely-no-margin level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Composers
+                  </Heading>
+                  <a
+                    className="level-right"
+                    onClick={[Function]}
+                  >
+                    Create
+                  </a>
+                </Level>,
                 <br />,
                 Array [],
               ],
@@ -611,11 +875,29 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "backgroundColor": undefined,
-                  "children": "Composers",
-                  "className": "absolutely-no-margin",
+                  "breakpoint": null,
+                  "children": Array [
+                    <Heading
+                      className="absolutely-no-margin level-left"
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Composers
+                    </Heading>,
+                    <a
+                      className="level-right"
+                      onClick={[Function]}
+                    >
+                      Create
+                    </a>,
+                  ],
+                  "className": "",
                   "clearfix": undefined,
                   "clipped": undefined,
-                  "heading": false,
                   "hidden": undefined,
                   "invisible": undefined,
                   "italic": undefined,
@@ -624,22 +906,70 @@ ShallowWrapper {
                   "paddingless": undefined,
                   "pull": undefined,
                   "radiusless": undefined,
-                  "renderAs": "h1",
+                  "renderAs": "div",
                   "responsive": undefined,
                   "shadowless": undefined,
-                  "size": 3,
-                  "spaced": false,
-                  "subtitle": false,
+                  "style": Object {},
                   "textAlignment": undefined,
                   "textColor": undefined,
                   "textSize": undefined,
                   "textTransform": undefined,
                   "textWeight": undefined,
                   "unselectable": undefined,
-                  "weight": null,
                 },
                 "ref": null,
-                "rendered": "Composers",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Composers",
+                      "className": "absolutely-no-margin level-left",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "heading": false,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "h1",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "size": 3,
+                      "spaced": false,
+                      "subtitle": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                      "weight": null,
+                    },
+                    "ref": null,
+                    "rendered": "Composers",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Create",
+                      "className": "level-right",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Create",
+                    "type": "a",
+                  },
+                ],
                 "type": [Function],
               },
               Object {
@@ -652,6 +982,82 @@ ShallowWrapper {
                 "type": "br",
               },
             ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <ComposerForm
+                errors={Object {}}
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />
+            </ModalContent>,
+            "className": "",
+            "closeOnBlur": true,
+            "closeOnEsc": true,
+            "document": null,
+            "onClose": [Function],
+            "show": false,
+            "showClose": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <ComposerForm
+                errors={Object {}}
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "errors": Object {},
+                "onCancel": [Function],
+                "onSubmit": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": [Function],
           },
           "type": [Function],

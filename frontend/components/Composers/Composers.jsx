@@ -9,6 +9,9 @@ import Box from 'react-bulma-components/lib/components/box'
 import Level from 'react-bulma-components/lib/components/level'
 import Heading from 'react-bulma-components/lib/components/heading'
 import DatePicker from 'react-datepicker'
+import { Field, Label, Control } from 'react-bulma-components/lib/components/form'
+import Button from 'react-bulma-components/lib/components/button'
+import Modal from 'react-bulma-components/lib/components/modal'
 
 import 'react-datepicker/dist/react-datepicker.css'
 
@@ -28,8 +31,16 @@ export class Composers extends Component {
   static propTypes = {
     composers: PropTypes.object.isRequired,
     getComposers: PropTypes.func.isRequired,
+    createComposer: PropTypes.func.isRequired,
+    updateComposer: PropTypes.func.isRequired,
     alert: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired
+  }
+
+  state = {
+    formOpen: false,
+    errors: {},
+    editID: null
   }
 
   componentDidMount() {
@@ -42,6 +53,35 @@ export class Composers extends Component {
     )
   }
 
+  createOrUpdate = (id, fields) => {
+    let composer = {}
+    Object.entries(fields).forEach(entry => {
+      const [key, val] = entry
+      if (val) {
+        composer[key] = val
+      }
+    })
+    let success 
+    if (id) {
+      success = this.props.updateComposer(this.props.token, id, composer)
+    } else {
+      if (!Object.keys(composer).includes('name')) {
+        this.setState({ errors: { name: 'Name is required' } })
+        return
+      }
+      if (!Object.keys(composer).includes('era')) {
+        this.setState({ errors: { name: 'Era is required' } })
+        return
+      }
+      success = this.props.createComposer(this.props.token, composer)
+    }
+    if (success) {
+      this.setState({ formOpen: false, editID: null })
+    } else {
+      this.setState({ errors: { ...this.props.composers.errors } })
+    }
+  }
+
   render() {
     const composerList = this.props.composers.list
     return (
@@ -49,15 +89,36 @@ export class Composers extends Component {
         <Header />
         <Container>
           <Box>
-            <Heading size={3} className="absolutely-no-margin">
-              Composers
-            </Heading>
+            <Level>
+              <Heading size={3} className="absolutely-no-margin level-left">
+                Composers
+              </Heading>
+              <a
+                onClick={() => this.setState({ formOpen: true })}
+                className="level-right"
+              >
+                Create
+              </a>
+            </Level>
             <br />
             {composerList.map(composer => (
               <ComposerItem key={composer.id} composer={composer} />
             ))}
           </Box>
         </Container>
+        <Modal
+          show={this.state.formOpen}
+          onClose={() => this.setState({ formOpen: false })}
+          closeOnBlur
+        >
+          <Modal.Content>
+            <ComposerForm
+              errors={this.state.errors}
+              onSubmit={this.createOrUpdate}
+              onCancel={() => this.setState({ formOpen: false })}
+            />
+          </Modal.Content>
+        </Modal>
       </React.Fragment>
     )
   }
@@ -74,6 +135,12 @@ const mapDispatchToProps = dispatch => {
   return {
     getComposers: token => {
       return dispatch(composers.getComposers(token))
+    },
+    createComposer: (token, composer) => {
+      return dispatch(composers.createComposer(token, composer))
+    },
+    updateComposer: (token, id, updated) => {
+      return dispatch(composer.updateComposer(token, id, updated))
     }
   }
 }
@@ -106,22 +173,26 @@ ComposerItem.propTypes = {
 
 export class ComposerForm extends Component {
   static propTypes = {
-    errors: PropTypes.object.isRequired
+    errors: PropTypes.object.isRequired,
+    onSubmit: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    id: PropTypes.number
   }
 
   state = {
     name: null,
     era: null,
     shortName: null,
-    born: null, 
+    born: null,
     died: null
   }
 
   render() {
-    const { errors } = this.props
-    const { name, era, shortName, born, died} = this.state
+    const { errors, id } = this.props
+    const { name, era, shortName, born, died } = this.state
     return (
       <form>
+        <Heading size={3}>{id ? 'Edit Composer' : 'Create Composer'}</Heading>
         <TextFieldWithErrors
           type="text"
           label="Name"
@@ -146,10 +217,34 @@ export class ComposerForm extends Component {
           error={errors.short_name}
           value={shortName || ''}
         />
-        Birth Date
-        <DatePicker selected={born} onChange={date => this.setState({ born: date })} />
-        Death Date
-        <DatePicker selected={died} onChange={date => this.setState({ died: date })} />
+        <Field>
+          <Label>Birth Date</Label>
+          <DatePicker
+            selected={born}
+            onChange={date => this.setState({ born: date })}
+          />
+        </Field>
+        <Field>
+          <Label>Death Date</Label>
+          <DatePicker
+            selected={died}
+            onChange={date => this.setState({ died: date })}
+          />
+        </Field>
+        <Field type="group">
+          <Control>
+            <Button
+              type="primary"
+              onClick={e => {
+                e.preventDefault()
+                this.props.onSubmit(id, { name, era, shortName, born, died })
+              }}
+            >
+              Submit
+            </Button>
+            <Button onClick={this.props.onCancel}>Cancel</Button>
+          </Control>
+        </Field>
       </form>
     )
   }
