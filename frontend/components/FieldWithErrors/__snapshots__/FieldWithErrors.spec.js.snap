@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FieldWithErrors /> matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FieldWithErrors />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "align": null,
+      "backgroundColor": undefined,
+      "children": Array [
+        undefined,
+        <Control
+          className="is-expanded"
+          fullwidth={false}
+          iconLeft={false}
+          iconRight={false}
+          loading={false}
+          renderAs="div"
+          size={null}
+          style={Object {}}
+        />,
+        undefined,
+      ],
+      "className": "",
+      "clearfix": undefined,
+      "clipped": undefined,
+      "hidden": undefined,
+      "horizontal": false,
+      "invisible": undefined,
+      "italic": undefined,
+      "kind": null,
+      "marginless": undefined,
+      "multiline": false,
+      "overlay": undefined,
+      "paddingless": undefined,
+      "pull": undefined,
+      "radiusless": undefined,
+      "renderAs": "div",
+      "responsive": undefined,
+      "shadowless": undefined,
+      "style": Object {},
+      "textAlignment": undefined,
+      "textColor": undefined,
+      "textSize": undefined,
+      "textTransform": undefined,
+      "textWeight": undefined,
+      "unselectable": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "backgroundColor": undefined,
+          "children": null,
+          "className": "is-expanded",
+          "clearfix": undefined,
+          "clipped": undefined,
+          "fullwidth": false,
+          "hidden": undefined,
+          "iconLeft": false,
+          "iconRight": false,
+          "invisible": undefined,
+          "italic": undefined,
+          "loading": false,
+          "marginless": undefined,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "size": null,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      undefined,
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "align": null,
+        "backgroundColor": undefined,
+        "children": Array [
+          undefined,
+          <Control
+            className="is-expanded"
+            fullwidth={false}
+            iconLeft={false}
+            iconRight={false}
+            loading={false}
+            renderAs="div"
+            size={null}
+            style={Object {}}
+          />,
+          undefined,
+        ],
+        "className": "",
+        "clearfix": undefined,
+        "clipped": undefined,
+        "hidden": undefined,
+        "horizontal": false,
+        "invisible": undefined,
+        "italic": undefined,
+        "kind": null,
+        "marginless": undefined,
+        "multiline": false,
+        "overlay": undefined,
+        "paddingless": undefined,
+        "pull": undefined,
+        "radiusless": undefined,
+        "renderAs": "div",
+        "responsive": undefined,
+        "shadowless": undefined,
+        "style": Object {},
+        "textAlignment": undefined,
+        "textColor": undefined,
+        "textSize": undefined,
+        "textTransform": undefined,
+        "textWeight": undefined,
+        "unselectable": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": null,
+            "className": "is-expanded",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "fullwidth": false,
+            "hidden": undefined,
+            "iconLeft": false,
+            "iconRight": false,
+            "invisible": undefined,
+            "italic": undefined,
+            "loading": false,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "size": null,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        undefined,
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

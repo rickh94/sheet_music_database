@@ -19,6 +19,9 @@ import Header from '../Header'
 import { composers } from '../../actions'
 import { getDataOrLogIn } from '../../helpers'
 import TextFieldWithErrors from '../TextFieldWithErrors'
+import FieldWithErrors from '../FieldWithErrors/FieldWithErrors'
+
+import './Composers.scss'
 
 const blankComposer = {
   name: null,
@@ -61,7 +64,7 @@ export class Composers extends Component {
         composer[key] = val
       }
     })
-    let success 
+    let success
     if (id) {
       success = this.props.updateComposer(this.props.token, id, composer)
     } else {
@@ -95,7 +98,7 @@ export class Composers extends Component {
               </Heading>
               <a
                 onClick={() => this.setState({ formOpen: true })}
-                className="level-right"
+                className="level-right edit-link"
               >
                 Create
               </a>
@@ -112,11 +115,13 @@ export class Composers extends Component {
           closeOnBlur
         >
           <Modal.Content>
-            <ComposerForm
-              errors={this.state.errors}
-              onSubmit={this.createOrUpdate}
-              onCancel={() => this.setState({ formOpen: false })}
-            />
+            <Box>
+              <ComposerForm
+                errors={this.state.errors}
+                onSubmit={this.createOrUpdate}
+                onCancel={() => this.setState({ formOpen: false })}
+              />
+            </Box>
           </Modal.Content>
         </Modal>
       </React.Fragment>
@@ -192,7 +197,9 @@ export class ComposerForm extends Component {
     const { name, era, shortName, born, died } = this.state
     return (
       <form>
-        <Heading size={3}>{id ? 'Edit Composer' : 'Create Composer'}</Heading>
+        <Heading className="absolutely-no-margin little-padding-bottom" size={3}>
+          {id ? 'Edit Composer' : 'Create Composer'}
+        </Heading>
         <TextFieldWithErrors
           type="text"
           label="Name"
@@ -217,24 +224,23 @@ export class ComposerForm extends Component {
           error={errors.short_name}
           value={shortName || ''}
         />
-        <Field>
-          <Label>Birth Date</Label>
+        <FieldWithErrors label="Birth Date" error={errors.born}>
           <DatePicker
             selected={born}
-            onChange={date => this.setState({ born: date })}
+            onChange={date => this.setState({ died: born })}
           />
-        </Field>
-        <Field>
-          <Label>Death Date</Label>
+        </FieldWithErrors>
+        <FieldWithErrors label="Death Date" error={errors.died}>
           <DatePicker
             selected={died}
             onChange={date => this.setState({ died: date })}
           />
-        </Field>
+        </FieldWithErrors>
         <Field type="group">
           <Control>
             <Button
               type="primary"
+              color="primary"
               onClick={e => {
                 e.preventDefault()
                 this.props.onSubmit(id, { name, era, shortName, born, died })
@@ -242,7 +248,9 @@ export class ComposerForm extends Component {
             >
               Submit
             </Button>
-            <Button onClick={this.props.onCancel}>Cancel</Button>
+            <Button onClick={this.props.onCancel} color="danger">
+              Cancel
+            </Button>
           </Control>
         </Field>
       </form>

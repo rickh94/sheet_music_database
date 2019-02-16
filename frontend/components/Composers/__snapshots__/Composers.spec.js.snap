@@ -310,7 +310,7 @@ ShallowWrapper {
                 Composers
               </Heading>
               <a
-                className="level-right"
+                className="level-right edit-link"
                 onClick={[Function]}
               >
                 Create
@@ -333,11 +333,17 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <ComposerForm
-              errors={Object {}}
-              onCancel={[Function]}
-              onSubmit={[Function]}
-            />
+            <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <ComposerForm
+                errors={Object {}}
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />
+            </Box>
           </ModalContent>
         </Modal>,
       ],
@@ -383,7 +389,7 @@ ShallowWrapper {
                 Composers
               </Heading>
               <a
-                className="level-right"
+                className="level-right edit-link"
                 onClick={[Function]}
               >
                 Create
@@ -440,7 +446,7 @@ ShallowWrapper {
                   Composers
                 </Heading>
                 <a
-                  className="level-right"
+                  className="level-right edit-link"
                   onClick={[Function]}
                 >
                   Create
@@ -493,7 +499,7 @@ ShallowWrapper {
                     Composers
                   </Heading>,
                   <a
-                    className="level-right"
+                    className="level-right edit-link"
                     onClick={[Function]}
                   >
                     Create
@@ -566,7 +572,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Create",
-                    "className": "level-right",
+                    "className": "level-right edit-link",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -600,11 +606,17 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <ComposerForm
-              errors={Object {}}
-              onCancel={[Function]}
-              onSubmit={[Function]}
-            />
+            <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <ComposerForm
+                errors={Object {}}
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />
+            </Box>
           </ModalContent>,
           "className": "",
           "closeOnBlur": true,
@@ -621,11 +633,17 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "backgroundColor": undefined,
-            "children": <ComposerForm
-              errors={Object {}}
-              onCancel={[Function]}
-              onSubmit={[Function]}
-            />,
+            "children": <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <ComposerForm
+                errors={Object {}}
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />
+            </Box>,
             "className": "",
             "clearfix": undefined,
             "clipped": undefined,
@@ -652,14 +670,50 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "errors": Object {},
-              "onCancel": [Function],
-              "onSubmit": [Function],
+              "backgroundColor": undefined,
+              "children": <ComposerForm
+                errors={Object {}}
+                onCancel={[Function]}
+                onSubmit={[Function]}
+              />,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "errors": Object {},
+                "onCancel": [Function],
+                "onSubmit": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": [Function],
           },
           "type": [Function],
@@ -706,7 +760,7 @@ ShallowWrapper {
                   Composers
                 </Heading>
                 <a
-                  className="level-right"
+                  className="level-right edit-link"
                   onClick={[Function]}
                 >
                   Create
@@ -729,11 +783,17 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <ComposerForm
-                errors={Object {}}
-                onCancel={[Function]}
-                onSubmit={[Function]}
-              />
+              <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <ComposerForm
+                  errors={Object {}}
+                  onCancel={[Function]}
+                  onSubmit={[Function]}
+                />
+              </Box>
             </ModalContent>
           </Modal>,
         ],
@@ -779,7 +839,7 @@ ShallowWrapper {
                   Composers
                 </Heading>
                 <a
-                  className="level-right"
+                  className="level-right edit-link"
                   onClick={[Function]}
                 >
                   Create
@@ -836,7 +896,7 @@ ShallowWrapper {
                     Composers
                   </Heading>
                   <a
-                    className="level-right"
+                    className="level-right edit-link"
                     onClick={[Function]}
                   >
                     Create
@@ -889,7 +949,7 @@ ShallowWrapper {
                       Composers
                     </Heading>,
                     <a
-                      className="level-right"
+                      className="level-right edit-link"
                       onClick={[Function]}
                     >
                       Create
@@ -962,7 +1022,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Create",
-                      "className": "level-right",
+                      "className": "level-right edit-link",
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -996,11 +1056,17 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <ComposerForm
-                errors={Object {}}
-                onCancel={[Function]}
-                onSubmit={[Function]}
-              />
+              <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <ComposerForm
+                  errors={Object {}}
+                  onCancel={[Function]}
+                  onSubmit={[Function]}
+                />
+              </Box>
             </ModalContent>,
             "className": "",
             "closeOnBlur": true,
@@ -1017,11 +1083,17 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "backgroundColor": undefined,
-              "children": <ComposerForm
-                errors={Object {}}
-                onCancel={[Function]}
-                onSubmit={[Function]}
-              />,
+              "children": <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <ComposerForm
+                  errors={Object {}}
+                  onCancel={[Function]}
+                  onSubmit={[Function]}
+                />
+              </Box>,
               "className": "",
               "clearfix": undefined,
               "clipped": undefined,
@@ -1048,14 +1120,50 @@ ShallowWrapper {
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {
-                "errors": Object {},
-                "onCancel": [Function],
-                "onSubmit": [Function],
+                "backgroundColor": undefined,
+                "children": <ComposerForm
+                  errors={Object {}}
+                  onCancel={[Function]}
+                  onSubmit={[Function]}
+                />,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
               },
               "ref": null,
-              "rendered": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "errors": Object {},
+                  "onCancel": [Function],
+                  "onSubmit": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": [Function],
             },
             "type": [Function],

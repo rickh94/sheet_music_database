@@ -7,23 +7,24 @@ import {
   Help,
   Control
 } from 'react-bulma-components/lib/components/form'
+import FieldWithErrors from '../FieldWithErrors/FieldWithErrors'
 
 function TextFieldWithErrors(props) {
   return (
-    <Field className={props.className}>
-      {props.label && <Label>{props.label}</Label>}
-      <Control className="is-expanded">
-        <Input
-          type={props.type}
-          placeholder={props.placeholder}
-          value={props.value}
-          onChange={e => props.onChange(e, props.name)}
-          color={props.error ? 'danger' : null}
-          className={`is-expanded ${props.inputClass}`}
-        />
-      </Control>
-      {props.error && <Help color="danger">{props.error}</Help>}
-    </Field>
+    <FieldWithErrors
+      className={props.className}
+      label={props.label}
+      error={props.error}
+    >
+      <Input
+        type={props.type}
+        placeholder={props.placeholder}
+        value={props.value}
+        onChange={e => props.onChange(e, props.name)}
+        color={props.error ? 'danger' : null}
+        className={`is-expanded ${props.inputClass}`}
+      />
+    </FieldWithErrors>
   )
 }
 

@@ -20,26 +20,6 @@ describe('<TextFieldWithErrors />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('renders a control', () => {
-    expect(wrapper.exists('Control')).toBeTruthy()
-  })
-
-  it('renders an input', () => {
-    expect(wrapper.exists('Label')).toBeTruthy()
-    expect(wrapper.find('Label').contains('Test'))
-  })
-
-  it('renders a Field', () => {
-    expect(wrapper.exists('Field')).toBeTruthy()
-  })
-
-  it('renders errors', () => {
-    const error = 'test error'
-    wrapper.setProps({ error })
-    expect(wrapper.exists('Help')).toBeTruthy()
-    expect(wrapper.find('Help').contains(error)).toBeTruthy()
-  })
-
   it('calls onChange callback when a change occurs', () => {
     const onChange = jest.fn()
     wrapper.setProps({ onChange })
@@ -47,8 +27,15 @@ describe('<TextFieldWithErrors />', () => {
     expect(onChange).toHaveBeenCalled()
   })
 
-  it('does not render label if not provided', () => {
-    wrapper.setProps({label: null})
-    expect(wrapper.exists('Label')).toBeFalsy()
+  it('renders a field with errors', () => {
+    expect(wrapper.exists('FieldWithErrors')).toBeTruthy()
+    const label = 'Test Label'
+    const error = { test: 'someError' }
+    const className = 'test-class'
+    wrapper.setProps({ label, error, className })
+    const fieldWithErrors = wrapper.find('FieldWithErrors')
+    expect(fieldWithErrors.props().label).toEqual(label)
+    expect(fieldWithErrors.props().error).toEqual(error)
+    expect(fieldWithErrors.props().className).toEqual(className)
   })
 })
