@@ -7,9 +7,11 @@ ShallowWrapper {
     composer={
       Object {
         "era": "",
+        "id": 1,
         "name": "",
       }
     }
+    onDelete={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -31,7 +33,7 @@ ShallowWrapper {
         <Link
           className="level-item level-left"
           replace={false}
-          to="/composer/undefined"
+          to="/composer/1"
         >
           
            
@@ -39,7 +41,13 @@ ShallowWrapper {
         </Link>,
         <div
           className="level-right"
-        />,
+        >
+          <ItalicLink
+            onClick={[Function]}
+          >
+            delete
+          </ItalicLink>
+        </div>,
       ],
       "className": "",
       "clearfix": undefined,
@@ -77,7 +85,7 @@ ShallowWrapper {
           ],
           "className": "level-item level-left",
           "replace": false,
-          "to": "/composer/undefined",
+          "to": "/composer/1",
         },
         "ref": null,
         "rendered": Array [
@@ -92,10 +100,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": <ItalicLink
+            onClick={[Function]}
+          >
+            delete
+          </ItalicLink>,
           "className": "level-right",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "delete",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "delete",
+          "type": [Function],
+        },
         "type": "div",
       },
     ],
@@ -113,7 +137,7 @@ ShallowWrapper {
           <Link
             className="level-item level-left"
             replace={false}
-            to="/composer/undefined"
+            to="/composer/1"
           >
             
              
@@ -121,7 +145,13 @@ ShallowWrapper {
           </Link>,
           <div
             className="level-right"
-          />,
+          >
+            <ItalicLink
+              onClick={[Function]}
+            >
+              delete
+            </ItalicLink>
+          </div>,
         ],
         "className": "",
         "clearfix": undefined,
@@ -159,7 +189,7 @@ ShallowWrapper {
             ],
             "className": "level-item level-left",
             "replace": false,
-            "to": "/composer/undefined",
+            "to": "/composer/1",
           },
           "ref": null,
           "rendered": Array [
@@ -174,10 +204,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": <ItalicLink
+              onClick={[Function]}
+            >
+              delete
+            </ItalicLink>,
             "className": "level-right",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "delete",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "delete",
+            "type": [Function],
+          },
           "type": "div",
         },
       ],

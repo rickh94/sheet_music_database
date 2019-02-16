@@ -33,8 +33,12 @@ export function testGetDataFailed(wrapper, functionPropName, nameInMessage) {
   )
 }
 
-export function clickButton(wrapper, name) {
+export function clickThing(tag, wrapper, content) {
   wrapper
-    .findWhere(el => el.name() == 'Button' && el.contains(name))
+    .findWhere(el => el.name() == tag && el.contains(content))
     .simulate('click', { preventDefault: jest.fn() })
 }
+
+export const clickButton = (wrapper, content) => clickThing('Button', wrapper, content)
+export const clickLink = (wrapper, content) => clickThing('a', wrapper, content)
+

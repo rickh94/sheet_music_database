@@ -17,5 +17,5 @@ FieldWithErrors.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
   children: PropTypes.any,
-  error: PropTypes.string
+  error: PropTypes.any
 }

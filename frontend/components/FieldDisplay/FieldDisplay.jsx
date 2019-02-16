@@ -83,7 +83,6 @@ export default class FieldDisplay extends Component {
                 {valueEl}
                 <a
                   className="edit-link"
-                  id="edit-first-name"
                   onClick={() => this.setState({ edit: true })}
                   style={{ marginLeft: '0.3rem' }}
                 >
