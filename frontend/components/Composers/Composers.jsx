@@ -104,7 +104,11 @@ export class Composers extends Component {
               </Level>
               <br />
               {composerList.map(composer => (
-                <ComposerItem key={composer.id} composer={composer} />
+                <ComposerItem
+                  key={composer.id}
+                  composer={composer}
+                  onDelete={() => {}}
+                />
               ))}
             </Box>
           </Container>

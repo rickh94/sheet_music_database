@@ -2,6 +2,7 @@ import * as composers from './composers'
 import MockAdapter from 'axios-mock-adapter'
 import axios from 'axios'
 import DjangoURL from '../middleware/api'
+import * as helpers from './helpers'
 
 function setup() {
   return { mockDispatch: jest.fn(), mockAxios: new MockAdapter(axios) }
@@ -72,6 +73,35 @@ describe('composer actions', () => {
     expect(mockDispatch).toHaveBeenCalledWith({
       type: 'CREATE_COMPOSER_FAILED',
       payload: errors
+    })
+  })
+
+  it('creates a composer with dates', async () => {
+    const { mockDispatch, mockAxios } = setup()
+    const born = new Date(1800)
+    const bornStr = `${born.getFullYear()}-${born.getMonth()}-${born.getDate()}`
+    const died = new Date(1890)
+    const diedStr = `${died.getFullYear()}-${died.getMonth()}-${died.getDate()}`
+    const spy = jest.spyOn(helpers, 'createAction')
+    const newComposer = { id: 4, name: 'composer4', born: bornStr, died: diedStr }
+    mockAxios
+      .onPost(api.v1.music.composers().url)
+      .reply(201, { ...newComposer, born: bornStr, died: diedStr })
+    expect(
+      await composers.createComposer(token, { name: 'composer4', born, died })(
+        mockDispatch,
+        mockGetState
+      )
+    ).toBeTruthy()
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'CREATE_COMPOSER' })
+    expect(spy).toHaveBeenCalledWith('COMPOSER', expect.anything(), {
+      name: 'composer4',
+      born: bornStr,
+      died: diedStr
+    })
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'CREATE_COMPOSER_SUCCESSFUL',
+      payload: { ...newComposer }
     })
   })
 
