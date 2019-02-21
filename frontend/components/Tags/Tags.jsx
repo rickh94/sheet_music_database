@@ -18,10 +18,9 @@ import FieldDisplay from '../FieldDisplay'
 import { tags } from '../../actions'
 import TextFieldWithErrors from '../TextFieldWithErrors'
 import alertText, { messages } from '../../middleware/alertText'
-import {getDataOrLogIn} from '../../helpers'
+import { getDataOrLogIn } from '../../helpers'
 
 import './Tags.scss'
-
 
 export class Tags extends Component {
   state = {
@@ -56,76 +55,84 @@ export class Tags extends Component {
     const tagList = this.props.tags.list
     const { token } = this.props
     const { newTagName } = this.state
-    return (
-      <React.Fragment>
-        <Header />
-        <Container>
-          <Card className="margin-default">
-            <Card.Content>
-              <Level>
-                <Heading size={3} className="absolutely-no-margin level-item level-left">
-                  Tags
-                </Heading>
-                <a
-                  style={{ verticalAlign: 'top' }}
-                  id="activate-create"
-                  className="level-item level-right edit-link"
-                  onClick={() => this.setState({ createMode: true })}
+    if (token) {
+      return (
+        <React.Fragment>
+          <Header />
+          <Container>
+            <Card className="margin-default">
+              <Card.Content>
+                <Level>
+                  <Heading
+                    size={3}
+                    className="absolutely-no-margin level-item level-left"
+                  >
+                    Tags
+                  </Heading>
+                  <a
+                    style={{ verticalAlign: 'top' }}
+                    id="activate-create"
+                    className="level-item level-right edit-link"
+                    onClick={() => this.setState({ createMode: true })}
+                  >
+                    <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />{' '}
+                    New
+                  </a>
+                </Level>
+                <div>
+                  {tagList.map(tag => (
+                    <TagItem
+                      tag={tag}
+                      key={tag.id}
+                      saveCallback={(_, name) =>
+                        this.props.updateTag(token, tag.id, name)
+                      }
+                      deleteCallback={id => this.props.deleteTag(token, id)}
+                      errors={this.state.errors[tag.id]}
+                    />
+                  ))}
+                </div>
+              </Card.Content>
+            </Card>
+          </Container>
+          <Modal
+            show={this.state.createMode}
+            onClose={() => this.setState({ createMode: false })}
+            closeOnBlur
+          >
+            <Modal.Content>
+              <Box>
+                <Heading size={4}>New Tag</Heading>
+                <TextFieldWithErrors
+                  type="text"
+                  value={newTagName}
+                  onChange={e => this.setState({ newTagName: e.target.value })}
+                  placeholder="Name"
+                  className="form-padding"
+                />
+                <Button
+                  color="primary"
+                  onClick={() => {
+                    this.props.createTag(this.props.token, newTagName)
+                    this.setState({ createMode: false, newTagName: '' })
+                  }}
                 >
-                  <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} /> New
-                </a>
-              </Level>
-              <div>
-                {tagList.map(tag => (
-                  <TagItem
-                    tag={tag}
-                    key={tag.id}
-                    saveCallback={(_, name) =>
-                      this.props.updateTag(token, tag.id, name)
-                    }
-                    deleteCallback={id => this.props.deleteTag(token, id)}
-                    errors={this.state.errors[tag.id]}
-                  />
-                ))}
-              </div>
-            </Card.Content>
-          </Card>
-        </Container>
-        <Modal
-          show={this.state.createMode}
-          onClose={() => this.setState({ createMode: false })}
-          closeOnBlur
-        >
-          <Modal.Content>
-            <Box>
-              <Heading size={4}>New Tag</Heading>
-              <TextFieldWithErrors
-                type="text"
-                value={newTagName}
-                onChange={e => this.setState({ newTagName: e.target.value })}
-                placeholder="Name"
-                className="form-padding"
-              />
-              <Button
-                color="primary"
-                onClick={() => {
-                  this.props.createTag(this.props.token, newTagName)
-                  this.setState({ createMode: false, newTagName: '' })
-                }}
-              >
-                Save
-              </Button>
-              <Button
-                color="danger"
-                onClick={() => this.setState({ createMode: false, newTagName: '' })}
-              >
-                Cancel
-              </Button>
-            </Box>
-          </Modal.Content>
-        </Modal>
-      </React.Fragment>
-    )
+                  Save
+                </Button>
+                <Button
+                  color="danger"
+                  onClick={() => this.setState({ createMode: false, newTagName: '' })}
+                >
+                  Cancel
+                </Button>
+              </Box>
+            </Modal.Content>
+          </Modal>
+        </React.Fragment>
+      )
+    } else {
+      return <div />
+    }
   }
 }
 

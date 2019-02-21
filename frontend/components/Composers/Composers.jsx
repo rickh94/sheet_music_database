@@ -85,45 +85,49 @@ export class Composers extends Component {
 
   render() {
     const composerList = this.props.composers.list
-    return (
-      <React.Fragment>
-        <Header />
-        <Container>
-          <Box>
-            <Level>
-              <Heading size={3} className="absolutely-no-margin level-left">
-                Composers
-              </Heading>
-              <a
-                onClick={() => this.setState({ formOpen: true })}
-                className="level-right edit-link"
-              >
-                Create
-              </a>
-            </Level>
-            <br />
-            {composerList.map(composer => (
-              <ComposerItem key={composer.id} composer={composer} />
-            ))}
-          </Box>
-        </Container>
-        <Modal
-          show={this.state.formOpen}
-          onClose={() => this.setState({ formOpen: false })}
-          closeOnBlur
-        >
-          <Modal.Content>
+    if (this.props.token) {
+      return (
+        <React.Fragment>
+          <Header />
+          <Container>
             <Box>
-              <ComposerForm
-                errors={this.state.errors}
-                onSubmit={this.createOrUpdate}
-                onCancel={() => this.setState({ formOpen: false })}
-              />
+              <Level>
+                <Heading size={3} className="absolutely-no-margin level-left">
+                  Composers
+                </Heading>
+                <a
+                  onClick={() => this.setState({ formOpen: true })}
+                  className="level-right edit-link"
+                >
+                  Create
+                </a>
+              </Level>
+              <br />
+              {composerList.map(composer => (
+                <ComposerItem key={composer.id} composer={composer} />
+              ))}
             </Box>
-          </Modal.Content>
-        </Modal>
-      </React.Fragment>
-    )
+          </Container>
+          <Modal
+            show={this.state.formOpen}
+            onClose={() => this.setState({ formOpen: false })}
+            closeOnBlur
+          >
+            <Modal.Content>
+              <Box>
+                <ComposerForm
+                  errors={this.state.errors}
+                  onSubmit={this.createOrUpdate}
+                  onCancel={() => this.setState({ formOpen: false })}
+                />
+              </Box>
+            </Modal.Content>
+          </Modal>
+        </React.Fragment>
+      )
+    } else {
+      return <div />
+    }
   }
 }
 
@@ -166,7 +170,9 @@ export function ComposerItem(props) {
         {props.composer.name} {dates}
       </Link>
       <div className="level-right">
-        <ItalicLink onClick={() => props.onDelete(props.composer.id)}>delete</ItalicLink>
+        <ItalicLink onClick={() => props.onDelete(props.composer.id)}>
+          delete
+        </ItalicLink>
       </div>
     </Level>
   )
