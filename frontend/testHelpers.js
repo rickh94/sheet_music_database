@@ -15,11 +15,11 @@ export function testLoggedIn(wrapper) {
   )
 }
 
-export function testGetData(wrapper, functionPropName) {
+export function testGetData(wrapper, functionPropName, functionPropArgs = []) {
   const getFunction = jest.fn()
   wrapper.setProps({ [functionPropName]: getFunction, token: testToken })
   wrapper.instance().componentDidMount()
-  expect(getFunction).toHaveBeenCalledWith(testToken)
+  expect(getFunction).toHaveBeenCalledWith(testToken, ...functionPropArgs)
 }
 
 export function testGetDataFailed(wrapper, functionPropName, nameInMessage) {

@@ -6,9 +6,13 @@ export function getComposers(token) {
   return getAction('COMPOSERS', api.v1.music.composers())
 }
 
+export function getComposer(token, id) {
+  const api = DjangoURL(token)
+  return getAction('COMPOSER', api.v1.music.composers(id))
+}
+
 export function createComposer(token, composer) {
   const api = DjangoURL(token)
-  console.log(composer)
   const { born, died } = composer
   if (born) {
     composer.born = `${born.getFullYear()}-${born.getMonth()}-${born.getDate()}`
@@ -22,6 +26,11 @@ export function createComposer(token, composer) {
 export function updateComposer(token, id, updatedFields) {
   const api = DjangoURL(token)
   return updateAction('COMPOSER', api.v1.music.composers(id), updatedFields)
+}
+
+export function updateSingleComposer(token, id, updatedFields) {
+  const api = DjangoURL(token)
+  return updateAction('SINGLE_COMPOSER', api.v1.music.composers(id), updatedFields)
 }
 
 export function deleteComposer(token, id) {

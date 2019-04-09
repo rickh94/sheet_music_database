@@ -1,0 +1,784 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Composer matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Composer
+    alert={
+      Object {
+        "show": [MockFunction] {
+          "calls": Array [
+            Array [
+              <span
+                className="alert-text"
+              >
+                Could not get Composer
+              </span>,
+              Object {
+                "type": "error",
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
+    composers={
+      Object {
+        "composer": Object {},
+      }
+    }
+    getComposer={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "testtoken",
+            1,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    history={
+      Object {
+        "push": [MockFunction],
+      }
+    }
+    match={
+      Object {
+        "params": Object {
+          "id": 1,
+        },
+      }
+    }
+    token="testtoken"
+    updateComposer={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Connect(Header) />,
+        <Container
+          breakpoint={null}
+          fluid={false}
+          renderAs="div"
+          style={Object {}}
+        >
+          <Box
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <Level
+              breakpoint={null}
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Heading
+                className="absolutely-no-margin level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                <FieldDisplay
+                  backendFieldName="name"
+                  saveCallback={[Function]}
+                />
+              </Heading>
+              <FieldDisplay
+                backendFieldName="era"
+                label="Era"
+                saveCallback={[Function]}
+              />
+              <FieldDisplay
+                backendFieldName="short_name"
+                label="Short Name"
+                saveCallback={[Function]}
+              />
+            </Level>
+          </Box>
+        </Container>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "backgroundColor": undefined,
+          "breakpoint": null,
+          "children": <Box
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <Level
+              breakpoint={null}
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Heading
+                className="absolutely-no-margin level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                <FieldDisplay
+                  backendFieldName="name"
+                  saveCallback={[Function]}
+                />
+              </Heading>
+              <FieldDisplay
+                backendFieldName="era"
+                label="Era"
+                saveCallback={[Function]}
+              />
+              <FieldDisplay
+                backendFieldName="short_name"
+                label="Short Name"
+                saveCallback={[Function]}
+              />
+            </Level>
+          </Box>,
+          "className": undefined,
+          "clearfix": undefined,
+          "clipped": undefined,
+          "fluid": false,
+          "hidden": undefined,
+          "invisible": undefined,
+          "italic": undefined,
+          "marginless": undefined,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": <Level
+              breakpoint={null}
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Heading
+                className="absolutely-no-margin level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                <FieldDisplay
+                  backendFieldName="name"
+                  saveCallback={[Function]}
+                />
+              </Heading>
+              <FieldDisplay
+                backendFieldName="era"
+                label="Era"
+                saveCallback={[Function]}
+              />
+              <FieldDisplay
+                backendFieldName="short_name"
+                label="Short Name"
+                saveCallback={[Function]}
+              />
+            </Level>,
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "breakpoint": null,
+              "children": Array [
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  <FieldDisplay
+                    backendFieldName="name"
+                    saveCallback={[Function]}
+                  />
+                </Heading>,
+                <FieldDisplay
+                  backendFieldName="era"
+                  label="Era"
+                  saveCallback={[Function]}
+                />,
+                <FieldDisplay
+                  backendFieldName="short_name"
+                  label="Short Name"
+                  saveCallback={[Function]}
+                />,
+              ],
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <FieldDisplay
+                    backendFieldName="name"
+                    saveCallback={[Function]}
+                  />,
+                  "className": "absolutely-no-margin level-left",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "heading": false,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "h1",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": 3,
+                  "spaced": false,
+                  "subtitle": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                  "weight": null,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "backendFieldName": "name",
+                    "errors": undefined,
+                    "saveCallback": [Function],
+                    "value": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "era",
+                  "errors": undefined,
+                  "label": "Era",
+                  "saveCallback": [Function],
+                  "value": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "short_name",
+                  "errors": undefined,
+                  "label": "Short Name",
+                  "saveCallback": [Function],
+                  "value": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Connect(Header) />,
+          <Container
+            breakpoint={null}
+            fluid={false}
+            renderAs="div"
+            style={Object {}}
+          >
+            <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  <FieldDisplay
+                    backendFieldName="name"
+                    saveCallback={[Function]}
+                  />
+                </Heading>
+                <FieldDisplay
+                  backendFieldName="era"
+                  label="Era"
+                  saveCallback={[Function]}
+                />
+                <FieldDisplay
+                  backendFieldName="short_name"
+                  label="Short Name"
+                  saveCallback={[Function]}
+                />
+              </Level>
+            </Box>
+          </Container>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "breakpoint": null,
+            "children": <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  <FieldDisplay
+                    backendFieldName="name"
+                    saveCallback={[Function]}
+                  />
+                </Heading>
+                <FieldDisplay
+                  backendFieldName="era"
+                  label="Era"
+                  saveCallback={[Function]}
+                />
+                <FieldDisplay
+                  backendFieldName="short_name"
+                  label="Short Name"
+                  saveCallback={[Function]}
+                />
+              </Level>
+            </Box>,
+            "className": undefined,
+            "clearfix": undefined,
+            "clipped": undefined,
+            "fluid": false,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  <FieldDisplay
+                    backendFieldName="name"
+                    saveCallback={[Function]}
+                  />
+                </Heading>
+                <FieldDisplay
+                  backendFieldName="era"
+                  label="Era"
+                  saveCallback={[Function]}
+                />
+                <FieldDisplay
+                  backendFieldName="short_name"
+                  label="Short Name"
+                  saveCallback={[Function]}
+                />
+              </Level>,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "breakpoint": null,
+                "children": Array [
+                  <Heading
+                    className="absolutely-no-margin level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    <FieldDisplay
+                      backendFieldName="name"
+                      saveCallback={[Function]}
+                    />
+                  </Heading>,
+                  <FieldDisplay
+                    backendFieldName="era"
+                    label="Era"
+                    saveCallback={[Function]}
+                  />,
+                  <FieldDisplay
+                    backendFieldName="short_name"
+                    label="Short Name"
+                    saveCallback={[Function]}
+                  />,
+                ],
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": <FieldDisplay
+                      backendFieldName="name"
+                      saveCallback={[Function]}
+                    />,
+                    "className": "absolutely-no-margin level-left",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "heading": false,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "h1",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": 3,
+                    "spaced": false,
+                    "subtitle": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "weight": null,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "backendFieldName": "name",
+                      "errors": undefined,
+                      "saveCallback": [Function],
+                      "value": undefined,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "backendFieldName": "era",
+                    "errors": undefined,
+                    "label": "Era",
+                    "saveCallback": [Function],
+                    "value": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "backendFieldName": "short_name",
+                    "errors": undefined,
+                    "label": "Short Name",
+                    "saveCallback": [Function],
+                    "value": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

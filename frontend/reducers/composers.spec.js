@@ -5,7 +5,8 @@ describe('composer reducer', () => {
   const initialState = {
     list: [],
     isLoading: false,
-    errors: {}
+    errors: {},
+    composer: {}
   }
   const composerList = [
     { id: 1, name: 'test composer' },
@@ -29,6 +30,22 @@ describe('composer reducer', () => {
       })
     })
 
+    it('should set isLoading', () => {
+      expect(composerReducer(undefined, { type: 'GET_COMPOSER' })).toEqual({
+        ...initialState,
+        isLoading: true
+      })
+    })
+
+    it('should return composer and unset is loading if get successful', () => {
+      expect(
+        composerReducer(
+          { ...initialState, isLoading: true },
+          { type: 'GET_COMPOSER_SUCCESSFUL', payload: composerList[0] }
+        )
+      ).toEqual({ ...initialState, isLoading: false, composer: composerList[0] })
+    })
+
     it('should return composer list and unset is loading if get successful', () => {
       expect(
         composerReducer(
@@ -43,6 +60,15 @@ describe('composer reducer', () => {
         composerReducer(
           { ...initialState, isLoading: false },
           { type: 'GET_COMPOSERS_FAILED', payload: errors }
+        )
+      ).toEqual({ ...initialState, isLoading: false, errors })
+    })
+
+    it('should return the errors if get unsuccessful', () => {
+      expect(
+        composerReducer(
+          { ...initialState, isLoading: false },
+          { type: 'GET_COMPOSER_FAILED', payload: errors }
         )
       ).toEqual({ ...initialState, isLoading: false, errors })
     })
@@ -86,6 +112,13 @@ describe('composer reducer', () => {
     })
   })
 
+  it('sets isLoading on update single composer', () => {
+    expect(composerReducer(undefined, { type: 'UPDATE_SINGLE_COMPOSER' })).toEqual({
+      ...initialState,
+      isLoading: true
+    })
+  })
+
   it('should return the new composerlist on update successful', () => {
     const updatedComposer = { id: 3, name: 'updated' }
     const updatedComposers = [
@@ -105,11 +138,34 @@ describe('composer reducer', () => {
     })
   })
 
+  it('should return the updated composer on update successful', () => {
+    const updatedComposer = { id: 3, name: 'updated' }
+    expect(
+      composerReducer(
+        { ...initialState, composer: composerList[2], isLoading: true },
+        { type: 'UPDATE_SINGLE_COMPOSER_SUCCESSFUL', payload: updatedComposer }
+      )
+    ).toEqual({
+      ...initialState,
+      isLoading: false,
+      composer: updatedComposer
+    })
+  })
+
   it('should return the errors on update failed', () => {
     expect(
       composerReducer(
         { ...initialState, isLoading: true },
         { type: 'UPDATE_COMPOSER_FAILED', payload: errors }
+      )
+    ).toEqual({ ...initialState, isLoading: false, errors })
+  })
+
+  it('should return the errors on update failed', () => {
+    expect(
+      composerReducer(
+        { ...initialState, isLoading: true },
+        { type: 'UPDATE_SINGLE_COMPOSER_FAILED', payload: errors }
       )
     ).toEqual({ ...initialState, isLoading: false, errors })
   })

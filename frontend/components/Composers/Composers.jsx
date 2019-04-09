@@ -151,7 +151,7 @@ const mapDispatchToProps = dispatch => {
       return dispatch(composers.createComposer(token, composer))
     },
     updateComposer: (token, id, updated) => {
-      return dispatch(composer.updateComposer(token, id, updated))
+      return dispatch(composers.updateComposer(token, id, updated))
     }
   }
 }

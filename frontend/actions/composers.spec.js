@@ -30,6 +30,17 @@ describe('composer actions', () => {
     })
   })
 
+  it('gets a composer correctly and returns', async () => {
+    const { mockDispatch, mockAxios } = setup()
+    mockAxios.onGet(api.v1.music.composers(1).url, {}).reply(200, composerList[0])
+    expect(await composers.getComposer(token, 1)(mockDispatch, mockGetState)).toBeTruthy()
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'GET_COMPOSER' })
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'GET_COMPOSER_SUCCESSFUL',
+      payload: composerList[0]
+    })
+  })
+
   it('returns errors on get failure', async () => {
     const { mockDispatch, mockAxios } = setup()
     mockAxios.onGet(api.v1.music.composers().url).reply(400, errors)
@@ -124,6 +135,25 @@ describe('composer actions', () => {
     })
   })
 
+  it('updates a single composer successfully', async () => {
+    const { mockDispatch, mockAxios } = setup()
+    const newComposer = { id: 3, name: 'updated' }
+    mockAxios
+      .onPatch(api.v1.music.composers(3).url, { name: 'updated' })
+      .reply(200, newComposer)
+    expect(
+      await composers.updateSingleComposer(token, 3, { name: 'updated' })(
+        mockDispatch,
+        mockGetState
+      )
+    ).toBeTruthy()
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'UPDATE_SINGLE_COMPOSER' })
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'UPDATE_SINGLE_COMPOSER_SUCCESSFUL',
+      payload: newComposer
+    })
+  })
+
   it('returns errors on update failure', async () => {
     const { mockDispatch, mockAxios } = setup()
     mockAxios.onPost(api.v1.music.composers(3).url).reply(400, errors)
@@ -136,6 +166,22 @@ describe('composer actions', () => {
     expect(mockDispatch).toHaveBeenCalledWith({ type: 'UPDATE_COMPOSER' })
     expect(mockDispatch).toHaveBeenCalledWith({
       type: 'UPDATE_COMPOSER_FAILED'
+      // payload: errors
+    })
+  })
+
+  it('returns errors on single update failure', async () => {
+    const { mockDispatch, mockAxios } = setup()
+    mockAxios.onPost(api.v1.music.composers(3).url).reply(400, errors)
+    expect(
+      await composers.updateSingleComposer(token, 3, { name: 'updated' })(
+        mockDispatch,
+        mockGetState
+      )
+    ).toBeFalsy()
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'UPDATE_SINGLE_COMPOSER' })
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'UPDATE_SINGLE_COMPOSER_FAILED'
       // payload: errors
     })
   })

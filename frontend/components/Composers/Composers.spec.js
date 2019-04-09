@@ -6,8 +6,7 @@ import {
   testLoggedIn,
   testGetData,
   testGetDataFailed,
-  testToken,
-  clickLink
+  testToken
 } from '../../testHelpers'
 
 describe('Composers', () => {

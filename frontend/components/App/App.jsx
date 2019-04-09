@@ -16,6 +16,7 @@ import Profile from '../Profile'
 import Register from '../Register'
 import Tags from '../Tags'
 import Composers from '../Composers'
+import Composer from '../Composer'
 
 import './App.scss'
 
@@ -43,6 +44,7 @@ export default class App extends Component {
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/tags" component={Tags} />
               <Route exact path="/composers" component={Composers} />
+              <Route exact path="/composer/:id" component={Composer} />
               <Route default component={NotFound} />
             </Switch>
           </BrowserRouter>
