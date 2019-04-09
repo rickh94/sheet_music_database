@@ -53,21 +53,21 @@ export class Composer extends Component {
                   errors={this.state.errors.name}
                 />
               </Heading>
-              <FieldDisplay
-                value={era}
-                saveCallback={() => {}}
-                backendFieldName="era"
-                label="Era"
-                errors={this.state.errors.era}
-              />
-              <FieldDisplay
-                value={short_name}
-                saveCallback={() => {}}
-                backendFieldName="short_name"
-                label="Short Name"
-                errors={this.state.errors.short_name}
-              />
             </Level>
+            <FieldDisplay
+              value={era}
+              saveCallback={() => {}}
+              backendFieldName="era"
+              label="Era"
+              errors={this.state.errors.era}
+            />
+            <FieldDisplay
+              value={short_name}
+              saveCallback={() => {}}
+              backendFieldName="short_name"
+              label="Short Name"
+              errors={this.state.errors.short_name}
+            />
           </Box>
         </Container>
       </React.Fragment>
