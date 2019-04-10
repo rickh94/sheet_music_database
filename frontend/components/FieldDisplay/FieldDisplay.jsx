@@ -6,9 +6,12 @@ import Button from 'react-bulma-components/lib/components/button'
 import { Field } from 'react-bulma-components/lib/components/form'
 import Level from 'react-bulma-components/lib/components/level'
 
+import DatePicker from 'react-datepicker'
+
 import TextFieldWithErrors from '../TextFieldWithErrors'
 
 import './FieldDisplay.scss'
+import FieldWithErrors from '../FieldWithErrors/FieldWithErrors'
 
 export default class FieldDisplay extends Component {
   state = { newValue: '' }
@@ -19,7 +22,8 @@ export default class FieldDisplay extends Component {
     saveCallback: PropTypes.func.isRequired,
     backendFieldName: PropTypes.string.isRequired,
     errors: PropTypes.any,
-    linkTo: PropTypes.string
+    linkTo: PropTypes.string,
+    type: PropTypes.string
   }
 
   componentDidMount() {
@@ -35,10 +39,22 @@ export default class FieldDisplay extends Component {
 
   render() {
     const { edit, newValue, errors } = this.state
+    let displayValue = this.props.value
+    if (this.props.type === 'date') {
+      const date = new Date(this.props.value)
+      displayValue = date.toLocaleDateString('en-US', {
+        timeZone: 'UTC',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
+    }
     const valueEl = this.props.linkTo ? (
-      <Link to={this.props.linkTo} className="field-link">{this.props.value}</Link>
+      <Link to={this.props.linkTo} className="field-link">
+        {displayValue}
+      </Link>
     ) : (
-      this.props.value
+      displayValue
     )
     return (
       <div style={{ ...this.props.style, paddingBottom: '0.8rem' }}>
@@ -46,15 +62,27 @@ export default class FieldDisplay extends Component {
         <Level>
           {this.state.edit ? (
             <React.Fragment>
-              <TextFieldWithErrors
-                type="text"
-                value={newValue}
-                onChange={e => this.setState({ newValue: e.target.value })}
-                error={errors}
-                name=""
-                inputClass="field-display-input"
-                className="level-item level-left is-4 is-grouped"
-              />
+              {this.props.type === 'date' ? (
+                <FieldWithErrors error={errors}>
+                  <DatePicker
+                    utcOffset={0}
+                    selected={new Date(newValue)}
+                    onChange={date => this.setState({ newValue: date })}
+                    showYearDropdown
+                    showMonthDropdown
+                  />
+                </FieldWithErrors>
+              ) : (
+                <TextFieldWithErrors
+                  type="text"
+                  value={newValue}
+                  onChange={e => this.setState({ newValue: e.target.value })}
+                  error={errors}
+                  name=""
+                  inputClass="field-display-input"
+                  className="level-item level-left is-4 is-grouped"
+                />
+              )}
               <Field type="group" className="level-item level-left">
                 <Button
                   onClick={() => {
@@ -79,7 +107,7 @@ export default class FieldDisplay extends Component {
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <div className={"level-item level-left is-2"}>
+              <div className={'level-item level-left is-2'}>
                 {valueEl}
                 <a
                   className="edit-link"

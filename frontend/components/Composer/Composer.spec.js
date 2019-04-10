@@ -50,7 +50,7 @@ describe('Composer', () => {
       short_name: 'test'
     }
     wrapper.setProps({ composer })
-    expect(wrapper.find('FieldDisplay').length).toEqual(3)
+    expect(wrapper.find('FieldDisplay').length).toEqual(5)
   })
 
   it('redirects if not logged in', () => {
@@ -63,5 +63,20 @@ describe('Composer', () => {
 
   it('shows error on get failure', () => {
     testGetDataFailed(wrapper, 'getComposer', 'Composer')
+  })
+
+  it('calls updateComposer with updated data', () => {
+    const updateComposer = jest.fn()
+    wrapper.setProps({ token: 'testtoken', updateComposer })
+    wrapper.instance().updateField('test', 'newValue')
+    expect(updateComposer).toHaveBeenCalledWith('testtoken', 1, { test: 'newValue' })
+  })
+
+  it('sets errors in state on error', () => {
+    const updateComposer = (token, id, updated) => false
+    const errors = { name: 'invalid name' }
+    wrapper.setProps({ updateComposer, composers: { errors, composer: {} } })
+    wrapper.instance().updateField('test', 'test')
+    expect(wrapper.state().errors).toEqual(errors)
   })
 })

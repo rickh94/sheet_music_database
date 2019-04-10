@@ -57,6 +57,7 @@ export default class ComposerForm extends Component {
         />
         <FieldWithErrors label="Birth Date" error={errors.born}>
           <DatePicker
+            utcOffset={0}
             selected={born}
             onChange={date => this.setState({ born: date })}
             showYearDropdown
@@ -65,6 +66,7 @@ export default class ComposerForm extends Component {
         </FieldWithErrors>
         <FieldWithErrors label="Death Date" error={errors.died}>
           <DatePicker
+            utcOffset={0}
             selected={died}
             onChange={date => this.setState({ died: date })}
             showYearDropdown

@@ -109,19 +109,36 @@ ShallowWrapper {
                 <FieldDisplay
                   backendFieldName="name"
                   saveCallback={[Function]}
+                  value=""
                 />
               </Heading>
-              <FieldDisplay
-                backendFieldName="era"
-                label="Era"
-                saveCallback={[Function]}
-              />
-              <FieldDisplay
-                backendFieldName="short_name"
-                label="Short Name"
-                saveCallback={[Function]}
-              />
             </Level>
+            <FieldDisplay
+              backendFieldName="era"
+              label="Era"
+              saveCallback={[Function]}
+              value=""
+            />
+            <FieldDisplay
+              backendFieldName="short_name"
+              label="Short Name"
+              saveCallback={[Function]}
+              value=""
+            />
+            <FieldDisplay
+              backendFieldName="born"
+              label="Born"
+              saveCallback={[Function]}
+              type="date"
+              value={null}
+            />
+            <FieldDisplay
+              backendFieldName="died"
+              label="Died"
+              saveCallback={[Function]}
+              type="date"
+              value={null}
+            />
           </Box>
         </Container>,
       ],
@@ -167,19 +184,36 @@ ShallowWrapper {
                 <FieldDisplay
                   backendFieldName="name"
                   saveCallback={[Function]}
+                  value=""
                 />
               </Heading>
-              <FieldDisplay
-                backendFieldName="era"
-                label="Era"
-                saveCallback={[Function]}
-              />
-              <FieldDisplay
-                backendFieldName="short_name"
-                label="Short Name"
-                saveCallback={[Function]}
-              />
             </Level>
+            <FieldDisplay
+              backendFieldName="era"
+              label="Era"
+              saveCallback={[Function]}
+              value=""
+            />
+            <FieldDisplay
+              backendFieldName="short_name"
+              label="Short Name"
+              saveCallback={[Function]}
+              value=""
+            />
+            <FieldDisplay
+              backendFieldName="born"
+              label="Born"
+              saveCallback={[Function]}
+              type="date"
+              value={null}
+            />
+            <FieldDisplay
+              backendFieldName="died"
+              label="Died"
+              saveCallback={[Function]}
+              type="date"
+              value={null}
+            />
           </Box>,
           "className": undefined,
           "clearfix": undefined,
@@ -211,37 +245,56 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "backgroundColor": undefined,
-            "children": <Level
-              breakpoint={null}
-              className=""
-              renderAs="div"
-              style={Object {}}
-            >
-              <Heading
-                className="absolutely-no-margin level-left"
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
+            "children": Array [
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
               >
-                <FieldDisplay
-                  backendFieldName="name"
-                  saveCallback={[Function]}
-                />
-              </Heading>
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  <FieldDisplay
+                    backendFieldName="name"
+                    saveCallback={[Function]}
+                    value=""
+                  />
+                </Heading>
+              </Level>,
               <FieldDisplay
                 backendFieldName="era"
                 label="Era"
                 saveCallback={[Function]}
-              />
+                value=""
+              />,
               <FieldDisplay
                 backendFieldName="short_name"
                 label="Short Name"
                 saveCallback={[Function]}
-              />
-            </Level>,
+                value=""
+              />,
+              <FieldDisplay
+                backendFieldName="born"
+                label="Born"
+                saveCallback={[Function]}
+                type="date"
+                value={null}
+              />,
+              <FieldDisplay
+                backendFieldName="died"
+                label="Died"
+                saveCallback={[Function]}
+                type="date"
+                value={null}
+              />,
+            ],
             "className": "",
             "clearfix": undefined,
             "clipped": undefined,
@@ -265,15 +318,15 @@ ShallowWrapper {
             "unselectable": undefined,
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "backgroundColor": undefined,
-              "breakpoint": null,
-              "children": Array [
-                <Heading
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "breakpoint": null,
+                "children": <Heading
                   className="absolutely-no-margin level-left"
                   heading={false}
                   renderAs="h1"
@@ -285,44 +338,33 @@ ShallowWrapper {
                   <FieldDisplay
                     backendFieldName="name"
                     saveCallback={[Function]}
+                    value=""
                   />
                 </Heading>,
-                <FieldDisplay
-                  backendFieldName="era"
-                  label="Era"
-                  saveCallback={[Function]}
-                />,
-                <FieldDisplay
-                  backendFieldName="short_name"
-                  label="Short Name"
-                  saveCallback={[Function]}
-                />,
-              ],
-              "className": "",
-              "clearfix": undefined,
-              "clipped": undefined,
-              "hidden": undefined,
-              "invisible": undefined,
-              "italic": undefined,
-              "marginless": undefined,
-              "overlay": undefined,
-              "paddingless": undefined,
-              "pull": undefined,
-              "radiusless": undefined,
-              "renderAs": "div",
-              "responsive": undefined,
-              "shadowless": undefined,
-              "style": Object {},
-              "textAlignment": undefined,
-              "textColor": undefined,
-              "textSize": undefined,
-              "textTransform": undefined,
-              "textWeight": undefined,
-              "unselectable": undefined,
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
@@ -331,6 +373,7 @@ ShallowWrapper {
                   "children": <FieldDisplay
                     backendFieldName="name"
                     saveCallback={[Function]}
+                    value=""
                   />,
                   "className": "absolutely-no-margin level-left",
                   "clearfix": undefined,
@@ -367,7 +410,7 @@ ShallowWrapper {
                     "backendFieldName": "name",
                     "errors": undefined,
                     "saveCallback": [Function],
-                    "value": undefined,
+                    "value": "",
                   },
                   "ref": null,
                   "rendered": null,
@@ -375,39 +418,71 @@ ShallowWrapper {
                 },
                 "type": [Function],
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "backendFieldName": "era",
-                  "errors": undefined,
-                  "label": "Era",
-                  "saveCallback": [Function],
-                  "value": undefined,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backendFieldName": "era",
+                "errors": undefined,
+                "label": "Era",
+                "saveCallback": [Function],
+                "value": "",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "backendFieldName": "short_name",
-                  "errors": undefined,
-                  "label": "Short Name",
-                  "saveCallback": [Function],
-                  "value": undefined,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backendFieldName": "short_name",
+                "errors": undefined,
+                "label": "Short Name",
+                "saveCallback": [Function],
+                "value": "",
               },
-            ],
-            "type": [Function],
-          },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backendFieldName": "born",
+                "errors": undefined,
+                "label": "Born",
+                "saveCallback": [Function],
+                "type": "date",
+                "value": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backendFieldName": "died",
+                "errors": undefined,
+                "label": "Died",
+                "saveCallback": [Function],
+                "type": "date",
+                "value": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         "type": [Function],
@@ -452,19 +527,36 @@ ShallowWrapper {
                   <FieldDisplay
                     backendFieldName="name"
                     saveCallback={[Function]}
+                    value=""
                   />
                 </Heading>
-                <FieldDisplay
-                  backendFieldName="era"
-                  label="Era"
-                  saveCallback={[Function]}
-                />
-                <FieldDisplay
-                  backendFieldName="short_name"
-                  label="Short Name"
-                  saveCallback={[Function]}
-                />
               </Level>
+              <FieldDisplay
+                backendFieldName="era"
+                label="Era"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="short_name"
+                label="Short Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="born"
+                label="Born"
+                saveCallback={[Function]}
+                type="date"
+                value={null}
+              />
+              <FieldDisplay
+                backendFieldName="died"
+                label="Died"
+                saveCallback={[Function]}
+                type="date"
+                value={null}
+              />
             </Box>
           </Container>,
         ],
@@ -510,19 +602,36 @@ ShallowWrapper {
                   <FieldDisplay
                     backendFieldName="name"
                     saveCallback={[Function]}
+                    value=""
                   />
                 </Heading>
-                <FieldDisplay
-                  backendFieldName="era"
-                  label="Era"
-                  saveCallback={[Function]}
-                />
-                <FieldDisplay
-                  backendFieldName="short_name"
-                  label="Short Name"
-                  saveCallback={[Function]}
-                />
               </Level>
+              <FieldDisplay
+                backendFieldName="era"
+                label="Era"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="short_name"
+                label="Short Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="born"
+                label="Born"
+                saveCallback={[Function]}
+                type="date"
+                value={null}
+              />
+              <FieldDisplay
+                backendFieldName="died"
+                label="Died"
+                saveCallback={[Function]}
+                type="date"
+                value={null}
+              />
             </Box>,
             "className": undefined,
             "clearfix": undefined,
@@ -554,37 +663,56 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "backgroundColor": undefined,
-              "children": <Level
-                breakpoint={null}
-                className=""
-                renderAs="div"
-                style={Object {}}
-              >
-                <Heading
-                  className="absolutely-no-margin level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
+              "children": Array [
+                <Level
+                  breakpoint={null}
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
                 >
-                  <FieldDisplay
-                    backendFieldName="name"
-                    saveCallback={[Function]}
-                  />
-                </Heading>
+                  <Heading
+                    className="absolutely-no-margin level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    <FieldDisplay
+                      backendFieldName="name"
+                      saveCallback={[Function]}
+                      value=""
+                    />
+                  </Heading>
+                </Level>,
                 <FieldDisplay
                   backendFieldName="era"
                   label="Era"
                   saveCallback={[Function]}
-                />
+                  value=""
+                />,
                 <FieldDisplay
                   backendFieldName="short_name"
                   label="Short Name"
                   saveCallback={[Function]}
-                />
-              </Level>,
+                  value=""
+                />,
+                <FieldDisplay
+                  backendFieldName="born"
+                  label="Born"
+                  saveCallback={[Function]}
+                  type="date"
+                  value={null}
+                />,
+                <FieldDisplay
+                  backendFieldName="died"
+                  label="Died"
+                  saveCallback={[Function]}
+                  type="date"
+                  value={null}
+                />,
+              ],
               "className": "",
               "clearfix": undefined,
               "clipped": undefined,
@@ -608,15 +736,15 @@ ShallowWrapper {
               "unselectable": undefined,
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "backgroundColor": undefined,
-                "breakpoint": null,
-                "children": Array [
-                  <Heading
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "breakpoint": null,
+                  "children": <Heading
                     className="absolutely-no-margin level-left"
                     heading={false}
                     renderAs="h1"
@@ -628,44 +756,33 @@ ShallowWrapper {
                     <FieldDisplay
                       backendFieldName="name"
                       saveCallback={[Function]}
+                      value=""
                     />
                   </Heading>,
-                  <FieldDisplay
-                    backendFieldName="era"
-                    label="Era"
-                    saveCallback={[Function]}
-                  />,
-                  <FieldDisplay
-                    backendFieldName="short_name"
-                    label="Short Name"
-                    saveCallback={[Function]}
-                  />,
-                ],
-                "className": "",
-                "clearfix": undefined,
-                "clipped": undefined,
-                "hidden": undefined,
-                "invisible": undefined,
-                "italic": undefined,
-                "marginless": undefined,
-                "overlay": undefined,
-                "paddingless": undefined,
-                "pull": undefined,
-                "radiusless": undefined,
-                "renderAs": "div",
-                "responsive": undefined,
-                "shadowless": undefined,
-                "style": Object {},
-                "textAlignment": undefined,
-                "textColor": undefined,
-                "textSize": undefined,
-                "textTransform": undefined,
-                "textWeight": undefined,
-                "unselectable": undefined,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "function",
@@ -674,6 +791,7 @@ ShallowWrapper {
                     "children": <FieldDisplay
                       backendFieldName="name"
                       saveCallback={[Function]}
+                      value=""
                     />,
                     "className": "absolutely-no-margin level-left",
                     "clearfix": undefined,
@@ -710,7 +828,7 @@ ShallowWrapper {
                       "backendFieldName": "name",
                       "errors": undefined,
                       "saveCallback": [Function],
-                      "value": undefined,
+                      "value": "",
                     },
                     "ref": null,
                     "rendered": null,
@@ -718,39 +836,71 @@ ShallowWrapper {
                   },
                   "type": [Function],
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "backendFieldName": "era",
-                    "errors": undefined,
-                    "label": "Era",
-                    "saveCallback": [Function],
-                    "value": undefined,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "era",
+                  "errors": undefined,
+                  "label": "Era",
+                  "saveCallback": [Function],
+                  "value": "",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "backendFieldName": "short_name",
-                    "errors": undefined,
-                    "label": "Short Name",
-                    "saveCallback": [Function],
-                    "value": undefined,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "short_name",
+                  "errors": undefined,
+                  "label": "Short Name",
+                  "saveCallback": [Function],
+                  "value": "",
                 },
-              ],
-              "type": [Function],
-            },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "born",
+                  "errors": undefined,
+                  "label": "Born",
+                  "saveCallback": [Function],
+                  "type": "date",
+                  "value": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "died",
+                  "errors": undefined,
+                  "label": "Died",
+                  "saveCallback": [Function],
+                  "type": "date",
+                  "value": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
           "type": [Function],

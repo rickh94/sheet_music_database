@@ -5,9 +5,18 @@ import FieldDisplay from './FieldDisplay'
 import '../../setupTests'
 
 describe('FieldDisplay', () => {
-  const wrapper = shallow(
-    <FieldDisplay label="" value="" saveCallback={jest.fn()} backendFieldName="test" />
-  )
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <FieldDisplay
+        label=""
+        value=""
+        saveCallback={jest.fn()}
+        backendFieldName="test"
+      />
+    )
+  })
 
   it('renders the value in the text', () => {
     wrapper.setProps({ value: 'test' })
@@ -66,5 +75,16 @@ describe('FieldDisplay', () => {
     wrapper.setProps({ linkTo: '/test/location' })
     expect(wrapper.exists('Link')).toBeTruthy()
     expect(wrapper.find('Link').props().to).toEqual('/test/location')
+  })
+
+  it('renders a date picker in edit if type is date', () => {
+    wrapper.setProps({ type: 'date', value: '2018-01-01' })
+    wrapper.setState({ edit: true })
+    expect(wrapper.exists('DatePicker')).toBeTruthy()
+  })
+
+  it('shows the date nicely', () => {
+    wrapper.setProps({ type: 'date', value: '2018-01-01' })
+    expect(wrapper.contains('January 1, 2018')).toBeTruthy()
   })
 })
