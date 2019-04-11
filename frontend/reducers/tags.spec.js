@@ -46,6 +46,8 @@ describe('tag reducer', () => {
         )
       ).toEqual({ ...initialState, isLoading: false, errors })
     })
+  })
+  describe('create actions', () => {
 
     it('sets isLoading on create tag', () => {
       expect(tagReducer(undefined, { type: 'CREATE_TAG' })).toEqual({
