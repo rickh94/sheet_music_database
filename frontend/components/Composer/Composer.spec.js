@@ -72,11 +72,11 @@ describe('Composer', () => {
     expect(updateComposer).toHaveBeenCalledWith('testtoken', 1, { test: 'newValue' })
   })
 
-  it('sets errors in state on error', () => {
+  it('sets errors in state on error', async () => {
     const updateComposer = (token, id, updated) => false
     const errors = { name: 'invalid name' }
     wrapper.setProps({ updateComposer, composers: { errors, composer: {} } })
-    wrapper.instance().updateField('test', 'test')
+    await wrapper.instance().updateField('test', 'test')
     expect(wrapper.state().errors).toEqual(errors)
   })
 })

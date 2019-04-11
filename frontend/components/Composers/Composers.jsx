@@ -15,7 +15,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 
 import Header from '../Header'
 import { composers } from '../../actions'
-import { getDataOrLogIn } from '../../helpers'
+import { getDataOrLogIn, formatDateForBackend } from '../../helpers'
 
 import './Composers.scss'
 import ComposerForm from '../ComposerForm'
@@ -59,7 +59,11 @@ export class Composers extends Component {
     Object.entries(fields).forEach(entry => {
       const [key, val] = entry
       if (val) {
-        composer[key] = val
+        if (key === 'born' || key === 'died') {
+          composer[key] = formatDateForBackend(val)
+        } else {
+          composer[key] = val
+        }
       }
     })
     let success

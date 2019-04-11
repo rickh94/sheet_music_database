@@ -9,7 +9,7 @@ import Level from 'react-bulma-components/lib/components/level'
 import Heading from 'react-bulma-components/lib/components/heading'
 
 import { composers } from '../../actions'
-import { getDataOrLogIn } from '../../helpers'
+import { getDataOrLogIn, formatDateForBackend } from '../../helpers'
 import Header from '../Header'
 import FieldDisplay from '../FieldDisplay'
 
@@ -41,12 +41,12 @@ export class Composer extends Component {
     const { id } = this.props.match.params
     const updated = { [fieldName]: newValue }
     if (fieldName === 'born' || fieldName === 'died') {
-      updated[fieldName] = `${newValue.getFullYear()}-${newValue.getMonth() + 1}-${newValue.getDate()}`
+      updated[fieldName] = formatDateForBackend(newValue)
 
     }
     const success = await this.props.updateComposer(this.props.token, id, updated)
     if (!success) {
-      this.setState({ errors: { ...this.props.composers.errors } })
+      this.setState({ errors: this.props.composers.errors  })
       console.log(this.state.errors)
     }
   }

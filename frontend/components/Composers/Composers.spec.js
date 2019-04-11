@@ -63,12 +63,19 @@ describe('Composers', () => {
 
   describe('createOrUpdate', () => {
     it('calls create action on new composer', () => {
-      const newComposer = { name: 'test', era: 'Baroque', born: '1234', died: '12345' }
+      const born = new Date('1234')
+      const died = new Date('1235')
+      const newComposer = {
+        name: 'test',
+        era: 'Baroque',
+        born: '1234-1-1',
+        died: '1235-1-1'
+      }
       const createComposer = jest.fn()
       const updateComposer = jest.fn()
       wrapper.setProps({ createComposer, updateComposer })
       wrapper.setProps({ createComposer })
-      wrapper.instance().createOrUpdate(undefined, newComposer)
+      wrapper.instance().createOrUpdate(undefined, { ...newComposer, born, died })
       expect(createComposer).toHaveBeenCalledWith(testToken, { ...newComposer })
       expect(updateComposer).not.toHaveBeenCalled()
     })
@@ -91,10 +98,10 @@ describe('Composers', () => {
       const createComposer = jest.fn()
       const updateComposer = jest.fn()
       wrapper.setProps({ createComposer, updateComposer })
-      wrapper.instance().createOrUpdate(null, { era: 'baroque', born: '12345' })
+      wrapper.instance().createOrUpdate(null, { era: 'baroque', born: new Date('1234') })
       expect(wrapper.state().errors.name).toEqual('Name is required')
       expect(createComposer).not.toHaveBeenCalled()
-      wrapper.instance().createOrUpdate(null, { name: 'test', born: '12345' })
+      wrapper.instance().createOrUpdate(null, { name: 'test', born: new Date('1234-1-1') })
       expect(wrapper.state().errors.name).toEqual('Era is required')
       expect(createComposer).not.toHaveBeenCalled()
     })
@@ -152,7 +159,9 @@ describe('Composers', () => {
 })
 
 describe('ComposerItem', () => {
-  const wrapper = shallow(<ComposerItem composer={{ name: '', era: '', id: 1 }} onDelete={jest.fn()} />)
+  const wrapper = shallow(
+    <ComposerItem composer={{ name: '', era: '', id: 1 }} onDelete={jest.fn()} />
+  )
   const composer = { name: 'Johann Sebastian Bach', era: 'Baroque' }
 
   beforeEach(() => {
@@ -177,5 +186,4 @@ describe('ComposerItem', () => {
     wrapper.setProps({ composer: { ...composer, born: '1685', died: '1750' } })
     expect(wrapper.contains('(1685-1750)')).toBeTruthy()
   })
-
 })
