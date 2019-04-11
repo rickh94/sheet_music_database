@@ -72,5 +72,76 @@ describe('instrument reducer', () => {
         list: newInstruments
       })
     })
+
+    it('should return errors on create failed', () => {
+      expect(
+        instrumentReducer(
+          { ...initialState, isLoading: true },
+          { type: 'CREATE_INSTRUMENT_FAILED', payload: errors }
+        )
+      ).toEqual({ ...initialState, isLoading: false, errors })
+    })
+  })
+
+  describe('update actions', () => {
+    it('sets isLoading on update instrument', () => {
+      expect(instrumentReducer(undefined, { type: 'UPDATE_INSTRUMENT' })).toEqual({
+        ...initialState,
+        isLoading: true
+      })
+    })
+
+    it('should return new instrument list on update successful', () => {
+      const updatedInstrument = { id: 3, name: 'cello' }
+      const updatedInstruments = [instruments[0], instruments[1], updatedInstrument]
+
+      expect(
+        instrumentReducer(
+          { ...initialState, list: instruments, isLoading: true },
+          { type: 'UPDATE_INSTRUMENT_SUCCESSFUL', payload: updatedInstrument }
+        )
+      ).toEqual({ ...initialState, isLoading: false, list: updatedInstruments })
+    })
+
+    it('should return the errors on update failed', () => {
+      expect(
+        instrumentReducer(
+          { ...initialState, isLoading: true },
+          { type: 'UPDATE_INSTRUMENT_FAILED', payload: errors }
+        )
+      ).toEqual({ ...initialState, isLoading: false, errors })
+    })
+  })
+
+  describe('delete actions', () => {
+    it('sets isLoading on delete instrument', () => {
+      expect(instrumentReducer(undefined, { type: 'DELETE_INSTRUMENT' })).toEqual({
+        ...initialState,
+        isLoading: true
+      })
+    })
+
+    it('should return the new instrument list on delete successful', () => {
+      const newInstruments = [instruments[0], instruments[2]]
+      expect(
+        instrumentReducer(
+          { ...initialState, list: instruments, isLoading: true },
+          { type: 'DELETE_INSTRUMENT_SUCCESSFUL', payload: instruments[1].id }
+        )
+      ).toEqual({
+        ...initialState,
+        isLoading: false,
+        list: newInstruments
+      })
+    })
+
+    it('should return the errors on delete failed', () => {
+      expect(
+        instrumentReducer(
+          { ...initialState, isLoading: true },
+          { type: 'DELETE_INSTRUMENT_FAILED', payload: errors }
+        )
+      ).toEqual({ ...initialState, isLoading: false, errors })
+    })
   })
 })

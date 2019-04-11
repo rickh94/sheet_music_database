@@ -48,7 +48,6 @@ describe('tag reducer', () => {
     })
   })
   describe('create actions', () => {
-
     it('sets isLoading on create tag', () => {
       expect(tagReducer(undefined, { type: 'CREATE_TAG' })).toEqual({
         ...initialState,
@@ -86,71 +85,72 @@ describe('tag reducer', () => {
     })
   })
 
-  it('sets isLoading on update tag', () => {
-    expect(tagReducer(undefined, { type: 'UPDATE_TAG' })).toEqual({
-      ...initialState,
-      isLoading: true
+  describe('update actions', () => {
+    it('sets isLoading on update tag', () => {
+      expect(tagReducer(undefined, { type: 'UPDATE_TAG' })).toEqual({
+        ...initialState,
+        isLoading: true
+      })
+    })
+
+    it('should return the new taglist on update successful', () => {
+      const updatedTag = { id: 3, name: 'updated' }
+      const updatedTags = [
+        { id: 1, name: 'tag1' },
+        { id: 2, name: 'tag2' },
+        { id: 3, name: 'updated' }
+      ]
+      expect(
+        tagReducer(
+          { ...initialState, list: tags, isLoading: true },
+          { type: 'UPDATE_TAG_SUCCESSFUL', payload: updatedTag }
+        )
+      ).toEqual({
+        ...initialState,
+        isLoading: false,
+        list: updatedTags
+      })
+    })
+
+    it('should return the errors on update failed', () => {
+      expect(
+        tagReducer(
+          { ...initialState, isLoading: true },
+          { type: 'UPDATE_TAG_FAILED', payload: errors }
+        )
+      ).toEqual({ ...initialState, isLoading: false, errors })
     })
   })
 
-  it('should return the new taglist on update successful', () => {
-    const updatedTag = { id: 3, name: 'updated' }
-    const updatedTags = [
-      { id: 1, name: 'tag1' },
-      { id: 2, name: 'tag2' },
-      { id: 3, name: 'updated' }
-    ]
-    expect(
-      tagReducer(
-        { ...initialState, list: tags, isLoading: true },
-        { type: 'UPDATE_TAG_SUCCESSFUL', payload: updatedTag }
-      )
-    ).toEqual({
-      ...initialState,
-      isLoading: false,
-      list: updatedTags
+  describe('delete actions', () => {
+    it('sets isLoading on delete tag', () => {
+      expect(tagReducer(undefined, { type: 'DELETE_TAG' })).toEqual({
+        ...initialState,
+        isLoading: true
+      })
     })
-  })
 
-  it('should return the errors on update failed', () => {
-    expect(
-      tagReducer(
-        { ...initialState, isLoading: true },
-        { type: 'UPDATE_TAG_FAILED', payload: errors }
-      )
-    ).toEqual({ ...initialState, isLoading: false, errors })
-  })
-
-  it('sets isLoading on delete tag', () => {
-    expect(tagReducer(undefined, { type: 'DELETE_TAG' })).toEqual({
-      ...initialState,
-      isLoading: true
+    it('should return the new taglist on delete successful', () => {
+      const newTags = [{ id: 1, name: 'tag1' }, { id: 3, name: 'tag3' }]
+      expect(
+        tagReducer(
+          { ...initialState, list: tags, isLoading: true },
+          { type: 'DELETE_TAG_SUCCESSFUL', payload: 2 }
+        )
+      ).toEqual({
+        ...initialState,
+        isLoading: false,
+        list: newTags
+      })
     })
-  })
 
-  it('should return the new taglist on delete successful', () => {
-    const newTags = [
-      {id: 1, name: 'tag1'},
-      {id: 3, name: 'tag3'}
-    ]
-    expect(
-      tagReducer(
-        { ...initialState, list: tags, isLoading: true },
-        { type: 'DELETE_TAG_SUCCESSFUL', payload: 2 }
-      )
-    ).toEqual({
-      ...initialState,
-      isLoading: false,
-      list: newTags
+    it('should return the errors on delete failed', () => {
+      expect(
+        tagReducer(
+          { ...initialState, isLoading: true },
+          { type: 'DELETE_TAG_FAILED', payload: errors }
+        )
+      ).toEqual({ ...initialState, isLoading: false, errors })
     })
-  })
-
-  it('should return the errors on delete failed', () => {
-    expect(
-      tagReducer(
-        { ...initialState, isLoading: true },
-        { type: 'DELETE_TAG_FAILED', payload: errors }
-      )
-    ).toEqual({ ...initialState, isLoading: false, errors })
   })
 })
