@@ -19,7 +19,17 @@ describe('<Instruments />', () => {
       />
     )
   })
+
   it('matches the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it('renders the header', () => {
+    expect(wrapper.exists('Connect(Header)')).toBeTruthy()
+  })
+
+  it('renders the instruments from the list', () => {
+    const instruments = {list: [{id: 1, name: 'violin'}, {id: 2, name: 'viola'}]}
+    wrapper.setProps({instruments})
   })
 })

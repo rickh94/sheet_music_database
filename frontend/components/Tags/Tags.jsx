@@ -15,6 +15,7 @@ import Box from 'react-bulma-components/lib/components/box'
 
 import Header from '../Header'
 import FieldDisplay from '../FieldDisplay'
+import ListItem from '../ListItem'
 import { tags } from '../../actions'
 import TextFieldWithErrors from '../TextFieldWithErrors'
 import alertText, { messages } from '../../middleware/alertText'
@@ -81,13 +82,13 @@ export class Tags extends Component {
                 </Level>
                 <div>
                   {tagList.map(tag => (
-                    <TagItem
-                      tag={tag}
+                    <ListItem
+                      item={tag}
                       key={tag.id}
                       saveCallback={(_, name) =>
                         this.props.updateTag(token, tag.id, name)
                       }
-                      deleteCallback={id => this.props.deleteTag(token, id)}
+                      // deleteCallback={id => this.props.deleteTag(token, id)}
                       errors={this.state.errors[tag.id]}
                     />
                   ))}
@@ -164,35 +165,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(withAlert(Tags))
-
-export function TagItem(props) {
-  return (
-    <Level>
-      <FieldDisplay
-        value={props.tag.name}
-        saveCallback={props.saveCallback}
-        backendFieldName=""
-        errors={props.error}
-        linkTo={`/tag/${props.tag.id}`}
-      />
-      <div className="links">
-        <a
-          onClick={e => {
-            e.preventDefault()
-            props.deleteCallback(props.tag.id)
-          }}
-          className="edit-link"
-        >
-          delete
-        </a>
-      </div>
-    </Level>
-  )
-}
-
-TagItem.propTypes = {
-  tag: PropTypes.object.isRequired,
-  saveCallback: PropTypes.func.isRequired,
-  deleteCallback: PropTypes.func.isRequired,
-  errors: PropTypes.string
-}

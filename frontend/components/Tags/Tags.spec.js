@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Tags, TagItem } from './Tags'
+import { Tags } from './Tags'
 import '../../setupTests'
 import {
   testLoggedIn,
@@ -44,7 +44,7 @@ describe('Tags', () => {
   it('renders tags from the list', () => {
     const tags = { list: [{ id: 1, name: 'test1' }, { id: 2, name: 'test2' }] }
     wrapper.setProps({ tags })
-    expect(wrapper.find('TagItem').length).toEqual(2)
+    expect(wrapper.find('ListItem').length).toEqual(2)
   })
 
   it('redirects if not logged in', () => {
@@ -86,34 +86,5 @@ describe('Tags', () => {
     clickButton(wrapper, 'Cancel')
     expect(wrapper.state().createMode).toBeFalsy()
     expect(wrapper.state().newTagName).toEqual('')
-  })
-})
-
-describe('TagItem', () => {
-  const testTag = { id: 5, name: 'test' }
-  const wrapper = shallow(
-    <TagItem tag={testTag} saveCallback={jest.fn()} deleteCallback={jest.fn()} />
-  )
-
-  it('matches snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('renders a Level', () => {
-    expect(wrapper.exists('Level')).toBeTruthy()
-  })
-
-  it('has delete link with icon', () => {
-    expect(wrapper.contains('delete')).toBeTruthy()
-    expect(wrapper.find('FontAwesomeIcon')).toBeTruthy()
-  })
-
-  it('calls passed in function when delete is clicked', () => {
-    const deleteCallback = jest.fn()
-    wrapper.setProps({ deleteCallback })
-    wrapper
-      .findWhere(el => el.name() == 'a' && el.contains('delete'))
-      .simulate('click', { preventDefault: jest.fn() })
-    expect(deleteCallback).toHaveBeenCalledWith(testTag.id)
   })
 })

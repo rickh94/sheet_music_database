@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
+import Header from '../Header'
 
 export class Instruments extends Component {
   render() {
-    return <div>Instruments</div>;
+    return (
+      <React.Fragment>
+        <Header />
+      </React.Fragment>
+    )
   }
 }
 
-Instruments.propTypes = {};
+Instruments.propTypes = {}
 
-export default Instruments;
+export default Instruments
