@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import App from './App'
+import App, { Routes } from './App'
 import '../../setupTests'
 
 describe('App', () => {
@@ -18,7 +18,7 @@ describe('App', () => {
     expect(wrapper.find('BrowserRouter').length).toEqual(1)
   })
 
-  it('renders a switch', () => {
-    expect(wrapper.find('Switch').length).toEqual(1)
+  it('renders the routes', () => {
+    expect(wrapper.exists('Routes')).toBeTruthy()
   })
 })

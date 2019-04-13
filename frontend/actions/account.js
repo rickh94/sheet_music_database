@@ -26,6 +26,26 @@ export function login(email, password, remember) {
   }
 }
 
+export function checkToken(token) {
+  return async dispatch => {
+    dispatch({ type: 'LOGIN' })
+    try {
+      const api = DjangoURL(token)
+      await api.v1.auth.user.get()
+      dispatch({
+        type: 'LOGIN_SUCCESSFUL',
+        payload: {token}
+      })
+    } catch (err) {
+      localStorage.removeItem('toke')
+      dispatch({
+        type: 'LOGIN_FAILED',
+        payload: err.response.data
+      })
+    }
+  }
+}
+
 export function register(email, password1, password2, remember) {
   return async dispatch => {
     dispatch({

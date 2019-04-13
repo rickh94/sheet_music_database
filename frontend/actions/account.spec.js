@@ -4,11 +4,13 @@ import {
   logout,
   getProfile,
   updateProfile,
-  changePassword
+  changePassword,
+  checkToken
 } from './account'
 import MockAdapter from 'axios-mock-adapter'
 import axios from 'axios'
 import DjangoURL from '../middleware/api'
+import { testToken } from '../testHelpers'
 
 describe('account login actions', () => {
   const api = DjangoURL()
@@ -295,12 +297,48 @@ describe('password change action', () => {
     const errors = { someError: 'error' }
     mock.onPost(api.v1.password.change.url).reply(400, errors)
     expect(
-      await changePassword(token, 'newpassword', 'newpassword')(mockDispatch, mockGetState)
+      await changePassword(token, 'newpassword', 'newpassword')(
+        mockDispatch,
+        mockGetState
+      )
     ).toBeFalsy()
     expect(mockDispatch).toBeCalledWith({ type: 'CHANGE_PASSWORD' })
     expect(mockDispatch).toBeCalledWith({
-      type: 'CHANGE_PASSWORD_FAILED',
+      type: 'CHANGE_PASSWORD_FAILED'
       // payload: errors
     })
+  })
+})
+
+describe('checkToken', () => {
+  let api
+  const mockGetState = jest.fn()
+  const token = 'testtokentext'
+
+  beforeEach(() => {
+    api = DjangoURL()
+  })
+
+  it('sets the token on correct token', async () => {
+    const mockDispatch = jest.fn()
+    const mock = new MockAdapter(axios)
+    mock.onGet(api.v1.auth.user.read).reply(200)
+    await checkToken(token)(mockDispatch, mockGetState)
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'LOGIN' })
+    expect(mockDispatch).toHaveBeenCalledWith({
+      type: 'LOGIN_SUCCESSFUL',
+      payload: { token }
+    })
+  })
+
+  it('does not set token and deletes from local storage on bad token', async () => {
+    const mockDispatch = jest.fn()
+    localStorage.setItem('token', testToken)
+    const mock = new MockAdapter(axios)
+    mock.onGet(api.v1.auth.user.read).reply(401)
+    await checkToken(token)(mockDispatch, mockGetState)
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'LOGIN' })
+    expect(mockDispatch).toHaveBeenCalledWith({ type: 'LOGIN_FAILED' })
+    expect(localStorage.getItem('token')).toBeNull()
   })
 })
