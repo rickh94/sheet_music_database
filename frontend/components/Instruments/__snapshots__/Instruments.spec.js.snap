@@ -17,6 +17,11 @@ ShallowWrapper {
         "push": [MockFunction],
       }
     }
+    instruments={
+      Object {
+        "list": Array [],
+      }
+    }
     token="testtoken"
     updateInstrument={[MockFunction]}
   />,
@@ -34,30 +39,44 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": <Connect(Header) />,
+      "children": Array [
+        <Connect(Header) />,
+        <Container
+          breakpoint={null}
+          fluid={false}
+          renderAs="div"
+          style={Object {}}
+        >
+          <Box
+            className="margin-default"
+            renderAs="div"
+            style={Object {}}
+          >
+            <Level
+              breakpoint={null}
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Heading
+                className="absolutely-no-margin level-item level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                Instruments
+              </Heading>
+            </Level>
+          </Box>
+        </Container>,
+      ],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {},
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": Symbol(react.fragment),
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": <Connect(Header) />,
-      },
-      "ref": null,
-      "rendered": Object {
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
@@ -66,6 +85,444 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "backgroundColor": undefined,
+          "breakpoint": null,
+          "children": <Box
+            className="margin-default"
+            renderAs="div"
+            style={Object {}}
+          >
+            <Level
+              breakpoint={null}
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Heading
+                className="absolutely-no-margin level-item level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                Instruments
+              </Heading>
+            </Level>
+          </Box>,
+          "className": undefined,
+          "clearfix": undefined,
+          "clipped": undefined,
+          "fluid": false,
+          "hidden": undefined,
+          "invisible": undefined,
+          "italic": undefined,
+          "marginless": undefined,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": Array [
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className="absolutely-no-margin level-item level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Instruments
+                </Heading>
+              </Level>,
+              Array [],
+            ],
+            "className": "margin-default",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "breakpoint": null,
+                "children": <Heading
+                  className="absolutely-no-margin level-item level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Instruments
+                </Heading>,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Instruments",
+                  "className": "absolutely-no-margin level-item level-left",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "heading": false,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "h1",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": 3,
+                  "spaced": false,
+                  "subtitle": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                  "weight": null,
+                },
+                "ref": null,
+                "rendered": "Instruments",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Connect(Header) />,
+          <Container
+            breakpoint={null}
+            fluid={false}
+            renderAs="div"
+            style={Object {}}
+          >
+            <Box
+              className="margin-default"
+              renderAs="div"
+              style={Object {}}
+            >
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className="absolutely-no-margin level-item level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Instruments
+                </Heading>
+              </Level>
+            </Box>
+          </Container>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "breakpoint": null,
+            "children": <Box
+              className="margin-default"
+              renderAs="div"
+              style={Object {}}
+            >
+              <Level
+                breakpoint={null}
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className="absolutely-no-margin level-item level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Instruments
+                </Heading>
+              </Level>
+            </Box>,
+            "className": undefined,
+            "clearfix": undefined,
+            "clipped": undefined,
+            "fluid": false,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": Array [
+                <Level
+                  breakpoint={null}
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <Heading
+                    className="absolutely-no-margin level-item level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Instruments
+                  </Heading>
+                </Level>,
+                Array [],
+              ],
+              "className": "margin-default",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "breakpoint": null,
+                  "children": <Heading
+                    className="absolutely-no-margin level-item level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Instruments
+                  </Heading>,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Instruments",
+                    "className": "absolutely-no-margin level-item level-left",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "heading": false,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "h1",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": 3,
+                    "spaced": false,
+                    "subtitle": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "weight": null,
+                  },
+                  "ref": null,
+                  "rendered": "Instruments",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
       "type": Symbol(react.fragment),
     },
   ],

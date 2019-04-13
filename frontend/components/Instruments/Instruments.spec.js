@@ -16,6 +16,7 @@ describe('<Instruments />', () => {
         createInstrument={jest.fn()}
         deleteInstrument={jest.fn()}
         updateInstrument={jest.fn()}
+        instruments={{list: []}}
       />
     )
   })
@@ -28,8 +29,13 @@ describe('<Instruments />', () => {
     expect(wrapper.exists('Connect(Header)')).toBeTruthy()
   })
 
+  it('renders a container', () => {
+    expect(wrapper.exists('Container')).toBeTruthy()
+  })
+
   it('renders the instruments from the list', () => {
     const instruments = {list: [{id: 1, name: 'violin'}, {id: 2, name: 'viola'}]}
     wrapper.setProps({instruments})
+    expect(wrapper.find('ListItem').length).toEqual(2)
   })
 })

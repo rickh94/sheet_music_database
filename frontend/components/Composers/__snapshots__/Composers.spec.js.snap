@@ -334,7 +334,7 @@ ShallowWrapper {
           style={Object {}}
         >
           <Box
-            className=""
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
@@ -413,7 +413,7 @@ ShallowWrapper {
           "backgroundColor": undefined,
           "breakpoint": null,
           "children": <Box
-            className=""
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
@@ -501,7 +501,7 @@ ShallowWrapper {
               <br />,
               Array [],
             ],
-            "className": "",
+            "className": "margin-default",
             "clearfix": undefined,
             "clipped": undefined,
             "hidden": undefined,
@@ -784,7 +784,7 @@ ShallowWrapper {
             style={Object {}}
           >
             <Box
-              className=""
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
@@ -863,7 +863,7 @@ ShallowWrapper {
             "backgroundColor": undefined,
             "breakpoint": null,
             "children": <Box
-              className=""
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
@@ -951,7 +951,7 @@ ShallowWrapper {
                 <br />,
                 Array [],
               ],
-              "className": "",
+              "className": "margin-default",
               "clearfix": undefined,
               "clipped": undefined,
               "hidden": undefined,

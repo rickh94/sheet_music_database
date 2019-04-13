@@ -5,7 +5,6 @@ import { withAlert } from 'react-alert'
 import { Link } from 'react-router-dom'
 
 import Container from 'react-bulma-components/lib/components/container/container'
-import Card from 'react-bulma-components/lib/components/card/card'
 import Heading from 'react-bulma-components/lib/components/heading'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Level from 'react-bulma-components/lib/components/level'
@@ -61,8 +60,7 @@ export class Tags extends Component {
         <React.Fragment>
           <Header />
           <Container>
-            <Card className="margin-default">
-              <Card.Content>
+            <Box className="margin-default">
                 <Level>
                   <Heading
                     size={3}
@@ -93,8 +91,7 @@ export class Tags extends Component {
                     />
                   ))}
                 </div>
-              </Card.Content>
-            </Card>
+            </Box>
           </Container>
           <Modal
             show={this.state.createMode}

@@ -94,7 +94,7 @@ export class Composers extends Component {
         <React.Fragment>
           <Header />
           <Container>
-            <Box>
+            <Box className="margin-default">
               <Level>
                 <Heading size={3} className="absolutely-no-margin level-left">
                   Composers

@@ -80,71 +80,67 @@ ShallowWrapper {
           renderAs="div"
           style={Object {}}
         >
-          <Card
+          <Box
             className="margin-default"
             renderAs="div"
             style={Object {}}
           >
-            <CardContent
+            <Level
+              breakpoint={null}
+              className=""
               renderAs="div"
+              style={Object {}}
             >
-              <Level
-                breakpoint={null}
-                className=""
-                renderAs="div"
-                style={Object {}}
+              <Heading
+                className="absolutely-no-margin level-item level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <Heading
-                  className="absolutely-no-margin level-item level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                >
-                  Tags
-                </Heading>
-                <a
-                  className="level-item level-right edit-link"
-                  id="activate-create"
-                  onClick={[Function]}
+                Tags
+              </Heading>
+              <a
+                className="level-item level-right edit-link"
+                id="activate-create"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "verticalAlign": "top",
+                  }
+                }
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="plus"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
                   style={
                     Object {
-                      "verticalAlign": "top",
+                      "paddingRight": "0.2rem",
                     }
                   }
-                >
-                  <FontAwesomeIcon
-                    border={false}
-                    className=""
-                    fixedWidth={false}
-                    flip={null}
-                    icon="plus"
-                    inverse={false}
-                    listItem={false}
-                    mask={null}
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    style={
-                      Object {
-                        "paddingRight": "0.2rem",
-                      }
-                    }
-                    symbol={false}
-                    title=""
-                    transform={null}
-                  />
-                   
-                  New
-                </a>
-              </Level>
-              <div />
-            </CardContent>
-          </Card>
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
+                 
+                New
+              </a>
+            </Level>
+            <div />
+          </Box>
         </Container>,
         <Modal
           className=""
@@ -252,71 +248,67 @@ ShallowWrapper {
         "props": Object {
           "backgroundColor": undefined,
           "breakpoint": null,
-          "children": <Card
+          "children": <Box
             className="margin-default"
             renderAs="div"
             style={Object {}}
           >
-            <CardContent
+            <Level
+              breakpoint={null}
+              className=""
               renderAs="div"
+              style={Object {}}
             >
-              <Level
-                breakpoint={null}
-                className=""
-                renderAs="div"
-                style={Object {}}
+              <Heading
+                className="absolutely-no-margin level-item level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <Heading
-                  className="absolutely-no-margin level-item level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                >
-                  Tags
-                </Heading>
-                <a
-                  className="level-item level-right edit-link"
-                  id="activate-create"
-                  onClick={[Function]}
+                Tags
+              </Heading>
+              <a
+                className="level-item level-right edit-link"
+                id="activate-create"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "verticalAlign": "top",
+                  }
+                }
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="plus"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
                   style={
                     Object {
-                      "verticalAlign": "top",
+                      "paddingRight": "0.2rem",
                     }
                   }
-                >
-                  <FontAwesomeIcon
-                    border={false}
-                    className=""
-                    fixedWidth={false}
-                    flip={null}
-                    icon="plus"
-                    inverse={false}
-                    listItem={false}
-                    mask={null}
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    style={
-                      Object {
-                        "paddingRight": "0.2rem",
-                      }
-                    }
-                    symbol={false}
-                    title=""
-                    transform={null}
-                  />
-                   
-                  New
-                </a>
-              </Level>
-              <div />
-            </CardContent>
-          </Card>,
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
+                 
+                New
+              </a>
+            </Level>
+            <div />
+          </Box>,
           "className": undefined,
           "clearfix": undefined,
           "clipped": undefined,
@@ -347,9 +339,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "backgroundColor": undefined,
-            "children": <CardContent
-              renderAs="div"
-            >
+            "children": Array [
               <Level
                 breakpoint={null}
                 className=""
@@ -403,9 +393,9 @@ ShallowWrapper {
                    
                   New
                 </a>
-              </Level>
-              <div />
-            </CardContent>,
+              </Level>,
+              <div />,
+            ],
             "className": "margin-default",
             "clearfix": undefined,
             "clipped": undefined,
@@ -429,19 +419,15 @@ ShallowWrapper {
             "unselectable": undefined,
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "backgroundColor": undefined,
-              "children": Array [
-                <Level
-                  breakpoint={null}
-                  className=""
-                  renderAs="div"
-                  style={Object {}}
-                >
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "breakpoint": null,
+                "children": Array [
                   <Heading
                     className="absolutely-no-margin level-item level-left"
                     heading={false}
@@ -452,7 +438,7 @@ ShallowWrapper {
                     weight={null}
                   >
                     Tags
-                  </Heading>
+                  </Heading>,
                   <a
                     className="level-item level-right edit-link"
                     id="activate-create"
@@ -488,62 +474,75 @@ ShallowWrapper {
                     />
                      
                     New
-                  </a>
-                </Level>,
-                <div />,
-              ],
-              "className": undefined,
-              "clearfix": undefined,
-              "clipped": undefined,
-              "hidden": undefined,
-              "invisible": undefined,
-              "italic": undefined,
-              "marginless": undefined,
-              "overlay": undefined,
-              "paddingless": undefined,
-              "pull": undefined,
-              "radiusless": undefined,
-              "renderAs": "div",
-              "responsive": undefined,
-              "shadowless": undefined,
-              "textAlignment": undefined,
-              "textColor": undefined,
-              "textSize": undefined,
-              "textTransform": undefined,
-              "textWeight": undefined,
-              "unselectable": undefined,
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "backgroundColor": undefined,
-                  "breakpoint": null,
-                  "children": Array [
-                    <Heading
-                      className="absolutely-no-margin level-item level-left"
-                      heading={false}
-                      renderAs="h1"
-                      size={3}
-                      spaced={false}
-                      subtitle={false}
-                      weight={null}
-                    >
-                      Tags
-                    </Heading>,
-                    <a
-                      className="level-item level-right edit-link"
-                      id="activate-create"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "verticalAlign": "top",
-                        }
-                      }
-                    >
+                  </a>,
+                ],
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Tags",
+                    "className": "absolutely-no-margin level-item level-left",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "heading": false,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "h1",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": 3,
+                    "spaced": false,
+                    "subtitle": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "weight": null,
+                  },
+                  "ref": null,
+                  "rendered": "Tags",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
                       <FontAwesomeIcon
                         border={false}
                         className=""
@@ -566,164 +565,68 @@ ShallowWrapper {
                         symbol={false}
                         title=""
                         transform={null}
-                      />
-                       
-                      New
-                    </a>,
-                  ],
-                  "className": "",
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "hidden": undefined,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "div",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "style": Object {},
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "backgroundColor": undefined,
-                      "children": "Tags",
-                      "className": "absolutely-no-margin level-item level-left",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "heading": false,
-                      "hidden": undefined,
-                      "invisible": undefined,
-                      "italic": undefined,
-                      "marginless": undefined,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "renderAs": "h1",
-                      "responsive": undefined,
-                      "shadowless": undefined,
-                      "size": 3,
-                      "spaced": false,
-                      "subtitle": false,
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
-                      "weight": null,
-                    },
-                    "ref": null,
-                    "rendered": "Tags",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": Array [
-                        <FontAwesomeIcon
-                          border={false}
-                          className=""
-                          fixedWidth={false}
-                          flip={null}
-                          icon="plus"
-                          inverse={false}
-                          listItem={false}
-                          mask={null}
-                          pull={null}
-                          pulse={false}
-                          rotation={null}
-                          size={null}
-                          spin={false}
-                          style={
-                            Object {
-                              "paddingRight": "0.2rem",
-                            }
-                          }
-                          symbol={false}
-                          title=""
-                          transform={null}
-                        />,
-                        " ",
-                        "New",
-                      ],
-                      "className": "level-item level-right edit-link",
-                      "id": "activate-create",
-                      "onClick": [Function],
-                      "style": Object {
-                        "verticalAlign": "top",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "border": false,
-                          "className": "",
-                          "fixedWidth": false,
-                          "flip": null,
-                          "icon": "plus",
-                          "inverse": false,
-                          "listItem": false,
-                          "mask": null,
-                          "pull": null,
-                          "pulse": false,
-                          "rotation": null,
-                          "size": null,
-                          "spin": false,
-                          "style": Object {
-                            "paddingRight": "0.2rem",
-                          },
-                          "symbol": false,
-                          "title": "",
-                          "transform": null,
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
+                      />,
                       " ",
                       "New",
                     ],
-                    "type": "a",
+                    "className": "level-item level-right edit-link",
+                    "id": "activate-create",
+                    "onClick": [Function],
+                    "style": Object {
+                      "verticalAlign": "top",
+                    },
                   },
-                ],
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [],
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "border": false,
+                        "className": "",
+                        "fixedWidth": false,
+                        "flip": null,
+                        "icon": "plus",
+                        "inverse": false,
+                        "listItem": false,
+                        "mask": null,
+                        "pull": null,
+                        "pulse": false,
+                        "rotation": null,
+                        "size": null,
+                        "spin": false,
+                        "style": Object {
+                          "paddingRight": "0.2rem",
+                        },
+                        "symbol": false,
+                        "title": "",
+                        "transform": null,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    " ",
+                    "New",
+                  ],
+                  "type": "a",
                 },
-                "ref": null,
-                "rendered": Array [],
-                "type": "div",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [],
               },
-            ],
-            "type": [Function],
-          },
+              "ref": null,
+              "rendered": Array [],
+              "type": "div",
+            },
+          ],
           "type": [Function],
         },
         "type": [Function],
@@ -1187,71 +1090,67 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Card
+            <Box
               className="margin-default"
               renderAs="div"
               style={Object {}}
             >
-              <CardContent
+              <Level
+                breakpoint={null}
+                className=""
                 renderAs="div"
+                style={Object {}}
               >
-                <Level
-                  breakpoint={null}
-                  className=""
-                  renderAs="div"
-                  style={Object {}}
+                <Heading
+                  className="absolutely-no-margin level-item level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
                 >
-                  <Heading
-                    className="absolutely-no-margin level-item level-left"
-                    heading={false}
-                    renderAs="h1"
-                    size={3}
-                    spaced={false}
-                    subtitle={false}
-                    weight={null}
-                  >
-                    Tags
-                  </Heading>
-                  <a
-                    className="level-item level-right edit-link"
-                    id="activate-create"
-                    onClick={[Function]}
+                  Tags
+                </Heading>
+                <a
+                  className="level-item level-right edit-link"
+                  id="activate-create"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
                     style={
                       Object {
-                        "verticalAlign": "top",
+                        "paddingRight": "0.2rem",
                       }
                     }
-                  >
-                    <FontAwesomeIcon
-                      border={false}
-                      className=""
-                      fixedWidth={false}
-                      flip={null}
-                      icon="plus"
-                      inverse={false}
-                      listItem={false}
-                      mask={null}
-                      pull={null}
-                      pulse={false}
-                      rotation={null}
-                      size={null}
-                      spin={false}
-                      style={
-                        Object {
-                          "paddingRight": "0.2rem",
-                        }
-                      }
-                      symbol={false}
-                      title=""
-                      transform={null}
-                    />
-                     
-                    New
-                  </a>
-                </Level>
-                <div />
-              </CardContent>
-            </Card>
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   
+                  New
+                </a>
+              </Level>
+              <div />
+            </Box>
           </Container>,
           <Modal
             className=""
@@ -1359,71 +1258,67 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "breakpoint": null,
-            "children": <Card
+            "children": <Box
               className="margin-default"
               renderAs="div"
               style={Object {}}
             >
-              <CardContent
+              <Level
+                breakpoint={null}
+                className=""
                 renderAs="div"
+                style={Object {}}
               >
-                <Level
-                  breakpoint={null}
-                  className=""
-                  renderAs="div"
-                  style={Object {}}
+                <Heading
+                  className="absolutely-no-margin level-item level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
                 >
-                  <Heading
-                    className="absolutely-no-margin level-item level-left"
-                    heading={false}
-                    renderAs="h1"
-                    size={3}
-                    spaced={false}
-                    subtitle={false}
-                    weight={null}
-                  >
-                    Tags
-                  </Heading>
-                  <a
-                    className="level-item level-right edit-link"
-                    id="activate-create"
-                    onClick={[Function]}
+                  Tags
+                </Heading>
+                <a
+                  className="level-item level-right edit-link"
+                  id="activate-create"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
                     style={
                       Object {
-                        "verticalAlign": "top",
+                        "paddingRight": "0.2rem",
                       }
                     }
-                  >
-                    <FontAwesomeIcon
-                      border={false}
-                      className=""
-                      fixedWidth={false}
-                      flip={null}
-                      icon="plus"
-                      inverse={false}
-                      listItem={false}
-                      mask={null}
-                      pull={null}
-                      pulse={false}
-                      rotation={null}
-                      size={null}
-                      spin={false}
-                      style={
-                        Object {
-                          "paddingRight": "0.2rem",
-                        }
-                      }
-                      symbol={false}
-                      title=""
-                      transform={null}
-                    />
-                     
-                    New
-                  </a>
-                </Level>
-                <div />
-              </CardContent>
-            </Card>,
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   
+                  New
+                </a>
+              </Level>
+              <div />
+            </Box>,
             "className": undefined,
             "clearfix": undefined,
             "clipped": undefined,
@@ -1454,9 +1349,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "backgroundColor": undefined,
-              "children": <CardContent
-                renderAs="div"
-              >
+              "children": Array [
                 <Level
                   breakpoint={null}
                   className=""
@@ -1510,9 +1403,9 @@ ShallowWrapper {
                      
                     New
                   </a>
-                </Level>
-                <div />
-              </CardContent>,
+                </Level>,
+                <div />,
+              ],
               "className": "margin-default",
               "clearfix": undefined,
               "clipped": undefined,
@@ -1536,19 +1429,15 @@ ShallowWrapper {
               "unselectable": undefined,
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "backgroundColor": undefined,
-                "children": Array [
-                  <Level
-                    breakpoint={null}
-                    className=""
-                    renderAs="div"
-                    style={Object {}}
-                  >
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "breakpoint": null,
+                  "children": Array [
                     <Heading
                       className="absolutely-no-margin level-item level-left"
                       heading={false}
@@ -1559,7 +1448,7 @@ ShallowWrapper {
                       weight={null}
                     >
                       Tags
-                    </Heading>
+                    </Heading>,
                     <a
                       className="level-item level-right edit-link"
                       id="activate-create"
@@ -1595,62 +1484,75 @@ ShallowWrapper {
                       />
                        
                       New
-                    </a>
-                  </Level>,
-                  <div />,
-                ],
-                "className": undefined,
-                "clearfix": undefined,
-                "clipped": undefined,
-                "hidden": undefined,
-                "invisible": undefined,
-                "italic": undefined,
-                "marginless": undefined,
-                "overlay": undefined,
-                "paddingless": undefined,
-                "pull": undefined,
-                "radiusless": undefined,
-                "renderAs": "div",
-                "responsive": undefined,
-                "shadowless": undefined,
-                "textAlignment": undefined,
-                "textColor": undefined,
-                "textSize": undefined,
-                "textTransform": undefined,
-                "textWeight": undefined,
-                "unselectable": undefined,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "breakpoint": null,
-                    "children": Array [
-                      <Heading
-                        className="absolutely-no-margin level-item level-left"
-                        heading={false}
-                        renderAs="h1"
-                        size={3}
-                        spaced={false}
-                        subtitle={false}
-                        weight={null}
-                      >
-                        Tags
-                      </Heading>,
-                      <a
-                        className="level-item level-right edit-link"
-                        id="activate-create"
-                        onClick={[Function]}
-                        style={
-                          Object {
-                            "verticalAlign": "top",
-                          }
-                        }
-                      >
+                    </a>,
+                  ],
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Tags",
+                      "className": "absolutely-no-margin level-item level-left",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "heading": false,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "h1",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "size": 3,
+                      "spaced": false,
+                      "subtitle": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                      "weight": null,
+                    },
+                    "ref": null,
+                    "rendered": "Tags",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
                         <FontAwesomeIcon
                           border={false}
                           className=""
@@ -1673,164 +1575,68 @@ ShallowWrapper {
                           symbol={false}
                           title=""
                           transform={null}
-                        />
-                         
-                        New
-                      </a>,
-                    ],
-                    "className": "",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "hidden": undefined,
-                    "invisible": undefined,
-                    "italic": undefined,
-                    "marginless": undefined,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "renderAs": "div",
-                    "responsive": undefined,
-                    "shadowless": undefined,
-                    "style": Object {},
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "backgroundColor": undefined,
-                        "children": "Tags",
-                        "className": "absolutely-no-margin level-item level-left",
-                        "clearfix": undefined,
-                        "clipped": undefined,
-                        "heading": false,
-                        "hidden": undefined,
-                        "invisible": undefined,
-                        "italic": undefined,
-                        "marginless": undefined,
-                        "overlay": undefined,
-                        "paddingless": undefined,
-                        "pull": undefined,
-                        "radiusless": undefined,
-                        "renderAs": "h1",
-                        "responsive": undefined,
-                        "shadowless": undefined,
-                        "size": 3,
-                        "spaced": false,
-                        "subtitle": false,
-                        "textAlignment": undefined,
-                        "textColor": undefined,
-                        "textSize": undefined,
-                        "textTransform": undefined,
-                        "textWeight": undefined,
-                        "unselectable": undefined,
-                        "weight": null,
-                      },
-                      "ref": null,
-                      "rendered": "Tags",
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": Array [
-                          <FontAwesomeIcon
-                            border={false}
-                            className=""
-                            fixedWidth={false}
-                            flip={null}
-                            icon="plus"
-                            inverse={false}
-                            listItem={false}
-                            mask={null}
-                            pull={null}
-                            pulse={false}
-                            rotation={null}
-                            size={null}
-                            spin={false}
-                            style={
-                              Object {
-                                "paddingRight": "0.2rem",
-                              }
-                            }
-                            symbol={false}
-                            title=""
-                            transform={null}
-                          />,
-                          " ",
-                          "New",
-                        ],
-                        "className": "level-item level-right edit-link",
-                        "id": "activate-create",
-                        "onClick": [Function],
-                        "style": Object {
-                          "verticalAlign": "top",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "function",
-                          "props": Object {
-                            "border": false,
-                            "className": "",
-                            "fixedWidth": false,
-                            "flip": null,
-                            "icon": "plus",
-                            "inverse": false,
-                            "listItem": false,
-                            "mask": null,
-                            "pull": null,
-                            "pulse": false,
-                            "rotation": null,
-                            "size": null,
-                            "spin": false,
-                            "style": Object {
-                              "paddingRight": "0.2rem",
-                            },
-                            "symbol": false,
-                            "title": "",
-                            "transform": null,
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
+                        />,
                         " ",
                         "New",
                       ],
-                      "type": "a",
+                      "className": "level-item level-right edit-link",
+                      "id": "activate-create",
+                      "onClick": [Function],
+                      "style": Object {
+                        "verticalAlign": "top",
+                      },
                     },
-                  ],
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [],
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "border": false,
+                          "className": "",
+                          "fixedWidth": false,
+                          "flip": null,
+                          "icon": "plus",
+                          "inverse": false,
+                          "listItem": false,
+                          "mask": null,
+                          "pull": null,
+                          "pulse": false,
+                          "rotation": null,
+                          "size": null,
+                          "spin": false,
+                          "style": Object {
+                            "paddingRight": "0.2rem",
+                          },
+                          "symbol": false,
+                          "title": "",
+                          "transform": null,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      " ",
+                      "New",
+                    ],
+                    "type": "a",
                   },
-                  "ref": null,
-                  "rendered": Array [],
-                  "type": "div",
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [],
                 },
-              ],
-              "type": [Function],
-            },
+                "ref": null,
+                "rendered": Array [],
+                "type": "div",
+              },
+            ],
             "type": [Function],
           },
           "type": [Function],
