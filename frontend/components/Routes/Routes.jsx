@@ -2,17 +2,46 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import { connect } from 'react-redux'
-
-import Home from '../Home'
-import Login from '../Login'
-import Logout from '../Logout'
-import NotFound from '../NotFound'
-import Profile from '../Profile'
-import Register from '../Register'
-import Tags from '../Tags'
-import Composers from '../Composers'
-import Composer from '../Composer'
 import { account } from '../../actions'
+import Loadable from 'react-loadable'
+
+const Home = Loadable({
+  loader: () => import('../Home'),
+  loading: () => <div>Loading...</div>
+})
+const Login = Loadable({
+  loader: () => import('../Login'),
+  loading: () => <div>Loading...</div>
+})
+const Logout = Loadable({
+  loader: () => import('../Logout'),
+  loading: () => <div>Loading...</div>
+})
+const NotFound = Loadable({
+  loader: () => import('../NotFound'),
+  loading: () => <div>Loading...</div>
+})
+const Profile = Loadable({
+  loader: () => import('../Profile'),
+  loading: () => <div>Loading...</div>
+})
+const Register = Loadable({
+  loader: () => import('../Register'),
+  loading: () => <div>Loading...</div>
+})
+const Tags = Loadable({
+  loader: () => import('../Tags'),
+  loading: () => <div>Loading...</div>
+})
+const Composers = Loadable({
+  loader: () => import('../Composers'),
+  loading: () => <div>Loading...</div>
+})
+const Composer = Loadable({
+  loader: () => import('../Composer'),
+  loading: () => <div>Loading...</div>
+})
+
 
 export class Routes extends Component {
   constructor(props) {
