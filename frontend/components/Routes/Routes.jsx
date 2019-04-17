@@ -5,10 +5,8 @@ import { connect } from 'react-redux'
 import { account } from '../../actions'
 import Loadable from 'react-loadable'
 
-const Home = Loadable({
-  loader: () => import('../Home'),
-  loading: () => <div>Loading...</div>
-})
+import Home from '../Home'
+
 const Login = Loadable({
   loader: () => import('../Login'),
   loading: () => <div>Loading...</div>
