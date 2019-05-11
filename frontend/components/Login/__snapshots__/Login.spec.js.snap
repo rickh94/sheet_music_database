@@ -43,41 +43,40 @@ ShallowWrapper {
           renderAs="div"
           style={Object {}}
         >
-          <Card
+          <Box
             className="margin-default"
             renderAs="div"
             style={Object {}}
           >
-            <CardHeader
-              renderAs="div"
+            <Heading
+              className="absolutely-no-margin"
+              heading={false}
+              renderAs="h1"
+              size={null}
+              spaced={false}
+              subtitle={false}
+              weight={null}
             >
-              <CardHeaderTitle
-                renderAs="div"
-              >
-                Login
-              </CardHeaderTitle>
-            </CardHeader>
+              Login
+            </Heading>
+            <br />
+            <LoginForm
+              attemptLogin={[Function]}
+              cancel={[Function]}
+            />
             <CardContent
               renderAs="div"
             >
-              <LoginForm
-                attemptLogin={[Function]}
-                cancel={[Function]}
-              />
-              <CardContent
-                renderAs="div"
+              <Link
+                replace={false}
+                to="/register"
               >
-                <Link
-                  replace={false}
-                  to="/register"
-                >
-                  Don
-                  '
-                  t have an account? Register Here
-                </Link>
-              </CardContent>
+                Don
+                '
+                t have an account? Register Here
+              </Link>
             </CardContent>
-          </Card>
+          </Box>
         </Container>,
       ],
     },
@@ -99,41 +98,40 @@ ShallowWrapper {
         "props": Object {
           "backgroundColor": undefined,
           "breakpoint": null,
-          "children": <Card
+          "children": <Box
             className="margin-default"
             renderAs="div"
             style={Object {}}
           >
-            <CardHeader
-              renderAs="div"
+            <Heading
+              className="absolutely-no-margin"
+              heading={false}
+              renderAs="h1"
+              size={null}
+              spaced={false}
+              subtitle={false}
+              weight={null}
             >
-              <CardHeaderTitle
-                renderAs="div"
-              >
-                Login
-              </CardHeaderTitle>
-            </CardHeader>
+              Login
+            </Heading>
+            <br />
+            <LoginForm
+              attemptLogin={[Function]}
+              cancel={[Function]}
+            />
             <CardContent
               renderAs="div"
             >
-              <LoginForm
-                attemptLogin={[Function]}
-                cancel={[Function]}
-              />
-              <CardContent
-                renderAs="div"
+              <Link
+                replace={false}
+                to="/register"
               >
-                <Link
-                  replace={false}
-                  to="/register"
-                >
-                  Don
-                  '
-                  t have an account? Register Here
-                </Link>
-              </CardContent>
+                Don
+                '
+                t have an account? Register Here
+              </Link>
             </CardContent>
-          </Card>,
+          </Box>,
           "className": undefined,
           "clearfix": undefined,
           "clipped": undefined,
@@ -165,34 +163,33 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "children": Array [
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={null}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Login
-                </CardHeaderTitle>
-              </CardHeader>,
+                Login
+              </Heading>,
+              <br />,
+              <LoginForm
+                attemptLogin={[Function]}
+                cancel={[Function]}
+              />,
               <CardContent
                 renderAs="div"
               >
-                <LoginForm
-                  attemptLogin={[Function]}
-                  cancel={[Function]}
-                />
-                <CardContent
-                  renderAs="div"
+                <Link
+                  replace={false}
+                  to="/register"
                 >
-                  <Link
-                    replace={false}
-                    to="/register"
-                  >
-                    Don
-                    '
-                    t have an account? Register Here
-                  </Link>
-                </CardContent>
+                  Don
+                  '
+                  t have an account? Register Here
+                </Link>
               </CardContent>,
             ],
             "className": "margin-default",
@@ -225,11 +222,72 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "backgroundColor": undefined,
-                "children": <CardHeaderTitle
-                  renderAs="div"
+                "children": "Login",
+                "className": "absolutely-no-margin",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "heading": false,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "h1",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "size": null,
+                "spaced": false,
+                "subtitle": false,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+                "weight": null,
+              },
+              "ref": null,
+              "rendered": "Login",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "attemptLogin": [Function],
+                "cancel": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <Link
+                  replace={false}
+                  to="/register"
                 >
-                  Login
-                </CardHeaderTitle>,
+                  Don
+                  '
+                  t have an account? Register Here
+                </Link>,
                 "className": undefined,
                 "clearfix": undefined,
                 "clipped": undefined,
@@ -255,156 +313,24 @@ ShallowWrapper {
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
-                  "backgroundColor": undefined,
-                  "children": "Login",
-                  "className": undefined,
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "hidden": undefined,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "div",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
+                  "children": Array [
+                    "Don",
+                    "'",
+                    "t have an account? Register Here",
+                  ],
+                  "replace": false,
+                  "to": "/register",
                 },
                 "ref": null,
-                "rendered": "Login",
+                "rendered": Array [
+                  "Don",
+                  "'",
+                  "t have an account? Register Here",
+                ],
                 "type": [Function],
               },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "backgroundColor": undefined,
-                "children": Array [
-                  <LoginForm
-                    attemptLogin={[Function]}
-                    cancel={[Function]}
-                  />,
-                  <CardContent
-                    renderAs="div"
-                  >
-                    <Link
-                      replace={false}
-                      to="/register"
-                    >
-                      Don
-                      '
-                      t have an account? Register Here
-                    </Link>
-                  </CardContent>,
-                ],
-                "className": undefined,
-                "clearfix": undefined,
-                "clipped": undefined,
-                "hidden": undefined,
-                "invisible": undefined,
-                "italic": undefined,
-                "marginless": undefined,
-                "overlay": undefined,
-                "paddingless": undefined,
-                "pull": undefined,
-                "radiusless": undefined,
-                "renderAs": "div",
-                "responsive": undefined,
-                "shadowless": undefined,
-                "textAlignment": undefined,
-                "textColor": undefined,
-                "textSize": undefined,
-                "textTransform": undefined,
-                "textWeight": undefined,
-                "unselectable": undefined,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "attemptLogin": [Function],
-                    "cancel": [Function],
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "children": <Link
-                      replace={false}
-                      to="/register"
-                    >
-                      Don
-                      '
-                      t have an account? Register Here
-                    </Link>,
-                    "className": undefined,
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "hidden": undefined,
-                    "invisible": undefined,
-                    "italic": undefined,
-                    "marginless": undefined,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "renderAs": "div",
-                    "responsive": undefined,
-                    "shadowless": undefined,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": Array [
-                        "Don",
-                        "'",
-                        "t have an account? Register Here",
-                      ],
-                      "replace": false,
-                      "to": "/register",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      "Don",
-                      "'",
-                      "t have an account? Register Here",
-                    ],
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-              ],
               "type": [Function],
             },
           ],
@@ -429,41 +355,40 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Card
+            <Box
               className="margin-default"
               renderAs="div"
               style={Object {}}
             >
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={null}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Login
-                </CardHeaderTitle>
-              </CardHeader>
+                Login
+              </Heading>
+              <br />
+              <LoginForm
+                attemptLogin={[Function]}
+                cancel={[Function]}
+              />
               <CardContent
                 renderAs="div"
               >
-                <LoginForm
-                  attemptLogin={[Function]}
-                  cancel={[Function]}
-                />
-                <CardContent
-                  renderAs="div"
+                <Link
+                  replace={false}
+                  to="/register"
                 >
-                  <Link
-                    replace={false}
-                    to="/register"
-                  >
-                    Don
-                    '
-                    t have an account? Register Here
-                  </Link>
-                </CardContent>
+                  Don
+                  '
+                  t have an account? Register Here
+                </Link>
               </CardContent>
-            </Card>
+            </Box>
           </Container>,
         ],
       },
@@ -485,41 +410,40 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "breakpoint": null,
-            "children": <Card
+            "children": <Box
               className="margin-default"
               renderAs="div"
               style={Object {}}
             >
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={null}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Login
-                </CardHeaderTitle>
-              </CardHeader>
+                Login
+              </Heading>
+              <br />
+              <LoginForm
+                attemptLogin={[Function]}
+                cancel={[Function]}
+              />
               <CardContent
                 renderAs="div"
               >
-                <LoginForm
-                  attemptLogin={[Function]}
-                  cancel={[Function]}
-                />
-                <CardContent
-                  renderAs="div"
+                <Link
+                  replace={false}
+                  to="/register"
                 >
-                  <Link
-                    replace={false}
-                    to="/register"
-                  >
-                    Don
-                    '
-                    t have an account? Register Here
-                  </Link>
-                </CardContent>
+                  Don
+                  '
+                  t have an account? Register Here
+                </Link>
               </CardContent>
-            </Card>,
+            </Box>,
             "className": undefined,
             "clearfix": undefined,
             "clipped": undefined,
@@ -551,34 +475,33 @@ ShallowWrapper {
             "props": Object {
               "backgroundColor": undefined,
               "children": Array [
-                <CardHeader
-                  renderAs="div"
+                <Heading
+                  className="absolutely-no-margin"
+                  heading={false}
+                  renderAs="h1"
+                  size={null}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
                 >
-                  <CardHeaderTitle
-                    renderAs="div"
-                  >
-                    Login
-                  </CardHeaderTitle>
-                </CardHeader>,
+                  Login
+                </Heading>,
+                <br />,
+                <LoginForm
+                  attemptLogin={[Function]}
+                  cancel={[Function]}
+                />,
                 <CardContent
                   renderAs="div"
                 >
-                  <LoginForm
-                    attemptLogin={[Function]}
-                    cancel={[Function]}
-                  />
-                  <CardContent
-                    renderAs="div"
+                  <Link
+                    replace={false}
+                    to="/register"
                   >
-                    <Link
-                      replace={false}
-                      to="/register"
-                    >
-                      Don
-                      '
-                      t have an account? Register Here
-                    </Link>
-                  </CardContent>
+                    Don
+                    '
+                    t have an account? Register Here
+                  </Link>
                 </CardContent>,
               ],
               "className": "margin-default",
@@ -611,11 +534,72 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "backgroundColor": undefined,
-                  "children": <CardHeaderTitle
-                    renderAs="div"
+                  "children": "Login",
+                  "className": "absolutely-no-margin",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "heading": false,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "h1",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "size": null,
+                  "spaced": false,
+                  "subtitle": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                  "weight": null,
+                },
+                "ref": null,
+                "rendered": "Login",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "attemptLogin": [Function],
+                  "cancel": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <Link
+                    replace={false}
+                    to="/register"
                   >
-                    Login
-                  </CardHeaderTitle>,
+                    Don
+                    '
+                    t have an account? Register Here
+                  </Link>,
                   "className": undefined,
                   "clearfix": undefined,
                   "clipped": undefined,
@@ -641,156 +625,24 @@ ShallowWrapper {
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Login",
-                    "className": undefined,
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "hidden": undefined,
-                    "invisible": undefined,
-                    "italic": undefined,
-                    "marginless": undefined,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "renderAs": "div",
-                    "responsive": undefined,
-                    "shadowless": undefined,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
+                    "children": Array [
+                      "Don",
+                      "'",
+                      "t have an account? Register Here",
+                    ],
+                    "replace": false,
+                    "to": "/register",
                   },
                   "ref": null,
-                  "rendered": "Login",
+                  "rendered": Array [
+                    "Don",
+                    "'",
+                    "t have an account? Register Here",
+                  ],
                   "type": [Function],
                 },
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "backgroundColor": undefined,
-                  "children": Array [
-                    <LoginForm
-                      attemptLogin={[Function]}
-                      cancel={[Function]}
-                    />,
-                    <CardContent
-                      renderAs="div"
-                    >
-                      <Link
-                        replace={false}
-                        to="/register"
-                      >
-                        Don
-                        '
-                        t have an account? Register Here
-                      </Link>
-                    </CardContent>,
-                  ],
-                  "className": undefined,
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "hidden": undefined,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "div",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "attemptLogin": [Function],
-                      "cancel": [Function],
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "backgroundColor": undefined,
-                      "children": <Link
-                        replace={false}
-                        to="/register"
-                      >
-                        Don
-                        '
-                        t have an account? Register Here
-                      </Link>,
-                      "className": undefined,
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "hidden": undefined,
-                      "invisible": undefined,
-                      "italic": undefined,
-                      "marginless": undefined,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "renderAs": "div",
-                      "responsive": undefined,
-                      "shadowless": undefined,
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": Array [
-                          "Don",
-                          "'",
-                          "t have an account? Register Here",
-                        ],
-                        "replace": false,
-                        "to": "/register",
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        "Don",
-                        "'",
-                        "t have an account? Register Here",
-                      ],
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                ],
                 "type": [Function],
               },
             ],

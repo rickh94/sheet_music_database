@@ -98,47 +98,44 @@ export class Profile extends Component {
       <React.Fragment>
         <Header />
         <Container>
-          <Card className="margin-default">
-            <Card.Header>
-              <Card.Header.Title>Profile</Card.Header.Title>
-            </Card.Header>
-            <Card.Content>
-              <div style={{ paddingBottom: '0.8rem' }}>
-                <strong>Email</strong>
-                <br />
-                {email}
-              </div>
-              <FieldDisplay
-                label="First Name"
-                value={first_name}
-                backendFieldName="first_name"
-                errors={errors.firstName}
-                saveCallback={this.updateField}
-              />
-              <FieldDisplay
-                label="Last Name"
-                value={last_name}
-                backendFieldName="last_name"
-                errors={errors.lastName}
-                saveCallback={this.updateField}
-              />
-              <FieldDisplay
-                label="Username"
-                value={username}
-                backendFieldName="username"
-                errors={errors.email}
-                saveCallback={this.updateField}
-              />
+          <Box className="margin-default">
+            <Heading className="absolutely-no-margin">Profile</Heading>
+            <br/>
+            <div style={{ paddingBottom: '0.8rem' }}>
+              <strong>Email</strong>
               <br />
-              <Button
-                onClick={() => {
-                  this.setState({ changePasswordOpen: true })
-                }}
-              >
-                Change Password
-              </Button>
-            </Card.Content>
-          </Card>
+              {email}
+            </div>
+            <FieldDisplay
+              label="First Name"
+              value={first_name}
+              backendFieldName="first_name"
+              errors={errors.firstName}
+              saveCallback={this.updateField}
+            />
+            <FieldDisplay
+              label="Last Name"
+              value={last_name}
+              backendFieldName="last_name"
+              errors={errors.lastName}
+              saveCallback={this.updateField}
+            />
+            <FieldDisplay
+              label="Username"
+              value={username}
+              backendFieldName="username"
+              errors={errors.email}
+              saveCallback={this.updateField}
+            />
+            <br />
+            <Button
+              onClick={() => {
+                this.setState({ changePasswordOpen: true })
+              }}
+            >
+              Change Password
+            </Button>
+          </Box>
         </Container>
         <Modal
           show={this.state.changePasswordOpen}

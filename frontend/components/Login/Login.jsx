@@ -5,15 +5,12 @@ import PropTypes from 'prop-types'
 import { withAlert } from 'react-alert'
 
 import Container from 'react-bulma-components/lib/components/container'
-import {
-  Field,
-  Control,
-  Checkbox,
-} from 'react-bulma-components/lib/components/form'
+import { Field, Control, Checkbox } from 'react-bulma-components/lib/components/form'
 import Button from 'react-bulma-components/lib/components/button'
-import Card from 'react-bulma-components/lib/components/card'
+import Box from 'react-bulma-components/lib/components/box'
 import Content from 'react-bulma-components/lib/components/card/components/content'
 import Notification from 'react-bulma-components/lib/components/notification'
+import Heading from 'react-bulma-components/lib/components/heading'
 
 import Header from '../Header'
 import TextFieldWithErrors from '../TextFieldWithErrors'
@@ -56,17 +53,17 @@ export class LoginWrapper extends Component {
       <React.Fragment>
         <Header />
         <Container>
-          <Card className="margin-default">
-            <Card.Header>
-              <Card.Header.Title>Login</Card.Header.Title>
-            </Card.Header>
-            <Card.Content>
-              <LoginForm attemptLogin={this.attemptLogin} cancel={() => this.props.history.goBack()} />
-              <Content>
-                <Link to="/register">Don{"'"}t have an account? Register Here</Link>
-              </Content>
-            </Card.Content>
-          </Card>
+          <Box className="margin-default">
+            <Heading className="absolutely-no-margin">Login</Heading>
+            <br />
+            <LoginForm
+              attemptLogin={this.attemptLogin}
+              cancel={() => this.props.history.goBack()}
+            />
+            <Content>
+              <Link to="/register">Don{"'"}t have an account? Register Here</Link>
+            </Content>
+          </Box>
         </Container>
       </React.Fragment>
     )
