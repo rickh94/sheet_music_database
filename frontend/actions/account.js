@@ -37,7 +37,7 @@ export function checkToken(token) {
         payload: {token}
       })
     } catch (err) {
-      localStorage.removeItem('toke')
+      localStorage.removeItem('token')
       dispatch({
         type: 'LOGIN_FAILED',
         payload: err.response.data

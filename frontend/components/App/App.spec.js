@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import App, { Routes } from './App'
+import App from './App'
 import '../../setupTests'
 
 describe('App', () => {
@@ -10,15 +10,11 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('renders the routes', () => {
+    expect(wrapper.exists('Connect(Routes)')).toBeTruthy()
+  })
+
   it('renders two Providers (Redux and Alert)', () => {
     expect(wrapper.find('Provider').length).toEqual(2)
-  })
-
-  it('renders a router', () => {
-    expect(wrapper.find('BrowserRouter').length).toEqual(1)
-  })
-
-  it('renders the routes', () => {
-    expect(wrapper.exists('Routes')).toBeTruthy()
   })
 })

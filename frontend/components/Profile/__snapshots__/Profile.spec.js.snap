@@ -1540,83 +1540,82 @@ ShallowWrapper {
           renderAs="div"
           style={Object {}}
         >
-          <Card
+          <Box
             className="margin-default"
             renderAs="div"
             style={Object {}}
           >
-            <CardHeader
-              renderAs="div"
+            <Heading
+              className="absolutely-no-margin"
+              heading={false}
+              renderAs="h1"
+              size={null}
+              spaced={false}
+              subtitle={false}
+              weight={null}
             >
-              <CardHeaderTitle
-                renderAs="div"
-              >
-                Profile
-              </CardHeaderTitle>
-            </CardHeader>
-            <CardContent
-              renderAs="div"
-            >
-              <div
-                style={
-                  Object {
-                    "paddingBottom": "0.8rem",
-                  }
+              Profile
+            </Heading>
+            <br />
+            <div
+              style={
+                Object {
+                  "paddingBottom": "0.8rem",
                 }
-              >
-                <strong>
-                  Email
-                </strong>
-                <br />
-                
-              </div>
-              <FieldDisplay
-                backendFieldName="first_name"
-                errors={null}
-                label="First Name"
-                saveCallback={[Function]}
-                value=""
-              />
-              <FieldDisplay
-                backendFieldName="last_name"
-                errors={null}
-                label="Last Name"
-                saveCallback={[Function]}
-                value=""
-              />
-              <FieldDisplay
-                backendFieldName="username"
-                errors={null}
-                label="Username"
-                saveCallback={[Function]}
-                value=""
-              />
+              }
+            >
+              <strong>
+                Email
+              </strong>
               <br />
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Change Password
-              </Button>
-            </CardContent>
-          </Card>
+              
+            </div>
+            <FieldDisplay
+              backendFieldName="first_name"
+              errors={null}
+              label="First Name"
+              saveCallback={[Function]}
+              value=""
+            />
+            <FieldDisplay
+              backendFieldName="last_name"
+              errors={null}
+              label="Last Name"
+              saveCallback={[Function]}
+              value=""
+            />
+            <FieldDisplay
+              backendFieldName="username"
+              errors={null}
+              label="Username"
+              saveCallback={[Function]}
+              value=""
+            />
+            <br />
+            <Button
+              className=""
+              color={null}
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={Object {}}
+              submit={false}
+              text={false}
+            >
+              Change Password
+            </Button>
+          </Box>
         </Container>,
         <Modal
           className=""
@@ -1664,83 +1663,82 @@ ShallowWrapper {
         "props": Object {
           "backgroundColor": undefined,
           "breakpoint": null,
-          "children": <Card
+          "children": <Box
             className="margin-default"
             renderAs="div"
             style={Object {}}
           >
-            <CardHeader
-              renderAs="div"
+            <Heading
+              className="absolutely-no-margin"
+              heading={false}
+              renderAs="h1"
+              size={null}
+              spaced={false}
+              subtitle={false}
+              weight={null}
             >
-              <CardHeaderTitle
-                renderAs="div"
-              >
-                Profile
-              </CardHeaderTitle>
-            </CardHeader>
-            <CardContent
-              renderAs="div"
-            >
-              <div
-                style={
-                  Object {
-                    "paddingBottom": "0.8rem",
-                  }
+              Profile
+            </Heading>
+            <br />
+            <div
+              style={
+                Object {
+                  "paddingBottom": "0.8rem",
                 }
-              >
-                <strong>
-                  Email
-                </strong>
-                <br />
-                
-              </div>
-              <FieldDisplay
-                backendFieldName="first_name"
-                errors={null}
-                label="First Name"
-                saveCallback={[Function]}
-                value=""
-              />
-              <FieldDisplay
-                backendFieldName="last_name"
-                errors={null}
-                label="Last Name"
-                saveCallback={[Function]}
-                value=""
-              />
-              <FieldDisplay
-                backendFieldName="username"
-                errors={null}
-                label="Username"
-                saveCallback={[Function]}
-                value=""
-              />
+              }
+            >
+              <strong>
+                Email
+              </strong>
               <br />
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Change Password
-              </Button>
-            </CardContent>
-          </Card>,
+              
+            </div>
+            <FieldDisplay
+              backendFieldName="first_name"
+              errors={null}
+              label="First Name"
+              saveCallback={[Function]}
+              value=""
+            />
+            <FieldDisplay
+              backendFieldName="last_name"
+              errors={null}
+              label="Last Name"
+              saveCallback={[Function]}
+              value=""
+            />
+            <FieldDisplay
+              backendFieldName="username"
+              errors={null}
+              label="Username"
+              saveCallback={[Function]}
+              value=""
+            />
+            <br />
+            <Button
+              className=""
+              color={null}
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={Object {}}
+              submit={false}
+              text={false}
+            >
+              Change Password
+            </Button>
+          </Box>,
           "className": undefined,
           "clearfix": undefined,
           "clipped": undefined,
@@ -1772,77 +1770,76 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "children": Array [
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={null}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Profile
-                </CardHeaderTitle>
-              </CardHeader>,
-              <CardContent
-                renderAs="div"
-              >
-                <div
-                  style={
-                    Object {
-                      "paddingBottom": "0.8rem",
-                    }
+                Profile
+              </Heading>,
+              <br />,
+              <div
+                style={
+                  Object {
+                    "paddingBottom": "0.8rem",
                   }
-                >
-                  <strong>
-                    Email
-                  </strong>
-                  <br />
-                  
-                </div>
-                <FieldDisplay
-                  backendFieldName="first_name"
-                  errors={null}
-                  label="First Name"
-                  saveCallback={[Function]}
-                  value=""
-                />
-                <FieldDisplay
-                  backendFieldName="last_name"
-                  errors={null}
-                  label="Last Name"
-                  saveCallback={[Function]}
-                  value=""
-                />
-                <FieldDisplay
-                  backendFieldName="username"
-                  errors={null}
-                  label="Username"
-                  saveCallback={[Function]}
-                  value=""
-                />
+                }
+              >
+                <strong>
+                  Email
+                </strong>
                 <br />
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Change Password
-                </Button>
-              </CardContent>,
+                
+              </div>,
+              <FieldDisplay
+                backendFieldName="first_name"
+                errors={null}
+                label="First Name"
+                saveCallback={[Function]}
+                value=""
+              />,
+              <FieldDisplay
+                backendFieldName="last_name"
+                errors={null}
+                label="Last Name"
+                saveCallback={[Function]}
+                value=""
+              />,
+              <FieldDisplay
+                backendFieldName="username"
+                errors={null}
+                label="Username"
+                saveCallback={[Function]}
+                value=""
+              />,
+              <br />,
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Change Password
+              </Button>,
             ],
             "className": "margin-default",
             "clearfix": undefined,
@@ -1874,14 +1871,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "backgroundColor": undefined,
-                "children": <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Profile
-                </CardHeaderTitle>,
-                "className": undefined,
+                "children": "Profile",
+                "className": "absolutely-no-margin",
                 "clearfix": undefined,
                 "clipped": undefined,
+                "heading": false,
                 "hidden": undefined,
                 "invisible": undefined,
                 "italic": undefined,
@@ -1890,137 +1884,48 @@ ShallowWrapper {
                 "paddingless": undefined,
                 "pull": undefined,
                 "radiusless": undefined,
-                "renderAs": "div",
+                "renderAs": "h1",
                 "responsive": undefined,
                 "shadowless": undefined,
+                "size": null,
+                "spaced": false,
+                "subtitle": false,
                 "textAlignment": undefined,
                 "textColor": undefined,
                 "textSize": undefined,
                 "textTransform": undefined,
                 "textWeight": undefined,
                 "unselectable": undefined,
+                "weight": null,
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "backgroundColor": undefined,
-                  "children": "Profile",
-                  "className": undefined,
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "hidden": undefined,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "div",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
-                },
-                "ref": null,
-                "rendered": "Profile",
-                "type": [Function],
-              },
+              "rendered": "Profile",
               "type": [Function],
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
               "props": Object {
-                "backgroundColor": undefined,
                 "children": Array [
-                  <div
-                    style={
-                      Object {
-                        "paddingBottom": "0.8rem",
-                      }
-                    }
-                  >
-                    <strong>
-                      Email
-                    </strong>
-                    <br />
-                    
-                  </div>,
-                  <FieldDisplay
-                    backendFieldName="first_name"
-                    errors={null}
-                    label="First Name"
-                    saveCallback={[Function]}
-                    value=""
-                  />,
-                  <FieldDisplay
-                    backendFieldName="last_name"
-                    errors={null}
-                    label="Last Name"
-                    saveCallback={[Function]}
-                    value=""
-                  />,
-                  <FieldDisplay
-                    backendFieldName="username"
-                    errors={null}
-                    label="Username"
-                    saveCallback={[Function]}
-                    value=""
-                  />,
+                  <strong>
+                    Email
+                  </strong>,
                   <br />,
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Change Password
-                  </Button>,
+                  "",
                 ],
-                "className": undefined,
-                "clearfix": undefined,
-                "clipped": undefined,
-                "hidden": undefined,
-                "invisible": undefined,
-                "italic": undefined,
-                "marginless": undefined,
-                "overlay": undefined,
-                "paddingless": undefined,
-                "pull": undefined,
-                "radiusless": undefined,
-                "renderAs": "div",
-                "responsive": undefined,
-                "shadowless": undefined,
-                "textAlignment": undefined,
-                "textColor": undefined,
-                "textSize": undefined,
-                "textTransform": undefined,
-                "textWeight": undefined,
-                "unselectable": undefined,
+                "style": Object {
+                  "paddingBottom": "0.8rem",
+                },
               },
               "ref": null,
               "rendered": Array [
@@ -2029,87 +1934,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
-                      <strong>
-                        Email
-                      </strong>,
-                      <br />,
-                      "",
-                    ],
-                    "style": Object {
-                      "paddingBottom": "0.8rem",
-                    },
+                    "children": "Email",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Email",
-                      },
-                      "ref": null,
-                      "rendered": "Email",
-                      "type": "strong",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {},
-                      "ref": null,
-                      "rendered": null,
-                      "type": "br",
-                    },
-                    "",
-                  ],
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "backendFieldName": "first_name",
-                    "errors": null,
-                    "label": "First Name",
-                    "saveCallback": [Function],
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "backendFieldName": "last_name",
-                    "errors": null,
-                    "label": "Last Name",
-                    "saveCallback": [Function],
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "backendFieldName": "username",
-                    "errors": null,
-                    "label": "Username",
-                    "saveCallback": [Function],
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "rendered": "Email",
+                  "type": "strong",
                 },
                 Object {
                   "instance": null,
@@ -2120,56 +1949,111 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "br",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Change Password",
-                    "className": "",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "color": null,
-                    "disabled": false,
-                    "fullwidth": false,
-                    "hidden": undefined,
-                    "inverted": false,
-                    "invisible": undefined,
-                    "isSelected": false,
-                    "isStatic": false,
-                    "italic": undefined,
-                    "loading": false,
-                    "marginless": undefined,
-                    "onClick": [Function],
-                    "outlined": false,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "remove": false,
-                    "renderAs": "button",
-                    "reset": false,
-                    "responsive": undefined,
-                    "rounded": false,
-                    "shadowless": undefined,
-                    "size": null,
-                    "state": null,
-                    "style": Object {},
-                    "submit": false,
-                    "text": false,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Change Password",
-                  "type": [Function],
-                },
+                "",
               ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backendFieldName": "first_name",
+                "errors": null,
+                "label": "First Name",
+                "saveCallback": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backendFieldName": "last_name",
+                "errors": null,
+                "label": "Last Name",
+                "saveCallback": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backendFieldName": "username",
+                "errors": null,
+                "label": "Username",
+                "saveCallback": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Change Password",
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "color": null,
+                "disabled": false,
+                "fullwidth": false,
+                "hidden": undefined,
+                "inverted": false,
+                "invisible": undefined,
+                "isSelected": false,
+                "isStatic": false,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "onClick": [Function],
+                "outlined": false,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "remove": false,
+                "renderAs": "button",
+                "reset": false,
+                "responsive": undefined,
+                "rounded": false,
+                "shadowless": undefined,
+                "size": null,
+                "state": null,
+                "style": Object {},
+                "submit": false,
+                "text": false,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": "Change Password",
               "type": [Function],
             },
           ],
@@ -2283,83 +2167,82 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Card
+            <Box
               className="margin-default"
               renderAs="div"
               style={Object {}}
             >
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={null}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Profile
-                </CardHeaderTitle>
-              </CardHeader>
-              <CardContent
-                renderAs="div"
-              >
-                <div
-                  style={
-                    Object {
-                      "paddingBottom": "0.8rem",
-                    }
+                Profile
+              </Heading>
+              <br />
+              <div
+                style={
+                  Object {
+                    "paddingBottom": "0.8rem",
                   }
-                >
-                  <strong>
-                    Email
-                  </strong>
-                  <br />
-                  
-                </div>
-                <FieldDisplay
-                  backendFieldName="first_name"
-                  errors={null}
-                  label="First Name"
-                  saveCallback={[Function]}
-                  value=""
-                />
-                <FieldDisplay
-                  backendFieldName="last_name"
-                  errors={null}
-                  label="Last Name"
-                  saveCallback={[Function]}
-                  value=""
-                />
-                <FieldDisplay
-                  backendFieldName="username"
-                  errors={null}
-                  label="Username"
-                  saveCallback={[Function]}
-                  value=""
-                />
+                }
+              >
+                <strong>
+                  Email
+                </strong>
                 <br />
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Change Password
-                </Button>
-              </CardContent>
-            </Card>
+                
+              </div>
+              <FieldDisplay
+                backendFieldName="first_name"
+                errors={null}
+                label="First Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="last_name"
+                errors={null}
+                label="Last Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="username"
+                errors={null}
+                label="Username"
+                saveCallback={[Function]}
+                value=""
+              />
+              <br />
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Change Password
+              </Button>
+            </Box>
           </Container>,
           <Modal
             className=""
@@ -2407,83 +2290,82 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "breakpoint": null,
-            "children": <Card
+            "children": <Box
               className="margin-default"
               renderAs="div"
               style={Object {}}
             >
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={null}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Profile
-                </CardHeaderTitle>
-              </CardHeader>
-              <CardContent
-                renderAs="div"
-              >
-                <div
-                  style={
-                    Object {
-                      "paddingBottom": "0.8rem",
-                    }
+                Profile
+              </Heading>
+              <br />
+              <div
+                style={
+                  Object {
+                    "paddingBottom": "0.8rem",
                   }
-                >
-                  <strong>
-                    Email
-                  </strong>
-                  <br />
-                  
-                </div>
-                <FieldDisplay
-                  backendFieldName="first_name"
-                  errors={null}
-                  label="First Name"
-                  saveCallback={[Function]}
-                  value=""
-                />
-                <FieldDisplay
-                  backendFieldName="last_name"
-                  errors={null}
-                  label="Last Name"
-                  saveCallback={[Function]}
-                  value=""
-                />
-                <FieldDisplay
-                  backendFieldName="username"
-                  errors={null}
-                  label="Username"
-                  saveCallback={[Function]}
-                  value=""
-                />
+                }
+              >
+                <strong>
+                  Email
+                </strong>
                 <br />
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Change Password
-                </Button>
-              </CardContent>
-            </Card>,
+                
+              </div>
+              <FieldDisplay
+                backendFieldName="first_name"
+                errors={null}
+                label="First Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="last_name"
+                errors={null}
+                label="Last Name"
+                saveCallback={[Function]}
+                value=""
+              />
+              <FieldDisplay
+                backendFieldName="username"
+                errors={null}
+                label="Username"
+                saveCallback={[Function]}
+                value=""
+              />
+              <br />
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Change Password
+              </Button>
+            </Box>,
             "className": undefined,
             "clearfix": undefined,
             "clipped": undefined,
@@ -2515,77 +2397,76 @@ ShallowWrapper {
             "props": Object {
               "backgroundColor": undefined,
               "children": Array [
-                <CardHeader
-                  renderAs="div"
+                <Heading
+                  className="absolutely-no-margin"
+                  heading={false}
+                  renderAs="h1"
+                  size={null}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
                 >
-                  <CardHeaderTitle
-                    renderAs="div"
-                  >
-                    Profile
-                  </CardHeaderTitle>
-                </CardHeader>,
-                <CardContent
-                  renderAs="div"
-                >
-                  <div
-                    style={
-                      Object {
-                        "paddingBottom": "0.8rem",
-                      }
+                  Profile
+                </Heading>,
+                <br />,
+                <div
+                  style={
+                    Object {
+                      "paddingBottom": "0.8rem",
                     }
-                  >
-                    <strong>
-                      Email
-                    </strong>
-                    <br />
-                    
-                  </div>
-                  <FieldDisplay
-                    backendFieldName="first_name"
-                    errors={null}
-                    label="First Name"
-                    saveCallback={[Function]}
-                    value=""
-                  />
-                  <FieldDisplay
-                    backendFieldName="last_name"
-                    errors={null}
-                    label="Last Name"
-                    saveCallback={[Function]}
-                    value=""
-                  />
-                  <FieldDisplay
-                    backendFieldName="username"
-                    errors={null}
-                    label="Username"
-                    saveCallback={[Function]}
-                    value=""
-                  />
+                  }
+                >
+                  <strong>
+                    Email
+                  </strong>
                   <br />
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Change Password
-                  </Button>
-                </CardContent>,
+                  
+                </div>,
+                <FieldDisplay
+                  backendFieldName="first_name"
+                  errors={null}
+                  label="First Name"
+                  saveCallback={[Function]}
+                  value=""
+                />,
+                <FieldDisplay
+                  backendFieldName="last_name"
+                  errors={null}
+                  label="Last Name"
+                  saveCallback={[Function]}
+                  value=""
+                />,
+                <FieldDisplay
+                  backendFieldName="username"
+                  errors={null}
+                  label="Username"
+                  saveCallback={[Function]}
+                  value=""
+                />,
+                <br />,
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Change Password
+                </Button>,
               ],
               "className": "margin-default",
               "clearfix": undefined,
@@ -2617,14 +2498,11 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "backgroundColor": undefined,
-                  "children": <CardHeaderTitle
-                    renderAs="div"
-                  >
-                    Profile
-                  </CardHeaderTitle>,
-                  "className": undefined,
+                  "children": "Profile",
+                  "className": "absolutely-no-margin",
                   "clearfix": undefined,
                   "clipped": undefined,
+                  "heading": false,
                   "hidden": undefined,
                   "invisible": undefined,
                   "italic": undefined,
@@ -2633,137 +2511,48 @@ ShallowWrapper {
                   "paddingless": undefined,
                   "pull": undefined,
                   "radiusless": undefined,
-                  "renderAs": "div",
+                  "renderAs": "h1",
                   "responsive": undefined,
                   "shadowless": undefined,
+                  "size": null,
+                  "spaced": false,
+                  "subtitle": false,
                   "textAlignment": undefined,
                   "textColor": undefined,
                   "textSize": undefined,
                   "textTransform": undefined,
                   "textWeight": undefined,
                   "unselectable": undefined,
+                  "weight": null,
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Profile",
-                    "className": undefined,
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "hidden": undefined,
-                    "invisible": undefined,
-                    "italic": undefined,
-                    "marginless": undefined,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "renderAs": "div",
-                    "responsive": undefined,
-                    "shadowless": undefined,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Profile",
-                  "type": [Function],
-                },
+                "rendered": "Profile",
                 "type": [Function],
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
                 "props": Object {
-                  "backgroundColor": undefined,
                   "children": Array [
-                    <div
-                      style={
-                        Object {
-                          "paddingBottom": "0.8rem",
-                        }
-                      }
-                    >
-                      <strong>
-                        Email
-                      </strong>
-                      <br />
-                      
-                    </div>,
-                    <FieldDisplay
-                      backendFieldName="first_name"
-                      errors={null}
-                      label="First Name"
-                      saveCallback={[Function]}
-                      value=""
-                    />,
-                    <FieldDisplay
-                      backendFieldName="last_name"
-                      errors={null}
-                      label="Last Name"
-                      saveCallback={[Function]}
-                      value=""
-                    />,
-                    <FieldDisplay
-                      backendFieldName="username"
-                      errors={null}
-                      label="Username"
-                      saveCallback={[Function]}
-                      value=""
-                    />,
+                    <strong>
+                      Email
+                    </strong>,
                     <br />,
-                    <Button
-                      className=""
-                      color={null}
-                      disabled={false}
-                      fullwidth={false}
-                      inverted={false}
-                      isSelected={false}
-                      isStatic={false}
-                      loading={false}
-                      onClick={[Function]}
-                      outlined={false}
-                      remove={false}
-                      renderAs="button"
-                      reset={false}
-                      rounded={false}
-                      size={null}
-                      state={null}
-                      style={Object {}}
-                      submit={false}
-                      text={false}
-                    >
-                      Change Password
-                    </Button>,
+                    "",
                   ],
-                  "className": undefined,
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "hidden": undefined,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "div",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
+                  "style": Object {
+                    "paddingBottom": "0.8rem",
+                  },
                 },
                 "ref": null,
                 "rendered": Array [
@@ -2772,87 +2561,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": Array [
-                        <strong>
-                          Email
-                        </strong>,
-                        <br />,
-                        "",
-                      ],
-                      "style": Object {
-                        "paddingBottom": "0.8rem",
-                      },
+                      "children": "Email",
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Email",
-                        },
-                        "ref": null,
-                        "rendered": "Email",
-                        "type": "strong",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {},
-                        "ref": null,
-                        "rendered": null,
-                        "type": "br",
-                      },
-                      "",
-                    ],
-                    "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "backendFieldName": "first_name",
-                      "errors": null,
-                      "label": "First Name",
-                      "saveCallback": [Function],
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "backendFieldName": "last_name",
-                      "errors": null,
-                      "label": "Last Name",
-                      "saveCallback": [Function],
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "backendFieldName": "username",
-                      "errors": null,
-                      "label": "Username",
-                      "saveCallback": [Function],
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                    "rendered": "Email",
+                    "type": "strong",
                   },
                   Object {
                     "instance": null,
@@ -2863,56 +2576,111 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "br",
                   },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "backgroundColor": undefined,
-                      "children": "Change Password",
-                      "className": "",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "color": null,
-                      "disabled": false,
-                      "fullwidth": false,
-                      "hidden": undefined,
-                      "inverted": false,
-                      "invisible": undefined,
-                      "isSelected": false,
-                      "isStatic": false,
-                      "italic": undefined,
-                      "loading": false,
-                      "marginless": undefined,
-                      "onClick": [Function],
-                      "outlined": false,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "remove": false,
-                      "renderAs": "button",
-                      "reset": false,
-                      "responsive": undefined,
-                      "rounded": false,
-                      "shadowless": undefined,
-                      "size": null,
-                      "state": null,
-                      "style": Object {},
-                      "submit": false,
-                      "text": false,
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
-                    },
-                    "ref": null,
-                    "rendered": "Change Password",
-                    "type": [Function],
-                  },
+                  "",
                 ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "first_name",
+                  "errors": null,
+                  "label": "First Name",
+                  "saveCallback": [Function],
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "last_name",
+                  "errors": null,
+                  "label": "Last Name",
+                  "saveCallback": [Function],
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "username",
+                  "errors": null,
+                  "label": "Username",
+                  "saveCallback": [Function],
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Change Password",
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": null,
+                  "disabled": false,
+                  "fullwidth": false,
+                  "hidden": undefined,
+                  "inverted": false,
+                  "invisible": undefined,
+                  "isSelected": false,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "loading": false,
+                  "marginless": undefined,
+                  "onClick": [Function],
+                  "outlined": false,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "remove": false,
+                  "renderAs": "button",
+                  "reset": false,
+                  "responsive": undefined,
+                  "rounded": false,
+                  "shadowless": undefined,
+                  "size": null,
+                  "state": null,
+                  "style": Object {},
+                  "submit": false,
+                  "text": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": "Change Password",
                 "type": [Function],
               },
             ],

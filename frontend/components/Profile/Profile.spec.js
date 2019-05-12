@@ -29,10 +29,6 @@ describe('Profile', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('renders a card', () => {
-    expect(wrapper.exists('Card')).toBeTruthy()
-  })
-
   it('renders a container', () => {
     expect(wrapper.exists('Container')).toBeTruthy()
   })

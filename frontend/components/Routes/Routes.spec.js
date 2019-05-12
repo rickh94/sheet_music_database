@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Routes from './Routes'
+import { Routes } from './Routes'
 
 import { testToken } from '../../testHelpers'
 
