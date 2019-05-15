@@ -67,6 +67,7 @@ export class Composer extends Component {
                   errors={this.state.errors.name}
                 />
               </Heading>
+
             </Level>
             <FieldDisplay
               value={era || ''}

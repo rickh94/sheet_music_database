@@ -1,4 +1,12 @@
-import { isLoading, returnPayload, failed, appendNew, removeID, updateItem } from './helpers'
+import {
+  isLoading,
+  returnPayload,
+  failed,
+  appendNew,
+  removeID,
+  updateItem
+} from './helpers'
+
 const initialState = {
   list: [],
   isLoading: false,

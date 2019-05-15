@@ -6,6 +6,7 @@ import { account } from '../../actions'
 import Loadable from 'react-loadable'
 
 import Home from '../Home'
+import Header from '../Header';
 
 const Login = Loadable({
   loader: () => import('../Login'),
@@ -39,7 +40,10 @@ const Composer = Loadable({
   loader: () => import('../Composer'),
   loading: () => <div>Loading...</div>
 })
-
+const Instruments = Loadable({
+  loader: () => import('../Instruments'),
+  loading: () => <div>Loading...</div>
+})
 
 export class Routes extends Component {
   constructor(props) {
@@ -61,6 +65,7 @@ export class Routes extends Component {
     this.setState({ isAuthenticating: false })
   }
 
+
   render() {
     return (
       !this.state.isAuthenticating && (
@@ -74,6 +79,7 @@ export class Routes extends Component {
             <Route exact path="/tags" component={Tags} />
             <Route exact path="/composers" component={Composers} />
             <Route exact path="/composer/:id" component={Composer} />
+            <Route exact path="/instruments" component={Instruments} />
             <Route default component={NotFound} />
           </Switch>
         </Router>

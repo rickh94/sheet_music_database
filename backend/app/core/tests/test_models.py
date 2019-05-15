@@ -83,7 +83,7 @@ class TestSheet:
 
     def test_file_added_correctly(self, sheet1):
         """Test that the file is added correctly"""
-        with open(str(sheet1.file), "r") as sheet_file:
+        with open(str(sheet1.sheet_file), "r") as sheet_file:
             assert "testdata" in sheet_file.read()
 
     def test_sheet_path(self, monkeypatch):

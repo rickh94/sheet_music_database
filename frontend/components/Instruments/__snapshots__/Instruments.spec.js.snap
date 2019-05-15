@@ -6,12 +6,45 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Instruments
     alert={
       Object {
-        "list": Array [],
+        "show": [MockFunction] {
+          "calls": Array [
+            Array [
+              <span
+                className="alert-text"
+              >
+                Could not get Instruments
+              </span>,
+              Object {
+                "type": "error",
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
       }
     }
     createInstrument={[MockFunction]}
     deleteInstrument={[MockFunction]}
-    getInstruments={[MockFunction]}
+    getInstruments={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "testtoken",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     history={
       Object {
         "push": [MockFunction],
@@ -69,9 +102,131 @@ ShallowWrapper {
               >
                 Instruments
               </Heading>
+              <a
+                className="level-item level-right edit-link"
+                id="activate-create"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "verticalAlign": "top",
+                  }
+                }
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="plus"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  style={
+                    Object {
+                      "paddingRight": "0.2rem",
+                    }
+                  }
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
+                 
+                Create
+              </a>
             </Level>
           </Box>
         </Container>,
+        <Modal
+          className=""
+          closeOnBlur={true}
+          closeOnEsc={true}
+          document={null}
+          onClose={[Function]}
+          show={false}
+          showClose={true}
+        >
+          <ModalContent
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Heading
+                className=""
+                heading={false}
+                renderAs="h1"
+                size={4}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                New Instrument
+              </Heading>
+              <TextFieldWithErrors
+                className="form-padding"
+                onChange={[Function]}
+                placeholder="Name"
+                type="text"
+                value=""
+              />
+              <Button
+                className=""
+                color="primary"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Save
+              </Button>
+              <Button
+                className=""
+                color="danger"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+            </Box>
+          </ModalContent>
+        </Modal>,
       ],
     },
     "ref": null,
@@ -114,6 +269,42 @@ ShallowWrapper {
               >
                 Instruments
               </Heading>
+              <a
+                className="level-item level-right edit-link"
+                id="activate-create"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "verticalAlign": "top",
+                  }
+                }
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="plus"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  style={
+                    Object {
+                      "paddingRight": "0.2rem",
+                    }
+                  }
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
+                 
+                Create
+              </a>
             </Level>
           </Box>,
           "className": undefined,
@@ -164,6 +355,42 @@ ShallowWrapper {
                 >
                   Instruments
                 </Heading>
+                <a
+                  className="level-item level-right edit-link"
+                  id="activate-create"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    style={
+                      Object {
+                        "paddingRight": "0.2rem",
+                      }
+                    }
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   
+                  Create
+                </a>
               </Level>,
               Array [],
             ],
@@ -198,17 +425,55 @@ ShallowWrapper {
               "props": Object {
                 "backgroundColor": undefined,
                 "breakpoint": null,
-                "children": <Heading
-                  className="absolutely-no-margin level-item level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                >
-                  Instruments
-                </Heading>,
+                "children": Array [
+                  <Heading
+                    className="absolutely-no-margin level-item level-left"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Instruments
+                  </Heading>,
+                  <a
+                    className="level-item level-right edit-link"
+                    id="activate-create"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      style={
+                        Object {
+                          "paddingRight": "0.2rem",
+                        }
+                      }
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    Create
+                  </a>,
+                ],
                 "className": "",
                 "clearfix": undefined,
                 "clipped": undefined,
@@ -232,14 +497,420 @@ ShallowWrapper {
                 "unselectable": undefined,
               },
               "ref": null,
-              "rendered": Object {
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Instruments",
+                    "className": "absolutely-no-margin level-item level-left",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "heading": false,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "h1",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": 3,
+                    "spaced": false,
+                    "subtitle": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "weight": null,
+                  },
+                  "ref": null,
+                  "rendered": "Instruments",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "paddingRight": "0.2rem",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />,
+                      " ",
+                      "Create",
+                    ],
+                    "className": "level-item level-right edit-link",
+                    "id": "activate-create",
+                    "onClick": [Function],
+                    "style": Object {
+                      "verticalAlign": "top",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "border": false,
+                        "className": "",
+                        "fixedWidth": false,
+                        "flip": null,
+                        "icon": "plus",
+                        "inverse": false,
+                        "listItem": false,
+                        "mask": null,
+                        "pull": null,
+                        "pulse": false,
+                        "rotation": null,
+                        "size": null,
+                        "spin": false,
+                        "style": Object {
+                          "paddingRight": "0.2rem",
+                        },
+                        "symbol": false,
+                        "title": "",
+                        "transform": null,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    " ",
+                    "Create",
+                  ],
+                  "type": "a",
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <ModalContent
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Heading
+                className=""
+                heading={false}
+                renderAs="h1"
+                size={4}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                New Instrument
+              </Heading>
+              <TextFieldWithErrors
+                className="form-padding"
+                onChange={[Function]}
+                placeholder="Name"
+                type="text"
+                value=""
+              />
+              <Button
+                className=""
+                color="primary"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Save
+              </Button>
+              <Button
+                className=""
+                color="danger"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+            </Box>
+          </ModalContent>,
+          "className": "",
+          "closeOnBlur": true,
+          "closeOnEsc": true,
+          "document": null,
+          "onClose": [Function],
+          "show": false,
+          "showClose": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "backgroundColor": undefined,
+            "children": <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Heading
+                className=""
+                heading={false}
+                renderAs="h1"
+                size={4}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              >
+                New Instrument
+              </Heading>
+              <TextFieldWithErrors
+                className="form-padding"
+                onChange={[Function]}
+                placeholder="Name"
+                type="text"
+                value=""
+              />
+              <Button
+                className=""
+                color="primary"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Save
+              </Button>
+              <Button
+                className=""
+                color="danger"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+            </Box>,
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": Array [
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={4}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  New Instrument
+                </Heading>,
+                <TextFieldWithErrors
+                  className="form-padding"
+                  onChange={[Function]}
+                  placeholder="Name"
+                  type="text"
+                  value=""
+                />,
+                <Button
+                  className=""
+                  color="primary"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Save
+                </Button>,
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>,
+              ],
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
                   "backgroundColor": undefined,
-                  "children": "Instruments",
-                  "className": "absolutely-no-margin level-item level-left",
+                  "children": "New Instrument",
+                  "className": "",
                   "clearfix": undefined,
                   "clipped": undefined,
                   "heading": false,
@@ -254,7 +925,7 @@ ShallowWrapper {
                   "renderAs": "h1",
                   "responsive": undefined,
                   "shadowless": undefined,
-                  "size": 3,
+                  "size": 4,
                   "spaced": false,
                   "subtitle": false,
                   "textAlignment": undefined,
@@ -266,12 +937,125 @@ ShallowWrapper {
                   "weight": null,
                 },
                 "ref": null,
-                "rendered": "Instruments",
+                "rendered": "New Instrument",
                 "type": [Function],
               },
-              "type": [Function],
-            },
-          ],
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "form-padding",
+                  "onChange": [Function],
+                  "placeholder": "Name",
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Save",
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": "primary",
+                  "disabled": false,
+                  "fullwidth": false,
+                  "hidden": undefined,
+                  "inverted": false,
+                  "invisible": undefined,
+                  "isSelected": false,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "loading": false,
+                  "marginless": undefined,
+                  "onClick": [Function],
+                  "outlined": false,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "remove": false,
+                  "renderAs": "button",
+                  "reset": false,
+                  "responsive": undefined,
+                  "rounded": false,
+                  "shadowless": undefined,
+                  "size": null,
+                  "state": null,
+                  "style": Object {},
+                  "submit": false,
+                  "text": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": "Save",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Cancel",
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": "danger",
+                  "disabled": false,
+                  "fullwidth": false,
+                  "hidden": undefined,
+                  "inverted": false,
+                  "invisible": undefined,
+                  "isSelected": false,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "loading": false,
+                  "marginless": undefined,
+                  "onClick": [Function],
+                  "outlined": false,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "remove": false,
+                  "renderAs": "button",
+                  "reset": false,
+                  "responsive": undefined,
+                  "rounded": false,
+                  "shadowless": undefined,
+                  "size": null,
+                  "state": null,
+                  "style": Object {},
+                  "submit": false,
+                  "text": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": "Cancel",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
           "type": [Function],
         },
         "type": [Function],
@@ -315,9 +1099,131 @@ ShallowWrapper {
                 >
                   Instruments
                 </Heading>
+                <a
+                  className="level-item level-right edit-link"
+                  id="activate-create"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    style={
+                      Object {
+                        "paddingRight": "0.2rem",
+                      }
+                    }
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   
+                  Create
+                </a>
               </Level>
             </Box>
           </Container>,
+          <Modal
+            className=""
+            closeOnBlur={true}
+            closeOnEsc={true}
+            document={null}
+            onClose={[Function]}
+            show={false}
+            showClose={true}
+          >
+            <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={4}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  New Instrument
+                </Heading>
+                <TextFieldWithErrors
+                  className="form-padding"
+                  onChange={[Function]}
+                  placeholder="Name"
+                  type="text"
+                  value=""
+                />
+                <Button
+                  className=""
+                  color="primary"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Save
+                </Button>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </Box>
+            </ModalContent>
+          </Modal>,
         ],
       },
       "ref": null,
@@ -360,6 +1266,42 @@ ShallowWrapper {
                 >
                   Instruments
                 </Heading>
+                <a
+                  className="level-item level-right edit-link"
+                  id="activate-create"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    style={
+                      Object {
+                        "paddingRight": "0.2rem",
+                      }
+                    }
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   
+                  Create
+                </a>
               </Level>
             </Box>,
             "className": undefined,
@@ -410,6 +1352,42 @@ ShallowWrapper {
                   >
                     Instruments
                   </Heading>
+                  <a
+                    className="level-item level-right edit-link"
+                    id="activate-create"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      style={
+                        Object {
+                          "paddingRight": "0.2rem",
+                        }
+                      }
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    Create
+                  </a>
                 </Level>,
                 Array [],
               ],
@@ -444,17 +1422,55 @@ ShallowWrapper {
                 "props": Object {
                   "backgroundColor": undefined,
                   "breakpoint": null,
-                  "children": <Heading
-                    className="absolutely-no-margin level-item level-left"
-                    heading={false}
-                    renderAs="h1"
-                    size={3}
-                    spaced={false}
-                    subtitle={false}
-                    weight={null}
-                  >
-                    Instruments
-                  </Heading>,
+                  "children": Array [
+                    <Heading
+                      className="absolutely-no-margin level-item level-left"
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Instruments
+                    </Heading>,
+                    <a
+                      className="level-item level-right edit-link"
+                      id="activate-create"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "verticalAlign": "top",
+                        }
+                      }
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "paddingRight": "0.2rem",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      Create
+                    </a>,
+                  ],
                   "className": "",
                   "clearfix": undefined,
                   "clipped": undefined,
@@ -478,14 +1494,420 @@ ShallowWrapper {
                   "unselectable": undefined,
                 },
                 "ref": null,
-                "rendered": Object {
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Instruments",
+                      "className": "absolutely-no-margin level-item level-left",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "heading": false,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "h1",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "size": 3,
+                      "spaced": false,
+                      "subtitle": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                      "weight": null,
+                    },
+                    "ref": null,
+                    "rendered": "Instruments",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "paddingRight": "0.2rem",
+                            }
+                          }
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />,
+                        " ",
+                        "Create",
+                      ],
+                      "className": "level-item level-right edit-link",
+                      "id": "activate-create",
+                      "onClick": [Function],
+                      "style": Object {
+                        "verticalAlign": "top",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "border": false,
+                          "className": "",
+                          "fixedWidth": false,
+                          "flip": null,
+                          "icon": "plus",
+                          "inverse": false,
+                          "listItem": false,
+                          "mask": null,
+                          "pull": null,
+                          "pulse": false,
+                          "rotation": null,
+                          "size": null,
+                          "spin": false,
+                          "style": Object {
+                            "paddingRight": "0.2rem",
+                          },
+                          "symbol": false,
+                          "title": "",
+                          "transform": null,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      " ",
+                      "Create",
+                    ],
+                    "type": "a",
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={4}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  New Instrument
+                </Heading>
+                <TextFieldWithErrors
+                  className="form-padding"
+                  onChange={[Function]}
+                  placeholder="Name"
+                  type="text"
+                  value=""
+                />
+                <Button
+                  className=""
+                  color="primary"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Save
+                </Button>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </Box>
+            </ModalContent>,
+            "className": "",
+            "closeOnBlur": true,
+            "closeOnEsc": true,
+            "document": null,
+            "onClose": [Function],
+            "show": false,
+            "showClose": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={4}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  New Instrument
+                </Heading>
+                <TextFieldWithErrors
+                  className="form-padding"
+                  onChange={[Function]}
+                  placeholder="Name"
+                  type="text"
+                  value=""
+                />
+                <Button
+                  className=""
+                  color="primary"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Save
+                </Button>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </Box>,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": Array [
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={4}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    New Instrument
+                  </Heading>,
+                  <TextFieldWithErrors
+                    className="form-padding"
+                    onChange={[Function]}
+                    placeholder="Name"
+                    type="text"
+                    value=""
+                  />,
+                  <Button
+                    className=""
+                    color="primary"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Save
+                  </Button>,
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>,
+                ],
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
                     "backgroundColor": undefined,
-                    "children": "Instruments",
-                    "className": "absolutely-no-margin level-item level-left",
+                    "children": "New Instrument",
+                    "className": "",
                     "clearfix": undefined,
                     "clipped": undefined,
                     "heading": false,
@@ -500,7 +1922,7 @@ ShallowWrapper {
                     "renderAs": "h1",
                     "responsive": undefined,
                     "shadowless": undefined,
-                    "size": 3,
+                    "size": 4,
                     "spaced": false,
                     "subtitle": false,
                     "textAlignment": undefined,
@@ -512,12 +1934,125 @@ ShallowWrapper {
                     "weight": null,
                   },
                   "ref": null,
-                  "rendered": "Instruments",
+                  "rendered": "New Instrument",
                   "type": [Function],
                 },
-                "type": [Function],
-              },
-            ],
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "form-padding",
+                    "onChange": [Function],
+                    "placeholder": "Name",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Save",
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "color": "primary",
+                    "disabled": false,
+                    "fullwidth": false,
+                    "hidden": undefined,
+                    "inverted": false,
+                    "invisible": undefined,
+                    "isSelected": false,
+                    "isStatic": false,
+                    "italic": undefined,
+                    "loading": false,
+                    "marginless": undefined,
+                    "onClick": [Function],
+                    "outlined": false,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "remove": false,
+                    "renderAs": "button",
+                    "reset": false,
+                    "responsive": undefined,
+                    "rounded": false,
+                    "shadowless": undefined,
+                    "size": null,
+                    "state": null,
+                    "style": Object {},
+                    "submit": false,
+                    "text": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Save",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Cancel",
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "color": "danger",
+                    "disabled": false,
+                    "fullwidth": false,
+                    "hidden": undefined,
+                    "inverted": false,
+                    "invisible": undefined,
+                    "isSelected": false,
+                    "isStatic": false,
+                    "italic": undefined,
+                    "loading": false,
+                    "marginless": undefined,
+                    "onClick": [Function],
+                    "outlined": false,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "remove": false,
+                    "renderAs": "button",
+                    "reset": false,
+                    "responsive": undefined,
+                    "rounded": false,
+                    "shadowless": undefined,
+                    "size": null,
+                    "state": null,
+                    "style": Object {},
+                    "submit": false,
+                    "text": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Cancel",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
             "type": [Function],
           },
           "type": [Function],

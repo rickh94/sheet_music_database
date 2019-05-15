@@ -10,6 +10,7 @@ import Level from 'react-bulma-components/lib/components/level'
 import Heading from 'react-bulma-components/lib/components/heading'
 import { Label } from 'react-bulma-components/lib/components/form'
 import Modal from 'react-bulma-components/lib/components/modal'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import 'react-datepicker/dist/react-datepicker.css'
 
@@ -103,6 +104,7 @@ export class Composers extends Component {
                   onClick={() => this.setState({ formOpen: true })}
                   className="level-right edit-link"
                 >
+                  <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />
                   Create
                 </a>
               </Level>

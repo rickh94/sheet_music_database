@@ -83,7 +83,7 @@ class TestPrivateSheetAPI:
                 "filename": "test.pdf",
                 "file_format": "pdf",
                 "sheet_type": "Part",
-                "file": the_file,
+                "sheet_file": the_file,
             }
             authenticated_client.post(sheets_url, payload, format="multipart")
 
@@ -112,10 +112,12 @@ class TestPrivateSheetAPI:
         url = sheet_upload_url(sheet_no_file.id)
 
         with test_file.open("rb") as the_file:
-            res = authenticated_client.post(url, {"file": the_file}, format="multipart")
+            res = authenticated_client.post(
+                url, {"sheet_file": the_file}, format="multipart"
+            )
 
         sheet_no_file.refresh_from_db()
 
         assert res.status_code == status.HTTP_200_OK
-        assert "file" in res.data
-        assert os.path.exists(sheet_no_file.file.path)
+        assert "sheet_file" in res.data
+        assert os.path.exists(sheet_no_file.sheet_file.path)

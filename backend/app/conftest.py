@@ -51,7 +51,7 @@ def sheet1(tmp_path, user1):
         sheet_type="Score",
         file_format="LilyPond",
         user=user1,
-        file=str(tmp_file),
+        sheet_file=str(tmp_file),
     )
 
 
@@ -65,7 +65,7 @@ def sheet2(tmp_path, user1):
         sheet_type="Part",
         file_format="LilyPond",
         user=user1,
-        file=str(tmp_file),
+        sheet_file=str(tmp_file),
     )
 
 
@@ -79,7 +79,7 @@ def user2_sheet(tmp_path, user2):
         sheet_type="Part",
         file_format="LilyPond",
         user=user2,
-        file=str(tmp_file),
+        sheet_file=str(tmp_file),
     )
 
 

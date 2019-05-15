@@ -34,6 +34,7 @@ ShallowWrapper {
         <FieldDisplay
           backendFieldName=""
           linkTo="/test item/5"
+          saveCallback={[MockFunction]}
           value="test"
         />,
         <div
@@ -79,6 +80,7 @@ ShallowWrapper {
           "backendFieldName": "",
           "errors": undefined,
           "linkTo": "/test item/5",
+          "saveCallback": [MockFunction],
           "value": "test",
         },
         "ref": null,
@@ -129,6 +131,7 @@ ShallowWrapper {
           <FieldDisplay
             backendFieldName=""
             linkTo="/test item/5"
+            saveCallback={[MockFunction]}
             value="test"
           />,
           <div
@@ -174,6 +177,7 @@ ShallowWrapper {
             "backendFieldName": "",
             "errors": undefined,
             "linkTo": "/test item/5",
+            "saveCallback": [MockFunction],
             "value": "test",
           },
           "ref": null,

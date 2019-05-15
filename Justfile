@@ -51,3 +51,7 @@ tb:
 
 test-backend:
     pipenv run smdb test
+
+migrate:
+    pipenv run smdb makemigrations
+    pipenv run smdb migrate

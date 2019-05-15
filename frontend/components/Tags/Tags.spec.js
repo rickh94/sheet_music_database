@@ -67,7 +67,7 @@ describe('Tags', () => {
   it('renders a modal for creating new tags', () => {
     expect(wrapper.exists('Modal')).toBeTruthy()
     expect(wrapper.find('Modal').contains('New Tag')).toBeTruthy()
-    expect(wrapper.find('Modal').contains('TextFieldWithError'))
+    expect(wrapper.find('Modal').exists('TextFieldWithErrors')).toBeTruthy()
   })
 
   it('has a button to save created tag, and resets state', () => {

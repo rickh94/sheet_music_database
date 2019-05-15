@@ -13,13 +13,6 @@ export function getComposer(token, id) {
 
 export function createComposer(token, composer) {
   const api = DjangoURL(token)
-  const { born, died } = composer
-  if (born) {
-    composer.born = `${born.getFullYear()}-${born.getMonth()}-${born.getDate()}`
-  }
-  if (died) {
-    composer.died = `${died.getFullYear()}-${died.getMonth()}-${died.getDate()}`
-  }
   return createAction('COMPOSER', api.v1.music.composers(), composer)
 }
 

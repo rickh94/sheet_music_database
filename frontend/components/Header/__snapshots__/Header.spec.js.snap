@@ -111,6 +111,11 @@ ShallowWrapper {
             >
               Composers
             </HeaderLink>
+            <HeaderLink
+              to="/instruments"
+            >
+              Instruments
+            </HeaderLink>
             <React.Fragment>
               <HeaderLink
                 to="/register"
@@ -440,6 +445,11 @@ ShallowWrapper {
             >
               Composers
             </HeaderLink>
+            <HeaderLink
+              to="/instruments"
+            >
+              Instruments
+            </HeaderLink>
             <React.Fragment>
               <HeaderLink
                 to="/register"
@@ -497,6 +507,11 @@ ShallowWrapper {
                 to="/composers"
               >
                 Composers
+              </HeaderLink>,
+              <HeaderLink
+                to="/instruments"
+              >
+                Instruments
               </HeaderLink>,
               <React.Fragment>
                 <HeaderLink
@@ -571,6 +586,18 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "Composers",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Instruments",
+                "to": "/instruments",
+              },
+              "ref": null,
+              "rendered": "Instruments",
               "type": [Function],
             },
             Object {
@@ -720,6 +747,11 @@ ShallowWrapper {
                 to="/composers"
               >
                 Composers
+              </HeaderLink>
+              <HeaderLink
+                to="/instruments"
+              >
+                Instruments
               </HeaderLink>
               <React.Fragment>
                 <HeaderLink
@@ -1050,6 +1082,11 @@ ShallowWrapper {
               >
                 Composers
               </HeaderLink>
+              <HeaderLink
+                to="/instruments"
+              >
+                Instruments
+              </HeaderLink>
               <React.Fragment>
                 <HeaderLink
                   to="/register"
@@ -1107,6 +1144,11 @@ ShallowWrapper {
                   to="/composers"
                 >
                   Composers
+                </HeaderLink>,
+                <HeaderLink
+                  to="/instruments"
+                >
+                  Instruments
                 </HeaderLink>,
                 <React.Fragment>
                   <HeaderLink
@@ -1181,6 +1223,18 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": "Composers",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Instruments",
+                  "to": "/instruments",
+                },
+                "ref": null,
+                "rendered": "Instruments",
                 "type": [Function],
               },
               Object {

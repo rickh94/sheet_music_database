@@ -135,8 +135,7 @@ ShallowWrapper {
                   title=""
                   transform={null}
                 />
-                 
-                New
+                 Create
               </a>
             </Level>
             <div />
@@ -303,8 +302,7 @@ ShallowWrapper {
                   title=""
                   transform={null}
                 />
-                 
-                New
+                 Create
               </a>
             </Level>
             <div />
@@ -390,8 +388,7 @@ ShallowWrapper {
                     title=""
                     transform={null}
                   />
-                   
-                  New
+                   Create
                 </a>
               </Level>,
               <div />,
@@ -472,8 +469,7 @@ ShallowWrapper {
                       title=""
                       transform={null}
                     />
-                     
-                    New
+                     Create
                   </a>,
                 ],
                 "className": "",
@@ -566,8 +562,7 @@ ShallowWrapper {
                         title=""
                         transform={null}
                       />,
-                      " ",
-                      "New",
+                      " Create",
                     ],
                     "className": "level-item level-right edit-link",
                     "id": "activate-create",
@@ -607,8 +602,7 @@ ShallowWrapper {
                       "rendered": null,
                       "type": [Function],
                     },
-                    " ",
-                    "New",
+                    " Create",
                   ],
                   "type": "a",
                 },
@@ -1145,8 +1139,7 @@ ShallowWrapper {
                     title=""
                     transform={null}
                   />
-                   
-                  New
+                   Create
                 </a>
               </Level>
               <div />
@@ -1313,8 +1306,7 @@ ShallowWrapper {
                     title=""
                     transform={null}
                   />
-                   
-                  New
+                   Create
                 </a>
               </Level>
               <div />
@@ -1400,8 +1392,7 @@ ShallowWrapper {
                       title=""
                       transform={null}
                     />
-                     
-                    New
+                     Create
                   </a>
                 </Level>,
                 <div />,
@@ -1482,8 +1473,7 @@ ShallowWrapper {
                         title=""
                         transform={null}
                       />
-                       
-                      New
+                       Create
                     </a>,
                   ],
                   "className": "",
@@ -1576,8 +1566,7 @@ ShallowWrapper {
                           title=""
                           transform={null}
                         />,
-                        " ",
-                        "New",
+                        " Create",
                       ],
                       "className": "level-item level-right edit-link",
                       "id": "activate-create",
@@ -1617,8 +1606,7 @@ ShallowWrapper {
                         "rendered": null,
                         "type": [Function],
                       },
-                      " ",
-                      "New",
+                      " Create",
                     ],
                     "type": "a",
                   },

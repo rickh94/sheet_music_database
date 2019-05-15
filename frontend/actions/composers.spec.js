@@ -99,7 +99,7 @@ describe('composer actions', () => {
       .onPost(api.v1.music.composers().url)
       .reply(201, { ...newComposer, born: bornStr, died: diedStr })
     expect(
-      await composers.createComposer(token, { name: 'composer4', born, died })(
+      await composers.createComposer(token, { name: 'composer4', born: bornStr, died: diedStr })(
         mockDispatch,
         mockGetState
       )

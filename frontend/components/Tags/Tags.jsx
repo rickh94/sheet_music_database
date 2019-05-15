@@ -61,36 +61,35 @@ export class Tags extends Component {
           <Header />
           <Container>
             <Box className="margin-default">
-                <Level>
-                  <Heading
-                    size={3}
-                    className="absolutely-no-margin level-item level-left"
-                  >
-                    Tags
-                  </Heading>
-                  <a
-                    style={{ verticalAlign: 'top' }}
-                    id="activate-create"
-                    className="level-item level-right edit-link"
-                    onClick={() => this.setState({ createMode: true })}
-                  >
-                    <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />{' '}
-                    New
-                  </a>
-                </Level>
-                <div>
-                  {tagList.map(tag => (
-                    <ListItem
-                      item={tag}
-                      key={tag.id}
-                      saveCallback={(_, name) =>
-                        this.props.updateTag(token, tag.id, name)
-                      }
-                      // deleteCallback={id => this.props.deleteTag(token, id)}
-                      errors={this.state.errors[tag.id]}
-                    />
-                  ))}
-                </div>
+              <Level>
+                <Heading
+                  size={3}
+                  className="absolutely-no-margin level-item level-left"
+                >
+                  Tags
+                </Heading>
+                <a
+                  style={{ verticalAlign: 'top' }}
+                  id="activate-create"
+                  className="level-item level-right edit-link"
+                  onClick={() => this.setState({ createMode: true })}
+                >
+                  <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} /> Create
+                </a>
+              </Level>
+              <div>
+                {tagList.map(tag => (
+                  <ListItem
+                    item={tag}
+                    key={tag.id}
+                    saveCallback={(_, name) => {
+                      this.props.updateTag(token, tag.id, name)
+                    }}
+                    deleteCallback={id => this.props.deleteTag(token, id)}
+                    errors={this.state.errors[tag.id]}
+                  />
+                ))}
+              </div>
             </Box>
           </Container>
           <Modal

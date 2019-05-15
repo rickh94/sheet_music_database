@@ -10,9 +10,9 @@ function ListItem(props) {
     <Level>
       <FieldDisplay
         value={props.item.name}
-        // saveCallback={props.saveCallback}
+        saveCallback={props.saveCallback}
         backendFieldName=""
-        errors={props.error}
+        errors={props.errors}
         linkTo={`/${props.link}/${props.item.id}`}
       />
       <div className="links">
@@ -32,9 +32,10 @@ function ListItem(props) {
 
 ListItem.propTypes = {
   item: PropTypes.object.isRequired,
-  // saveCallback: PropTypes.func.isRequired,
+  saveCallback: PropTypes.func.isRequired,
   deleteCallback: PropTypes.func.isRequired,
-  errors: PropTypes.string
+  errors: PropTypes.string,
+  link: PropTypes.string
 }
 
 export default ListItem

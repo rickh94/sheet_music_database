@@ -359,6 +359,29 @@ ShallowWrapper {
                 className="level-right edit-link"
                 onClick={[Function]}
               >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="plus"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  style={
+                    Object {
+                      "paddingRight": "0.2rem",
+                    }
+                  }
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
                 Create
               </a>
             </Level>
@@ -438,6 +461,29 @@ ShallowWrapper {
                 className="level-right edit-link"
                 onClick={[Function]}
               >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="plus"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  style={
+                    Object {
+                      "paddingRight": "0.2rem",
+                    }
+                  }
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
                 Create
               </a>
             </Level>
@@ -495,6 +541,29 @@ ShallowWrapper {
                   className="level-right edit-link"
                   onClick={[Function]}
                 >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    style={
+                      Object {
+                        "paddingRight": "0.2rem",
+                      }
+                    }
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
                   Create
                 </a>
               </Level>,
@@ -548,6 +617,29 @@ ShallowWrapper {
                     className="level-right edit-link"
                     onClick={[Function]}
                   >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      style={
+                        Object {
+                          "paddingRight": "0.2rem",
+                        }
+                      }
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
                     Create
                   </a>,
                 ],
@@ -617,12 +709,68 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Create",
+                    "children": Array [
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "paddingRight": "0.2rem",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />,
+                      "Create",
+                    ],
                     "className": "level-right edit-link",
                     "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "Create",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "border": false,
+                        "className": "",
+                        "fixedWidth": false,
+                        "flip": null,
+                        "icon": "plus",
+                        "inverse": false,
+                        "listItem": false,
+                        "mask": null,
+                        "pull": null,
+                        "pulse": false,
+                        "rotation": null,
+                        "size": null,
+                        "spin": false,
+                        "style": Object {
+                          "paddingRight": "0.2rem",
+                        },
+                        "symbol": false,
+                        "title": "",
+                        "transform": null,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "Create",
+                  ],
                   "type": "a",
                 },
               ],
@@ -809,6 +957,29 @@ ShallowWrapper {
                   className="level-right edit-link"
                   onClick={[Function]}
                 >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    style={
+                      Object {
+                        "paddingRight": "0.2rem",
+                      }
+                    }
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
                   Create
                 </a>
               </Level>
@@ -888,6 +1059,29 @@ ShallowWrapper {
                   className="level-right edit-link"
                   onClick={[Function]}
                 >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="plus"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    style={
+                      Object {
+                        "paddingRight": "0.2rem",
+                      }
+                    }
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
                   Create
                 </a>
               </Level>
@@ -945,6 +1139,29 @@ ShallowWrapper {
                     className="level-right edit-link"
                     onClick={[Function]}
                   >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      style={
+                        Object {
+                          "paddingRight": "0.2rem",
+                        }
+                      }
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
                     Create
                   </a>
                 </Level>,
@@ -998,6 +1215,29 @@ ShallowWrapper {
                       className="level-right edit-link"
                       onClick={[Function]}
                     >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "paddingRight": "0.2rem",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
                       Create
                     </a>,
                   ],
@@ -1067,12 +1307,68 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Create",
+                      "children": Array [
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "paddingRight": "0.2rem",
+                            }
+                          }
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />,
+                        "Create",
+                      ],
                       "className": "level-right edit-link",
                       "onClick": [Function],
                     },
                     "ref": null,
-                    "rendered": "Create",
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "border": false,
+                          "className": "",
+                          "fixedWidth": false,
+                          "flip": null,
+                          "icon": "plus",
+                          "inverse": false,
+                          "listItem": false,
+                          "mask": null,
+                          "pull": null,
+                          "pulse": false,
+                          "rotation": null,
+                          "size": null,
+                          "spin": false,
+                          "style": Object {
+                            "paddingRight": "0.2rem",
+                          },
+                          "symbol": false,
+                          "title": "",
+                          "transform": null,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "Create",
+                    ],
                     "type": "a",
                   },
                 ],
