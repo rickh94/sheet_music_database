@@ -1,18 +1,19 @@
 import composerReducer from './composers'
 
+const errors = { someError: 'error' }
+const initialState = {
+  list: [],
+  isLoading: false,
+  errors: {},
+  composer: {}
+}
+const composerList = [
+  { id: 1, name: 'test composer' },
+  { id: 2, name: 'test2', era: '123' },
+  { id: 3, name: 'composer3', is_alive: true }
+]
+
 describe('composer reducer', () => {
-  const errors = { someError: 'error' }
-  const initialState = {
-    list: [],
-    isLoading: false,
-    errors: {},
-    composer: {}
-  }
-  const composerList = [
-    { id: 1, name: 'test composer' },
-    { id: 2, name: 'test2', era: '123' },
-    { id: 3, name: 'composer3', is_alive: true }
-  ]
   it('should return the initial state', () => {
     expect(composerReducer(undefined, {})).toEqual(initialState)
   })
@@ -72,7 +73,9 @@ describe('composer reducer', () => {
         )
       ).toEqual({ ...initialState, isLoading: false, errors })
     })
+  })
 
+  describe('create actions', () => {
     it('sets isLoading on create composer', () => {
       expect(composerReducer(undefined, { type: 'CREATE_COMPOSER' })).toEqual({
         ...initialState,
@@ -104,7 +107,9 @@ describe('composer reducer', () => {
       ).toEqual({ ...initialState, isLoading: false, errors })
     })
   })
+})
 
+describe('update actions', () => {
   it('sets isLoading on update composer', () => {
     expect(composerReducer(undefined, { type: 'UPDATE_COMPOSER' })).toEqual({
       ...initialState,
@@ -169,7 +174,9 @@ describe('composer reducer', () => {
       )
     ).toEqual({ ...initialState, isLoading: false, errors })
   })
+})
 
+describe('delete actions', () => {
   it('sets isLoading on delete composer', () => {
     expect(composerReducer(undefined, { type: 'DELETE_COMPOSER' })).toEqual({
       ...initialState,
