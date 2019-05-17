@@ -91,22 +91,15 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Level
-              breakpoint={null}
-              className=""
-              renderAs="div"
-              style={Object {}}
-            >
-              <Heading
-                className="absolutely-no-margin level-left"
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
-              />
-            </Level>
+            <Heading
+              className="absolutely-no-margin level-left"
+              heading={false}
+              renderAs="h1"
+              size={3}
+              spaced={false}
+              subtitle={false}
+              weight={null}
+            />
             <FieldDisplay
               backendFieldName="file_format"
               label="File Format"
@@ -201,22 +194,15 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Level
-              breakpoint={null}
-              className=""
-              renderAs="div"
-              style={Object {}}
-            >
-              <Heading
-                className="absolutely-no-margin level-left"
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
-              />
-            </Level>
+            <Heading
+              className="absolutely-no-margin level-left"
+              heading={false}
+              renderAs="h1"
+              size={3}
+              spaced={false}
+              subtitle={false}
+              weight={null}
+            />
             <FieldDisplay
               backendFieldName="file_format"
               label="File Format"
@@ -316,22 +302,15 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "children": Array [
-              <Level
-                breakpoint={null}
-                className=""
-                renderAs="div"
-                style={Object {}}
-              >
-                <Heading
-                  className="absolutely-no-margin level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                />
-              </Level>,
+              <Heading
+                className="absolutely-no-margin level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              />,
               <FieldDisplay
                 backendFieldName="file_format"
                 label="File Format"
@@ -430,19 +409,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "backgroundColor": undefined,
-                "breakpoint": null,
-                "children": <Heading
-                  className="absolutely-no-margin level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                />,
-                "className": "",
+                "children": null,
+                "className": "absolutely-no-margin level-left",
                 "clearfix": undefined,
                 "clipped": undefined,
+                "heading": false,
                 "hidden": undefined,
                 "invisible": undefined,
                 "italic": undefined,
@@ -451,55 +422,22 @@ ShallowWrapper {
                 "paddingless": undefined,
                 "pull": undefined,
                 "radiusless": undefined,
-                "renderAs": "div",
+                "renderAs": "h1",
                 "responsive": undefined,
                 "shadowless": undefined,
-                "style": Object {},
+                "size": 3,
+                "spaced": false,
+                "subtitle": false,
                 "textAlignment": undefined,
                 "textColor": undefined,
                 "textSize": undefined,
                 "textTransform": undefined,
                 "textWeight": undefined,
                 "unselectable": undefined,
+                "weight": null,
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "backgroundColor": undefined,
-                  "children": null,
-                  "className": "absolutely-no-margin level-left",
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "heading": false,
-                  "hidden": undefined,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "h1",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "size": 3,
-                  "spaced": false,
-                  "subtitle": false,
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
-                  "weight": null,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
+              "rendered": null,
               "type": [Function],
             },
             Object {
@@ -774,22 +712,15 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <Level
-                breakpoint={null}
-                className=""
-                renderAs="div"
-                style={Object {}}
-              >
-                <Heading
-                  className="absolutely-no-margin level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                />
-              </Level>
+              <Heading
+                className="absolutely-no-margin level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              />
               <FieldDisplay
                 backendFieldName="file_format"
                 label="File Format"
@@ -884,22 +815,15 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <Level
-                breakpoint={null}
-                className=""
-                renderAs="div"
-                style={Object {}}
-              >
-                <Heading
-                  className="absolutely-no-margin level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
-                />
-              </Level>
+              <Heading
+                className="absolutely-no-margin level-left"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
+              />
               <FieldDisplay
                 backendFieldName="file_format"
                 label="File Format"
@@ -999,22 +923,15 @@ ShallowWrapper {
             "props": Object {
               "backgroundColor": undefined,
               "children": Array [
-                <Level
-                  breakpoint={null}
-                  className=""
-                  renderAs="div"
-                  style={Object {}}
-                >
-                  <Heading
-                    className="absolutely-no-margin level-left"
-                    heading={false}
-                    renderAs="h1"
-                    size={3}
-                    spaced={false}
-                    subtitle={false}
-                    weight={null}
-                  />
-                </Level>,
+                <Heading
+                  className="absolutely-no-margin level-left"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                />,
                 <FieldDisplay
                   backendFieldName="file_format"
                   label="File Format"
@@ -1113,19 +1030,11 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "backgroundColor": undefined,
-                  "breakpoint": null,
-                  "children": <Heading
-                    className="absolutely-no-margin level-left"
-                    heading={false}
-                    renderAs="h1"
-                    size={3}
-                    spaced={false}
-                    subtitle={false}
-                    weight={null}
-                  />,
-                  "className": "",
+                  "children": null,
+                  "className": "absolutely-no-margin level-left",
                   "clearfix": undefined,
                   "clipped": undefined,
+                  "heading": false,
                   "hidden": undefined,
                   "invisible": undefined,
                   "italic": undefined,
@@ -1134,55 +1043,22 @@ ShallowWrapper {
                   "paddingless": undefined,
                   "pull": undefined,
                   "radiusless": undefined,
-                  "renderAs": "div",
+                  "renderAs": "h1",
                   "responsive": undefined,
                   "shadowless": undefined,
-                  "style": Object {},
+                  "size": 3,
+                  "spaced": false,
+                  "subtitle": false,
                   "textAlignment": undefined,
                   "textColor": undefined,
                   "textSize": undefined,
                   "textTransform": undefined,
                   "textWeight": undefined,
                   "unselectable": undefined,
+                  "weight": null,
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "children": null,
-                    "className": "absolutely-no-margin level-left",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "heading": false,
-                    "hidden": undefined,
-                    "invisible": undefined,
-                    "italic": undefined,
-                    "marginless": undefined,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "renderAs": "h1",
-                    "responsive": undefined,
-                    "shadowless": undefined,
-                    "size": 3,
-                    "spaced": false,
-                    "subtitle": false,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                    "weight": null,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": [Function],
               },
               Object {

@@ -57,7 +57,10 @@ export class Instruments extends Component {
     }
 
     this.setState({ errors: {} })
-    const success = await this.props.createInstrument(this.props.token, this.state.newInstrumentName)
+    const success = await this.props.createInstrument(
+      this.props.token,
+      this.state.newInstrumentName
+    )
     if (success) {
       this.setState({ newInstrumentName: '', createMode: false })
       this.props.alert.show(alertText('Instrument Created'))
@@ -77,18 +80,26 @@ export class Instruments extends Component {
         <Container>
           <Box className="margin-default">
             <Level>
-              <Heading size={3} className="absolutely-no-margin level-item level-left">
-                Instruments
-              </Heading>
-              <a
-                style={{ verticalAlign: 'top' }}
-                id="activate-create"
-                className="level-item level-right edit-link"
-                onClick={() => this.setState({ createMode: true })}
-              >
-                <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />{' '}
-                Create
-              </a>
+              <Level.Side align="left">
+                <Level.Item>
+                  <Heading size={3} className="absolutely-no-margin">
+                    Instruments
+                  </Heading>
+                </Level.Item>
+              </Level.Side>
+              <Level.Side align="right">
+                <Level.Item>
+                  <a
+                    style={{ verticalAlign: 'top' }}
+                    id="activate-create"
+                    className="edit-link"
+                    onClick={() => this.setState({ createMode: true })}
+                  >
+                    <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />{' '}
+                    Create
+                  </a>
+                </Level.Item>
+              </Level.Side>
             </Level>
             {instrumentList.map(instrument => (
               <ListItem
@@ -118,10 +129,7 @@ export class Instruments extends Component {
                 placeholder="Name"
                 className="form-padding"
               />
-              <Button
-                color="primary"
-                onClick={this.handleSubmit}
-              >
+              <Button color="primary" onClick={this.handleSubmit}>
                 Save
               </Button>
               <Button

@@ -6,6 +6,8 @@ import Container from 'react-bulma-components/lib/components/container'
 import Card from 'react-bulma-components/lib/components/card'
 import Button from 'react-bulma-components/lib/components/button'
 import Notification from 'react-bulma-components/lib/components/notification/notification'
+import Box from 'react-bulma-components/lib/components/box'
+import Heading from 'react-bulma-components/lib/components/heading'
 import { withAlert } from 'react-alert'
 
 import Header from '../Header'
@@ -57,24 +59,33 @@ export class Logout extends Component {
       <React.Fragment>
         <Header />
         <Container>
-          <Card>
+          <Box className="margin-default">
             {this.state.errors && (
               <Notification color="danger">{this.state.errors}</Notification>
             )}
-            <Card.Header>
-              <Card.Header.Title>Logout</Card.Header.Title>
-            </Card.Header>
-            <Card.Content>
-              Are you sure you want to logout?
-              <Button onClick={() => this.onLogoutClicked()}>Logout</Button>
-              <Button onClick={() => this.props.history.goBack()}>Cancel</Button>
-              <br />
+            <Heading size={3} className="absolutely-no-margin">
+              Logout
+            </Heading>
+            <br />
+            <p>Are you sure you want to logout?</p>
+            <Button
+              onClick={() => this.onLogoutClicked()}
+              style={{ marginRight: '0.5rem' }}
+            >
+              Logout
+            </Button>
+            <Button onClick={() => this.props.history.goBack()}>Cancel</Button>
+            <br />
+            <p>
               You can also log out of all devices (this operation cannot be reversed)
-              <Button color={'danger'} onClick={() => this.onLogoutAllClicked()}>
-                Logout All
-              </Button>
-            </Card.Content>
-          </Card>
+            </p>
+            <Button
+              color="danger"
+              onClick={() => this.onLogoutAllClicked()}
+            >
+              Logout All
+            </Button>
+          </Box>
         </Container>
       </React.Fragment>
     )

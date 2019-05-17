@@ -3,6 +3,7 @@ import { shallow } from 'enzyme'
 import ListItem from './ListItem'
 
 import '../../setupTests'
+import { clickButton } from '../../testHelpers';
 
 describe('TagItem', () => {
   const testItem = { id: 5, name: 'test' }
@@ -35,12 +36,14 @@ describe('TagItem', () => {
     expect(wrapper.contains('delete')).toBeFalsy()
   })
 
-  it('calls passed in function when delete is clicked', () => {
+  it('has a confirm delete modal', () => {
+    expect(wrapper.find('Modal').contains('Confirm Delete')).toBeTruthy()
+  })
+
+  it('calls passed in function when confirm is clicked', () => {
     const deleteCallback = jest.fn()
     wrapper.setProps({ deleteCallback })
-    wrapper
-      .findWhere(el => el.name() == 'a' && el.contains('delete'))
-      .simulate('click', { preventDefault: jest.fn() })
+    clickButton(wrapper, 'Confirm')
     expect(deleteCallback).toHaveBeenCalledWith(testItem.id)
   })
 })

@@ -10,7 +10,7 @@ import Level from 'react-bulma-components/lib/components/level'
 import Heading from 'react-bulma-components/lib/components/heading'
 import { Label } from 'react-bulma-components/lib/components/form'
 import Modal from 'react-bulma-components/lib/components/modal'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import 'react-datepicker/dist/react-datepicker.css'
 
@@ -98,16 +98,24 @@ export class Composers extends Component {
           <Container>
             <Box className="margin-default">
               <Level>
-                <Heading size={3} className="absolutely-no-margin level-left">
-                  Composers
-                </Heading>
-                <a
-                  onClick={() => this.setState({ formOpen: true })}
-                  className="level-right edit-link"
-                >
-                  <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />
-                  Create
-                </a>
+                <Level.Side align="left">
+                  <Level.Item>
+                    <Heading size={3} className="absolutely-no-margin">
+                      Composers
+                    </Heading>
+                  </Level.Item>
+                </Level.Side>
+                <Level.Side align="right">
+                  <Level.Item>
+                    <a
+                      onClick={() => this.setState({ formOpen: true })}
+                      className="edit-link"
+                    >
+                      <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />
+                      Create
+                    </a>
+                  </Level.Item>
+                </Level.Side>
               </Level>
               <br />
               {composerList.map(composer => (
@@ -126,11 +134,13 @@ export class Composers extends Component {
           >
             <Modal.Content>
               <Box>
-                <ComposerForm
-                  errors={this.state.errors}
-                  onSubmit={this.createOrUpdate}
-                  onCancel={() => this.setState({ formOpen: false })}
-                />
+                <div style={{ padding: '0.8rem' }}>
+                  <ComposerForm
+                    errors={this.state.errors}
+                    onSubmit={this.createOrUpdate}
+                    onCancel={() => this.setState({ formOpen: false })}
+                  />
+                </div>
               </Box>
             </Modal.Content>
           </Modal>

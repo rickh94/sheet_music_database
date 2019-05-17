@@ -43,97 +43,104 @@ ShallowWrapper {
           renderAs="div"
           style={Object {}}
         >
-          <Card
-            className=""
+          <Box
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
-            <CardHeader
-              renderAs="div"
+            <Heading
+              className="absolutely-no-margin"
+              heading={false}
+              renderAs="h1"
+              size={3}
+              spaced={false}
+              subtitle={false}
+              weight={null}
             >
-              <CardHeaderTitle
-                renderAs="div"
-              >
-                Logout
-              </CardHeaderTitle>
-            </CardHeader>
-            <CardContent
-              renderAs="div"
-            >
+              Logout
+            </Heading>
+            <br />
+            <p>
               Are you sure you want to logout?
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Logout
-              </Button>
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Cancel
-              </Button>
-              <br />
+            </p>
+            <Button
+              className=""
+              color={null}
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={
+                Object {
+                  "marginRight": "0.5rem",
+                }
+              }
+              submit={false}
+              text={false}
+            >
+              Logout
+            </Button>
+            <Button
+              className=""
+              color={null}
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={Object {}}
+              submit={false}
+              text={false}
+            >
+              Cancel
+            </Button>
+            <br />
+            <p>
               You can also log out of all devices (this operation cannot be reversed)
-              <Button
-                className=""
-                color="danger"
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Logout All
-              </Button>
-            </CardContent>
-          </Card>
+            </p>
+            <Button
+              className=""
+              color="danger"
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={Object {}}
+              submit={false}
+              text={false}
+            >
+              Logout All
+            </Button>
+          </Box>
         </Container>,
       ],
     },
@@ -155,97 +162,104 @@ ShallowWrapper {
         "props": Object {
           "backgroundColor": undefined,
           "breakpoint": null,
-          "children": <Card
-            className=""
+          "children": <Box
+            className="margin-default"
             renderAs="div"
             style={Object {}}
           >
-            <CardHeader
-              renderAs="div"
+            <Heading
+              className="absolutely-no-margin"
+              heading={false}
+              renderAs="h1"
+              size={3}
+              spaced={false}
+              subtitle={false}
+              weight={null}
             >
-              <CardHeaderTitle
-                renderAs="div"
-              >
-                Logout
-              </CardHeaderTitle>
-            </CardHeader>
-            <CardContent
-              renderAs="div"
-            >
+              Logout
+            </Heading>
+            <br />
+            <p>
               Are you sure you want to logout?
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Logout
-              </Button>
-              <Button
-                className=""
-                color={null}
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Cancel
-              </Button>
-              <br />
+            </p>
+            <Button
+              className=""
+              color={null}
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={
+                Object {
+                  "marginRight": "0.5rem",
+                }
+              }
+              submit={false}
+              text={false}
+            >
+              Logout
+            </Button>
+            <Button
+              className=""
+              color={null}
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={Object {}}
+              submit={false}
+              text={false}
+            >
+              Cancel
+            </Button>
+            <br />
+            <p>
               You can also log out of all devices (this operation cannot be reversed)
-              <Button
-                className=""
-                color="danger"
-                disabled={false}
-                fullwidth={false}
-                inverted={false}
-                isSelected={false}
-                isStatic={false}
-                loading={false}
-                onClick={[Function]}
-                outlined={false}
-                remove={false}
-                renderAs="button"
-                reset={false}
-                rounded={false}
-                size={null}
-                state={null}
-                style={Object {}}
-                submit={false}
-                text={false}
-              >
-                Logout All
-              </Button>
-            </CardContent>
-          </Card>,
+            </p>
+            <Button
+              className=""
+              color="danger"
+              disabled={false}
+              fullwidth={false}
+              inverted={false}
+              isSelected={false}
+              isStatic={false}
+              loading={false}
+              onClick={[Function]}
+              outlined={false}
+              remove={false}
+              renderAs="button"
+              reset={false}
+              rounded={false}
+              size={null}
+              state={null}
+              style={Object {}}
+              submit={false}
+              text={false}
+            >
+              Logout All
+            </Button>
+          </Box>,
           "className": undefined,
           "clearfix": undefined,
           "clipped": undefined,
@@ -278,93 +292,100 @@ ShallowWrapper {
             "backgroundColor": undefined,
             "children": Array [
               null,
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Logout
-                </CardHeaderTitle>
-              </CardHeader>,
-              <CardContent
-                renderAs="div"
-              >
+                Logout
+              </Heading>,
+              <br />,
+              <p>
                 Are you sure you want to logout?
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout
-                </Button>
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Cancel
-                </Button>
-                <br />
+              </p>,
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={
+                  Object {
+                    "marginRight": "0.5rem",
+                  }
+                }
+                submit={false}
+                text={false}
+              >
+                Logout
+              </Button>,
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>,
+              <br />,
+              <p>
                 You can also log out of all devices (this operation cannot be reversed)
-                <Button
-                  className=""
-                  color="danger"
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout All
-                </Button>
-              </CardContent>,
+              </p>,
+              <Button
+                className=""
+                color="danger"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Logout All
+              </Button>,
             ],
-            "className": "",
+            "className": "margin-default",
             "clearfix": undefined,
             "clipped": undefined,
             "hidden": undefined,
@@ -395,14 +416,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "backgroundColor": undefined,
-                "children": <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Logout
-                </CardHeaderTitle>,
-                "className": undefined,
+                "children": "Logout",
+                "className": "absolutely-no-margin",
                 "clearfix": undefined,
                 "clipped": undefined,
+                "heading": false,
                 "hidden": undefined,
                 "invisible": undefined,
                 "italic": undefined,
@@ -411,9 +429,84 @@ ShallowWrapper {
                 "paddingless": undefined,
                 "pull": undefined,
                 "radiusless": undefined,
-                "renderAs": "div",
+                "renderAs": "h1",
                 "responsive": undefined,
                 "shadowless": undefined,
+                "size": 3,
+                "spaced": false,
+                "subtitle": false,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+                "weight": null,
+              },
+              "ref": null,
+              "rendered": "Logout",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Are you sure you want to logout?",
+              },
+              "ref": null,
+              "rendered": "Are you sure you want to logout?",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Logout",
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "color": null,
+                "disabled": false,
+                "fullwidth": false,
+                "hidden": undefined,
+                "inverted": false,
+                "invisible": undefined,
+                "isSelected": false,
+                "isStatic": false,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "onClick": [Function],
+                "outlined": false,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "remove": false,
+                "renderAs": "button",
+                "reset": false,
+                "responsive": undefined,
+                "rounded": false,
+                "shadowless": undefined,
+                "size": null,
+                "state": null,
+                "style": Object {
+                  "marginRight": "0.5rem",
+                },
+                "submit": false,
+                "text": false,
                 "textAlignment": undefined,
                 "textColor": undefined,
                 "textSize": undefined,
@@ -422,38 +515,7 @@ ShallowWrapper {
                 "unselectable": undefined,
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "backgroundColor": undefined,
-                  "children": "Logout",
-                  "className": undefined,
-                  "clearfix": undefined,
-                  "clipped": undefined,
-                  "hidden": undefined,
-                  "invisible": undefined,
-                  "italic": undefined,
-                  "marginless": undefined,
-                  "overlay": undefined,
-                  "paddingless": undefined,
-                  "pull": undefined,
-                  "radiusless": undefined,
-                  "renderAs": "div",
-                  "responsive": undefined,
-                  "shadowless": undefined,
-                  "textAlignment": undefined,
-                  "textColor": undefined,
-                  "textSize": undefined,
-                  "textTransform": undefined,
-                  "textWeight": undefined,
-                  "unselectable": undefined,
-                },
-                "ref": null,
-                "rendered": "Logout",
-                "type": [Function],
-              },
+              "rendered": "Logout",
               "type": [Function],
             },
             Object {
@@ -462,94 +524,38 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "backgroundColor": undefined,
-                "children": Array [
-                  "Are you sure you want to logout?",
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Logout
-                  </Button>,
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Cancel
-                  </Button>,
-                  <br />,
-                  "You can also log out of all devices (this operation cannot be reversed)",
-                  <Button
-                    className=""
-                    color="danger"
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Logout All
-                  </Button>,
-                ],
-                "className": undefined,
+                "children": "Cancel",
+                "className": "",
                 "clearfix": undefined,
                 "clipped": undefined,
+                "color": null,
+                "disabled": false,
+                "fullwidth": false,
                 "hidden": undefined,
+                "inverted": false,
                 "invisible": undefined,
+                "isSelected": false,
+                "isStatic": false,
                 "italic": undefined,
+                "loading": false,
                 "marginless": undefined,
+                "onClick": [Function],
+                "outlined": false,
                 "overlay": undefined,
                 "paddingless": undefined,
                 "pull": undefined,
                 "radiusless": undefined,
-                "renderAs": "div",
+                "remove": false,
+                "renderAs": "button",
+                "reset": false,
                 "responsive": undefined,
+                "rounded": false,
                 "shadowless": undefined,
+                "size": null,
+                "state": null,
+                "style": Object {},
+                "submit": false,
+                "text": false,
                 "textAlignment": undefined,
                 "textColor": undefined,
                 "textSize": undefined,
@@ -558,166 +564,76 @@ ShallowWrapper {
                 "unselectable": undefined,
               },
               "ref": null,
-              "rendered": Array [
-                "Are you sure you want to logout?",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Logout",
-                    "className": "",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "color": null,
-                    "disabled": false,
-                    "fullwidth": false,
-                    "hidden": undefined,
-                    "inverted": false,
-                    "invisible": undefined,
-                    "isSelected": false,
-                    "isStatic": false,
-                    "italic": undefined,
-                    "loading": false,
-                    "marginless": undefined,
-                    "onClick": [Function],
-                    "outlined": false,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "remove": false,
-                    "renderAs": "button",
-                    "reset": false,
-                    "responsive": undefined,
-                    "rounded": false,
-                    "shadowless": undefined,
-                    "size": null,
-                    "state": null,
-                    "style": Object {},
-                    "submit": false,
-                    "text": false,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Logout",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Cancel",
-                    "className": "",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "color": null,
-                    "disabled": false,
-                    "fullwidth": false,
-                    "hidden": undefined,
-                    "inverted": false,
-                    "invisible": undefined,
-                    "isSelected": false,
-                    "isStatic": false,
-                    "italic": undefined,
-                    "loading": false,
-                    "marginless": undefined,
-                    "onClick": [Function],
-                    "outlined": false,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "remove": false,
-                    "renderAs": "button",
-                    "reset": false,
-                    "responsive": undefined,
-                    "rounded": false,
-                    "shadowless": undefined,
-                    "size": null,
-                    "state": null,
-                    "style": Object {},
-                    "submit": false,
-                    "text": false,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Cancel",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": "br",
-                },
-                "You can also log out of all devices (this operation cannot be reversed)",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Logout All",
-                    "className": "",
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "color": "danger",
-                    "disabled": false,
-                    "fullwidth": false,
-                    "hidden": undefined,
-                    "inverted": false,
-                    "invisible": undefined,
-                    "isSelected": false,
-                    "isStatic": false,
-                    "italic": undefined,
-                    "loading": false,
-                    "marginless": undefined,
-                    "onClick": [Function],
-                    "outlined": false,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "remove": false,
-                    "renderAs": "button",
-                    "reset": false,
-                    "responsive": undefined,
-                    "rounded": false,
-                    "shadowless": undefined,
-                    "size": null,
-                    "state": null,
-                    "style": Object {},
-                    "submit": false,
-                    "text": false,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Logout All",
-                  "type": [Function],
-                },
-              ],
+              "rendered": "Cancel",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "You can also log out of all devices (this operation cannot be reversed)",
+              },
+              "ref": null,
+              "rendered": "You can also log out of all devices (this operation cannot be reversed)",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": "Logout All",
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "color": "danger",
+                "disabled": false,
+                "fullwidth": false,
+                "hidden": undefined,
+                "inverted": false,
+                "invisible": undefined,
+                "isSelected": false,
+                "isStatic": false,
+                "italic": undefined,
+                "loading": false,
+                "marginless": undefined,
+                "onClick": [Function],
+                "outlined": false,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "remove": false,
+                "renderAs": "button",
+                "reset": false,
+                "responsive": undefined,
+                "rounded": false,
+                "shadowless": undefined,
+                "size": null,
+                "state": null,
+                "style": Object {},
+                "submit": false,
+                "text": false,
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": "Logout All",
               "type": [Function],
             },
           ],
@@ -742,97 +658,104 @@ ShallowWrapper {
             renderAs="div"
             style={Object {}}
           >
-            <Card
-              className=""
+            <Box
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Logout
-                </CardHeaderTitle>
-              </CardHeader>
-              <CardContent
-                renderAs="div"
-              >
+                Logout
+              </Heading>
+              <br />
+              <p>
                 Are you sure you want to logout?
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout
-                </Button>
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Cancel
-                </Button>
-                <br />
+              </p>
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={
+                  Object {
+                    "marginRight": "0.5rem",
+                  }
+                }
+                submit={false}
+                text={false}
+              >
+                Logout
+              </Button>
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+              <br />
+              <p>
                 You can also log out of all devices (this operation cannot be reversed)
-                <Button
-                  className=""
-                  color="danger"
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout All
-                </Button>
-              </CardContent>
-            </Card>
+              </p>
+              <Button
+                className=""
+                color="danger"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Logout All
+              </Button>
+            </Box>
           </Container>,
         ],
       },
@@ -854,97 +777,104 @@ ShallowWrapper {
           "props": Object {
             "backgroundColor": undefined,
             "breakpoint": null,
-            "children": <Card
-              className=""
+            "children": <Box
+              className="margin-default"
               renderAs="div"
               style={Object {}}
             >
-              <CardHeader
-                renderAs="div"
+              <Heading
+                className="absolutely-no-margin"
+                heading={false}
+                renderAs="h1"
+                size={3}
+                spaced={false}
+                subtitle={false}
+                weight={null}
               >
-                <CardHeaderTitle
-                  renderAs="div"
-                >
-                  Logout
-                </CardHeaderTitle>
-              </CardHeader>
-              <CardContent
-                renderAs="div"
-              >
+                Logout
+              </Heading>
+              <br />
+              <p>
                 Are you sure you want to logout?
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout
-                </Button>
-                <Button
-                  className=""
-                  color={null}
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Cancel
-                </Button>
-                <br />
+              </p>
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={
+                  Object {
+                    "marginRight": "0.5rem",
+                  }
+                }
+                submit={false}
+                text={false}
+              >
+                Logout
+              </Button>
+              <Button
+                className=""
+                color={null}
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Cancel
+              </Button>
+              <br />
+              <p>
                 You can also log out of all devices (this operation cannot be reversed)
-                <Button
-                  className=""
-                  color="danger"
-                  disabled={false}
-                  fullwidth={false}
-                  inverted={false}
-                  isSelected={false}
-                  isStatic={false}
-                  loading={false}
-                  onClick={[Function]}
-                  outlined={false}
-                  remove={false}
-                  renderAs="button"
-                  reset={false}
-                  rounded={false}
-                  size={null}
-                  state={null}
-                  style={Object {}}
-                  submit={false}
-                  text={false}
-                >
-                  Logout All
-                </Button>
-              </CardContent>
-            </Card>,
+              </p>
+              <Button
+                className=""
+                color="danger"
+                disabled={false}
+                fullwidth={false}
+                inverted={false}
+                isSelected={false}
+                isStatic={false}
+                loading={false}
+                onClick={[Function]}
+                outlined={false}
+                remove={false}
+                renderAs="button"
+                reset={false}
+                rounded={false}
+                size={null}
+                state={null}
+                style={Object {}}
+                submit={false}
+                text={false}
+              >
+                Logout All
+              </Button>
+            </Box>,
             "className": undefined,
             "clearfix": undefined,
             "clipped": undefined,
@@ -977,93 +907,100 @@ ShallowWrapper {
               "backgroundColor": undefined,
               "children": Array [
                 null,
-                <CardHeader
-                  renderAs="div"
+                <Heading
+                  className="absolutely-no-margin"
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
                 >
-                  <CardHeaderTitle
-                    renderAs="div"
-                  >
-                    Logout
-                  </CardHeaderTitle>
-                </CardHeader>,
-                <CardContent
-                  renderAs="div"
-                >
+                  Logout
+                </Heading>,
+                <br />,
+                <p>
                   Are you sure you want to logout?
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Logout
-                  </Button>
-                  <Button
-                    className=""
-                    color={null}
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Cancel
-                  </Button>
-                  <br />
+                </p>,
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={
+                    Object {
+                      "marginRight": "0.5rem",
+                    }
+                  }
+                  submit={false}
+                  text={false}
+                >
+                  Logout
+                </Button>,
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>,
+                <br />,
+                <p>
                   You can also log out of all devices (this operation cannot be reversed)
-                  <Button
-                    className=""
-                    color="danger"
-                    disabled={false}
-                    fullwidth={false}
-                    inverted={false}
-                    isSelected={false}
-                    isStatic={false}
-                    loading={false}
-                    onClick={[Function]}
-                    outlined={false}
-                    remove={false}
-                    renderAs="button"
-                    reset={false}
-                    rounded={false}
-                    size={null}
-                    state={null}
-                    style={Object {}}
-                    submit={false}
-                    text={false}
-                  >
-                    Logout All
-                  </Button>
-                </CardContent>,
+                </p>,
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Logout All
+                </Button>,
               ],
-              "className": "",
+              "className": "margin-default",
               "clearfix": undefined,
               "clipped": undefined,
               "hidden": undefined,
@@ -1094,14 +1031,11 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "backgroundColor": undefined,
-                  "children": <CardHeaderTitle
-                    renderAs="div"
-                  >
-                    Logout
-                  </CardHeaderTitle>,
-                  "className": undefined,
+                  "children": "Logout",
+                  "className": "absolutely-no-margin",
                   "clearfix": undefined,
                   "clipped": undefined,
+                  "heading": false,
                   "hidden": undefined,
                   "invisible": undefined,
                   "italic": undefined,
@@ -1110,9 +1044,84 @@ ShallowWrapper {
                   "paddingless": undefined,
                   "pull": undefined,
                   "radiusless": undefined,
-                  "renderAs": "div",
+                  "renderAs": "h1",
                   "responsive": undefined,
                   "shadowless": undefined,
+                  "size": 3,
+                  "spaced": false,
+                  "subtitle": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                  "weight": null,
+                },
+                "ref": null,
+                "rendered": "Logout",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Are you sure you want to logout?",
+                },
+                "ref": null,
+                "rendered": "Are you sure you want to logout?",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Logout",
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": null,
+                  "disabled": false,
+                  "fullwidth": false,
+                  "hidden": undefined,
+                  "inverted": false,
+                  "invisible": undefined,
+                  "isSelected": false,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "loading": false,
+                  "marginless": undefined,
+                  "onClick": [Function],
+                  "outlined": false,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "remove": false,
+                  "renderAs": "button",
+                  "reset": false,
+                  "responsive": undefined,
+                  "rounded": false,
+                  "shadowless": undefined,
+                  "size": null,
+                  "state": null,
+                  "style": Object {
+                    "marginRight": "0.5rem",
+                  },
+                  "submit": false,
+                  "text": false,
                   "textAlignment": undefined,
                   "textColor": undefined,
                   "textSize": undefined,
@@ -1121,38 +1130,7 @@ ShallowWrapper {
                   "unselectable": undefined,
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "backgroundColor": undefined,
-                    "children": "Logout",
-                    "className": undefined,
-                    "clearfix": undefined,
-                    "clipped": undefined,
-                    "hidden": undefined,
-                    "invisible": undefined,
-                    "italic": undefined,
-                    "marginless": undefined,
-                    "overlay": undefined,
-                    "paddingless": undefined,
-                    "pull": undefined,
-                    "radiusless": undefined,
-                    "renderAs": "div",
-                    "responsive": undefined,
-                    "shadowless": undefined,
-                    "textAlignment": undefined,
-                    "textColor": undefined,
-                    "textSize": undefined,
-                    "textTransform": undefined,
-                    "textWeight": undefined,
-                    "unselectable": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Logout",
-                  "type": [Function],
-                },
+                "rendered": "Logout",
                 "type": [Function],
               },
               Object {
@@ -1161,94 +1139,38 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "backgroundColor": undefined,
-                  "children": Array [
-                    "Are you sure you want to logout?",
-                    <Button
-                      className=""
-                      color={null}
-                      disabled={false}
-                      fullwidth={false}
-                      inverted={false}
-                      isSelected={false}
-                      isStatic={false}
-                      loading={false}
-                      onClick={[Function]}
-                      outlined={false}
-                      remove={false}
-                      renderAs="button"
-                      reset={false}
-                      rounded={false}
-                      size={null}
-                      state={null}
-                      style={Object {}}
-                      submit={false}
-                      text={false}
-                    >
-                      Logout
-                    </Button>,
-                    <Button
-                      className=""
-                      color={null}
-                      disabled={false}
-                      fullwidth={false}
-                      inverted={false}
-                      isSelected={false}
-                      isStatic={false}
-                      loading={false}
-                      onClick={[Function]}
-                      outlined={false}
-                      remove={false}
-                      renderAs="button"
-                      reset={false}
-                      rounded={false}
-                      size={null}
-                      state={null}
-                      style={Object {}}
-                      submit={false}
-                      text={false}
-                    >
-                      Cancel
-                    </Button>,
-                    <br />,
-                    "You can also log out of all devices (this operation cannot be reversed)",
-                    <Button
-                      className=""
-                      color="danger"
-                      disabled={false}
-                      fullwidth={false}
-                      inverted={false}
-                      isSelected={false}
-                      isStatic={false}
-                      loading={false}
-                      onClick={[Function]}
-                      outlined={false}
-                      remove={false}
-                      renderAs="button"
-                      reset={false}
-                      rounded={false}
-                      size={null}
-                      state={null}
-                      style={Object {}}
-                      submit={false}
-                      text={false}
-                    >
-                      Logout All
-                    </Button>,
-                  ],
-                  "className": undefined,
+                  "children": "Cancel",
+                  "className": "",
                   "clearfix": undefined,
                   "clipped": undefined,
+                  "color": null,
+                  "disabled": false,
+                  "fullwidth": false,
                   "hidden": undefined,
+                  "inverted": false,
                   "invisible": undefined,
+                  "isSelected": false,
+                  "isStatic": false,
                   "italic": undefined,
+                  "loading": false,
                   "marginless": undefined,
+                  "onClick": [Function],
+                  "outlined": false,
                   "overlay": undefined,
                   "paddingless": undefined,
                   "pull": undefined,
                   "radiusless": undefined,
-                  "renderAs": "div",
+                  "remove": false,
+                  "renderAs": "button",
+                  "reset": false,
                   "responsive": undefined,
+                  "rounded": false,
                   "shadowless": undefined,
+                  "size": null,
+                  "state": null,
+                  "style": Object {},
+                  "submit": false,
+                  "text": false,
                   "textAlignment": undefined,
                   "textColor": undefined,
                   "textSize": undefined,
@@ -1257,166 +1179,76 @@ ShallowWrapper {
                   "unselectable": undefined,
                 },
                 "ref": null,
-                "rendered": Array [
-                  "Are you sure you want to logout?",
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "backgroundColor": undefined,
-                      "children": "Logout",
-                      "className": "",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "color": null,
-                      "disabled": false,
-                      "fullwidth": false,
-                      "hidden": undefined,
-                      "inverted": false,
-                      "invisible": undefined,
-                      "isSelected": false,
-                      "isStatic": false,
-                      "italic": undefined,
-                      "loading": false,
-                      "marginless": undefined,
-                      "onClick": [Function],
-                      "outlined": false,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "remove": false,
-                      "renderAs": "button",
-                      "reset": false,
-                      "responsive": undefined,
-                      "rounded": false,
-                      "shadowless": undefined,
-                      "size": null,
-                      "state": null,
-                      "style": Object {},
-                      "submit": false,
-                      "text": false,
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
-                    },
-                    "ref": null,
-                    "rendered": "Logout",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "backgroundColor": undefined,
-                      "children": "Cancel",
-                      "className": "",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "color": null,
-                      "disabled": false,
-                      "fullwidth": false,
-                      "hidden": undefined,
-                      "inverted": false,
-                      "invisible": undefined,
-                      "isSelected": false,
-                      "isStatic": false,
-                      "italic": undefined,
-                      "loading": false,
-                      "marginless": undefined,
-                      "onClick": [Function],
-                      "outlined": false,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "remove": false,
-                      "renderAs": "button",
-                      "reset": false,
-                      "responsive": undefined,
-                      "rounded": false,
-                      "shadowless": undefined,
-                      "size": null,
-                      "state": null,
-                      "style": Object {},
-                      "submit": false,
-                      "text": false,
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
-                    },
-                    "ref": null,
-                    "rendered": "Cancel",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {},
-                    "ref": null,
-                    "rendered": null,
-                    "type": "br",
-                  },
-                  "You can also log out of all devices (this operation cannot be reversed)",
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "backgroundColor": undefined,
-                      "children": "Logout All",
-                      "className": "",
-                      "clearfix": undefined,
-                      "clipped": undefined,
-                      "color": "danger",
-                      "disabled": false,
-                      "fullwidth": false,
-                      "hidden": undefined,
-                      "inverted": false,
-                      "invisible": undefined,
-                      "isSelected": false,
-                      "isStatic": false,
-                      "italic": undefined,
-                      "loading": false,
-                      "marginless": undefined,
-                      "onClick": [Function],
-                      "outlined": false,
-                      "overlay": undefined,
-                      "paddingless": undefined,
-                      "pull": undefined,
-                      "radiusless": undefined,
-                      "remove": false,
-                      "renderAs": "button",
-                      "reset": false,
-                      "responsive": undefined,
-                      "rounded": false,
-                      "shadowless": undefined,
-                      "size": null,
-                      "state": null,
-                      "style": Object {},
-                      "submit": false,
-                      "text": false,
-                      "textAlignment": undefined,
-                      "textColor": undefined,
-                      "textSize": undefined,
-                      "textTransform": undefined,
-                      "textWeight": undefined,
-                      "unselectable": undefined,
-                    },
-                    "ref": null,
-                    "rendered": "Logout All",
-                    "type": [Function],
-                  },
-                ],
+                "rendered": "Cancel",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "You can also log out of all devices (this operation cannot be reversed)",
+                },
+                "ref": null,
+                "rendered": "You can also log out of all devices (this operation cannot be reversed)",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": "Logout All",
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "color": "danger",
+                  "disabled": false,
+                  "fullwidth": false,
+                  "hidden": undefined,
+                  "inverted": false,
+                  "invisible": undefined,
+                  "isSelected": false,
+                  "isStatic": false,
+                  "italic": undefined,
+                  "loading": false,
+                  "marginless": undefined,
+                  "onClick": [Function],
+                  "outlined": false,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "remove": false,
+                  "renderAs": "button",
+                  "reset": false,
+                  "responsive": undefined,
+                  "rounded": false,
+                  "shadowless": undefined,
+                  "size": null,
+                  "state": null,
+                  "style": Object {},
+                  "submit": false,
+                  "text": false,
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": "Logout All",
                 "type": [Function],
               },
             ],

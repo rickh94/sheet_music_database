@@ -29,14 +29,6 @@ describe('Logout', () => {
     expect(wrapper.exists('Connect(Header)')).toBeTruthy()
   })
 
-  it('renders a card', () => {
-    expect(wrapper.exists('Card')).toBeTruthy()
-  })
-
-  it('renders the needed buttons', () => {
-    expect(wrapper.find('Button').length).toEqual(3)
-  })
-
   it('shows a notification if there are errors', () => {
     wrapper.setState({ errors: 'some error' })
     expect(wrapper.exists('Notification')).toBeTruthy()

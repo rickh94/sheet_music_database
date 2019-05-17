@@ -67,11 +67,9 @@ export class Sheet extends Component {
         <Header />
         <Container>
           <Box className="margin-default">
-            <Level>
-              <Heading size={3} className="absolutely-no-margin level-left">
-                {filename}
-              </Heading>
-            </Level>
+            <Heading size={3} className="absolutely-no-margin level-left">
+              {filename}
+            </Heading>
             <FieldDisplay
               value={file_format || ''}
               saveCallback={this.updateFromFieldDisplay}

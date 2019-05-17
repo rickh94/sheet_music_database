@@ -103,18 +103,26 @@ export class Sheets extends Component {
         <Container>
           <Box className="margin-default">
             <Level>
-              <Heading size={3} className="absolutely-no-margin level-item level-left">
-                Sheets
-              </Heading>
-              <a
-                style={{ verticalAlign: 'top' }}
-                id="activate-create"
-                className="level-item level-right edit-link"
-                onClick={() => this.setState({ createMode: true })}
-              >
-                <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />{' '}
-                Create
-              </a>
+              <Level.Side align="left">
+                <Level.Item>
+                  <Heading size={3} className="absolutely-no-margin">
+                    Sheets
+                  </Heading>
+                </Level.Item>
+              </Level.Side>
+              <Level.Side align="right">
+                <Level.Item>
+                  <a
+                    style={{ verticalAlign: 'top' }}
+                    id="activate-create"
+                    className="edit-link"
+                    onClick={() => this.setState({ createMode: true })}
+                  >
+                    <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />{' '}
+                    Create
+                  </a>
+                </Level.Item>
+              </Level.Side>
             </Level>
             {sheetList.map(sheet => (
               <ListItem
@@ -129,7 +137,7 @@ export class Sheets extends Component {
         </Container>
         <Modal
           show={this.state.createMode}
-          onClose={() => this.setState({ creatMode: false })}
+          onClose={() => this.setState({ createMode: false })}
           closeOnBlur
         >
           <Modal.Content>

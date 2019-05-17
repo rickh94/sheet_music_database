@@ -91,53 +91,79 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <Heading
-                className="absolutely-no-margin level-item level-left"
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
+              <LevelSide
+                align="left"
+                className=""
+                renderAs="div"
+                style={Object {}}
               >
-                Instruments
-              </Heading>
-              <a
-                className="level-item level-right edit-link"
-                id="activate-create"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "verticalAlign": "top",
-                  }
-                }
-              >
-                <FontAwesomeIcon
-                  border={false}
+                <LevelItem
                   className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon="plus"
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  style={
-                    Object {
-                      "paddingRight": "0.2rem",
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <Heading
+                    className="absolutely-no-margin"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Instruments
+                  </Heading>
+                </LevelItem>
+              </LevelSide>
+              <LevelSide
+                align="right"
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <LevelItem
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <a
+                    className="edit-link"
+                    id="activate-create"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "verticalAlign": "top",
+                      }
                     }
-                  }
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-                 
-                Create
-              </a>
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      style={
+                        Object {
+                          "paddingRight": "0.2rem",
+                        }
+                      }
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    Create
+                  </a>
+                </LevelItem>
+              </LevelSide>
             </Level>
           </Box>
         </Container>,
@@ -258,53 +284,79 @@ ShallowWrapper {
               renderAs="div"
               style={Object {}}
             >
-              <Heading
-                className="absolutely-no-margin level-item level-left"
-                heading={false}
-                renderAs="h1"
-                size={3}
-                spaced={false}
-                subtitle={false}
-                weight={null}
+              <LevelSide
+                align="left"
+                className=""
+                renderAs="div"
+                style={Object {}}
               >
-                Instruments
-              </Heading>
-              <a
-                className="level-item level-right edit-link"
-                id="activate-create"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "verticalAlign": "top",
-                  }
-                }
-              >
-                <FontAwesomeIcon
-                  border={false}
+                <LevelItem
                   className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon="plus"
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  style={
-                    Object {
-                      "paddingRight": "0.2rem",
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <Heading
+                    className="absolutely-no-margin"
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Instruments
+                  </Heading>
+                </LevelItem>
+              </LevelSide>
+              <LevelSide
+                align="right"
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <LevelItem
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <a
+                    className="edit-link"
+                    id="activate-create"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "verticalAlign": "top",
+                      }
                     }
-                  }
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-                 
-                Create
-              </a>
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="plus"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      style={
+                        Object {
+                          "paddingRight": "0.2rem",
+                        }
+                      }
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    Create
+                  </a>
+                </LevelItem>
+              </LevelSide>
             </Level>
           </Box>,
           "className": undefined,
@@ -344,53 +396,79 @@ ShallowWrapper {
                 renderAs="div"
                 style={Object {}}
               >
-                <Heading
-                  className="absolutely-no-margin level-item level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
+                <LevelSide
+                  align="left"
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
                 >
-                  Instruments
-                </Heading>
-                <a
-                  className="level-item level-right edit-link"
-                  id="activate-create"
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <FontAwesomeIcon
-                    border={false}
+                  <LevelItem
                     className=""
-                    fixedWidth={false}
-                    flip={null}
-                    icon="plus"
-                    inverse={false}
-                    listItem={false}
-                    mask={null}
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    style={
-                      Object {
-                        "paddingRight": "0.2rem",
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <Heading
+                      className="absolutely-no-margin"
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Instruments
+                    </Heading>
+                  </LevelItem>
+                </LevelSide>
+                <LevelSide
+                  align="right"
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <LevelItem
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <a
+                      className="edit-link"
+                      id="activate-create"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "verticalAlign": "top",
+                        }
                       }
-                    }
-                    symbol={false}
-                    title=""
-                    transform={null}
-                  />
-                   
-                  Create
-                </a>
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "paddingRight": "0.2rem",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      Create
+                    </a>
+                  </LevelItem>
+                </LevelSide>
               </Level>,
               Array [],
             ],
@@ -426,53 +504,79 @@ ShallowWrapper {
                 "backgroundColor": undefined,
                 "breakpoint": null,
                 "children": Array [
-                  <Heading
-                    className="absolutely-no-margin level-item level-left"
-                    heading={false}
-                    renderAs="h1"
-                    size={3}
-                    spaced={false}
-                    subtitle={false}
-                    weight={null}
+                  <LevelSide
+                    align="left"
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
                   >
-                    Instruments
-                  </Heading>,
-                  <a
-                    className="level-item level-right edit-link"
-                    id="activate-create"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "verticalAlign": "top",
-                      }
-                    }
-                  >
-                    <FontAwesomeIcon
-                      border={false}
+                    <LevelItem
                       className=""
-                      fixedWidth={false}
-                      flip={null}
-                      icon="plus"
-                      inverse={false}
-                      listItem={false}
-                      mask={null}
-                      pull={null}
-                      pulse={false}
-                      rotation={null}
-                      size={null}
-                      spin={false}
-                      style={
-                        Object {
-                          "paddingRight": "0.2rem",
+                      renderAs="div"
+                      style={Object {}}
+                    >
+                      <Heading
+                        className="absolutely-no-margin"
+                        heading={false}
+                        renderAs="h1"
+                        size={3}
+                        spaced={false}
+                        subtitle={false}
+                        weight={null}
+                      >
+                        Instruments
+                      </Heading>
+                    </LevelItem>
+                  </LevelSide>,
+                  <LevelSide
+                    align="right"
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <LevelItem
+                      className=""
+                      renderAs="div"
+                      style={Object {}}
+                    >
+                      <a
+                        className="edit-link"
+                        id="activate-create"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "verticalAlign": "top",
+                          }
                         }
-                      }
-                      symbol={false}
-                      title=""
-                      transform={null}
-                    />
-                     
-                    Create
-                  </a>,
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "paddingRight": "0.2rem",
+                            }
+                          }
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         
+                        Create
+                      </a>
+                    </LevelItem>
+                  </LevelSide>,
                 ],
                 "className": "",
                 "clearfix": undefined,
@@ -503,12 +607,28 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
+                    "align": "left",
                     "backgroundColor": undefined,
-                    "children": "Instruments",
-                    "className": "absolutely-no-margin level-item level-left",
+                    "children": <LevelItem
+                      className=""
+                      renderAs="div"
+                      style={Object {}}
+                    >
+                      <Heading
+                        className="absolutely-no-margin"
+                        heading={false}
+                        renderAs="h1"
+                        size={3}
+                        spaced={false}
+                        subtitle={false}
+                        weight={null}
+                      >
+                        Instruments
+                      </Heading>
+                    </LevelItem>,
+                    "className": "",
                     "clearfix": undefined,
                     "clipped": undefined,
-                    "heading": false,
                     "hidden": undefined,
                     "invisible": undefined,
                     "italic": undefined,
@@ -517,98 +637,314 @@ ShallowWrapper {
                     "paddingless": undefined,
                     "pull": undefined,
                     "radiusless": undefined,
-                    "renderAs": "h1",
+                    "renderAs": "div",
                     "responsive": undefined,
                     "shadowless": undefined,
-                    "size": 3,
-                    "spaced": false,
-                    "subtitle": false,
+                    "style": Object {},
                     "textAlignment": undefined,
                     "textColor": undefined,
                     "textSize": undefined,
                     "textTransform": undefined,
                     "textWeight": undefined,
                     "unselectable": undefined,
-                    "weight": null,
                   },
                   "ref": null,
-                  "rendered": "Instruments",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": <Heading
+                        className="absolutely-no-margin"
+                        heading={false}
+                        renderAs="h1"
+                        size={3}
+                        spaced={false}
+                        subtitle={false}
+                        weight={null}
+                      >
+                        Instruments
+                      </Heading>,
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "div",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "style": Object {},
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": "Instruments",
+                        "className": "absolutely-no-margin",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "heading": false,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "h1",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "size": 3,
+                        "spaced": false,
+                        "subtitle": false,
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                        "weight": null,
+                      },
+                      "ref": null,
+                      "rendered": "Instruments",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
                   "type": [Function],
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      <FontAwesomeIcon
-                        border={false}
-                        className=""
-                        fixedWidth={false}
-                        flip={null}
-                        icon="plus"
-                        inverse={false}
-                        listItem={false}
-                        mask={null}
-                        pull={null}
-                        pulse={false}
-                        rotation={null}
-                        size={null}
-                        spin={false}
+                    "align": "right",
+                    "backgroundColor": undefined,
+                    "children": <LevelItem
+                      className=""
+                      renderAs="div"
+                      style={Object {}}
+                    >
+                      <a
+                        className="edit-link"
+                        id="activate-create"
+                        onClick={[Function]}
                         style={
                           Object {
-                            "paddingRight": "0.2rem",
+                            "verticalAlign": "top",
                           }
                         }
-                        symbol={false}
-                        title=""
-                        transform={null}
-                      />,
-                      " ",
-                      "Create",
-                    ],
-                    "className": "level-item level-right edit-link",
-                    "id": "activate-create",
-                    "onClick": [Function],
-                    "style": Object {
-                      "verticalAlign": "top",
-                    },
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "paddingRight": "0.2rem",
+                            }
+                          }
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         
+                        Create
+                      </a>
+                    </LevelItem>,
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "div",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "style": Object {},
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": <a
+                        className="edit-link"
+                        id="activate-create"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "verticalAlign": "top",
+                          }
+                        }
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "paddingRight": "0.2rem",
+                            }
+                          }
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         
+                        Create
+                      </a>,
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "div",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "style": Object {},
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "function",
+                      "nodeType": "host",
                       "props": Object {
-                        "border": false,
-                        "className": "",
-                        "fixedWidth": false,
-                        "flip": null,
-                        "icon": "plus",
-                        "inverse": false,
-                        "listItem": false,
-                        "mask": null,
-                        "pull": null,
-                        "pulse": false,
-                        "rotation": null,
-                        "size": null,
-                        "spin": false,
+                        "children": Array [
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            style={
+                              Object {
+                                "paddingRight": "0.2rem",
+                              }
+                            }
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />,
+                          " ",
+                          "Create",
+                        ],
+                        "className": "edit-link",
+                        "id": "activate-create",
+                        "onClick": [Function],
                         "style": Object {
-                          "paddingRight": "0.2rem",
+                          "verticalAlign": "top",
                         },
-                        "symbol": false,
-                        "title": "",
-                        "transform": null,
                       },
                       "ref": null,
-                      "rendered": null,
-                      "type": [Function],
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "border": false,
+                            "className": "",
+                            "fixedWidth": false,
+                            "flip": null,
+                            "icon": "plus",
+                            "inverse": false,
+                            "listItem": false,
+                            "mask": null,
+                            "pull": null,
+                            "pulse": false,
+                            "rotation": null,
+                            "size": null,
+                            "spin": false,
+                            "style": Object {
+                              "paddingRight": "0.2rem",
+                            },
+                            "symbol": false,
+                            "title": "",
+                            "transform": null,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        " ",
+                        "Create",
+                      ],
+                      "type": "a",
                     },
-                    " ",
-                    "Create",
-                  ],
-                  "type": "a",
+                    "type": [Function],
+                  },
+                  "type": [Function],
                 },
               ],
               "type": [Function],
@@ -1088,53 +1424,79 @@ ShallowWrapper {
                 renderAs="div"
                 style={Object {}}
               >
-                <Heading
-                  className="absolutely-no-margin level-item level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
+                <LevelSide
+                  align="left"
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
                 >
-                  Instruments
-                </Heading>
-                <a
-                  className="level-item level-right edit-link"
-                  id="activate-create"
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <FontAwesomeIcon
-                    border={false}
+                  <LevelItem
                     className=""
-                    fixedWidth={false}
-                    flip={null}
-                    icon="plus"
-                    inverse={false}
-                    listItem={false}
-                    mask={null}
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    style={
-                      Object {
-                        "paddingRight": "0.2rem",
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <Heading
+                      className="absolutely-no-margin"
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Instruments
+                    </Heading>
+                  </LevelItem>
+                </LevelSide>
+                <LevelSide
+                  align="right"
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <LevelItem
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <a
+                      className="edit-link"
+                      id="activate-create"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "verticalAlign": "top",
+                        }
                       }
-                    }
-                    symbol={false}
-                    title=""
-                    transform={null}
-                  />
-                   
-                  Create
-                </a>
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "paddingRight": "0.2rem",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      Create
+                    </a>
+                  </LevelItem>
+                </LevelSide>
               </Level>
             </Box>
           </Container>,
@@ -1255,53 +1617,79 @@ ShallowWrapper {
                 renderAs="div"
                 style={Object {}}
               >
-                <Heading
-                  className="absolutely-no-margin level-item level-left"
-                  heading={false}
-                  renderAs="h1"
-                  size={3}
-                  spaced={false}
-                  subtitle={false}
-                  weight={null}
+                <LevelSide
+                  align="left"
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
                 >
-                  Instruments
-                </Heading>
-                <a
-                  className="level-item level-right edit-link"
-                  id="activate-create"
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <FontAwesomeIcon
-                    border={false}
+                  <LevelItem
                     className=""
-                    fixedWidth={false}
-                    flip={null}
-                    icon="plus"
-                    inverse={false}
-                    listItem={false}
-                    mask={null}
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    style={
-                      Object {
-                        "paddingRight": "0.2rem",
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <Heading
+                      className="absolutely-no-margin"
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Instruments
+                    </Heading>
+                  </LevelItem>
+                </LevelSide>
+                <LevelSide
+                  align="right"
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <LevelItem
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <a
+                      className="edit-link"
+                      id="activate-create"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "verticalAlign": "top",
+                        }
                       }
-                    }
-                    symbol={false}
-                    title=""
-                    transform={null}
-                  />
-                   
-                  Create
-                </a>
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="plus"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "paddingRight": "0.2rem",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      Create
+                    </a>
+                  </LevelItem>
+                </LevelSide>
               </Level>
             </Box>,
             "className": undefined,
@@ -1341,53 +1729,79 @@ ShallowWrapper {
                   renderAs="div"
                   style={Object {}}
                 >
-                  <Heading
-                    className="absolutely-no-margin level-item level-left"
-                    heading={false}
-                    renderAs="h1"
-                    size={3}
-                    spaced={false}
-                    subtitle={false}
-                    weight={null}
+                  <LevelSide
+                    align="left"
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
                   >
-                    Instruments
-                  </Heading>
-                  <a
-                    className="level-item level-right edit-link"
-                    id="activate-create"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "verticalAlign": "top",
-                      }
-                    }
-                  >
-                    <FontAwesomeIcon
-                      border={false}
+                    <LevelItem
                       className=""
-                      fixedWidth={false}
-                      flip={null}
-                      icon="plus"
-                      inverse={false}
-                      listItem={false}
-                      mask={null}
-                      pull={null}
-                      pulse={false}
-                      rotation={null}
-                      size={null}
-                      spin={false}
-                      style={
-                        Object {
-                          "paddingRight": "0.2rem",
+                      renderAs="div"
+                      style={Object {}}
+                    >
+                      <Heading
+                        className="absolutely-no-margin"
+                        heading={false}
+                        renderAs="h1"
+                        size={3}
+                        spaced={false}
+                        subtitle={false}
+                        weight={null}
+                      >
+                        Instruments
+                      </Heading>
+                    </LevelItem>
+                  </LevelSide>
+                  <LevelSide
+                    align="right"
+                    className=""
+                    renderAs="div"
+                    style={Object {}}
+                  >
+                    <LevelItem
+                      className=""
+                      renderAs="div"
+                      style={Object {}}
+                    >
+                      <a
+                        className="edit-link"
+                        id="activate-create"
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "verticalAlign": "top",
+                          }
                         }
-                      }
-                      symbol={false}
-                      title=""
-                      transform={null}
-                    />
-                     
-                    Create
-                  </a>
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="plus"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "paddingRight": "0.2rem",
+                            }
+                          }
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         
+                        Create
+                      </a>
+                    </LevelItem>
+                  </LevelSide>
                 </Level>,
                 Array [],
               ],
@@ -1423,53 +1837,79 @@ ShallowWrapper {
                   "backgroundColor": undefined,
                   "breakpoint": null,
                   "children": Array [
-                    <Heading
-                      className="absolutely-no-margin level-item level-left"
-                      heading={false}
-                      renderAs="h1"
-                      size={3}
-                      spaced={false}
-                      subtitle={false}
-                      weight={null}
+                    <LevelSide
+                      align="left"
+                      className=""
+                      renderAs="div"
+                      style={Object {}}
                     >
-                      Instruments
-                    </Heading>,
-                    <a
-                      className="level-item level-right edit-link"
-                      id="activate-create"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "verticalAlign": "top",
-                        }
-                      }
-                    >
-                      <FontAwesomeIcon
-                        border={false}
+                      <LevelItem
                         className=""
-                        fixedWidth={false}
-                        flip={null}
-                        icon="plus"
-                        inverse={false}
-                        listItem={false}
-                        mask={null}
-                        pull={null}
-                        pulse={false}
-                        rotation={null}
-                        size={null}
-                        spin={false}
-                        style={
-                          Object {
-                            "paddingRight": "0.2rem",
+                        renderAs="div"
+                        style={Object {}}
+                      >
+                        <Heading
+                          className="absolutely-no-margin"
+                          heading={false}
+                          renderAs="h1"
+                          size={3}
+                          spaced={false}
+                          subtitle={false}
+                          weight={null}
+                        >
+                          Instruments
+                        </Heading>
+                      </LevelItem>
+                    </LevelSide>,
+                    <LevelSide
+                      align="right"
+                      className=""
+                      renderAs="div"
+                      style={Object {}}
+                    >
+                      <LevelItem
+                        className=""
+                        renderAs="div"
+                        style={Object {}}
+                      >
+                        <a
+                          className="edit-link"
+                          id="activate-create"
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "verticalAlign": "top",
+                            }
                           }
-                        }
-                        symbol={false}
-                        title=""
-                        transform={null}
-                      />
-                       
-                      Create
-                    </a>,
+                        >
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            style={
+                              Object {
+                                "paddingRight": "0.2rem",
+                              }
+                            }
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />
+                           
+                          Create
+                        </a>
+                      </LevelItem>
+                    </LevelSide>,
                   ],
                   "className": "",
                   "clearfix": undefined,
@@ -1500,12 +1940,28 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
+                      "align": "left",
                       "backgroundColor": undefined,
-                      "children": "Instruments",
-                      "className": "absolutely-no-margin level-item level-left",
+                      "children": <LevelItem
+                        className=""
+                        renderAs="div"
+                        style={Object {}}
+                      >
+                        <Heading
+                          className="absolutely-no-margin"
+                          heading={false}
+                          renderAs="h1"
+                          size={3}
+                          spaced={false}
+                          subtitle={false}
+                          weight={null}
+                        >
+                          Instruments
+                        </Heading>
+                      </LevelItem>,
+                      "className": "",
                       "clearfix": undefined,
                       "clipped": undefined,
-                      "heading": false,
                       "hidden": undefined,
                       "invisible": undefined,
                       "italic": undefined,
@@ -1514,98 +1970,314 @@ ShallowWrapper {
                       "paddingless": undefined,
                       "pull": undefined,
                       "radiusless": undefined,
-                      "renderAs": "h1",
+                      "renderAs": "div",
                       "responsive": undefined,
                       "shadowless": undefined,
-                      "size": 3,
-                      "spaced": false,
-                      "subtitle": false,
+                      "style": Object {},
                       "textAlignment": undefined,
                       "textColor": undefined,
                       "textSize": undefined,
                       "textTransform": undefined,
                       "textWeight": undefined,
                       "unselectable": undefined,
-                      "weight": null,
                     },
                     "ref": null,
-                    "rendered": "Instruments",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": <Heading
+                          className="absolutely-no-margin"
+                          heading={false}
+                          renderAs="h1"
+                          size={3}
+                          spaced={false}
+                          subtitle={false}
+                          weight={null}
+                        >
+                          Instruments
+                        </Heading>,
+                        "className": "",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "div",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "style": Object {},
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "backgroundColor": undefined,
+                          "children": "Instruments",
+                          "className": "absolutely-no-margin",
+                          "clearfix": undefined,
+                          "clipped": undefined,
+                          "heading": false,
+                          "hidden": undefined,
+                          "invisible": undefined,
+                          "italic": undefined,
+                          "marginless": undefined,
+                          "overlay": undefined,
+                          "paddingless": undefined,
+                          "pull": undefined,
+                          "radiusless": undefined,
+                          "renderAs": "h1",
+                          "responsive": undefined,
+                          "shadowless": undefined,
+                          "size": 3,
+                          "spaced": false,
+                          "subtitle": false,
+                          "textAlignment": undefined,
+                          "textColor": undefined,
+                          "textSize": undefined,
+                          "textTransform": undefined,
+                          "textWeight": undefined,
+                          "unselectable": undefined,
+                          "weight": null,
+                        },
+                        "ref": null,
+                        "rendered": "Instruments",
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "host",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        <FontAwesomeIcon
-                          border={false}
-                          className=""
-                          fixedWidth={false}
-                          flip={null}
-                          icon="plus"
-                          inverse={false}
-                          listItem={false}
-                          mask={null}
-                          pull={null}
-                          pulse={false}
-                          rotation={null}
-                          size={null}
-                          spin={false}
+                      "align": "right",
+                      "backgroundColor": undefined,
+                      "children": <LevelItem
+                        className=""
+                        renderAs="div"
+                        style={Object {}}
+                      >
+                        <a
+                          className="edit-link"
+                          id="activate-create"
+                          onClick={[Function]}
                           style={
                             Object {
-                              "paddingRight": "0.2rem",
+                              "verticalAlign": "top",
                             }
                           }
-                          symbol={false}
-                          title=""
-                          transform={null}
-                        />,
-                        " ",
-                        "Create",
-                      ],
-                      "className": "level-item level-right edit-link",
-                      "id": "activate-create",
-                      "onClick": [Function],
-                      "style": Object {
-                        "verticalAlign": "top",
-                      },
+                        >
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            style={
+                              Object {
+                                "paddingRight": "0.2rem",
+                              }
+                            }
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />
+                           
+                          Create
+                        </a>
+                      </LevelItem>,
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "div",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "style": Object {},
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "backgroundColor": undefined,
+                        "children": <a
+                          className="edit-link"
+                          id="activate-create"
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "verticalAlign": "top",
+                            }
+                          }
+                        >
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="plus"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            style={
+                              Object {
+                                "paddingRight": "0.2rem",
+                              }
+                            }
+                            symbol={false}
+                            title=""
+                            transform={null}
+                          />
+                           
+                          Create
+                        </a>,
+                        "className": "",
+                        "clearfix": undefined,
+                        "clipped": undefined,
+                        "hidden": undefined,
+                        "invisible": undefined,
+                        "italic": undefined,
+                        "marginless": undefined,
+                        "overlay": undefined,
+                        "paddingless": undefined,
+                        "pull": undefined,
+                        "radiusless": undefined,
+                        "renderAs": "div",
+                        "responsive": undefined,
+                        "shadowless": undefined,
+                        "style": Object {},
+                        "textAlignment": undefined,
+                        "textColor": undefined,
+                        "textSize": undefined,
+                        "textTransform": undefined,
+                        "textWeight": undefined,
+                        "unselectable": undefined,
+                      },
+                      "ref": null,
+                      "rendered": Object {
                         "instance": null,
                         "key": undefined,
-                        "nodeType": "function",
+                        "nodeType": "host",
                         "props": Object {
-                          "border": false,
-                          "className": "",
-                          "fixedWidth": false,
-                          "flip": null,
-                          "icon": "plus",
-                          "inverse": false,
-                          "listItem": false,
-                          "mask": null,
-                          "pull": null,
-                          "pulse": false,
-                          "rotation": null,
-                          "size": null,
-                          "spin": false,
+                          "children": Array [
+                            <FontAwesomeIcon
+                              border={false}
+                              className=""
+                              fixedWidth={false}
+                              flip={null}
+                              icon="plus"
+                              inverse={false}
+                              listItem={false}
+                              mask={null}
+                              pull={null}
+                              pulse={false}
+                              rotation={null}
+                              size={null}
+                              spin={false}
+                              style={
+                                Object {
+                                  "paddingRight": "0.2rem",
+                                }
+                              }
+                              symbol={false}
+                              title=""
+                              transform={null}
+                            />,
+                            " ",
+                            "Create",
+                          ],
+                          "className": "edit-link",
+                          "id": "activate-create",
+                          "onClick": [Function],
                           "style": Object {
-                            "paddingRight": "0.2rem",
+                            "verticalAlign": "top",
                           },
-                          "symbol": false,
-                          "title": "",
-                          "transform": null,
                         },
                         "ref": null,
-                        "rendered": null,
-                        "type": [Function],
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {
+                              "border": false,
+                              "className": "",
+                              "fixedWidth": false,
+                              "flip": null,
+                              "icon": "plus",
+                              "inverse": false,
+                              "listItem": false,
+                              "mask": null,
+                              "pull": null,
+                              "pulse": false,
+                              "rotation": null,
+                              "size": null,
+                              "spin": false,
+                              "style": Object {
+                                "paddingRight": "0.2rem",
+                              },
+                              "symbol": false,
+                              "title": "",
+                              "transform": null,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          " ",
+                          "Create",
+                        ],
+                        "type": "a",
                       },
-                      " ",
-                      "Create",
-                    ],
-                    "type": "a",
+                      "type": [Function],
+                    },
+                    "type": [Function],
                   },
                 ],
                 "type": [Function],

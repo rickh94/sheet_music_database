@@ -28,96 +28,1006 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "backgroundColor": undefined,
-      "breakpoint": null,
       "children": Array [
-        <FieldDisplay
-          backendFieldName=""
-          linkTo="/test item/5"
-          saveCallback={[MockFunction]}
-          value="test"
-        />,
-        <div
-          className="links"
+        <Level
+          breakpoint={null}
+          className=""
+          renderAs="div"
+          style={Object {}}
         >
-          <a
-            className="edit-link"
-            onClick={[Function]}
+          <LevelSide
+            align="left"
+            className=""
+            renderAs="div"
+            style={Object {}}
           >
-            delete
-          </a>
-        </div>,
+            <LevelItem
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <FieldDisplay
+                backendFieldName=""
+                linkTo="/test item/5"
+                saveCallback={[MockFunction]}
+                value="test"
+              />
+            </LevelItem>
+          </LevelSide>
+          <LevelSide
+            align="right"
+            className="absolutely-no-margin"
+            renderAs="div"
+            style={Object {}}
+          >
+            <LevelItem
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <div
+                className="links"
+              >
+                <a
+                  className="edit-link"
+                  onClick={[Function]}
+                >
+                  delete
+                </a>
+              </div>
+            </LevelItem>
+          </LevelSide>
+        </Level>,
+        <Modal
+          className=""
+          closeOnBlur={false}
+          closeOnEsc={true}
+          document={null}
+          onClose={[Function]}
+          show={false}
+          showClose={true}
+        >
+          <ModalContent
+            className=""
+            renderAs="div"
+            style={Object {}}
+          >
+            <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <div
+                style={
+                  Object {
+                    "margin": "1rem",
+                  }
+                }
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Confirm Delete
+                </Heading>
+                <p>
+                  Are you sure you want to delete 
+                  test
+                  ?
+                </p>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={
+                    Object {
+                      "marginRight": "0.5rem",
+                    }
+                  }
+                  submit={false}
+                  text={false}
+                >
+                  Confirm
+                </Button>
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </div>
+            </Box>
+          </ModalContent>
+        </Modal>,
       ],
-      "className": "",
-      "clearfix": undefined,
-      "clipped": undefined,
-      "hidden": undefined,
-      "invisible": undefined,
-      "italic": undefined,
-      "marginless": undefined,
-      "overlay": undefined,
-      "paddingless": undefined,
-      "pull": undefined,
-      "radiusless": undefined,
-      "renderAs": "div",
-      "responsive": undefined,
-      "shadowless": undefined,
-      "style": Object {},
-      "textAlignment": undefined,
-      "textColor": undefined,
-      "textSize": undefined,
-      "textTransform": undefined,
-      "textWeight": undefined,
-      "unselectable": undefined,
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "backendFieldName": "",
-          "errors": undefined,
-          "linkTo": "/test item/5",
-          "saveCallback": [MockFunction],
-          "value": "test",
+          "backgroundColor": undefined,
+          "breakpoint": null,
+          "children": Array [
+            <LevelSide
+              align="left"
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <LevelItem
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <FieldDisplay
+                  backendFieldName=""
+                  linkTo="/test item/5"
+                  saveCallback={[MockFunction]}
+                  value="test"
+                />
+              </LevelItem>
+            </LevelSide>,
+            <LevelSide
+              align="right"
+              className="absolutely-no-margin"
+              renderAs="div"
+              style={Object {}}
+            >
+              <LevelItem
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <div
+                  className="links"
+                >
+                  <a
+                    className="edit-link"
+                    onClick={[Function]}
+                  >
+                    delete
+                  </a>
+                </div>
+              </LevelItem>
+            </LevelSide>,
+          ],
+          "className": "",
+          "clearfix": undefined,
+          "clipped": undefined,
+          "hidden": undefined,
+          "invisible": undefined,
+          "italic": undefined,
+          "marginless": undefined,
+          "overlay": undefined,
+          "paddingless": undefined,
+          "pull": undefined,
+          "radiusless": undefined,
+          "renderAs": "div",
+          "responsive": undefined,
+          "shadowless": undefined,
+          "style": Object {},
+          "textAlignment": undefined,
+          "textColor": undefined,
+          "textSize": undefined,
+          "textTransform": undefined,
+          "textWeight": undefined,
+          "unselectable": undefined,
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "align": "left",
+              "backgroundColor": undefined,
+              "children": <LevelItem
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <FieldDisplay
+                  backendFieldName=""
+                  linkTo="/test item/5"
+                  saveCallback={[MockFunction]}
+                  value="test"
+                />
+              </LevelItem>,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <FieldDisplay
+                  backendFieldName=""
+                  linkTo="/test item/5"
+                  saveCallback={[MockFunction]}
+                  value="test"
+                />,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "backendFieldName": "",
+                  "errors": undefined,
+                  "linkTo": "/test item/5",
+                  "saveCallback": [MockFunction],
+                  "value": "test",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "align": "right",
+              "backgroundColor": undefined,
+              "children": <LevelItem
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <div
+                  className="links"
+                >
+                  <a
+                    className="edit-link"
+                    onClick={[Function]}
+                  >
+                    delete
+                  </a>
+                </div>
+              </LevelItem>,
+              "className": "absolutely-no-margin",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <div
+                  className="links"
+                >
+                  <a
+                    className="edit-link"
+                    onClick={[Function]}
+                  >
+                    delete
+                  </a>
+                </div>,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <a
+                    className="edit-link"
+                    onClick={[Function]}
+                  >
+                    delete
+                  </a>,
+                  "className": "links",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "delete",
+                    "className": "edit-link",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "delete",
+                  "type": "a",
+                },
+                "type": "div",
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": <a
-            className="edit-link"
-            onClick={[Function]}
+          "children": <ModalContent
+            className=""
+            renderAs="div"
+            style={Object {}}
           >
-            delete
-          </a>,
-          "className": "links",
+            <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <div
+                style={
+                  Object {
+                    "margin": "1rem",
+                  }
+                }
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Confirm Delete
+                </Heading>
+                <p>
+                  Are you sure you want to delete 
+                  test
+                  ?
+                </p>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={
+                    Object {
+                      "marginRight": "0.5rem",
+                    }
+                  }
+                  submit={false}
+                  text={false}
+                >
+                  Confirm
+                </Button>
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </div>
+            </Box>
+          </ModalContent>,
+          "className": "",
+          "closeOnBlur": false,
+          "closeOnEsc": true,
+          "document": null,
+          "onClose": [Function],
+          "show": false,
+          "showClose": true,
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
-            "children": "delete",
-            "className": "edit-link",
-            "onClick": [Function],
+            "backgroundColor": undefined,
+            "children": <Box
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <div
+                style={
+                  Object {
+                    "margin": "1rem",
+                  }
+                }
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Confirm Delete
+                </Heading>
+                <p>
+                  Are you sure you want to delete 
+                  test
+                  ?
+                </p>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={
+                    Object {
+                      "marginRight": "0.5rem",
+                    }
+                  }
+                  submit={false}
+                  text={false}
+                >
+                  Confirm
+                </Button>
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </div>
+            </Box>,
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
           },
           "ref": null,
-          "rendered": "delete",
-          "type": "a",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": undefined,
+              "children": <div
+                style={
+                  Object {
+                    "margin": "1rem",
+                  }
+                }
+              >
+                <Heading
+                  className=""
+                  heading={false}
+                  renderAs="h1"
+                  size={3}
+                  spaced={false}
+                  subtitle={false}
+                  weight={null}
+                >
+                  Confirm Delete
+                </Heading>
+                <p>
+                  Are you sure you want to delete 
+                  test
+                  ?
+                </p>
+                <Button
+                  className=""
+                  color="danger"
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={
+                    Object {
+                      "marginRight": "0.5rem",
+                    }
+                  }
+                  submit={false}
+                  text={false}
+                >
+                  Confirm
+                </Button>
+                <Button
+                  className=""
+                  color={null}
+                  disabled={false}
+                  fullwidth={false}
+                  inverted={false}
+                  isSelected={false}
+                  isStatic={false}
+                  loading={false}
+                  onClick={[Function]}
+                  outlined={false}
+                  remove={false}
+                  renderAs="button"
+                  reset={false}
+                  rounded={false}
+                  size={null}
+                  state={null}
+                  style={Object {}}
+                  submit={false}
+                  text={false}
+                >
+                  Cancel
+                </Button>
+              </div>,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Confirm Delete
+                  </Heading>,
+                  <p>
+                    Are you sure you want to delete 
+                    test
+                    ?
+                  </p>,
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={
+                      Object {
+                        "marginRight": "0.5rem",
+                      }
+                    }
+                    submit={false}
+                    text={false}
+                  >
+                    Confirm
+                  </Button>,
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>,
+                ],
+                "style": Object {
+                  "margin": "1rem",
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Confirm Delete",
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "heading": false,
+                    "hidden": undefined,
+                    "invisible": undefined,
+                    "italic": undefined,
+                    "marginless": undefined,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "renderAs": "h1",
+                    "responsive": undefined,
+                    "shadowless": undefined,
+                    "size": 3,
+                    "spaced": false,
+                    "subtitle": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                    "weight": null,
+                  },
+                  "ref": null,
+                  "rendered": "Confirm Delete",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Are you sure you want to delete ",
+                      "test",
+                      "?",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Are you sure you want to delete ",
+                    "test",
+                    "?",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Confirm",
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "color": "danger",
+                    "disabled": false,
+                    "fullwidth": false,
+                    "hidden": undefined,
+                    "inverted": false,
+                    "invisible": undefined,
+                    "isSelected": false,
+                    "isStatic": false,
+                    "italic": undefined,
+                    "loading": false,
+                    "marginless": undefined,
+                    "onClick": [Function],
+                    "outlined": false,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "remove": false,
+                    "renderAs": "button",
+                    "reset": false,
+                    "responsive": undefined,
+                    "rounded": false,
+                    "shadowless": undefined,
+                    "size": null,
+                    "state": null,
+                    "style": Object {
+                      "marginRight": "0.5rem",
+                    },
+                    "submit": false,
+                    "text": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Confirm",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "backgroundColor": undefined,
+                    "children": "Cancel",
+                    "className": "",
+                    "clearfix": undefined,
+                    "clipped": undefined,
+                    "color": null,
+                    "disabled": false,
+                    "fullwidth": false,
+                    "hidden": undefined,
+                    "inverted": false,
+                    "invisible": undefined,
+                    "isSelected": false,
+                    "isStatic": false,
+                    "italic": undefined,
+                    "loading": false,
+                    "marginless": undefined,
+                    "onClick": [Function],
+                    "outlined": false,
+                    "overlay": undefined,
+                    "paddingless": undefined,
+                    "pull": undefined,
+                    "radiusless": undefined,
+                    "remove": false,
+                    "renderAs": "button",
+                    "reset": false,
+                    "responsive": undefined,
+                    "rounded": false,
+                    "shadowless": undefined,
+                    "size": null,
+                    "state": null,
+                    "style": Object {},
+                    "submit": false,
+                    "text": false,
+                    "textAlignment": undefined,
+                    "textColor": undefined,
+                    "textSize": undefined,
+                    "textTransform": undefined,
+                    "textWeight": undefined,
+                    "unselectable": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Cancel",
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          "type": [Function],
         },
-        "type": "div",
+        "type": [Function],
       },
     ],
-    "type": [Function],
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -125,96 +1035,1006 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "backgroundColor": undefined,
-        "breakpoint": null,
         "children": Array [
-          <FieldDisplay
-            backendFieldName=""
-            linkTo="/test item/5"
-            saveCallback={[MockFunction]}
-            value="test"
-          />,
-          <div
-            className="links"
+          <Level
+            breakpoint={null}
+            className=""
+            renderAs="div"
+            style={Object {}}
           >
-            <a
-              className="edit-link"
-              onClick={[Function]}
+            <LevelSide
+              align="left"
+              className=""
+              renderAs="div"
+              style={Object {}}
             >
-              delete
-            </a>
-          </div>,
+              <LevelItem
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <FieldDisplay
+                  backendFieldName=""
+                  linkTo="/test item/5"
+                  saveCallback={[MockFunction]}
+                  value="test"
+                />
+              </LevelItem>
+            </LevelSide>
+            <LevelSide
+              align="right"
+              className="absolutely-no-margin"
+              renderAs="div"
+              style={Object {}}
+            >
+              <LevelItem
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <div
+                  className="links"
+                >
+                  <a
+                    className="edit-link"
+                    onClick={[Function]}
+                  >
+                    delete
+                  </a>
+                </div>
+              </LevelItem>
+            </LevelSide>
+          </Level>,
+          <Modal
+            className=""
+            closeOnBlur={false}
+            closeOnEsc={true}
+            document={null}
+            onClose={[Function]}
+            show={false}
+            showClose={true}
+          >
+            <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
+            >
+              <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <div
+                  style={
+                    Object {
+                      "margin": "1rem",
+                    }
+                  }
+                >
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Confirm Delete
+                  </Heading>
+                  <p>
+                    Are you sure you want to delete 
+                    test
+                    ?
+                  </p>
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={
+                      Object {
+                        "marginRight": "0.5rem",
+                      }
+                    }
+                    submit={false}
+                    text={false}
+                  >
+                    Confirm
+                  </Button>
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </div>
+              </Box>
+            </ModalContent>
+          </Modal>,
         ],
-        "className": "",
-        "clearfix": undefined,
-        "clipped": undefined,
-        "hidden": undefined,
-        "invisible": undefined,
-        "italic": undefined,
-        "marginless": undefined,
-        "overlay": undefined,
-        "paddingless": undefined,
-        "pull": undefined,
-        "radiusless": undefined,
-        "renderAs": "div",
-        "responsive": undefined,
-        "shadowless": undefined,
-        "style": Object {},
-        "textAlignment": undefined,
-        "textColor": undefined,
-        "textSize": undefined,
-        "textTransform": undefined,
-        "textWeight": undefined,
-        "unselectable": undefined,
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "backendFieldName": "",
-            "errors": undefined,
-            "linkTo": "/test item/5",
-            "saveCallback": [MockFunction],
-            "value": "test",
+            "backgroundColor": undefined,
+            "breakpoint": null,
+            "children": Array [
+              <LevelSide
+                align="left"
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <LevelItem
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <FieldDisplay
+                    backendFieldName=""
+                    linkTo="/test item/5"
+                    saveCallback={[MockFunction]}
+                    value="test"
+                  />
+                </LevelItem>
+              </LevelSide>,
+              <LevelSide
+                align="right"
+                className="absolutely-no-margin"
+                renderAs="div"
+                style={Object {}}
+              >
+                <LevelItem
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <div
+                    className="links"
+                  >
+                    <a
+                      className="edit-link"
+                      onClick={[Function]}
+                    >
+                      delete
+                    </a>
+                  </div>
+                </LevelItem>
+              </LevelSide>,
+            ],
+            "className": "",
+            "clearfix": undefined,
+            "clipped": undefined,
+            "hidden": undefined,
+            "invisible": undefined,
+            "italic": undefined,
+            "marginless": undefined,
+            "overlay": undefined,
+            "paddingless": undefined,
+            "pull": undefined,
+            "radiusless": undefined,
+            "renderAs": "div",
+            "responsive": undefined,
+            "shadowless": undefined,
+            "style": Object {},
+            "textAlignment": undefined,
+            "textColor": undefined,
+            "textSize": undefined,
+            "textTransform": undefined,
+            "textWeight": undefined,
+            "unselectable": undefined,
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "align": "left",
+                "backgroundColor": undefined,
+                "children": <LevelItem
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <FieldDisplay
+                    backendFieldName=""
+                    linkTo="/test item/5"
+                    saveCallback={[MockFunction]}
+                    value="test"
+                  />
+                </LevelItem>,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <FieldDisplay
+                    backendFieldName=""
+                    linkTo="/test item/5"
+                    saveCallback={[MockFunction]}
+                    value="test"
+                  />,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "backendFieldName": "",
+                    "errors": undefined,
+                    "linkTo": "/test item/5",
+                    "saveCallback": [MockFunction],
+                    "value": "test",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "align": "right",
+                "backgroundColor": undefined,
+                "children": <LevelItem
+                  className=""
+                  renderAs="div"
+                  style={Object {}}
+                >
+                  <div
+                    className="links"
+                  >
+                    <a
+                      className="edit-link"
+                      onClick={[Function]}
+                    >
+                      delete
+                    </a>
+                  </div>
+                </LevelItem>,
+                "className": "absolutely-no-margin",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "backgroundColor": undefined,
+                  "children": <div
+                    className="links"
+                  >
+                    <a
+                      className="edit-link"
+                      onClick={[Function]}
+                    >
+                      delete
+                    </a>
+                  </div>,
+                  "className": "",
+                  "clearfix": undefined,
+                  "clipped": undefined,
+                  "hidden": undefined,
+                  "invisible": undefined,
+                  "italic": undefined,
+                  "marginless": undefined,
+                  "overlay": undefined,
+                  "paddingless": undefined,
+                  "pull": undefined,
+                  "radiusless": undefined,
+                  "renderAs": "div",
+                  "responsive": undefined,
+                  "shadowless": undefined,
+                  "style": Object {},
+                  "textAlignment": undefined,
+                  "textColor": undefined,
+                  "textSize": undefined,
+                  "textTransform": undefined,
+                  "textWeight": undefined,
+                  "unselectable": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      className="edit-link"
+                      onClick={[Function]}
+                    >
+                      delete
+                    </a>,
+                    "className": "links",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "delete",
+                      "className": "edit-link",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "delete",
+                    "type": "a",
+                  },
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": <a
-              className="edit-link"
-              onClick={[Function]}
+            "children": <ModalContent
+              className=""
+              renderAs="div"
+              style={Object {}}
             >
-              delete
-            </a>,
-            "className": "links",
+              <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <div
+                  style={
+                    Object {
+                      "margin": "1rem",
+                    }
+                  }
+                >
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Confirm Delete
+                  </Heading>
+                  <p>
+                    Are you sure you want to delete 
+                    test
+                    ?
+                  </p>
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={
+                      Object {
+                        "marginRight": "0.5rem",
+                      }
+                    }
+                    submit={false}
+                    text={false}
+                  >
+                    Confirm
+                  </Button>
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </div>
+              </Box>
+            </ModalContent>,
+            "className": "",
+            "closeOnBlur": false,
+            "closeOnEsc": true,
+            "document": null,
+            "onClose": [Function],
+            "show": false,
+            "showClose": true,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": "delete",
-              "className": "edit-link",
-              "onClick": [Function],
+              "backgroundColor": undefined,
+              "children": <Box
+                className=""
+                renderAs="div"
+                style={Object {}}
+              >
+                <div
+                  style={
+                    Object {
+                      "margin": "1rem",
+                    }
+                  }
+                >
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Confirm Delete
+                  </Heading>
+                  <p>
+                    Are you sure you want to delete 
+                    test
+                    ?
+                  </p>
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={
+                      Object {
+                        "marginRight": "0.5rem",
+                      }
+                    }
+                    submit={false}
+                    text={false}
+                  >
+                    Confirm
+                  </Button>
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </div>
+              </Box>,
+              "className": "",
+              "clearfix": undefined,
+              "clipped": undefined,
+              "hidden": undefined,
+              "invisible": undefined,
+              "italic": undefined,
+              "marginless": undefined,
+              "overlay": undefined,
+              "paddingless": undefined,
+              "pull": undefined,
+              "radiusless": undefined,
+              "renderAs": "div",
+              "responsive": undefined,
+              "shadowless": undefined,
+              "style": Object {},
+              "textAlignment": undefined,
+              "textColor": undefined,
+              "textSize": undefined,
+              "textTransform": undefined,
+              "textWeight": undefined,
+              "unselectable": undefined,
             },
             "ref": null,
-            "rendered": "delete",
-            "type": "a",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": undefined,
+                "children": <div
+                  style={
+                    Object {
+                      "margin": "1rem",
+                    }
+                  }
+                >
+                  <Heading
+                    className=""
+                    heading={false}
+                    renderAs="h1"
+                    size={3}
+                    spaced={false}
+                    subtitle={false}
+                    weight={null}
+                  >
+                    Confirm Delete
+                  </Heading>
+                  <p>
+                    Are you sure you want to delete 
+                    test
+                    ?
+                  </p>
+                  <Button
+                    className=""
+                    color="danger"
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={
+                      Object {
+                        "marginRight": "0.5rem",
+                      }
+                    }
+                    submit={false}
+                    text={false}
+                  >
+                    Confirm
+                  </Button>
+                  <Button
+                    className=""
+                    color={null}
+                    disabled={false}
+                    fullwidth={false}
+                    inverted={false}
+                    isSelected={false}
+                    isStatic={false}
+                    loading={false}
+                    onClick={[Function]}
+                    outlined={false}
+                    remove={false}
+                    renderAs="button"
+                    reset={false}
+                    rounded={false}
+                    size={null}
+                    state={null}
+                    style={Object {}}
+                    submit={false}
+                    text={false}
+                  >
+                    Cancel
+                  </Button>
+                </div>,
+                "className": "",
+                "clearfix": undefined,
+                "clipped": undefined,
+                "hidden": undefined,
+                "invisible": undefined,
+                "italic": undefined,
+                "marginless": undefined,
+                "overlay": undefined,
+                "paddingless": undefined,
+                "pull": undefined,
+                "radiusless": undefined,
+                "renderAs": "div",
+                "responsive": undefined,
+                "shadowless": undefined,
+                "style": Object {},
+                "textAlignment": undefined,
+                "textColor": undefined,
+                "textSize": undefined,
+                "textTransform": undefined,
+                "textWeight": undefined,
+                "unselectable": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Heading
+                      className=""
+                      heading={false}
+                      renderAs="h1"
+                      size={3}
+                      spaced={false}
+                      subtitle={false}
+                      weight={null}
+                    >
+                      Confirm Delete
+                    </Heading>,
+                    <p>
+                      Are you sure you want to delete 
+                      test
+                      ?
+                    </p>,
+                    <Button
+                      className=""
+                      color="danger"
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[Function]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={
+                        Object {
+                          "marginRight": "0.5rem",
+                        }
+                      }
+                      submit={false}
+                      text={false}
+                    >
+                      Confirm
+                    </Button>,
+                    <Button
+                      className=""
+                      color={null}
+                      disabled={false}
+                      fullwidth={false}
+                      inverted={false}
+                      isSelected={false}
+                      isStatic={false}
+                      loading={false}
+                      onClick={[Function]}
+                      outlined={false}
+                      remove={false}
+                      renderAs="button"
+                      reset={false}
+                      rounded={false}
+                      size={null}
+                      state={null}
+                      style={Object {}}
+                      submit={false}
+                      text={false}
+                    >
+                      Cancel
+                    </Button>,
+                  ],
+                  "style": Object {
+                    "margin": "1rem",
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Confirm Delete",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "heading": false,
+                      "hidden": undefined,
+                      "invisible": undefined,
+                      "italic": undefined,
+                      "marginless": undefined,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "renderAs": "h1",
+                      "responsive": undefined,
+                      "shadowless": undefined,
+                      "size": 3,
+                      "spaced": false,
+                      "subtitle": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                      "weight": null,
+                    },
+                    "ref": null,
+                    "rendered": "Confirm Delete",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Are you sure you want to delete ",
+                        "test",
+                        "?",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Are you sure you want to delete ",
+                      "test",
+                      "?",
+                    ],
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Confirm",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "color": "danger",
+                      "disabled": false,
+                      "fullwidth": false,
+                      "hidden": undefined,
+                      "inverted": false,
+                      "invisible": undefined,
+                      "isSelected": false,
+                      "isStatic": false,
+                      "italic": undefined,
+                      "loading": false,
+                      "marginless": undefined,
+                      "onClick": [Function],
+                      "outlined": false,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "remove": false,
+                      "renderAs": "button",
+                      "reset": false,
+                      "responsive": undefined,
+                      "rounded": false,
+                      "shadowless": undefined,
+                      "size": null,
+                      "state": null,
+                      "style": Object {
+                        "marginRight": "0.5rem",
+                      },
+                      "submit": false,
+                      "text": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "Confirm",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "backgroundColor": undefined,
+                      "children": "Cancel",
+                      "className": "",
+                      "clearfix": undefined,
+                      "clipped": undefined,
+                      "color": null,
+                      "disabled": false,
+                      "fullwidth": false,
+                      "hidden": undefined,
+                      "inverted": false,
+                      "invisible": undefined,
+                      "isSelected": false,
+                      "isStatic": false,
+                      "italic": undefined,
+                      "loading": false,
+                      "marginless": undefined,
+                      "onClick": [Function],
+                      "outlined": false,
+                      "overlay": undefined,
+                      "paddingless": undefined,
+                      "pull": undefined,
+                      "radiusless": undefined,
+                      "remove": false,
+                      "renderAs": "button",
+                      "reset": false,
+                      "responsive": undefined,
+                      "rounded": false,
+                      "shadowless": undefined,
+                      "size": null,
+                      "state": null,
+                      "style": Object {},
+                      "submit": false,
+                      "text": false,
+                      "textAlignment": undefined,
+                      "textColor": undefined,
+                      "textSize": undefined,
+                      "textTransform": undefined,
+                      "textWeight": undefined,
+                      "unselectable": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "Cancel",
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+              "type": [Function],
+            },
+            "type": [Function],
           },
-          "type": "div",
+          "type": [Function],
         },
       ],
-      "type": [Function],
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
