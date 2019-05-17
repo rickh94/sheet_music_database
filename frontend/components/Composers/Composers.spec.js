@@ -98,10 +98,14 @@ describe('Composers', () => {
       const createComposer = jest.fn()
       const updateComposer = jest.fn()
       wrapper.setProps({ createComposer, updateComposer })
-      wrapper.instance().createOrUpdate(null, { era: 'baroque', born: new Date('1234') })
+      wrapper
+        .instance()
+        .createOrUpdate(null, { era: 'baroque', born: new Date('1234') })
       expect(wrapper.state().errors.name).toEqual('Name is required')
       expect(createComposer).not.toHaveBeenCalled()
-      wrapper.instance().createOrUpdate(null, { name: 'test', born: new Date('1234-1-1') })
+      wrapper
+        .instance()
+        .createOrUpdate(null, { name: 'test', born: new Date('1234-1-1') })
       expect(wrapper.state().errors.name).toEqual('Era is required')
       expect(createComposer).not.toHaveBeenCalled()
     })
@@ -159,13 +163,13 @@ describe('Composers', () => {
 })
 
 describe('ComposerItem', () => {
-  const wrapper = shallow(
-    <ComposerItem composer={{ name: '', era: '', id: 1 }} onDelete={jest.fn()} />
-  )
+  let wrapper
   const composer = { name: 'Johann Sebastian Bach', era: 'Baroque' }
 
   beforeEach(() => {
-    wrapper.update()
+    wrapper = shallow(
+      <ComposerItem composer={{ name: '', era: '', id: 1 }} onDelete={jest.fn()} />
+    )
   })
 
   it('renders', () => {
@@ -185,5 +189,12 @@ describe('ComposerItem', () => {
   it('renders the dates if present', () => {
     wrapper.setProps({ composer: { ...composer, born: '1685', died: '1750' } })
     expect(wrapper.contains('(1685-1750)')).toBeTruthy()
+  })
+
+  it('deletes composer on click', () => {
+    const onDelete = jest.fn()
+    wrapper.setProps({ onDelete })
+    wrapper.find('ItalicLink').simulate('click')
+    expect(onDelete).toHaveBeenCalledWith(1)
   })
 })

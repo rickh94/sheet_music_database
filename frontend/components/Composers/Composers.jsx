@@ -35,6 +35,7 @@ export class Composers extends Component {
     getComposers: PropTypes.func.isRequired,
     createComposer: PropTypes.func.isRequired,
     updateComposer: PropTypes.func.isRequired,
+    deleteComposer: PropTypes.func.isRequired,
     alert: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired
   }
@@ -113,7 +114,7 @@ export class Composers extends Component {
                 <ComposerItem
                   key={composer.id}
                   composer={composer}
-                  onDelete={() => {}}
+                  onDelete={id => this.props.deleteComposer(this.props.token, id)}
                 />
               ))}
             </Box>
@@ -158,6 +159,9 @@ const mapDispatchToProps = dispatch => {
     },
     updateComposer: (token, id, updated) => {
       return dispatch(composers.updateComposer(token, id, updated))
+    },
+    deleteComposer: (token, id) => {
+      return dispatch(composers.deleteComposer(token, id))
     }
   }
 }
