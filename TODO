@@ -1,1 +1,2 @@
 Fix widths on tags and composers pages
+fix submit functions to have error handling and alerts in all components
