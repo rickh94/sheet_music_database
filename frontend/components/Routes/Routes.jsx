@@ -48,6 +48,10 @@ const Sheets = Loadable({
   loader: () => import('../Sheets'),
   loading: () => <div>Loading...</div>
 })
+const Sheet = Loadable({
+  loader: () => import('../Sheet'),
+  loading: () => <div>Loading...</div>
+})
 
 export class Routes extends Component {
   constructor(props) {
@@ -84,6 +88,7 @@ export class Routes extends Component {
             <Route exact path="/composer/:id" component={Composer} />
             <Route exact path="/instruments" component={Instruments} />
             <Route exact path="/sheets" component={Sheets} />
+            <Route exact path="/sheets/:id" component={Sheet} />
             <Route default component={NotFound} />
           </Switch>
         </Router>

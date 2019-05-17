@@ -172,13 +172,6 @@ ShallowWrapper {
               </Heading>
               <form>
                 <TextFieldWithErrors
-                  label="File Name"
-                  onChange={[Function]}
-                  placeholder="file.pdf"
-                  type="text"
-                  value=""
-                />
-                <TextFieldWithErrors
                   label="File format"
                   onChange={[Function]}
                   placeholder="PDF"
@@ -693,13 +686,6 @@ ShallowWrapper {
               </Heading>
               <form>
                 <TextFieldWithErrors
-                  label="File Name"
-                  onChange={[Function]}
-                  placeholder="file.pdf"
-                  type="text"
-                  value=""
-                />
-                <TextFieldWithErrors
                   label="File format"
                   onChange={[Function]}
                   placeholder="PDF"
@@ -826,13 +812,6 @@ ShallowWrapper {
                 New Sheet
               </Heading>
               <form>
-                <TextFieldWithErrors
-                  label="File Name"
-                  onChange={[Function]}
-                  placeholder="file.pdf"
-                  type="text"
-                  value=""
-                />
                 <TextFieldWithErrors
                   label="File format"
                   onChange={[Function]}
@@ -969,13 +948,6 @@ ShallowWrapper {
                   New Sheet
                 </Heading>,
                 <form>
-                  <TextFieldWithErrors
-                    label="File Name"
-                    onChange={[Function]}
-                    placeholder="file.pdf"
-                    type="text"
-                    value=""
-                  />
                   <TextFieldWithErrors
                     label="File format"
                     onChange={[Function]}
@@ -1138,13 +1110,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <TextFieldWithErrors
-                      label="File Name"
-                      onChange={[Function]}
-                      placeholder="file.pdf"
-                      type="text"
-                      value=""
-                    />,
-                    <TextFieldWithErrors
                       label="File format"
                       onChange={[Function]}
                       placeholder="PDF"
@@ -1240,22 +1205,6 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "error": undefined,
-                      "label": "File Name",
-                      "onChange": [Function],
-                      "placeholder": "file.pdf",
-                      "type": "text",
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -1716,13 +1665,6 @@ ShallowWrapper {
                   New Sheet
                 </Heading>
                 <form>
-                  <TextFieldWithErrors
-                    label="File Name"
-                    onChange={[Function]}
-                    placeholder="file.pdf"
-                    type="text"
-                    value=""
-                  />
                   <TextFieldWithErrors
                     label="File format"
                     onChange={[Function]}
@@ -2238,13 +2180,6 @@ ShallowWrapper {
                 </Heading>
                 <form>
                   <TextFieldWithErrors
-                    label="File Name"
-                    onChange={[Function]}
-                    placeholder="file.pdf"
-                    type="text"
-                    value=""
-                  />
-                  <TextFieldWithErrors
                     label="File format"
                     onChange={[Function]}
                     placeholder="PDF"
@@ -2371,13 +2306,6 @@ ShallowWrapper {
                   New Sheet
                 </Heading>
                 <form>
-                  <TextFieldWithErrors
-                    label="File Name"
-                    onChange={[Function]}
-                    placeholder="file.pdf"
-                    type="text"
-                    value=""
-                  />
                   <TextFieldWithErrors
                     label="File format"
                     onChange={[Function]}
@@ -2514,13 +2442,6 @@ ShallowWrapper {
                     New Sheet
                   </Heading>,
                   <form>
-                    <TextFieldWithErrors
-                      label="File Name"
-                      onChange={[Function]}
-                      placeholder="file.pdf"
-                      type="text"
-                      value=""
-                    />
                     <TextFieldWithErrors
                       label="File format"
                       onChange={[Function]}
@@ -2683,13 +2604,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <TextFieldWithErrors
-                        label="File Name"
-                        onChange={[Function]}
-                        placeholder="file.pdf"
-                        type="text"
-                        value=""
-                      />,
-                      <TextFieldWithErrors
                         label="File format"
                         onChange={[Function]}
                         placeholder="PDF"
@@ -2785,22 +2699,6 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "error": undefined,
-                        "label": "File Name",
-                        "onChange": [Function],
-                        "placeholder": "file.pdf",
-                        "type": "text",
-                        "value": "",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
                     Object {
                       "instance": null,
                       "key": undefined,

@@ -47,7 +47,7 @@ export class Composer extends Component {
     const success = await this.props.updateComposer(this.props.token, id, updated)
     if (!success) {
       this.setState({ errors: this.props.composers.errors  })
-      console.log(this.state.errors)
+      // console.log(this.state.errors)
     }
   }
 
@@ -57,7 +57,7 @@ export class Composer extends Component {
       <React.Fragment>
         <Header />
         <Container>
-          <Box>
+          <Box className="margin-default">
             <Level>
               <Heading size={3} className="absolutely-no-margin level-left">
                 <FieldDisplay
@@ -67,7 +67,6 @@ export class Composer extends Component {
                   errors={this.state.errors.name}
                 />
               </Heading>
-
             </Level>
             <FieldDisplay
               value={era || ''}

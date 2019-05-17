@@ -25,12 +25,26 @@ export function createSheet(token, sheet) {
 
 export function updateSheet(token, id, updatedFields) {
   const api = DjangoURL(token)
-  return updateAction('SHEET', api.v1.music.sheets(id), updatedFields)
+  const data = new FormData()
+  Object.entries(updatedFields).forEach(entry => {
+    const [key, val] = entry
+    data.append(key, val)
+  })
+  return updateAction('SHEET', api.v1.music.sheets(id), data, {
+    'Content-Type': 'multipart/form-data'
+  })
 }
 
 export function updateSingleSheet(token, id, updatedFields) {
   const api = DjangoURL(token)
-  return updateAction('SINGLE_SHEET', api.v1.music.sheets(id), updatedFields)
+  const data = new FormData()
+  Object.entries(updatedFields).forEach(entry => {
+    const [key, val] = entry
+    data.append(key, val)
+  })
+  return updateAction('SINGLE_SHEET', api.v1.music.sheets(id), data, {
+    'Content-Type': 'multipart/form-data'
+  })
 }
 
 export function deleteSheet(token, id) {

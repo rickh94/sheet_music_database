@@ -92,8 +92,10 @@ describe('sheet actions', () => {
   it('updates sheet successfully', async () => {
     const { mockDispatch, mockAxios } = setup()
     const newSheet = { id: 3, name: 'updated' }
+    const data = new FormData()
+    data.append('name', 'updated')
     mockAxios
-      .onPatch(api.v1.music.sheets(3).url, { name: 'updated' })
+      .onPatch(api.v1.music.sheets(3).url, data)
       .reply(200, newSheet)
     expect(
       await sheets.updateSheet(testToken, 3, { name: 'updated' })(
@@ -111,8 +113,10 @@ describe('sheet actions', () => {
   it('updates a single sheet successfully', async () => {
     const { mockDispatch, mockAxios } = setup()
     const newSheet = { id: 3, name: 'updated' }
+    const data = new FormData()
+    data.append('name', 'updated')
     mockAxios
-      .onPatch(api.v1.music.sheets(3).url, { name: 'updated' })
+      .onPatch(api.v1.music.sheets(3).url, data)
       .reply(200, newSheet)
     expect(
       await sheets.updateSingleSheet(testToken, 3, { name: 'updated' })(

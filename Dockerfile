@@ -23,8 +23,8 @@ RUN mkdir -p /vol/web/media
 RUN mkdir -p /vol/web/static
 RUN mkdir /socks
 RUN useradd -M user
-RUN chown -R user:user /vol/
+RUN chown -R user:user /vol/web
 RUN chown -R user:user /socks
-RUN chmod -R a+rX /vol/web
+RUN chmod -R +rX /vol/web
 RUN chmod -R u+w /vol/web
 USER user

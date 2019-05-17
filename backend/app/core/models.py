@@ -7,9 +7,7 @@ from django.db import models
 
 def sheet_file_path(_instance, filename):
     """Generate new file path for sheet file"""
-    ext = filename.split(".")[-1]
-    filename = f"{uuid.uuid4()}.{ext}"
-    return str(Path("uploads/sheets") / filename)
+    return str(Path("uploads") / "sheets" / f"{uuid.uuid4()}" / filename)
 
 
 def _generate_short_name(name):

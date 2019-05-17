@@ -94,7 +94,7 @@ class TestSheet:
 
         monkeypatch.setattr("uuid.uuid4", test_name)
         file_path = sheet_file_path(None, "test.ly")
-        assert file_path == f"uploads/sheets/testname.ly"
+        assert file_path == f"uploads/sheets/testname/test.ly"
 
 
 class TestPiece:

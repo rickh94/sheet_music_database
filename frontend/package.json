@@ -11,6 +11,7 @@
     "components": "^0.1.0",
     "eslint": "^5.13.0",
     "filepond": "^4.4.6",
+    "js-file-download": "^0.4.5",
     "normalize.css": "^8.0.1",
     "postcss": "^7.0.14",
     "prop-types": "^15.6.2",

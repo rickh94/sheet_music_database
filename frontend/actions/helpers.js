@@ -38,11 +38,11 @@ export function createAction(name, api, item, headers = {}) {
   }
 }
 
-export function updateAction(name, api, item) {
+export function updateAction(name, api, item, headers = {}) {
   return async dispatch => {
     dispatch({ type: `UPDATE_${name}` })
     try {
-      const res = await api.patch(item)
+      const res = await api.patch(item, {headers})
       dispatch({
         type: `UPDATE_${name}_SUCCESSFUL`,
         payload: res.data

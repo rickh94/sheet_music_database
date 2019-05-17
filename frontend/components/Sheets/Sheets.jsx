@@ -89,7 +89,7 @@ export class Sheets extends Component {
       this.props.alert.show(alertText('Sheet Created'))
     } else {
       this.setState({ errors: { ...this.props.sheets.errors } })
-      this.props.alert.show(alertText('Sheet Creation Failed'), {type: 'error'})
+      this.props.alert.show(alertText('Sheet Creation Failed'), { type: 'error' })
     }
   }
 
@@ -118,6 +118,7 @@ export class Sheets extends Component {
             </Level>
             {sheetList.map(sheet => (
               <ListItem
+                link="sheets"
                 item={{ name: sheet.filename, id: sheet.id }}
                 key={sheet.id}
                 deleteCallback={id => this.props.deleteSheet(token, id)}
@@ -137,14 +138,14 @@ export class Sheets extends Component {
                 New Sheet
               </Heading>
               <form>
-                <TextFieldWithErrors
+                {/* <TextFieldWithErrors
                   type="text"
                   label="File Name"
                   placeholder="file.pdf"
                   onChange={e => this.setState({ newSheetFilename: e.target.value })}
                   error={errors.filename}
                   value={newSheetFilename || ''}
-                />
+                /> */}
                 <TextFieldWithErrors
                   type="text"
                   label="File format"
@@ -166,6 +167,7 @@ export class Sheets extends Component {
                     file={this.state.newSheetFile}
                     allowMultiple={false}
                     onupdatefiles={fileItems => {
+                      this.setState({ newSheetFilename: fileItems[0].filename })
                       this.setState({ newSheetFile: fileItems[0].file })
                     }}
                   />
