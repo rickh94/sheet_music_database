@@ -89,7 +89,7 @@ export class Sheets extends Component {
       this.props.alert.show(alertText('Sheet Created'))
     } else {
       this.setState({ errors: { ...this.props.sheets.errors } })
-      this.props.alert.show(alertText('Sheet Creation Failed'))
+      this.props.alert.show(alertText('Sheet Creation Failed'), {type: 'error'})
     }
   }
 

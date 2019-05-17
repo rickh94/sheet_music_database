@@ -187,7 +187,8 @@ describe('<Sheets />', () => {
         sheet_file: 'testfile'
       })
       expect(show).toHaveBeenCalledWith(
-        <span className="alert-text">Sheet Creation Failed</span>
+        <span className="alert-text">Sheet Creation Failed</span>,
+        { type: 'error' }
       )
       expect(spy).not.toHaveBeenCalled()
       expect(wrapper.state().errors.filename).toEqual('test error')

@@ -10,7 +10,6 @@ import {
   clickButton
 } from '../../testHelpers'
 
-
 describe('Tags', () => {
   const wrapper = shallow(
     <Tags
@@ -73,12 +72,11 @@ describe('Tags', () => {
   it('has a button to save created tag, and resets state', () => {
     const createTag = jest.fn()
     const newTagName = 'new test tag name'
+    const spy = jest.spyOn(wrapper.instance(), 'handleSubmit')
     wrapper.setProps({ createTag })
     wrapper.setState({ newTagName, createMode: true })
     clickButton(wrapper, 'Save')
-    expect(createTag).toHaveBeenCalledWith(testToken, newTagName)
-    expect(wrapper.state().createMode).toBeFalsy()
-    expect(wrapper.state().newTagName).toEqual('')
+    expect(spy).toHaveBeenCalled()
   })
 
   it('has a cancel button that closes the modal and reset newtagname', () => {
@@ -86,5 +84,54 @@ describe('Tags', () => {
     clickButton(wrapper, 'Cancel')
     expect(wrapper.state().createMode).toBeFalsy()
     expect(wrapper.state().newTagName).toEqual('')
+  })
+
+  describe('handle submit', () => {
+    const e = { preventDefault: jest.fn() }
+    it('returns and sets errors if no filename', async () => {
+      const createTag = jest.fn()
+      wrapper.setProps({ createTag })
+      wrapper.setState({ newTagName: '', createMode: true })
+      await wrapper.instance().handleSubmit(e)
+      expect(createTag).not.toHaveBeenCalled()
+      expect(wrapper.state().errors.name).toEqual('Tag name is required')
+      expect(wrapper.state().createMode).toBeTruthy()
+    })
+
+    it('calls create tag and clears form on success', async () => {
+      const createTag = jest.fn()
+      const show = jest.fn()
+      createTag.mockReturnValue(true)
+      wrapper.setProps({ createTag, alert: { show } })
+      wrapper.setState({
+        newTagName: 'testname', createMode: true
+      })
+      await wrapper.instance().handleSubmit(e)
+      expect(createTag).toHaveBeenCalledWith(testToken, 'testname')
+      expect(show).toHaveBeenCalledWith(<span className="alert-text">Tag Created</span>)
+      expect(wrapper.state().newTagName).toEqual('')
+    })
+
+    it('sets errors and shows alert on failure', async () => {
+      const createTag = jest.fn()
+      const show = jest.fn()
+      createTag.mockReturnValue(false)
+      wrapper.setProps({
+        createTag,
+        alert: { show },
+        tags: { errors: { name: 'test error' }, list: [] }
+      })
+      wrapper.setState({
+        newTagName: 'testname', createMode: true
+      })
+      await wrapper.instance().handleSubmit(e)
+      expect(createTag).toHaveBeenCalledWith(testToken, 'testname')
+      expect(show).toHaveBeenCalledWith(
+        <span className="alert-text">Tag Creation Failed</span>,
+        { type: 'error' }
+      )
+      expect(wrapper.state().errors.name).toEqual('test error')
+      expect(wrapper.state().createMode).toBeTruthy()
+    })
   })
 })

@@ -51,6 +51,24 @@ export class Tags extends Component {
     )
   }
 
+  handleSubmit = async e => {
+    e.preventDefault()
+    if (!this.state.newTagName) {
+      this.setState({ errors: { name: 'Tag name is required' } })
+      return
+    }
+
+    this.setState({ errors: {} })
+    const success = await this.props.createTag(this.props.token, this.state.newTagName)
+    if (success) {
+      this.setState({ newTagName: '', createMode: false })
+      this.props.alert.show(alertText('Tag Created'))
+    } else {
+      this.setState({ errors: { ...this.props.tags.errors } })
+      this.props.alert.show(alertText('Tag Creation Failed'), { type: 'error' })
+    }
+  }
+
   render() {
     const tagList = this.props.tags.list
     const { token } = this.props
@@ -74,7 +92,8 @@ export class Tags extends Component {
                   className="level-item level-right edit-link"
                   onClick={() => this.setState({ createMode: true })}
                 >
-                  <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} /> Create
+                  <FontAwesomeIcon icon="plus" style={{ paddingRight: '0.2rem' }} />{' '}
+                  Create
                 </a>
               </Level>
               <div>
@@ -106,13 +125,11 @@ export class Tags extends Component {
                   onChange={e => this.setState({ newTagName: e.target.value })}
                   placeholder="Name"
                   className="form-padding"
+                  errors={this.state.errors.name}
                 />
                 <Button
                   color="primary"
-                  onClick={() => {
-                    this.props.createTag(this.props.token, newTagName)
-                    this.setState({ createMode: false, newTagName: '' })
-                  }}
+                  onClick={this.handleSubmit}
                 >
                   Save
                 </Button>

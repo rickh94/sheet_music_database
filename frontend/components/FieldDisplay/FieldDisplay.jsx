@@ -19,7 +19,7 @@ export default class FieldDisplay extends Component {
   static propTypes = {
     label: PropTypes.string,
     value: PropTypes.string.isRequired,
-    saveCallback: PropTypes.func.isRequired,
+    saveCallback: PropTypes.func,
     backendFieldName: PropTypes.string.isRequired,
     errors: PropTypes.any,
     linkTo: PropTypes.string,
@@ -109,13 +109,15 @@ export default class FieldDisplay extends Component {
             <React.Fragment>
               <div className={'level-item level-left is-2'}>
                 {valueEl}
-                <a
-                  className="edit-link"
-                  onClick={() => this.setState({ edit: true })}
-                  style={{ marginLeft: '0.3rem' }}
-                >
-                  edit
-                </a>
+                {this.props.saveCallback && (
+                  <a
+                    className="edit-link"
+                    onClick={() => this.setState({ edit: true })}
+                    style={{ marginLeft: '0.3rem' }}
+                  >
+                    edit
+                  </a>
+                )}
               </div>
             </React.Fragment>
           )}

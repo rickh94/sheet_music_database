@@ -28,7 +28,11 @@ describe('TagItem', () => {
 
   it('has delete link with icon', () => {
     expect(wrapper.contains('delete')).toBeTruthy()
-    expect(wrapper.find('FontAwesomeIcon')).toBeTruthy()
+  })
+
+  it('does not render a delete link with no delete callback', () => {
+    wrapper.setProps({deleteCallback: null})
+    expect(wrapper.contains('delete')).toBeFalsy()
   })
 
   it('calls passed in function when delete is clicked', () => {

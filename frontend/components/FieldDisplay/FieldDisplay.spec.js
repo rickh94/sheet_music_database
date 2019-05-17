@@ -27,6 +27,11 @@ describe('FieldDisplay', () => {
     expect(wrapper.exists('.edit-link')).toBeTruthy()
   })
 
+  it('does not render edit link without save callback', () => {
+    wrapper.setProps({saveCallback: null})
+    expect(wrapper.exists('.edit-link')).toBeFalsy()
+  })
+
   it('renders label', () => {
     wrapper.setProps({ label: 'Test name' })
     expect(wrapper.contains('Test name')).toBeTruthy()

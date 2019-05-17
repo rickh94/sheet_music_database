@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import Level from 'react-bulma-components/lib/components/level'
@@ -16,15 +16,17 @@ function ListItem(props) {
         linkTo={`/${props.link}/${props.item.id}`}
       />
       <div className="links">
-        <a
-          onClick={e => {
-            e.preventDefault()
-            props.deleteCallback(props.item.id)
-          }}
-          className="edit-link"
-        >
-          delete
-        </a>
+        {props.deleteCallback && (
+          <a
+            onClick={e => {
+              e.preventDefault()
+              props.deleteCallback(props.item.id)
+            }}
+            className="edit-link"
+          >
+            delete
+          </a>
+        )}
       </div>
     </Level>
   )
@@ -32,8 +34,8 @@ function ListItem(props) {
 
 ListItem.propTypes = {
   item: PropTypes.object.isRequired,
-  saveCallback: PropTypes.func.isRequired,
-  deleteCallback: PropTypes.func.isRequired,
+  saveCallback: PropTypes.func,
+  deleteCallback: PropTypes.func,
   errors: PropTypes.string,
   link: PropTypes.string
 }

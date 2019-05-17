@@ -4,6 +4,7 @@ export default function alertText(text) {
   return <span className={'alert-text'}>{text}</span>
 }
 
+
 function couldNotGet(thing) {
   return [alertText(`Could not get ${thing}`), {type: 'error'}]
 }
