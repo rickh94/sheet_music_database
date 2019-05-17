@@ -198,7 +198,7 @@ ShallowWrapper {
                   <FilePond
                     allowMultiple={false}
                     file={null}
-                    onupdatfiles={[Function]}
+                    onupdatefiles={[Function]}
                   />
                 </FieldWithErrors>
                 <Field
@@ -719,7 +719,7 @@ ShallowWrapper {
                   <FilePond
                     allowMultiple={false}
                     file={null}
-                    onupdatfiles={[Function]}
+                    onupdatefiles={[Function]}
                   />
                 </FieldWithErrors>
                 <Field
@@ -853,7 +853,7 @@ ShallowWrapper {
                   <FilePond
                     allowMultiple={false}
                     file={null}
-                    onupdatfiles={[Function]}
+                    onupdatefiles={[Function]}
                   />
                 </FieldWithErrors>
                 <Field
@@ -996,7 +996,7 @@ ShallowWrapper {
                     <FilePond
                       allowMultiple={false}
                       file={null}
-                      onupdatfiles={[Function]}
+                      onupdatefiles={[Function]}
                     />
                   </FieldWithErrors>
                   <Field
@@ -1164,7 +1164,7 @@ ShallowWrapper {
                       <FilePond
                         allowMultiple={false}
                         file={null}
-                        onupdatfiles={[Function]}
+                        onupdatefiles={[Function]}
                       />
                     </FieldWithErrors>,
                     <Field
@@ -1296,7 +1296,7 @@ ShallowWrapper {
                       "children": <FilePond
                         allowMultiple={false}
                         file={null}
-                        onupdatfiles={[Function]}
+                        onupdatefiles={[Function]}
                       />,
                       "error": undefined,
                       "label": "File",
@@ -1309,7 +1309,7 @@ ShallowWrapper {
                       "props": Object {
                         "allowMultiple": false,
                         "file": null,
-                        "onupdatfiles": [Function],
+                        "onupdatefiles": [Function],
                       },
                       "ref": null,
                       "rendered": null,
@@ -1743,7 +1743,7 @@ ShallowWrapper {
                     <FilePond
                       allowMultiple={false}
                       file={null}
-                      onupdatfiles={[Function]}
+                      onupdatefiles={[Function]}
                     />
                   </FieldWithErrors>
                   <Field
@@ -2264,7 +2264,7 @@ ShallowWrapper {
                     <FilePond
                       allowMultiple={false}
                       file={null}
-                      onupdatfiles={[Function]}
+                      onupdatefiles={[Function]}
                     />
                   </FieldWithErrors>
                   <Field
@@ -2398,7 +2398,7 @@ ShallowWrapper {
                     <FilePond
                       allowMultiple={false}
                       file={null}
-                      onupdatfiles={[Function]}
+                      onupdatefiles={[Function]}
                     />
                   </FieldWithErrors>
                   <Field
@@ -2541,7 +2541,7 @@ ShallowWrapper {
                       <FilePond
                         allowMultiple={false}
                         file={null}
-                        onupdatfiles={[Function]}
+                        onupdatefiles={[Function]}
                       />
                     </FieldWithErrors>
                     <Field
@@ -2709,7 +2709,7 @@ ShallowWrapper {
                         <FilePond
                           allowMultiple={false}
                           file={null}
-                          onupdatfiles={[Function]}
+                          onupdatefiles={[Function]}
                         />
                       </FieldWithErrors>,
                       <Field
@@ -2841,7 +2841,7 @@ ShallowWrapper {
                         "children": <FilePond
                           allowMultiple={false}
                           file={null}
-                          onupdatfiles={[Function]}
+                          onupdatefiles={[Function]}
                         />,
                         "error": undefined,
                         "label": "File",
@@ -2854,7 +2854,7 @@ ShallowWrapper {
                         "props": Object {
                           "allowMultiple": false,
                           "file": null,
-                          "onupdatfiles": [Function],
+                          "onupdatefiles": [Function],
                         },
                         "ref": null,
                         "rendered": null,

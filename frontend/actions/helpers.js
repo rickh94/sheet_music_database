@@ -18,11 +18,11 @@ export function getAction(name, api) {
   }
 }
 
-export function createAction(name, api, item) {
+export function createAction(name, api, item, headers = {}) {
   return async dispatch => {
     dispatch({ type: `CREATE_${name}` })
     try {
-      const res = await api.post(item)
+      const res = await api.post(item, {headers})
       dispatch({
         type: `CREATE_${name}_SUCCESSFUL`,
         payload: res.data

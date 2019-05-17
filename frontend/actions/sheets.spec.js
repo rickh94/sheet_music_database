@@ -53,12 +53,14 @@ describe('sheet actions', () => {
 
   it('creates sheet successfully', async () => {
     const { mockDispatch, mockAxios } = setup()
-    const newSheet = { id: 4, name: 'sheet4' }
+    const newSheet = { id: 4, filename: 'sheet4' }
+    const data = new FormData()
+    data.append('name', newSheet.filename)
     mockAxios
-      .onPost(api.v1.music.sheets().url, { name: 'sheet4' })
+      .onPost(api.v1.music.sheets().url, data)
       .reply(201, newSheet)
     expect(
-      await sheets.createSheet(testToken, { name: 'sheet4' })(
+      await sheets.createSheet(testToken, { filename: 'sheet4' })(
         mockDispatch,
         mockGetState
       )
@@ -86,34 +88,6 @@ describe('sheet actions', () => {
     })
   })
 
-  it('creates a sheet with dates', async () => {
-    const { mockDispatch, mockAxios } = setup()
-    const born = new Date(1800)
-    const bornStr = `${born.getFullYear()}-${born.getMonth()}-${born.getDate()}`
-    const died = new Date(1890)
-    const diedStr = `${died.getFullYear()}-${died.getMonth()}-${died.getDate()}`
-    const spy = jest.spyOn(helpers, 'createAction')
-    const newSheet = { id: 4, name: 'sheet4', born: bornStr, died: diedStr }
-    mockAxios
-      .onPost(api.v1.music.sheets().url)
-      .reply(201, { ...newSheet, born: bornStr, died: diedStr })
-    expect(
-      await sheets.createSheet(testToken, { name: 'sheet4', born: bornStr, died: diedStr })(
-        mockDispatch,
-        mockGetState
-      )
-    ).toBeTruthy()
-    expect(mockDispatch).toHaveBeenCalledWith({ type: 'CREATE_SHEET' })
-    expect(spy).toHaveBeenCalledWith('SHEET', expect.anything(), {
-      name: 'sheet4',
-      born: bornStr,
-      died: diedStr
-    })
-    expect(mockDispatch).toHaveBeenCalledWith({
-      type: 'CREATE_SHEET_SUCCESSFUL',
-      payload: { ...newSheet }
-    })
-  })
 
   it('updates sheet successfully', async () => {
     const { mockDispatch, mockAxios } = setup()

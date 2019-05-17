@@ -116,39 +116,41 @@ describe('<Sheets />', () => {
       expect(wrapper.state().newSheetFile).toBeNull()
     })
   })
+
   describe('handle submit', () => {
-    it('returns and sets errors if no filename', () => {
+    const e = { preventDefault: jest.fn() }
+    it('returns and sets errors if no filename', async () => {
       const createSheet = jest.fn()
       wrapper.setProps({ createSheet })
       wrapper.setState({ newSheetFilename: '' })
-      wrapper.instance().handleSubmit()
+      await wrapper.instance().handleSubmit(e)
       expect(createSheet).not.toHaveBeenCalled()
       expect(wrapper.state().errors.filename).toEqual('File name is required')
     })
 
-    it('returns and sets errors if no file', () => {
+    it('returns and sets errors if no file', async () => {
       const createSheet = jest.fn()
       const show = jest.fn()
       wrapper.setProps({ createSheet, alert: { show } })
       wrapper.setState({ newSheetFile: null, newSheetFilename: 'test' })
-      wrapper.instance().handleSubmit()
+      await wrapper.instance().handleSubmit(e)
       expect(createSheet).not.toHaveBeenCalled()
       expect(wrapper.state().errors.sheet_file).toEqual('File is required')
     })
 
-    it('calls create sheet and clears form on success', () => {
+    it('calls create sheet and clears form on success', async () => {
       const createSheet = jest.fn()
       const show = jest.fn()
       createSheet.mockReturnValue(true)
       const spy = jest.spyOn(wrapper.instance(), 'clearForm')
-      wrapper.setProps({ createSheet, alert: {show} })
+      wrapper.setProps({ createSheet, alert: { show } })
       wrapper.setState({
         newSheetFilename: 'testname',
         newSheetFormat: 'testformat',
         newSheetType: 'testtype',
         newSheetFile: 'testfile'
       })
-      wrapper.instance().handleSubmit()
+      await wrapper.instance().handleSubmit(e)
       expect(createSheet).toHaveBeenCalledWith(testToken, {
         filename: 'testname',
         file_format: 'testformat',
@@ -161,19 +163,23 @@ describe('<Sheets />', () => {
       expect(spy).toHaveBeenCalled()
     })
 
-    it('sets errors and shows alert on failure', () => {
+    it('sets errors and shows alert on failure', async () => {
       const createSheet = jest.fn()
       const show = jest.fn()
       createSheet.mockReturnValue(false)
       const spy = jest.spyOn(wrapper.instance(), 'clearForm')
-      wrapper.setProps({ createSheet, alert: {show}, sheets: {errors: {filename: 'test error'}, list: []} })
+      wrapper.setProps({
+        createSheet,
+        alert: { show },
+        sheets: { errors: { filename: 'test error' }, list: [] }
+      })
       wrapper.setState({
         newSheetFilename: 'testname',
         newSheetFormat: 'testformat',
         newSheetType: 'testtype',
         newSheetFile: 'testfile'
       })
-      wrapper.instance().handleSubmit()
+      await wrapper.instance().handleSubmit(e)
       expect(createSheet).toHaveBeenCalledWith(testToken, {
         filename: 'testname',
         file_format: 'testformat',

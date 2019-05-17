@@ -59,6 +59,7 @@ export class Header extends Component {
             <HeaderLink to="/tags">Tags</HeaderLink>
             <HeaderLink to="/composers">Composers</HeaderLink>
             <HeaderLink to="/instruments">Instruments</HeaderLink>
+            <HeaderLink to="/sheets">Sheets</HeaderLink>
             {token ? (
               <React.Fragment>
                 <HeaderLink to="/profile">Profile</HeaderLink>

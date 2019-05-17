@@ -68,6 +68,11 @@ ShallowWrapper {
         />
         <Route
           component={[Function]}
+          exact={true}
+          path="/sheets"
+        />
+        <Route
+          component={[Function]}
           default={true}
         />
       </Switch>,
@@ -123,6 +128,11 @@ ShallowWrapper {
             component={[Function]}
             exact={true}
             path="/instruments"
+          />,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sheets"
           />,
           <Route
             component={[Function]}
@@ -255,6 +265,19 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
+            "exact": true,
+            "path": "/sheets",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
             "default": true,
           },
           "ref": null,
@@ -320,6 +343,11 @@ ShallowWrapper {
           />
           <Route
             component={[Function]}
+            exact={true}
+            path="/sheets"
+          />
+          <Route
+            component={[Function]}
             default={true}
           />
         </Switch>,
@@ -375,6 +403,11 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/instruments"
+            />,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/sheets"
             />,
             <Route
               component={[Function]}
@@ -496,6 +529,19 @@ ShallowWrapper {
               "component": [Function],
               "exact": true,
               "path": "/instruments",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/sheets",
             },
             "ref": null,
             "rendered": null,

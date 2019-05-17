@@ -13,7 +13,14 @@ export function getSheet(token, id) {
 
 export function createSheet(token, sheet) {
   const api = DjangoURL(token)
-  return createAction('SHEET', api.v1.music.sheets(), sheet)
+  const data = new FormData()
+  data.append('filename', sheet.filename)
+  data.append('file_format', sheet.file_format)
+  data.append('sheet_type', sheet.sheet_type)
+  data.append('sheet_file', sheet.sheet_file)
+  return createAction('SHEET', api.v1.music.sheets(), data, {
+    'Content-Type': 'multipart/form-data'
+  })
 }
 
 export function updateSheet(token, id, updatedFields) {

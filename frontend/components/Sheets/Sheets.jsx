@@ -17,7 +17,7 @@ import 'filepond/dist/filepond.css'
 
 import Header from '../Header'
 import TextFieldWithErrors from '../TextFieldWithErrors'
-import sheets from '../../actions'
+import { sheets } from '../../actions'
 import { getDataOrLogIn } from '../../helpers'
 import FieldWithErrors from '../FieldWithErrors'
 import ListItem from '../ListItem'
@@ -65,7 +65,8 @@ export class Sheets extends Component {
     })
   }
 
-  handleSubmit = () => {
+  handleSubmit = async e => {
+    e.preventDefault()
     if (!this.state.newSheetFilename) {
       this.setState({ errors: { filename: 'File name is required' } })
       return
@@ -81,7 +82,7 @@ export class Sheets extends Component {
       sheet_type: this.state.newSheetType,
       sheet_file: this.state.newSheetFile
     }
-    const success = this.props.createSheet(this.props.token, newSheet)
+    const success = await this.props.createSheet(this.props.token, newSheet)
     if (success) {
       this.clearForm()
       this.setState({ createMode: false })
@@ -164,7 +165,7 @@ export class Sheets extends Component {
                   <FilePond
                     file={this.state.newSheetFile}
                     allowMultiple={false}
-                    onupdatfiles={fileItems => {
+                    onupdatefiles={fileItems => {
                       this.setState({ newSheetFile: fileItems[0].file })
                     }}
                   />
