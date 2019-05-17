@@ -88,7 +88,7 @@ describe('Tags', () => {
 
   describe('handle submit', () => {
     const e = { preventDefault: jest.fn() }
-    it('returns and sets errors if no filename', async () => {
+    it('returns and sets errors if no name', async () => {
       const createTag = jest.fn()
       wrapper.setProps({ createTag })
       wrapper.setState({ newTagName: '', createMode: true })

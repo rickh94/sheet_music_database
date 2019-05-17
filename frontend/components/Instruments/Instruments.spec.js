@@ -71,12 +71,11 @@ describe('<Instruments />', () => {
   it('has a button to save created instrument, and resets state', () => {
     const createInstrument = jest.fn()
     const newInstrumentName = 'new test instrument name'
+    const spy = jest.spyOn(wrapper.instance(), 'handleSubmit')
     wrapper.setProps({ createInstrument })
     wrapper.setState({ newInstrumentName, createMode: true })
     clickButton(wrapper, 'Save')
-    expect(createInstrument).toHaveBeenCalledWith(testToken, newInstrumentName)
-    expect(wrapper.state().createMode).toBeFalsy()
-    expect(wrapper.state().newInstrumentName).toEqual('')
+    expect(spy).toHaveBeenCalled()
   })
 
   it('has a cancel button that closes the modal and reset newinstrumentname', () => {
@@ -84,5 +83,54 @@ describe('<Instruments />', () => {
     clickButton(wrapper, 'Cancel')
     expect(wrapper.state().createMode).toBeFalsy()
     expect(wrapper.state().newInstrumentName).toEqual('')
+  })
+
+  describe('handle submit', () => {
+    const e = { preventDefault: jest.fn() }
+    it('returns and sets errors if no name', async () => {
+      const createInstrument = jest.fn()
+      wrapper.setProps({ createInstrument })
+      wrapper.setState({ newInstrumentName: '', createMode: true })
+      await wrapper.instance().handleSubmit(e)
+      expect(createInstrument).not.toHaveBeenCalled()
+      expect(wrapper.state().errors.name).toEqual('Instrument name is required')
+      expect(wrapper.state().createMode).toBeTruthy()
+    })
+
+    it('calls create instrument and clears form on success', async () => {
+      const createInstrument = jest.fn()
+      const show = jest.fn()
+      createInstrument.mockReturnValue(true)
+      wrapper.setProps({ createInstrument, alert: { show } })
+      wrapper.setState({
+        newInstrumentName: 'testname', createMode: true
+      })
+      await wrapper.instance().handleSubmit(e)
+      expect(createInstrument).toHaveBeenCalledWith(testToken, 'testname')
+      expect(show).toHaveBeenCalledWith(<span className="alert-text">Instrument Created</span>)
+      expect(wrapper.state().newInstrumentName).toEqual('')
+    })
+
+    it('sets errors and shows alert on failure', async () => {
+      const createInstrument = jest.fn()
+      const show = jest.fn()
+      createInstrument.mockReturnValue(false)
+      wrapper.setProps({
+        createInstrument,
+        alert: { show },
+        instruments: { errors: { name: 'test error' }, list: [] }
+      })
+      wrapper.setState({
+        newInstrumentName: 'testname', createMode: true
+      })
+      await wrapper.instance().handleSubmit(e)
+      expect(createInstrument).toHaveBeenCalledWith(testToken, 'testname')
+      expect(show).toHaveBeenCalledWith(
+        <span className="alert-text">Instrument Creation Failed</span>,
+        { type: 'error' }
+      )
+      expect(wrapper.state().errors.name).toEqual('test error')
+      expect(wrapper.state().createMode).toBeTruthy()
+    })
   })
 })

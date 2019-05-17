@@ -15,6 +15,7 @@ import Header from '../Header'
 import ListItem from '../ListItem'
 import { instruments } from '../../actions'
 import { getDataOrLogIn } from '../../helpers'
+import alertText from '../../middleware/alertText'
 import TextFieldWithErrors from '../TextFieldWithErrors'
 
 export class Instruments extends Component {
@@ -46,6 +47,24 @@ export class Instruments extends Component {
       this.props.getInstruments,
       'Instruments'
     )
+  }
+
+  handleSubmit = async e => {
+    e.preventDefault()
+    if (!this.state.newInstrumentName) {
+      this.setState({ errors: { name: 'Instrument name is required' } })
+      return
+    }
+
+    this.setState({ errors: {} })
+    const success = await this.props.createInstrument(this.props.token, this.state.newInstrumentName)
+    if (success) {
+      this.setState({ newInstrumentName: '', createMode: false })
+      this.props.alert.show(alertText('Instrument Created'))
+    } else {
+      this.setState({ errors: { ...this.props.instruments.errors } })
+      this.props.alert.show(alertText('Instrument Creation Failed'), { type: 'error' })
+    }
   }
 
   render() {
@@ -101,10 +120,7 @@ export class Instruments extends Component {
               />
               <Button
                 color="primary"
-                onClick={() => {
-                  this.props.createInstrument(this.props.token, newInstrumentName)
-                  this.setState({ createMode: false, newInstrumentName: '' })
-                }}
+                onClick={this.handleSubmit}
               >
                 Save
               </Button>
