@@ -4,53 +4,69 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { account } from '../../actions'
 import Loadable from 'react-loadable'
+import { List } from 'react-content-loader'
+import Box from 'react-bulma-components/lib/components/box'
 
 import Home from '../Home'
 import Header from '../Header'
+import Container from 'react-bulma-components/lib/components/container/container'
+
+function LoadingScreen(props) {
+  return (
+    <React.Fragment>
+      <Header />
+      <Container>
+        <Box className="margin-default">
+          <List />
+        </Box>
+      </Container>
+    </React.Fragment>
+  )
+}
 
 const Login = Loadable({
   loader: () => import('../Login'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Logout = Loadable({
   loader: () => import('../Logout'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const NotFound = Loadable({
   loader: () => import('../NotFound'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Profile = Loadable({
   loader: () => import('../Profile'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Register = Loadable({
   loader: () => import('../Register'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Tags = Loadable({
   loader: () => import('../Tags'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Composers = Loadable({
   loader: () => import('../Composers'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Composer = Loadable({
   loader: () => import('../Composer'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Instruments = Loadable({
   loader: () => import('../Instruments'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Sheets = Loadable({
   loader: () => import('../Sheets'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 const Sheet = Loadable({
   loader: () => import('../Sheet'),
-  loading: () => <div>Loading...</div>
+  loading: () => <LoadingScreen />
 })
 
 export class Routes extends Component {
